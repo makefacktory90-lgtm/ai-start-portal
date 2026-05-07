@@ -68,7 +68,7 @@
 
 ## 2. Pipeline prompts
 
-### Pipeline 01. Событие / видео -> текстовые форматы
+### Pipeline 01. Text OS / материал -> текстовые форматы
 
 Главный файл:
 
@@ -78,13 +78,18 @@
 
 Prompts:
 
-- fact extraction;
+- EXO: facts / people / dates / quotes / meanings / gaps / risks;
+- context briefing;
+- Tone of Voice draft;
+- Style Graph draft;
+- Repurpose Boss map;
 - context gaps;
 - website article draft;
 - Telegram version;
 - social short;
 - headline set;
 - editor risk list.
+- skill / workflow update proposal.
 
 ### Pipeline 02. Длинное видео -> вертикальные клипы
 
@@ -207,4 +212,3 @@ Prompts:
 
 Отдельно пометь, что требует подтверждения редакции.
 ```
-

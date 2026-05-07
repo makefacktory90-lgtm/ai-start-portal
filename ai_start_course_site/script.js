@@ -13,12 +13,14 @@ const modules = {
       "Снимаем ожидание, что курс - это набор промптов.",
       "Показываем смену рабочего мышления: input, AI step, human gate, saved example.",
       "Разводим OS роли, OS редакции и OS компании.",
-      "Объясняем 5 базовых пайплайнов и где они живут в AI-hub.",
+      "Показываем helicopter view пяти пайплайнов: input, AI step, human gate, output, hub artifact.",
+      "Делаем zoom-in в Text OS: EXO, ToV, Style Graph, Repurpose Boss, QA и update proposal.",
       "Показываем механику: prework, live demo, практика, запись, transcript, summary, feedback log."
     ],
     artifacts: [
       "карта OS роли / редакции / компании",
-      "понимание 5 пайплайнов",
+      "понимание пяти пайплайнов как рабочих контуров",
+      "карта Text OS перед первым практическим занятием",
       "маршрут работы в hub",
       "первое правило: AI drafts, human owns"
     ],
@@ -36,21 +38,23 @@ const modules = {
   text: {
     crumb: "Pipeline 01",
     code: "PIPELINE · 01",
-    title: "Событие или видео → текстовые форматы",
-    subtitle: "Один исходный материал превращается в факты, вопросы на проверку, сайт, Telegram, social-анонс и заголовки. Сначала проверяем смысл и факты, затем адаптируем под формат.",
+    title: "Text OS: материал → текстовые форматы",
+    subtitle: "Один исходный материал проходит EXO-разбор, контекст, Tone of Voice, Style Graph, Repurpose Boss и QA. На выходе не один текст, а управляемый publication package.",
     posterKicker: "15 МАЯ",
-    posterTitle: "материал → facts → site / Telegram / social",
+    posterTitle: "source → EXO → ToV → Style Graph → formats",
     posterSubtitle: "workflow и starter prompt уже в hub",
     sideTitle: "Pipeline 01",
-    sideSummary: "Базовый маршрут для текста: из события, заметки, видео или расшифровки в публикационный пакет.",
+    sideSummary: "Базовый маршрут для текста: из события, заметки, видео или расшифровки в Text OS и публикационный пакет.",
     lessons: [
-      "Извлекаем факты и отделяем их от интерпретаций.",
-      "Выносим сомнительное в блок 'нужно проверить'.",
-      "Собираем черновик сайта, Telegram-версию, social-анонс и заголовки.",
-      "Прогоняем output через factual gate и editor risk list."
+      "Делаем EXO-разбор: факты, цитаты, смысл, пробелы, риски.",
+      "Собираем Tone of Voice и Style Graph draft, если готовых правил еще нет.",
+      "Пересобираем материал через Repurpose Boss: сайт, Telegram, social, подписи, карточки.",
+      "Прогоняем output через factual, tone и editor risk gate."
     ],
     artifacts: [
-      "факты из материала",
+      "EXO-разбор материала",
+      "ToV / Style Graph draft",
+      "Repurpose Boss map",
       "блок 'нужно проверить'",
       "черновик для сайта",
       "Telegram и social",
@@ -62,9 +66,9 @@ const modules = {
       "Плохой output полезен, если мы сохранили evidence.",
       "Редактору нужен проверяемый черновик, а не гладкая фантазия."
     ],
-    a1: ["A1 · первый пакет", "Сделать facts, check, site draft, Telegram, social и headline set."],
-    a2: ["A2 · сравнить каналы", "Показать, где меняется тон сайта, Telegram и social без потери фактов."],
-    a3: ["A3 · update workflow", "Найти повторяющуюся редакторскую правку и предложить изменение Pipeline 01."]
+    a1: ["A1 · первый пакет", "Сделать EXO, check, site draft, Telegram, social и headline set."],
+    a2: ["A2 · стиль и repurpose", "Собрать ToV / Style Graph draft и показать, как меняются форматы без потери фактов."],
+    a3: ["A3 · update workflow", "Найти повторяющуюся редакторскую правку и предложить изменение Pipeline 01 или новый skill."]
   },
   formats: {
     crumb: "Pipeline 02",
