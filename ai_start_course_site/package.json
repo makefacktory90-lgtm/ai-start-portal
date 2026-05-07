@@ -1,0 +1,17 @@
+{
+  "name": "ai_start_course_site",
+  "version": "1.0.0",
+  "description": "Static AI Start course portal preview for Nornikel.",
+  "main": "script.js",
+  "scripts": {
+    "serve": "python3 -m http.server 4317",
+    "check": "node --check script.js",
+    "screenshot": "node screenshot.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "playwright": "^1.59.1"
+  }
+}

@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Start Visual Lab · Nornikel</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./visual-builder.css">
+</head>
+<body class="builder-body">
+  <aside class="control-panel" aria-label="Настройки визуального конструктора">
+    <header class="builder-brand">
+      <div class="builder-mark" aria-hidden="true">AI</div>
+      <div>
+        <strong>AI Start Visual Lab</strong>
+        <span>Nornikel · visual thinking</span>
+      </div>
+      <button class="ghost-button" id="reset-button" type="button">reset</button>
+    </header>
+
+    <section class="control-section">
+      <div class="section-title">format</div>
+      <div class="segmented" role="group" aria-label="Формат холста">
+        <button type="button" class="is-active" data-format="story">Story<span>1080x1920</span></button>
+        <button type="button" data-format="square">Square<span>1080x1080</span></button>
+        <button type="button" data-format="youtube">YouTube<span>1920x1080</span></button>
+        <button type="button" data-format="banner">Banner<span>1920x640</span></button>
+      </div>
+    </section>
+
+    <section class="control-section">
+      <div class="section-title">layout</div>
+      <div class="icon-grid" role="group" aria-label="Композиция">
+        <button type="button" class="is-active" data-layout="left">Left</button>
+        <button type="button" data-layout="center">Center</button>
+        <button type="button" data-layout="right">Right</button>
+        <button type="button" data-layout="split">Split</button>
+        <button type="button" data-layout="minimal">Minimal</button>
+        <button type="button" data-layout="poster">Poster</button>
+      </div>
+      <div class="toggle-grid">
+        <label><input type="checkbox" id="toggle-grid" checked> grid</label>
+        <label><input type="checkbox" id="toggle-corners" checked> corners</label>
+        <label><input type="checkbox" id="toggle-scanner"> scan</label>
+        <label><input type="checkbox" id="toggle-vignette" checked> vignette</label>
+      </div>
+    </section>
+
+    <section class="control-section">
+      <div class="section-title">style</div>
+      <div class="swatch-row" id="theme-row" aria-label="Темы"></div>
+      <div class="section-subtitle">accent</div>
+      <div class="swatch-row" id="accent-row" aria-label="Акцентный цвет"></div>
+      <div class="font-row" role="group" aria-label="Типографика">
+        <button type="button" class="is-active" data-font="condensed">Condensed</button>
+        <button type="button" data-font="mono">Mono</button>
+        <button type="button" data-font="sans">Sans</button>
+      </div>
+    </section>
+
+    <section class="control-section">
+      <div class="section-title">content</div>
+      <label class="field">
+        <span>kicker</span>
+        <input id="input-kicker" type="text" value="AI START · 19 МАЯ">
+      </label>
+      <label class="field">
+        <span>title</span>
+        <textarea id="input-title" rows="3">ВИЗУАЛ БЕЗ ВРАНЬЯ</textarea>
+      </label>
+      <label class="field">
+        <span>subtitle</span>
+        <input id="input-subtitle" type="text" value="материал → карточки → brief → gate">
+      </label>
+      <label class="field">
+        <span>name plate</span>
+        <input id="input-name" type="text" value="TV-21 / Северный город">
+      </label>
+    </section>
+
+    <section class="control-section">
+      <div class="section-title">metaphor</div>
+      <select id="metaphor-select">
+        <option value="industrial">industrial layers</option>
+        <option value="signals">editorial signal radar</option>
+        <option value="routes">pipeline routes</option>
+        <option value="archive">archive cards</option>
+      </select>
+      <button class="primary-button" id="shuffle-button" type="button">shuffle composition</button>
+    </section>
+  </aside>
+
+  <main class="builder-workspace">
+    <header class="builder-topbar">
+      <a href="./index.html">← AI Start hub</a>
+      <div class="topbar-meta">
+        <span id="canvas-size">1080 × 1920</span>
+        <span>Nornikel draft system</span>
+      </div>
+    </header>
+
+    <section class="preview-zone" aria-label="Предпросмотр визуала">
+      <div class="stage-shell">
+        <div class="stage-scale">
+          <svg id="visual-canvas" role="img" aria-labelledby="svg-title svg-desc" viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg">
+            <title id="svg-title">Nornikel AI Start visual</title>
+            <desc id="svg-desc">Редактируемый визуальный шаблон для обложек и карточек AI Start.</desc>
+          </svg>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <aside class="output-panel" aria-label="Экспорт и бренд-пакет">
+    <section class="output-card">
+      <div class="section-title">brand pack</div>
+      <div class="brand-lockup">
+        <span class="nn-mark">NN</span>
+        <div>
+          <strong>AI Start Nornikel</strong>
+          <small>редакционный, строгий, проверяемый</small>
+        </div>
+      </div>
+      <p>Шаблон держит текст и факты в редактируемом слое. AI-фон или metaphor-asset можно добавлять отдельно, но финальные цифры, имена и цитаты остаются в проверяемом слое.</p>
+    </section>
+
+    <section class="output-card">
+      <div class="section-title">quick presets</div>
+      <button class="preset-button" type="button" data-preset="lesson">Обложка занятия</button>
+      <button class="preset-button" type="button" data-preset="quote">Quote card</button>
+      <button class="preset-button" type="button" data-preset="pipeline">Pipeline cover</button>
+      <button class="preset-button" type="button" data-preset="ira">IraAI адаптация</button>
+    </section>
+
+    <section class="output-card">
+      <div class="section-title">AI background prompt</div>
+      <textarea id="prompt-output" rows="8" readonly></textarea>
+      <button class="ghost-button wide" id="copy-prompt" type="button">copy prompt</button>
+    </section>
+
+    <section class="output-card">
+      <div class="section-title">export</div>
+      <div class="export-row">
+        <button class="primary-button" id="export-png" type="button">PNG</button>
+        <button class="ghost-button" id="export-svg" type="button">SVG</button>
+      </div>
+      <p class="export-note" id="export-note">Экспорт скачает текущий визуал из браузера.</p>
+    </section>
+  </aside>
+
+  <script src="./visual-builder.js"></script>
+</body>
+</html>

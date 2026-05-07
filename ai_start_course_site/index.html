@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Start Kit · Норникель</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="progress"></div>
+  <aside class="sidebar" aria-label="Навигация курса">
+    <div class="brand">
+      <div class="mark" aria-hidden="true"></div>
+      <div>
+        <div class="brand-title">AI START</div>
+        <div class="brand-subtitle">hub // v0.3</div>
+      </div>
+    </div>
+
+    <label class="search">
+        <span>SEARCH</span>
+      <input type="search" placeholder="workflow, чеклист, модуль">
+    </label>
+
+    <nav class="nav">
+      <div class="nav-section">// старт</div>
+      <button class="nav-item active" data-module="intro">
+        <span class="dot filled"></span>
+        <span>
+          <b>00 / START MAP</b>
+          <small>5 пайплайнов + hub</small>
+        </span>
+      </button>
+
+      <div class="nav-section">// модули</div>
+      <button class="nav-item" data-module="text">
+        <span class="dot"></span>
+        <span>
+          <b>01 / ТЕКСТ</b>
+          <small>событие → форматы</small>
+        </span>
+      </button>
+      <button class="nav-item" data-module="formats">
+        <span class="dot"></span>
+        <span>
+          <b>02 / ВИДЕО</b>
+          <small>long → vertical clips</small>
+        </span>
+      </button>
+      <button class="nav-item" data-module="visual">
+        <span class="dot"></span>
+        <span>
+          <b>03 / ВИЗУАЛ</b>
+          <small>карточки · обложки</small>
+        </span>
+      </button>
+      <button class="nav-item" data-module="radar">
+        <span class="dot"></span>
+        <span>
+          <b>04 / АУДИО</b>
+          <small>script · podcast</small>
+        </span>
+      </button>
+      <button class="nav-item" data-module="system">
+        <span class="dot"></span>
+        <span>
+          <b>05 / КОНТУР</b>
+          <small>monitoring · grid</small>
+        </span>
+      </button>
+      <button class="nav-item" data-module="clinic">
+        <span class="dot"></span>
+        <span>
+          <b>06 / RETENTION</b>
+          <small>30 дней применения</small>
+        </span>
+      </button>
+
+      <div class="nav-section">// материалы</div>
+      <a class="nav-link" href="../ai_start_portal_v0/AGENTS.md">AGENTS.md</a>
+      <a class="nav-link" href="../ai_start_portal_v0/00_start_here/04_task_levels.md">A1 / A2 / A3</a>
+      <a class="nav-link" href="../ai_start_portal_v0/02_pipelines/01_event_video_to_text/workflow.md">Pipeline 01</a>
+      <a class="nav-link" href="../ai_start_portal_v0/09_practice_materials/nornikel%20%7Bpractice%7D%20all%20meetings%20exercises%20-%202026-05-05.md">упражнения</a>
+      <a class="nav-link" href="../ai_start_portal_v0/04_prompt_library/master_prompt_index.md">prompt library</a>
+      <a class="nav-link" href="./visual-builder.html">visual creator</a>
+    </nav>
+  </aside>
+
+  <main class="workspace">
+    <header class="topbar">
+      <div class="crumbs">
+        <span>IRAAI.RU</span>
+        <span>›</span>
+        <span>AI START</span>
+        <span>›</span>
+        <strong id="crumb-title">Start Here</strong>
+      </div>
+      <div class="user-pill"><span></span> LIVE BUILD // 5 DAYS</div>
+    </header>
+
+    <section class="content">
+      <div class="module-head">
+        <div>
+          <a class="back-link" href="../ai_start_portal_v0/00_start_here/01_read_first.md">← IRA & AI / AI START KIT</a>
+          <div class="eyebrow" id="module-code">AI-START · 00</div>
+          <h1 id="module-title">AI Start: 5 пайплайнов, hub и рабочий порядок</h1>
+          <p id="module-subtitle">Для ТВ-21 и «Северного города»: единая архитектура курса, библиотека промптов, AI-hub и механика применения после встреч.</p>
+          <div class="meta">
+            <span>5 пайплайнов</span>
+            <span>AI-hub</span>
+            <span>30 дней применения</span>
+          </div>
+        </div>
+        <div class="graph-card" aria-label="Карта уровней курса">
+          <div class="graph-core"></div>
+          <span class="node n1">A1</span>
+          <span class="node n2">A2</span>
+          <span class="node n3">A3</span>
+          <span class="node n4">kit</span>
+          <span class="node n5">review</span>
+        </div>
+      </div>
+
+      <section class="module-status">
+        <div class="status-visual" aria-hidden="true">
+          <span class="pulse-ring"></span>
+          <span class="pulse-dot"></span>
+        </div>
+        <div class="status-copy">
+          <span id="poster-kicker">ДО ЗАНЯТИЯ</span>
+          <strong id="poster-title">материал → workflow → checked draft</strong>
+          <small id="poster-subtitle">запись, транскрипт и резюме появятся после лекции</small>
+        </div>
+        <div class="status-steps" aria-label="Статус материалов">
+          <span class="current">до занятия</span>
+          <span>live</span>
+          <span>запись доступна</span>
+        </div>
+      </section>
+
+      <section class="tool-row" aria-label="Быстрые материалы">
+        <a href="../ai_start_portal_v0/00_start_here/01_read_first.md">старт</a>
+        <a href="../ai_start_portal_v0/00_start_here/04_task_levels.md">уровни</a>
+          <a href="../ai_start_portal_v0/02_pipelines/01_event_video_to_text/workflow.md">Pipeline 01</a>
+          <a href="../ai_start_portal_v0/02_pipelines/02_long_video_to_vertical_clips/workflow.md">Pipeline 02</a>
+          <a href="../ai_start_portal_v0/02_pipelines/03_material_to_visual_cards/workflow.md">Pipeline 03</a>
+          <a href="../ai_start_portal_v0/02_pipelines/04_material_to_audio/workflow.md">Pipeline 04</a>
+      <a href="../ai_start_portal_v0/02_pipelines/05_editorial_contour/workflow.md">Pipeline 05</a>
+      <a href="../ai_start_portal_v0/09_practice_materials/nornikel%20%7Bpractice%7D%20synthetic%20source%20pack%20-%202026-05-05.md">practice pack</a>
+      <a href="../ai_start_portal_v0/09_practice_materials/nornikel%20%7Bpractice%7D%20all%20meetings%20exercises%20-%202026-05-05.md">exercises</a>
+      <a href="./visual-builder.html">visual lab</a>
+      <a href="../ai_start_portal_v0/03_quality_gates/factual_check.md">factual check</a>
+      <a href="../ai_start_portal_v0/03_quality_gates/video_quality_gate.md">video gate</a>
+      <a href="../ai_start_portal_v0/03_quality_gates/visual_quality_gate.md">visual gate</a>
+      <a href="../ai_start_portal_v0/03_quality_gates/audio_quality_gate.md">audio gate</a>
+      <a href="../ai_start_portal_v0/03_quality_gates/ai_use_policy.md">AI policy</a>
+      <a href="../ai_start_portal_v0/05_update_log/feedback_log_template.md">feedback log</a>
+      </section>
+
+      <section class="panel-grid">
+        <article class="panel tool-card">
+          <div class="tool-head">
+            <span class="tool-num">01</span>
+            <span class="tool-title">ЧТО ДЕЛАЕМ</span>
+            <span class="tool-toggle">[ + ]</span>
+          </div>
+          <h2>Что делаем на занятии</h2>
+          <ul id="lesson-list"></ul>
+        </article>
+        <article class="panel tool-card">
+          <div class="tool-head">
+            <span class="tool-num">02</span>
+            <span class="tool-title">ЧТО УНОСИТ</span>
+            <span class="tool-toggle">[ + ]</span>
+          </div>
+          <h2>Что участник уносит</h2>
+          <ul id="artifact-list"></ul>
+        </article>
+      </section>
+
+      <section class="insights">
+        <div class="section-num">// ПРИНЦИПЫ</div>
+        <h2>Не учим AI.<br>Учимся делать работу.</h2>
+        <div id="insight-list" class="quote-grid"></div>
+      </section>
+    </section>
+  </main>
+
+  <aside class="rightbar" aria-label="Чеклист модуля">
+    <section class="mini-card">
+      <div class="mini-label">модуль</div>
+      <h2 id="side-title">Start Here</h2>
+      <p id="side-summary">Открыть kit, понять уровни и запустить первый безопасный workflow.</p>
+    </section>
+
+    <section class="check-card">
+      <div class="check-head">
+        <span>чеклист</span>
+        <span id="check-count">0/3</span>
+      </div>
+      <label class="task">
+        <input type="checkbox">
+        <span>
+          <b id="a1-title">A1 · использовать</b>
+          <small id="a1-text">Открыть kit, выбрать первый workflow, получить checked draft.</small>
+        </span>
+      </label>
+      <label class="task">
+        <input type="checkbox">
+        <span>
+          <b id="a2-title">A2 · адаптировать</b>
+          <small id="a2-text">Сделать версию под другой канал или роль.</small>
+        </span>
+      </label>
+      <label class="task">
+        <input type="checkbox">
+        <span>
+          <b id="a3-title">A3 · владеть</b>
+          <small id="a3-text">Найти повторяющуюся проблему и предложить update.</small>
+        </span>
+      </label>
+    </section>
+
+    <section class="collection">
+      <div class="mini-label">коллекция</div>
+      <a href="../ai_start_kit/project_command_center_until_saturday.md">штаб до субботы</a>
+      <a href="../ai_start_kit/product_and_design_decisions.md">продуктовые решения</a>
+      <a href="../ai_start_kit/nornikel {guide} visual builder course use - 2026-05-05.md">visual lab guide</a>
+      <a href="../ai_start_portal_v0/01_rules/nornikel {rule} file naming convention - 2026-05-04.md">naming rule</a>
+      <a href="../ai_start_portal_v0/04_prompt_library/master_prompt_index.md">prompt library</a>
+      <a href="../ai_start_portal_v0/07_content_mechanics/release_and_retention_model.md">выдача контента</a>
+    </section>
+  </aside>
+
+  <script src="./script.js"></script>
+</body>
+</html>
