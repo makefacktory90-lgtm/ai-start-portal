@@ -8,8 +8,12 @@ status: draft
 owner: Ira + Codex
 sources:
   - "https://chatgpt.com/pricing/"
+  - "https://developers.openai.com/codex/cli"
+  - "https://help.openai.com/en/articles/11369540-codex-in-chatgpt"
   - "https://support.anthropic.com/en/articles/9266767-what-is-the-team-plan"
   - "https://claude.com/pricing/enterprise"
+  - "https://code.claude.com/docs/en/ide-integrations"
+  - "https://code.claude.com/docs/en/setup"
   - "https://higgsfield.ai/"
   - "https://higgsfield.ai/cli"
   - "https://www.capcut.com/help/how-much-does-capcut-pro-cost"
@@ -23,21 +27,29 @@ sources:
 
 Цель закупки: не показать витрину нейросетей, а дать участникам общий инструмент для практики и несколько специализированных пилотов для видео / визуала.
 
+Важно: в этом курсе базовая работа не должна замыкаться только на чате. ChatGPT нужен как основной LLM-доступ, но рабочая сборка курса опирается на Codex / code-agent route: hub, markdown-файлы, workflows, prompts, gates, examples.
+
+Setup-инструкция:
+
+- `nornikel {setup} ai tools purchase install checklist - 2026-05-07.md`
+
 ### Что нужно до первой лекции
 
 | Приоритет | Инструмент | Сколько | Кому | Зачем |
 |---|---|---:|---|---|
 | 1 | ChatGPT Business | ideally 30 seats / минимум работа парами | все участники или учебные пары | hands-on практика, Text OS, файлы, проекты, prompt/workflow |
-| 2 | Higgsfield | 2-3 seats | visual/video команда, методолог, один продвинутый участник | визуальные и видео-гипотезы, cover/title/asset thinking, демонстрации 19 мая |
-| 3 | Claude Team / Enterprise | 1-3 seats | owners, методолог, сильные редакторы | длинные материалы, методология, альтернативная проверка структуры и тона |
-| 4 | CapCut Pro / текущий NLE | 2-4 seats, если нужно | видео / SMM | vertical clips, captions, быстрый production route |
-| 5 | Транскрипция | 1 согласованный маршрут | редакторы / видео | transcript + timestamps для текстового и видео-пайплайна |
+| 2 | Codex access / Codex CLI | ведущая + owners + advanced | методолог, technical helper, owners | работа с hub, файлами, markdown, prompt library, обновлениями курса |
+| 3 | Higgsfield | 2-3 seats | visual/video команда, методолог, один продвинутый участник | визуальные и видео-гипотезы, cover/title/asset thinking, демонстрации 19 мая |
+| 4 | Claude Code / Claude Team / Enterprise | 1-3 seats optional | owners, методолог, сильные редакторы | второй code-agent route, длинные материалы, методология, альтернативная проверка структуры и тона |
+| 5 | CapCut Pro / текущий NLE | 2-4 seats, если нужно | видео / SMM | vertical clips, captions, быстрый production route |
+| 6 | Транскрипция | 1 согласованный маршрут | редакторы / видео | transcript + timestamps для текстового и видео-пайплайна |
 
 Если закупка не успевает:
 
 ```text
 минимум для первой лекции:
 ChatGPT Business или согласованный корпоративный LLM для всех / пар
++ Codex для ведущей / owners / technical helper
 + один демонстрационный доступ Higgsfield
 + понятный способ получить transcript
 ```
@@ -100,13 +112,42 @@ ChatGPT Business или согласованный корпоративный LL
 
 ```text
 ChatGPT Business для основной рабочей группы.
+Codex сразу включить в setup как рабочий code-agent route для hub и файлов.
 ```
 
 Если корпоративная безопасность не пропускает ChatGPT, нужен согласованный enterprise/procurement route или локальный/разрешенный LLM как fallback.
 
+## 3.1. Codex: устанавливаем вместе с ChatGPT route
+
+OpenAI указывает, что Codex входит в ChatGPT Plus, Pro, Business, Edu и Enterprise планы, а Codex CLI можно установить и запускать локально в терминале. Для курса это важно: мы работаем не только в чате, а с папкой проекта, hub, markdown-файлами, prompts, workflows и examples.
+
+Рекомендация:
+
+```text
+Если покупаем ChatGPT Business:
+1. Проверяем доступ к Codex.
+2. Устанавливаем Codex CLI для ведущей, методолога, owners и technical helper.
+3. Проверяем запуск Codex в папке проекта.
+4. Проверяем, что Codex видит hub-файлы и может предложить правку.
+```
+
+Базовая команда для technical helper:
+
+```bash
+npm i -g @openai/codex
+codex
+```
+
 ## 4. Claude: не всем, а owners
 
 Claude Team - платный командный план для Claude chat. Claude Enterprise предназначен для организаций с расширенной безопасностью, compliance, user management и масштабированием.
+
+Если покупаем не просто Claude chat, а Claude Code, устанавливаем:
+
+- Claude Code app / CLI;
+- VS Code extension Claude Code;
+- VS Code как рабочее приложение для папки проекта;
+- доступ к GitHub / hub repository, если этот человек работает с файлами.
 
 Для курса Claude полезен:
 
@@ -114,12 +155,14 @@ Claude Team - платный командный план для Claude chat. Cla
 - AI-hub owners;
 - людям, которые работают с длинными документами и структурой;
 - для альтернативной проверки tone/style/workflow.
+- как второй code-agent route для advanced / owners.
 
 Рекомендация:
 
 ```text
 1-3 seats Claude Team/Enterprise по доступности и procurement.
 Не покупать всем участникам на старте.
+Если покупаем Claude Code - сразу ставим app / CLI и VS Code extension.
 ```
 
 ## 5. Higgsfield: пилот для визуала и видео

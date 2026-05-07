@@ -9,6 +9,7 @@ This folder is the markdown content layer for the Nornikel AI Start hub.
 - `02_pipelines/`
 - `04_prompt_library/master_prompt_index.md`
 - `07_content_mechanics/release_and_retention_model.md`
+- `08_presentations/deck_map.md`
 
 ## Current source of truth
 
