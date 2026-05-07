@@ -19,6 +19,9 @@ sources:
   - "https://www.opus.pro/"
   - "https://docs.submagic.co/introduction"
   - "https://www.gling.ai/"
+  - "https://ref.evdokimov.ai/AWJxM9ZM?from=WhyNot"
+  - "https://plati.market/games/claude/1543/"
+  - "https://plati.market/games/chatgpt/1267/"
 ---
 
 # AI Start: что купить и что установить
@@ -181,7 +184,21 @@ claude
 
 > Покупка AI-доступа должна идти вместе с установкой рабочих инструментов. Если покупаем ChatGPT Business, проверяем доступ к Codex и ставим Codex CLI для тех, кто работает с hub и файлами. Если покупаем Claude Code, ставим Claude Code app / CLI и VS Code extension. До первой лекции нужно проверить вход, доступ к hub и тестовый запуск на учебной папке.
 
-## 6. Решение на сейчас
+## 6. Ссылки для покупки и доступа
+
+Статус: draft, не отправлять клиенту до финальной проверки 10 мая.
+
+| Что | Ссылка | Комментарий |
+|---|---|---|
+| VPN / доступ | [WhyNot VPN](https://ref.evdokimov.ai/AWJxM9ZM?from=WhyNot) | рекомендованная ссылка Иры |
+| ChatGPT | [Plati Market / ChatGPT](https://plati.market/games/chatgpt/1267/) | канал покупки для согласования |
+| Claude | [Plati Market / Claude](https://plati.market/games/claude/1543/) | опционально для owners / advanced |
+
+Отдельная сверстанная страница:
+
+- `ai_start_course_site/purchase-stack.html`
+
+## 7. Решение на сейчас
 
 ```text
 Base:

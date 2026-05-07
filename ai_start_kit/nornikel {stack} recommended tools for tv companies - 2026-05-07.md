@@ -384,3 +384,23 @@ Claude Code - точечно для owners как второй code-agent route.
 CapCut / текущий монтаж - только видео-команде, если это реально их workflow.
 Транскрипция - обязательный согласованный маршрут.
 ```
+
+## 11. Future watchlist для видео / монтажа
+
+Этот список нужен не для немедленной закупки, а чтобы показать: курс видит рынок production tools и выбирает не по названию, а по производственному участку.
+
+| Слой | Сервисы | Как держим в программе |
+|---|---|---|
+| Short-form / clipping | Submagic, OpusClip, Gling | показываем как video acceleration layer |
+| Captions / social packaging | Submagic, CapCut, текущий NLE | выбираем по качеству русских субтитров и экспорту |
+| Rough cut / cleanup | Gling, Descript, текущий NLE | тестируем на реальном материале, не покупаем всем заранее |
+| Google video / visual draft | Google Vids, Stitch | показываем как Workspace / prototype layer |
+| AI video / visual hypotheses | Higgsfield | 2-3 пилотных seats для visual/video команды |
+
+Формулировка:
+
+```text
+Мы не предлагаем участникам набор случайных сервисов.
+Мы показываем классы инструментов и критерии выбора:
+где они ускоряют работу, где нужен human gate, где есть риски прав, точности и production quality.
+```
