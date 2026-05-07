@@ -1,4 +1,4 @@
-# Карта web-decks AI Start Nornikel
+# Карта web-decks AI Start
 
 Статус: starter v0.3  
 Назначение: список web-decks, которые нужны для готовой программы.

@@ -1,6 +1,6 @@
 ---
 tags:
-  - project/nornikel
+  - project/ai-start
   - type/guide
   - pipeline/03
   - meeting/2026-05-19
@@ -257,7 +257,7 @@ Visual builder помогает объяснить второй маршрут.
 - добавить preset "quote from transcript";
 - добавить visual gate прямо в правую панель;
 - добавить кнопку / блок "что нельзя запекать в картинку";
-- переименовать `Nornikel Visual Creator` в более учебное `AI Start Visual Lab`.
+- переименовать `AI Start Visual Lab` в более учебное `AI Start Visual Lab`.
 
 Не надо сейчас:
 

@@ -1,4 +1,4 @@
-# Prompt library: AI Start Nornikel v0.1
+# Prompt library: AI Start v0.1
 
 Статус: starter index  
 Назначение: единая библиотека промптов для 5 пайплайнов, decks, практики и AI-hub.

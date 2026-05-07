@@ -1,4 +1,4 @@
-# Nornikel {rule} file naming convention - 2026-05-04
+# AI Start {rule} file naming convention - 2026-05-04
 
 Status: draft v0.2  
 Source references:
@@ -168,7 +168,7 @@ Minimum:
 ```yaml
 ---
 tags:
-  - project/nornikel
+  - project/ai-start
   - type/pipeline
   - status/draft
 date: 2026-05-04
@@ -182,7 +182,7 @@ Recommended full version:
 ```yaml
 ---
 tags:
-  - project/nornikel
+  - project/ai-start
   - type/exercise
   - pipeline/01
   - status/draft
@@ -356,7 +356,7 @@ For Codex, use `AGENTS.md` instead of `CLAUDE.md`.
 Root / important folder instruction should say:
 
 ```markdown
-# AI Start Nornikel Rules
+# AI Start Rules
 
 ## Naming
 
@@ -365,7 +365,7 @@ For new human-facing markdown files, use:
 nornikel {type} specific description - YYYY-MM-DD.md
 
 Include YAML frontmatter:
-- project/nornikel
+- project/ai-start
 - type/...
 - status/...
 - date
@@ -376,7 +376,7 @@ Code and app files use kebab-case.
 ## Source of truth
 
 Build under:
-output/_source_of_truth/Финальная_гибридная_программа_AI_Start_Норникель.docx
+output/_source_of_truth/Финальная_гибридная_программа_AI_Start_AI Start.docx
 ```
 
 Current project-level instruction is saved in:

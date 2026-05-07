@@ -29,7 +29,7 @@ const presets = {
     kicker: "EDITORIAL RULE",
     title: "AI ДАЕТ ВАРИАНТЫ. ЧЕЛОВЕК ДЕРЖИТ СМЫСЛ.",
     subtitle: "quote card · проверяемый слой текста",
-    name: "AI Start Nornikel",
+    name: "AI Start",
     layout: "poster",
     metaphor: "archive"
   },
@@ -43,7 +43,7 @@ const presets = {
   },
   ira: {
     kicker: "IRA & AI",
-    title: "НОРНИКЕЛЬ: КОНТЕНТ-СИСТЕМА",
+    title: "AI START: КОНТЕНТ-СИСТЕМА",
     subtitle: "строго, понятно, в редакционном стиле",
     name: "IraAI adaptation",
     layout: "center",
@@ -419,7 +419,7 @@ function renderSvg() {
 function renderPrompt() {
   const colors = theme();
   const prompt = [
-    "Create an editorial industrial background asset for AI Start Nornikel.",
+    "Create an editorial industrial background asset for AI Start.",
     `Mood: ${state.theme}, ${state.metaphor}, strict newsroom training system, metallic surfaces, paper texture, modular grid.`,
     `Palette: ${colors.bg}, ${colors.ink}, accent ${state.accent}.`,
     "No readable text, no invented logos, no fake numbers, no people unless explicitly requested.",
@@ -479,7 +479,7 @@ function downloadBlob(blob, filename) {
 
 function exportSvg() {
   const blob = new Blob([serializedSvg()], { type: "image/svg+xml;charset=utf-8" });
-  downloadBlob(blob, `nornikel-visual-${state.format}.svg`);
+  downloadBlob(blob, `ai-start-visual-${state.format}.svg`);
 }
 
 function exportPng() {
@@ -497,7 +497,7 @@ function exportPng() {
     URL.revokeObjectURL(url);
     canvas.toBlob((blob) => {
       if (!blob) return;
-      downloadBlob(blob, `nornikel-visual-${state.format}.png`);
+      downloadBlob(blob, `ai-start-visual-${state.format}.png`);
     }, "image/png");
   };
 

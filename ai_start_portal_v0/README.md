@@ -1,6 +1,6 @@
 # AI Start Portal v0
 
-This folder is the markdown content layer for the Nornikel AI Start hub.
+This folder is the markdown content layer for the AI Start hub.
 
 ## Start here
 

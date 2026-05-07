@@ -1,6 +1,6 @@
 ---
 tags:
-  - project/nornikel
+  - project/ai-start
   - type/strategy
   - status/draft
 date: 2026-05-07
