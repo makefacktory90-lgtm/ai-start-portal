@@ -1,0 +1,1 @@
+Disable Jekyll processing so course files with spaces and braces in names are served as static assets.
