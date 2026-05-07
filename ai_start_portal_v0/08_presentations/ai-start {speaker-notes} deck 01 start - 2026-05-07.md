@@ -9,8 +9,8 @@ status: draft
 owner: Ira + Codex
 refs:
   - "../../../ai_start_course_site/decks/deck-01-start.html"
-  - "../../ai_start_kit/nornikel {strategy} expert os company os learning frame - 2026-05-05.md"
-  - "../../ai_start_kit/nornikel {strategy} five pipelines helicopter view - 2026-05-07.md"
+  - "../../ai_start_kit/ai-start {strategy} expert os company os learning frame - 2026-05-05.md"
+  - "../../ai_start_kit/ai-start {strategy} five pipelines helicopter view - 2026-05-07.md"
 ---
 
 # Speaker notes: Deck 01 / старт

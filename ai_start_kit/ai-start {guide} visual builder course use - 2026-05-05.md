@@ -9,11 +9,11 @@ date: 2026-05-05
 status: draft
 owner: Codex
 source:
-  - "nornikel {source} final hybrid program calendar map - 2026-05-04.md"
+  - "ai-start {source} final hybrid program calendar map - 2026-05-04.md"
 refs:
   - "../ai_start_course_site/visual-builder.html"
   - "../ai_start_portal_v0/02_pipelines/03_material_to_visual_cards/workflow.md"
-  - "nornikel {guide} 19 may video stack alignment - 2026-05-05.md"
+  - "ai-start {guide} 19 may video stack alignment - 2026-05-05.md"
 ---
 
 # Visual Builder: как используем в курсе
@@ -25,7 +25,7 @@ refs:
 Путь:
 
 ```text
-/Users/irinabuyan/Desktop/nornikel/output/ai_start_course_site/visual-builder.html
+output/ai_start_course_site/visual-builder.html
 ```
 
 Локальный URL при поднятом сервере:

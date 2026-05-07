@@ -40,7 +40,7 @@ sources:
 
 Setup-инструкция:
 
-- `nornikel {setup} ai tools purchase install checklist - 2026-05-07.md`
+- `ai-start {setup} ai tools purchase install checklist - 2026-05-07.md`
 
 ### Что нужно до первой лекции
 

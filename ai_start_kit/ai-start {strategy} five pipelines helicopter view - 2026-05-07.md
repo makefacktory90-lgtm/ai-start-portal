@@ -8,7 +8,7 @@ status: draft
 owner: Ira + Codex
 refs:
   - "../ai_start_portal_v0/02_pipelines/01_event_video_to_text/workflow.md"
-  - "../ai_start_portal_v0/08_presentations/nornikel {deck-system} lecture exercises embedded map - 2026-05-05.md"
+  - "../ai_start_portal_v0/08_presentations/ai-start {deck-system} lecture exercises embedded map - 2026-05-05.md"
 ---
 
 # Helicopter view: пять пайплайнов AI Start

@@ -7,7 +7,7 @@ date: 2026-05-07
 status: draft
 owner: Ira + Codex
 refs:
-  - "nornikel {guide} 19 may video stack alignment - 2026-05-05.md"
+  - "ai-start {guide} 19 may video stack alignment - 2026-05-05.md"
   - "../ai_start_portal_v0/02_pipelines/02_long_video_to_vertical_clips/workflow.md"
   - "../ai_start_portal_v0/03_quality_gates/video_quality_gate.md"
 ---

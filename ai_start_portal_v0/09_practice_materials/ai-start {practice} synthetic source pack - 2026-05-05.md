@@ -7,7 +7,7 @@ date: 2026-05-05
 status: draft
 owner: Codex
 source:
-  - "../../ai_start_kit/nornikel {source} final hybrid program calendar map - 2026-05-04.md"
+  - "../../ai_start_kit/ai-start {source} final hybrid program calendar map - 2026-05-04.md"
 ---
 
 # Synthetic source pack

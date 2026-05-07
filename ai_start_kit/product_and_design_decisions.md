@@ -80,7 +80,7 @@ AI подключается к уже существующей работе
 
 Подробно:
 
-- `nornikel {strategy} expert os company os learning frame - 2026-05-05.md`
+- `ai-start {strategy} expert os company os learning frame - 2026-05-05.md`
 
 ### Презентации
 
@@ -177,7 +177,7 @@ https://iraai.ru/masterclass-hassid/
 Рекомендуемая структура:
 
 ```text
-ai-start-nornikel/
+ai-start/
   apps/
     hub/                  # портал курса / knowledge base
     decks/                # web-презентации

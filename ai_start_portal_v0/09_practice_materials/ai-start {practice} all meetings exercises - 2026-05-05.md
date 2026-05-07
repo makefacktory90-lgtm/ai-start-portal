@@ -7,8 +7,8 @@ date: 2026-05-05
 status: draft
 owner: Codex
 source:
-  - "nornikel {practice} synthetic source pack - 2026-05-05.md"
-  - "../../ai_start_kit/nornikel {source} final hybrid program calendar map - 2026-05-04.md"
+  - "ai-start {practice} synthetic source pack - 2026-05-05.md"
+  - "../../ai_start_kit/ai-start {source} final hybrid program calendar map - 2026-05-04.md"
 ---
 
 # Упражнения по всем встречам

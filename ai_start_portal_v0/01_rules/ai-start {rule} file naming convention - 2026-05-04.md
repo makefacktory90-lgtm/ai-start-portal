@@ -37,17 +37,17 @@ Use POS-style names for markdown content, course docs, briefs, scripts and hando
 Pattern:
 
 ```text
-nornikel {type} specific description - YYYY-MM-DD.md
+ai-start {type} specific description - YYYY-MM-DD.md
 ```
 
 Examples:
 
 ```text
-nornikel {rule} file naming convention - 2026-05-04.md
-nornikel {pipeline} event video to text - 2026-05-04.md
-nornikel {exercise} pipeline 01 A1 safe text package - 2026-05-04.md
-nornikel {deck} 14 may start map - 2026-05-04.md
-nornikel {handoff} current state - 2026-05-04.md
+ai-start {rule} file naming convention - 2026-05-04.md
+ai-start {pipeline} event video to text - 2026-05-04.md
+ai-start {exercise} pipeline 01 A1 safe text package - 2026-05-04.md
+ai-start {deck} 14 may start map - 2026-05-04.md
+ai-start {handoff} current state - 2026-05-04.md
 ```
 
 Maximum:
@@ -115,7 +115,7 @@ Use these tags inside braces for human-facing files. Start with this set. Do not
 Default project code:
 
 ```text
-nornikel
+ai-start
 ```
 
 Optional secondary project codes may be used only when needed:
@@ -139,7 +139,7 @@ YYYY-MM-DD
 For dated program blocks, keep the real program date in the description if useful:
 
 ```text
-nornikel {deck} 14 may start map - 2026-05-04.md
+ai-start {deck} 14 may start map - 2026-05-04.md
 ```
 
 The date after hyphen is the file creation / version date, not necessarily the meeting date.
@@ -148,7 +148,7 @@ The date after hyphen is the file creation / version date, not necessarily the m
 
 Default for filenames:
 
-- project name: `nornikel`;
+- project name: `ai-start`;
 - type tag: English;
 - description: English transliteration / simple English;
 - file content: Russian or English as needed.
@@ -190,7 +190,7 @@ date: 2026-05-04
 status: draft
 owner: Codex
 source:
-  - "nornikel {source} final hybrid program calendar map - 2026-05-04.md"
+  - "ai-start {source} final hybrid program calendar map - 2026-05-04.md"
 refs:
   - "02_pipelines/01_event_video_to_text/workflow.md"
 ---
@@ -292,7 +292,7 @@ The H1 should repeat the useful file identity, but in human language.
 Filename:
 
 ```text
-nornikel {exercise} pipeline 01 A1 safe text package - 2026-05-04.md
+ai-start {exercise} pipeline 01 A1 safe text package - 2026-05-04.md
 ```
 
 H1:
@@ -362,7 +362,7 @@ Root / important folder instruction should say:
 
 For new human-facing markdown files, use:
 
-nornikel {type} specific description - YYYY-MM-DD.md
+ai-start {type} specific description - YYYY-MM-DD.md
 
 Include YAML frontmatter:
 - project/ai-start

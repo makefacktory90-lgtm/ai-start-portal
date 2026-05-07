@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Deck 02 · Text OS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./deck-01-start.css">
+  <link rel="stylesheet" href="./deck-02-text.css">
+</head>
+<body>
+  <header class="deck-nav" aria-label="Навигация презентации">
+    <a class="deck-logo" href="../index.html">AI START</a>
+    <nav>
+      <a href="#s01">02</a>
+      <a href="#s04">data</a>
+      <a href="#s08">format</a>
+      <a href="#s12">gate</a>
+      <a href="#s16">hub</a>
+    </nav>
+    <span>15 мая · Text OS</span>
+  </header>
+
+  <main>
+    <section class="slide hero" id="s01">
+      <div class="kicker">// TEXT OS</div>
+      <h1>Материал<br><span>становится системой</span> текстовых форматов</h1>
+      <p class="lead">Сегодня не разбираем “как написать текст в AI”. Разбираем рабочий способ: взять источник, извлечь факты, удержать голос, пересобрать материал под каналы и проверить output перед выпуском.</p>
+      <div class="hero-strip">
+        <span>source</span>
+        <span>EXO</span>
+        <span>formats</span>
+        <span>QA</span>
+        <span>hub update</span>
+      </div>
+    </section>
+
+    <section class="slide split" id="s02">
+      <div>
+        <div class="kicker">// СДВИГ</div>
+        <h2>Не просим AI “написать”. Сначала просим увидеть материал.</h2>
+      </div>
+      <div class="statement-list">
+        <p>Текст начинается не с красивого абзаца, а с чистого входа.</p>
+        <p>Если AI не видит факты, он начинает уверенно дорисовывать.</p>
+        <p>Если нет gate, гладкий текст выглядит готовым раньше времени.</p>
+        <p class="red">Поэтому первый навык — извлечение, а не генерация.</p>
+      </div>
+    </section>
+
+    <section class="slide dark" id="s03">
+      <div class="kicker">// СХЕМА УРОКА</div>
+      <h2>Четыре коротких цикла практики внутри занятия</h2>
+      <div class="process-line" aria-label="Практические циклы">
+        <div><b>01</b><span>EXO: разобрать источник</span></div>
+        <div><b>02</b><span>Smell test: убрать AI-гладкость</span></div>
+        <div><b>03</b><span>Repurpose: собрать форматы</span></div>
+        <div><b>04</b><span>QA: проверить риски</span></div>
+        <div><b>05</b><span>Hub: сохранить правило</span></div>
+      </div>
+    </section>
+
+    <section class="slide split" id="s04">
+      <div>
+        <div class="kicker">// DATA LAYER</div>
+        <h2>EXO превращает сырой материал в карту фактов</h2>
+      </div>
+      <div class="exo-grid">
+        <div><span>facts</span><strong>что точно есть в источнике</strong></div>
+        <div><span>people</span><strong>люди, организации, места, должности</strong></div>
+        <div><span>quotes</span><strong>кто что сказал и можно ли это цитировать</strong></div>
+        <div><span>missing</span><strong>чего не хватает для уверенной публикации</strong></div>
+        <div><span>risks</span><strong>где возможны юридические, тональные или репутационные ошибки</strong></div>
+      </div>
+    </section>
+
+    <section class="slide dark" id="s05">
+      <div class="kicker">// PRACTICE 01 · 10 МИН</div>
+      <h2>Упражнение: разобрать материал до первого текста</h2>
+      <div class="exercise">
+        <p><b>03 мин.</b> Вставьте общий source в starter prompt.</p>
+        <p><b>04 мин.</b> Проверьте EXO: что есть, чего не хватает, где риск.</p>
+        <p><b>03 мин.</b> Отметьте один факт, который нельзя усиливать или додумывать.</p>
+      </div>
+    </section>
+
+    <section class="slide split" id="s06">
+      <div>
+        <div class="kicker">// VOICE LAYER</div>
+        <h2>Голос редакции — это не настроение, а набор проверяемых решений</h2>
+      </div>
+      <div class="prompt-card">
+        <p><b>ритм:</b> короткие / длинные фразы, плотность, темп.</p>
+        <p><b>словарь:</b> какие слова звучат как редакция, а какие нет.</p>
+        <p><b>доказательства:</b> как показываем факт, цитату, число, контекст.</p>
+        <p><b>запреты:</b> где AI начинает звучать рекламно, драматично или канцелярски.</p>
+      </div>
+    </section>
+
+    <section class="slide dark" id="s07">
+      <div class="kicker">// PRACTICE 02 · 8 МИН</div>
+      <h2>Smell test:<br>найти AI-гладкость до публикации</h2>
+      <div class="exercise">
+        <p><b>01.</b> Найдите 3 фразы, которые можно поставить в любой текст.</p>
+        <p><b>02.</b> Замените каждую фразу на факт, цитату или конкретное наблюдение.</p>
+        <p><b>03.</b> Сформулируйте одно правило для Style Graph.</p>
+      </div>
+    </section>
+
+    <section class="slide split" id="s08">
+      <div>
+        <div class="kicker">// SKILL LAYER</div>
+        <h2>Repurpose — это не “укоротить”, а сменить задачу формата</h2>
+      </div>
+      <div class="format-table">
+        <div><b>сайт</b><span>контекст, факты, спокойная структура</span></div>
+        <div><b>Telegram</b><span>быстрый вход, смысл, проверяемый акцент</span></div>
+        <div><b>social</b><span>одна мысль, первый экран, без кликбейта</span></div>
+        <div><b>карточки</b><span>только факты в редактируемом слое</span></div>
+      </div>
+    </section>
+
+    <section class="slide dark" id="s09">
+      <div class="kicker">// PRACTICE 03 · 12 МИН</div>
+      <h2>Собрать publication package из одного source</h2>
+      <div class="exercise">
+        <p><b>04 мин.</b> Черновик для сайта: заголовок, лид, структура.</p>
+        <p><b>04 мин.</b> Telegram-версия: первый экран, факт, зачем читать.</p>
+        <p><b>04 мин.</b> Social-анонс и 5 заголовков с разным фокусом.</p>
+      </div>
+    </section>
+
+    <section class="slide split" id="s10">
+      <div>
+        <div class="kicker">// PROMPT AS WORKFLOW</div>
+        <h2>Один сильный prompt держит источник, формат и проверку</h2>
+      </div>
+      <pre class="prompt-block light"><code>Задача: собрать publication package.
+
+1. Не пишите финал, пока не сделан EXO.
+2. Все сомнительное вынесите в "нужно проверить".
+3. Для каждого формата укажите цель канала.
+4. Не усиливайте смысл, если этого нет в source.
+5. В конце дайте QA-gate и update proposal.</code></pre>
+    </section>
+
+    <section class="slide dark" id="s11">
+      <div class="kicker">// METRICS / GATES</div>
+      <h2>Качество текста проверяется до красоты</h2>
+      <div class="publication-gate">
+        <div><b>factual</b><span>нет фактов, которых не было в источнике</span></div>
+        <div><b>tone</b><span>текст не звучит как пресс-релиз без редакции</span></div>
+        <div><b>risk</b><span>сомнительное вынесено в вопросы редактору</span></div>
+        <div><b>format</b><span>канал меняет подачу, а не факты</span></div>
+      </div>
+    </section>
+
+    <section class="slide split" id="s12">
+      <div>
+        <div class="kicker">// DATA SAFETY</div>
+        <h2>В Text OS есть материалы, которые не загружаются в общий AI</h2>
+      </div>
+      <div class="gate-grid">
+        <div><span>green</span><strong>публичные источники и учебные материалы</strong></div>
+        <div><span>yellow</span><strong>внутренние черновики только по разрешенной политике</strong></div>
+        <div><span>red</span><strong>персональные данные, доступы, договоры, непубличные конфликты</strong></div>
+      </div>
+    </section>
+
+    <section class="slide dark" id="s13">
+      <div class="kicker">// PRACTICE 04 · 8 МИН</div>
+      <h2>QA-проверка: что нельзя выпускать без человека</h2>
+      <div class="exercise">
+        <p><b>01.</b> Найдите один факт, который требует проверки.</p>
+        <p><b>02.</b> Найдите одну фразу, где AI усилил смысл.</p>
+        <p><b>03.</b> Решите: правим prompt, context, Style Graph или gate.</p>
+      </div>
+    </section>
+
+    <section class="slide split" id="s14">
+      <div>
+        <div class="kicker">// ROLE LAYER</div>
+        <h2>Один pipeline дает разные полезные outputs для разных ролей</h2>
+      </div>
+      <div class="role-grid compact">
+        <article><span>корреспондент</span><p>факты, цитаты, вопросы редактору</p></article>
+        <article><span>редактор</span><p>структура, риски, версия к публикации</p></article>
+        <article><span>SMM</span><p>Telegram, social, первый экран</p></article>
+        <article><span>owner</span><p>что сохранить как правило в hub</p></article>
+      </div>
+    </section>
+
+    <section class="slide dark" id="s15">
+      <div class="kicker">// FLYWHEEL</div>
+      <h2>Система становится сильнее, когда хорошие и плохие outputs сохраняются</h2>
+      <div class="process-line" aria-label="Контур обновления">
+        <div><b>01</b><span>source</span></div>
+        <div><b>02</b><span>output</span></div>
+        <div><b>03</b><span>human edit</span></div>
+        <div><b>04</b><span>rule / example</span></div>
+        <div><b>05</b><span>updated prompt</span></div>
+      </div>
+    </section>
+
+    <section class="slide split" id="s16">
+      <div>
+        <div class="kicker">// HUB ACTION</div>
+        <h2>После занятия остается не впечатление, а артефакт</h2>
+      </div>
+      <div class="os-stack">
+        <div><span>approved</span><strong>один хороший output</strong></div>
+        <div><span>rejected</span><strong>один рискованный output как training example</strong></div>
+        <div><span>update</span><strong>одно предложение для prompt / gate / Style Graph</strong></div>
+        <div><span>owner</span><strong>кто проверит изменение до следующего занятия</strong></div>
+      </div>
+    </section>
+
+    <section class="slide final" id="s17">
+      <div class="kicker">// ИТОГ</div>
+      <h2>После Text OS участник может взять материал и собрать проверяемый пакет.</h2>
+      <div class="final-links">
+        <a href="./deck-01-start.html">Deck 01</a>
+        <a href="../index.html">открыть hub</a>
+        <a href="../../ai_start_portal_v0/02_pipelines/01_event_video_to_text/workflow.md">Pipeline 01</a>
+      </div>
+    </section>
+  </main>
+
+  <script src="./deck-01-start.js"></script>
+</body>
+</html>

@@ -9,12 +9,12 @@
 
 Учебный материал:
 
-- `09_practice_materials/nornikel {practice} synthetic source pack - 2026-05-05.md`, Material 03.
+- `09_practice_materials/ai-start {practice} synthetic source pack - 2026-05-05.md`, Material 03.
 
 Упражнение встроено в:
 
-- `09_practice_materials/nornikel {practice} all meetings exercises - 2026-05-05.md`, блок 19 мая.
-- `08_presentations/nornikel {deck-system} lecture exercises embedded map - 2026-05-05.md`, Deck 04.
+- `09_practice_materials/ai-start {practice} all meetings exercises - 2026-05-05.md`, блок 19 мая.
+- `08_presentations/ai-start {deck-system} lecture exercises embedded map - 2026-05-05.md`, Deck 04.
 
 ## Когда использовать
 

@@ -7,7 +7,7 @@ date: 2026-05-05
 status: decided
 owner: Ira + Codex
 refs:
-  - "../ai_start_portal_v0/08_presentations/nornikel {deck-system} lecture exercises embedded map - 2026-05-05.md"
+  - "../ai_start_portal_v0/08_presentations/ai-start {deck-system} lecture exercises embedded map - 2026-05-05.md"
   - "product_and_design_decisions.md"
   - "PROJECT_DECISION_TREE.md"
 ---

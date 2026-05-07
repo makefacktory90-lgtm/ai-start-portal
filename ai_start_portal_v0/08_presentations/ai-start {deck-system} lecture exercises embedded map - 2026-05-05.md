@@ -8,7 +8,7 @@ status: draft
 owner: Codex
 source:
   - "deck_map.md"
-  - "../09_practice_materials/nornikel {practice} all meetings exercises - 2026-05-05.md"
+  - "../09_practice_materials/ai-start {practice} all meetings exercises - 2026-05-05.md"
 ---
 
 # Lecture / deck system with embedded exercises
@@ -42,7 +42,7 @@ thesis
 
 Источник решения:
 
-- `../../ai_start_kit/nornikel {strategy} expert os company os learning frame - 2026-05-05.md`
+- `../../ai_start_kit/ai-start {strategy} expert os company os learning frame - 2026-05-05.md`
 
 ## Deck 01. 14 мая: старт и карта AI-системы
 

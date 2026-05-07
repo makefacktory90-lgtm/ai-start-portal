@@ -5,7 +5,7 @@ This folder is the markdown content layer for the AI Start hub.
 ## Start here
 
 - `AGENTS.md`
-- `01_rules/nornikel {rule} file naming convention - 2026-05-04.md`
+- `01_rules/ai-start {rule} file naming convention - 2026-05-04.md`
 - `02_pipelines/`
 - `04_prompt_library/master_prompt_index.md`
 - `07_content_mechanics/release_and_retention_model.md`
