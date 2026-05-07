@@ -14,6 +14,13 @@ sources:
   - "https://claude.com/pricing/enterprise"
   - "https://code.claude.com/docs/en/ide-integrations"
   - "https://code.claude.com/docs/en/setup"
+  - "https://support.google.com/notebooklm/answer/16164461"
+  - "https://gemini.google/us/about/"
+  - "https://workspace.google.com/products/vids/"
+  - "https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-ai-ui-design/"
+  - "https://www.opus.pro/"
+  - "https://docs.submagic.co/introduction"
+  - "https://www.gling.ai/"
   - "https://higgsfield.ai/"
   - "https://higgsfield.ai/cli"
   - "https://www.capcut.com/help/how-much-does-capcut-pro-cost"
@@ -29,6 +36,8 @@ sources:
 
 Важно: в этом курсе базовая работа не должна замыкаться только на чате. ChatGPT нужен как основной LLM-доступ, но рабочая сборка курса опирается на Codex / code-agent route: hub, markdown-файлы, workflows, prompts, gates, examples.
 
+Еще важнее: Submagic, OpusClip, Gling и похожие продукты показываем не как "главные нейронки", а как production acceleration layer. Это сервисы, которые ускоряют монтажный участок: captions, rough cut, silences, clips, reframing, export. Методология курса остается выше: что выбрать, по каким критериям, как проверить контекст и где сохранить пример.
+
 Setup-инструкция:
 
 - `nornikel {setup} ai tools purchase install checklist - 2026-05-07.md`
@@ -41,8 +50,11 @@ Setup-инструкция:
 | 2 | Codex access / Codex CLI | ведущая + owners + advanced | методолог, technical helper, owners | работа с hub, файлами, markdown, prompt library, обновлениями курса |
 | 3 | Higgsfield | 2-3 seats | visual/video команда, методолог, один продвинутый участник | визуальные и видео-гипотезы, cover/title/asset thinking, демонстрации 19 мая |
 | 4 | Claude Code / Claude Team / Enterprise | 1-3 seats optional | owners, методолог, сильные редакторы | второй code-agent route, длинные материалы, методология, альтернативная проверка структуры и тона |
-| 5 | CapCut Pro / текущий NLE | 2-4 seats, если нужно | видео / SMM | vertical clips, captions, быстрый production route |
-| 6 | Транскрипция | 1 согласованный маршрут | редакторы / видео | transcript + timestamps для текстового и видео-пайплайна |
+| 5 | NotebookLM / Gemini | доступ через Google account / Workspace | все участники или owners по доступности | source-grounded research, briefs, audio/video overviews, Google ecosystem |
+| 6 | CapCut Pro / текущий NLE | 2-4 seats, если нужно | видео / SMM | vertical clips, captions, быстрый production route |
+| 7 | Submagic / OpusClip / Gling | 1-2 pilot seats на сравнение | видео / SMM | ускорить нарезку, captions, клипы, rough cut |
+| 8 | Google Vids / Stitch | pilot / demo | owners, visual/video, digital | быстрые черновики видео и UI/visual prototypes |
+| 9 | Транскрипция | 1 согласованный маршрут | редакторы / видео | transcript + timestamps для текстового и видео-пайплайна |
 
 Если закупка не успевает:
 
@@ -50,14 +62,16 @@ Setup-инструкция:
 минимум для первой лекции:
 ChatGPT Business или согласованный корпоративный LLM для всех / пар
 + Codex для ведущей / owners / technical helper
++ NotebookLM / Gemini для работы с источниками и Google-контуром
 + один демонстрационный доступ Higgsfield
++ один pilot video acceleration tool: Submagic / OpusClip / Gling
 + понятный способ получить transcript
 ```
 
 ### Что не нужно покупать до первой лекции
 
 - отдельные генераторы картинок для всех;
-- 5-7 AI-video сервисов одновременно;
+- 5-7 AI-video / clipping сервисов одновременно;
 - ElevenLabs / voice cloning до юридического согласования;
 - автоматизации и n8n до появления повторяемых workflows;
 - тяжелую LMS;
@@ -67,7 +81,7 @@ ChatGPT Business или согласованный корпоративный LL
 
 Если вас завтра спрашивают "что покупать?", отвечаем так:
 
-> Для старта не нужно покупать 15 нейросетей. Нужен один сильный командный LLM, 2-3 визуально-видео seats для экспериментов и понятный монтажный/транскрипционный контур. Базовая рекомендация: ChatGPT Business для основной группы, Higgsfield пилотно для visual/video команды, CapCut или текущий NLE для монтажа, Claude - опционально для owners и длинных текстовых/методологических задач.
+> Для старта не нужно покупать 15 нейросетей. Нужен один сильный командный LLM, Codex/code-agent route для hub, Google-контур для источников и знаний, 2-3 visual/video seats и 1-2 pilot-сервиса для ускорения монтажа. Базовая рекомендация: ChatGPT Business + Codex, NotebookLM/Gemini, Higgsfield пилотно, один из Submagic/OpusClip/Gling на тест, CapCut или текущий NLE для монтажа, Claude Code - опционально для owners.
 
 ## 2. Базовый стек v1
 
@@ -76,6 +90,9 @@ ChatGPT Business или согласованный корпоративный LL
 | Инструмент | Кому | Зачем | Рекомендация |
 |---|---|---|---|
 | ChatGPT Business | участники курса, редакторы, SMM, owners | текст, анализ, файлы, проекты, custom GPTs, shared workspace | основной командный LLM |
+| Codex / code-agent route | методолог, owners, technical helper | hub, markdown, prompt library, workflows, gates | ставить вместе с ChatGPT route |
+| NotebookLM | участники, редакторы, owners | source-grounded notebooks, briefs, citations, audio/video overviews | обязательно дать как knowledge layer |
+| Gemini / Google Workspace | участники, owners | Google ecosystem, Deep Research, Docs/Drive/YouTube, multimodal work | обязательно показать, если Workspace разрешен |
 | Монтажный инструмент редакции | видео-команда | vertical edit, captions, export | оставить привычный Premiere / DaVinci / CapCut, не ломать production |
 | Транскрипция | видео, редакторы | transcript + timestamps | использовать текущий сервис или быстрый fallback |
 | GitHub Pages / markdown hub | owners, Codex/helper | база знаний, workflows, prompts, gates | v1 уже работает |
@@ -85,6 +102,9 @@ ChatGPT Business или согласованный корпоративный LL
 | Инструмент | Кому | Зачем | Рекомендация |
 |---|---|---|---|
 | Higgsfield | 2-3 visual/video участника | visual/video assets, AI image/video, Marketing Studio, MCP/agent workflow | купить пилот, не всем сразу |
+| Submagic / OpusClip / Gling | 1-2 video/SMM участника | captions, rough cut, silence removal, short clips, reframing | показать как acceleration tools, выбрать один после теста |
+| Google Vids | owners / internal comms / training | editable video drafts from prompt + Drive file, Workspace sharing | demo / pilot, если Workspace доступен |
+| Google Stitch | visual / digital / методолог | high-fidelity UI / portal / interface prototypes from natural language | demo / pilot для visual thinking, не базовая закупка всем |
 | Claude Team / Enterprise | 1-3 owners / методолог / сильные редакторы | длинные документы, методология, альтернативный reasoning | опционально, не базовая закупка для всех |
 | CapCut Pro | видео/SMM | captions, vertical packaging, быстрый монтаж | покупать только если редакции реально будут монтировать там |
 
@@ -183,6 +203,120 @@ Higgsfield сейчас позиционируется как AI video/image pla
 После 19 мая решить, расширять или нет.
 ```
 
+## 5.1. Google layer: NotebookLM, Gemini, Vids, Stitch
+
+Google-контур стоит показать обязательно, но не смешивать все продукты в одну кучу.
+
+### NotebookLM
+
+NotebookLM - knowledge / source-grounded layer. Google описывает его как инструмент, куда можно загружать PDFs, websites, YouTube videos, audio files, Google Docs и Slides, а ответы строятся на источниках с inline citations. Для Workspace / Education Google отдельно указывает, что uploads, queries и model responses не используются для обучения моделей.
+
+Для курса:
+
+- разобрать клиентские материалы после 10 мая;
+- собрать briefing doc по источникам;
+- сделать Audio Overview / Video Overview как черновой учебный формат;
+- дать участникам способ работать с источниками, а не с памятью чата;
+- показать citations / source-grounded answers как часть доверия.
+
+Рекомендация:
+
+```text
+NotebookLM обязательно включить в обучение как knowledge layer.
+Проверить доступ через Google Workspace / аккаунты до занятия.
+```
+
+### Gemini
+
+Gemini нужен как Google ecosystem layer: файлы, мультимодальность, Deep Research, связь с Gmail / Calendar / Maps / YouTube / Photos по доступности и политике Workspace. Это не замена ChatGPT/Codex, а второй большой контур, особенно если команда уже живет в Google Workspace.
+
+Для курса:
+
+- быстрый анализ материалов;
+- Deep Research;
+- работа с длинными файлами;
+- Google Docs / Drive контекст;
+- проверка альтернативных формулировок и мультимодальных задач.
+
+Рекомендация:
+
+```text
+Gemini показать обязательно.
+Закупку / доступ проверять через Google Workspace policies.
+```
+
+### Google Vids
+
+Google Vids - video creation / internal communications layer внутри Workspace. Google описывает Gemini in Vids как способ получить initial storyboard, suggested scenes, stock media и scripts из prompt + Drive file; также Vids поддерживает совместную работу и sharing controls как Docs / Sheets / Slides.
+
+Для курса:
+
+- не как монтаж телестудии;
+- а как быстрый черновик training / announcement / internal explainer;
+- полезно owners, внутренним коммуникациям, обучающим материалам.
+
+Рекомендация:
+
+```text
+Показать как Google Workspace video draft tool.
+Не подменять им профессиональный монтаж.
+```
+
+### Google Stitch
+
+Stitch - visual / UI prototype layer от Google Labs. Google описывает Stitch как AI-native software design canvas для high-fidelity UI из natural language; полезен для быстрых прототипов интерфейсов, порталов, визуальных оболочек.
+
+Для курса:
+
+- показать как способ быстро набросать интерфейс / портал / визуальную оболочку;
+- связать с visual-builder и hub thinking;
+- не обещать, что он заменяет дизайнера или production design.
+
+Рекомендация:
+
+```text
+Stitch дать как demo / optional tool для visual thinking и interface prototypes.
+```
+
+## 5.2. Video acceleration layer: Submagic, OpusClip, Gling
+
+Submagic, OpusClip, Gling - это не методология курса и не "главные нейронки". Это сервисы ускорения монтажа.
+
+Где они полезны:
+
+| Сервис | Для чего | Как показываем |
+|---|---|---|
+| Submagic | AI captions, Magic Clips, templates, short-form clips, API / MCP | captions + social packaging |
+| OpusClip | long video -> short clips, AI clipping, reframing, captions, repurposing | быстрый поиск clip candidates |
+| Gling | rough cut, bad takes, silence / filler words, text-based trimming, captions, export to Premiere / DaVinci / Final Cut | ускорение чернового монтажа |
+
+Как объяснять участникам:
+
+```text
+Это не сервисы, которые решают за редактора.
+Они помогают быстрее пройти технический участок:
+- найти кандидатов;
+- убрать паузы / дубли;
+- сделать captions;
+- получить rough cut;
+- экспортировать в монтажный инструмент.
+
+Редакторский gate остается прежним:
+- контекст;
+- точность;
+- права;
+- монтажная пригодность;
+- не потерян ли смысл.
+```
+
+Рекомендация:
+
+```text
+На 19 мая показать 2-3 video acceleration tools сравнительно.
+Не покупать всем.
+Выбрать 1 основной после теста на реальном материале клиента.
+```
+
 ## 6. CapCut / монтаж
 
 CapCut официально пишет, что цена Pro зависит от региона, устройства и промо; актуальную цену нужно смотреть внутри web/desktop/mobile account.
@@ -209,7 +343,9 @@ Descript/аналоги -> если доступны и легальны
 ```text
 30 seats ChatGPT Business ideally
 или 15 seats, если участники работают парами
+NotebookLM / Gemini access через Google Workspace или аккаунты
 2-3 seats Higgsfield
+1-2 seats video acceleration pilot: Submagic / OpusClip / Gling
 1-3 seats Claude Team/Enterprise optional
 2-4 seats CapCut Pro only if video/SMM needs it
 transcription route: existing service or approved fallback
@@ -240,9 +376,11 @@ owners decide expansion after 19/22 May
 На завтра:
 
 ```text
-Рекомендую купить ChatGPT Business как основной рабочий инструмент для участников.
-Higgsfield - пилотно для visual/video.
-Claude - точечно для owners.
-CapCut/монтаж - только для видео-команды, если это реально их workflow.
-Транскрипция - обязательный согласованный маршрут, иначе видео и текстовые пайплайны будут хромать.
+Рекомендую купить / проверить ChatGPT Business + Codex как основной рабочий контур.
+NotebookLM и Gemini - обязательно дать как Google knowledge / research layer.
+Higgsfield - пилотно для visual/video generation.
+Submagic / OpusClip / Gling - показать как video acceleration tools и выбрать один после теста.
+Claude Code - точечно для owners как второй code-agent route.
+CapCut / текущий монтаж - только видео-команде, если это реально их workflow.
+Транскрипция - обязательный согласованный маршрут.
 ```
