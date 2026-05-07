@@ -19,6 +19,9 @@ sources:
   - "https://www.opus.pro/"
   - "https://docs.submagic.co/introduction"
   - "https://www.gling.ai/"
+  - "https://granola.to/"
+  - "https://obsidian.md/"
+  - "https://github.com/openai/whisper"
   - "https://ref.evdokimov.ai/AWJxM9ZM?from=WhyNot"
   - "https://plati.market/games/claude/1543/"
   - "https://plati.market/games/chatgpt/1267/"
@@ -42,6 +45,7 @@ sources:
 | Higgsfield | visual/video группа | 2-3 seats | визуальные и видео-гипотезы, демонстрации 19 мая |
 | Submagic / OpusClip / Gling | видео / SMM | 1-2 pilot seats | ускорение captions, clips, rough cut |
 | Google Vids / Stitch | owners / visual / digital | demo / pilot | видео-черновики и interface / visual prototypes |
+| Granola / Obsidian / Whisper route | ведущая, методолог, owners | pilot / по политике безопасности | запись созвонов, транскрипты, заметки, база знаний |
 | Claude Code / Claude Team / Enterprise | owners / методолог / advanced | 1-3 seats optional | альтернативный code-agent и длинная структурная работа |
 | CapCut Pro или текущий NLE | видео / SMM | 2-4 seats, если нужно | vertical clips, captions, быстрый монтаж |
 
@@ -57,6 +61,9 @@ sources:
 | Higgsfield | web account + доступ к workspace / credits | visual/video группа | можно создать image/video test, понятен лимит credits |
 | Submagic / OpusClip / Gling | web/desktop account | видео / SMM pilot | можно загрузить тестовый ролик, получить captions / clips / rough cut |
 | Google Vids / Stitch | Workspace / Google Labs access | owners / visual / digital | Vids открывает Drive-file, Stitch генерирует простой UI draft |
+| Granola | desktop/mobile account | ведущая, методолог, owners | можно записать тестовый созвон и получить structured notes |
+| Obsidian | desktop app + vault | ведущая, методолог, owners / advanced | открыт vault, заметки лежат как markdown-файлы |
+| Whisper → Obsidian | approved transcription route | technical helper / owners | запись превращается в transcript, summary и hub note |
 | CapCut / NLE | desktop app + project preset | видео / SMM | можно импортировать видео, сделать captions/export |
 | GitHub | GitHub account + доступ к repo / Pages | owners / technical helper | есть доступ к hub repository и live link |
 | VS Code | VS Code + нужные extensions | owners / advanced / technical helper | открывается папка проекта, видны markdown-файлы |
@@ -216,6 +223,7 @@ CapCut / current NLE только видео-команде.
 Knowledge / Google:
 NotebookLM и Gemini обязательно проверить.
 Google Vids / Stitch как demo / pilot.
+Granola / Obsidian / Whisper route для фиксации встреч и обновления базы знаний.
 
 Infrastructure:
 GitHub access + live hub link + VS Code для тех, кто работает с файлами.
