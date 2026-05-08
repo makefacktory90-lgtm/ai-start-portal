@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Deck 09 · Practice Clinic</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./deck-01-start.css">
+  <link rel="stylesheet" href="./deck-practical.css">
+</head>
+<body>
+  <header class="deck-nav">
+    <a class="deck-logo" href="../index.html">AI START</a>
+    <nav><a href="#s01">clinic</a><a href="#s02">outcome</a><a href="#s04">method</a><a href="#s06">practice</a><a href="#s08">next</a></nav>
+    <span>Practice · friction cases</span>
+  </header>
+  <main>
+    <section class="slide hero" id="s01">
+      <div class="hero-copy">
+        <div class="pill">workshop 09 · practice clinic</div>
+        <h1>Здесь перестаём слушать.<br><span>Здесь делаем.</span></h1>
+        <p class="lead">Берём реальные материалы редакций, прогоняем через пайплайны, разбираем фейлы, сохраняем evidence и назначаем амбассадоров.</p>
+      </div>
+      <div class="plain-list">
+        <p><b>case</b> реальный материал</p>
+        <p><b>gate</b> ручная проверка</p>
+        <p><b>owner</b> кто продолжит</p>
+      </div>
+    </section>
+
+    <section class="slide manifesto" id="s02">
+      <div class="kicker">// С ЧЕМ УХОДИМ</div>
+      <h2>После clinic у редакции есть первые реальные кейсы применения.</h2>
+      <div class="outcome-lanes">
+        <article><b>base</b><h3>один кейс</h3><p>Материал прошёл через один pipeline и human gate.</p></article>
+        <article><b>opti</b><h3>сравнение</h3><p>Что быстрее руками, что быстрее через AI, где качество хуже.</p></article>
+        <article><b>advanced</b><h3>update proposal</h3><p>Правка workflow по реальному фейлу.</p></article>
+        <article><b>scout</b><h3>ambassadors</h3><p>Кто будет тестировать инструменты и приносить evidence.</p></article>
+      </div>
+    </section>
+
+    <section class="slide dark" id="s03">
+      <div class="kicker">// ПРАВИЛО</div>
+      <h2>Clinic не превращаем в марафон вопрос-ответ.</h2>
+      <p class="lead narrow">Каждый вопрос должен закончиться действием: поменять prompt, добавить gate, сохранить пример, назначить owner, убрать бесполезную механику.</p>
+    </section>
+
+    <section class="slide split" id="s04">
+      <div><div class="kicker">// CASE FORMAT</div><h2>Как разбираем кейс</h2></div>
+      <pre class="prompt-block"><code>Разбери рабочий AI-кейс редакции.
+
+1. Какая задача была у человека.
+2. Какой source использовали.
+3. Какой AI-output получили.
+4. Что пришлось править руками.
+5. Где AI помог, а где создал риск.
+6. Что изменить: prompt, context, workflow, gate или tool stack.
+7. Что сохранить в hub как example.</code></pre>
+    </section>
+
+    <section class="slide" id="s05">
+      <div class="kicker">// РЕЖИМЫ</div>
+      <h2>Три режима работы на clinic</h2>
+      <div class="tool-radar">
+        <article><b>repair</b><h3>починить output</h3><p>Разобрать, почему получилось плохо, и сделать лучше.</p></article>
+        <article><b>speed</b><h3>ускорить кусок</h3><p>Найти рутину, которую можно забрать у человека.</p></article>
+        <article><b>risk</b><h3>не выпускать</h3><p>Поймать факт, тон, контекст или права.</p></article>
+        <article><b>system</b><h3>обновить hub</h3><p>Превратить фейл в правило для всех.</p></article>
+      </div>
+    </section>
+
+    <section class="slide dark" id="s06">
+      <div class="kicker">// PRACTICE · 60 МИН</div>
+      <h2>Практика: реальные материалы</h2>
+      <div class="timeline-plan">
+        <article><b>15 мин</b><p>Выбрать кейсы и распределить по пайплайнам.</p></article>
+        <article><b>30 мин</b><p>Прогнать, проверить, поправить, сравнить с ручным способом.</p></article>
+        <article><b>15 мин</b><p>Сохранить example, update proposal и owner.</p></article>
+      </div>
+    </section>
+
+    <section class="slide split" id="s07">
+      <div><div class="kicker">// AMBASSADORS</div><h2>Кто продолжит после курса</h2></div>
+      <div class="risk-list">
+        <p><b>text</b><span>человек, который ведёт Text OS examples</span></p>
+        <p><b>video</b><span>человек, который тестирует монтажные ускорители</span></p>
+        <p><b>visual</b><span>человек, который ведёт style prompt projects</span></p>
+        <p><b>hub</b><span>человек, который держит changelog и weekly review</span></p>
+      </div>
+    </section>
+
+    <section class="slide" id="s08">
+      <div class="kicker">// NEXT</div>
+      <h2>Финал собираем вокруг того, что реально сработало.</h2>
+      <div class="final-links">
+        <a href="./deck-08-agents.html">Deck 08</a>
+        <a href="./deck-10-final-kit.html">Deck 10</a>
+        <a href="../index.html">hub</a>
+      </div>
+    </section>
+  </main>
+  <script src="./deck-01-start.js"></script>
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Deck 03 · Video Acceleration</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./deck-01-start.css">
+  <link rel="stylesheet" href="./deck-practical.css">
+</head>
+<body>
+  <header class="deck-nav">
+    <a class="deck-logo" href="../index.html">AI START</a>
+    <nav>
+      <a href="#s01">video</a>
+      <a href="#s02">outcome</a>
+      <a href="#s04">tools</a>
+      <a href="#s06">practice</a>
+      <a href="#s09">hub</a>
+    </nav>
+    <span>Video · acceleration</span>
+  </header>
+  <main>
+    <section class="slide hero" id="s01">
+      <div class="hero-copy">
+        <div class="pill">workshop 03 · video</div>
+        <h1>AI не заменяет монтажера.<br><span>Он забирает первый проход.</span></h1>
+        <p class="lead">Показываем редакциям не мечту про автосюжет, а реальные ускорители: расшифровка, поиск фрагментов, автонарезка, паузы, multicam, субтитры, вертикальные версии и rough cut.</p>
+      </div>
+      <div class="plain-list">
+        <p><b>01</b> long video → карта</p>
+        <p><b>02</b> карта → кандидаты</p>
+        <p><b>03</b> candidates → production pack</p>
+      </div>
+    </section>
+
+    <section class="slide manifesto" id="s02">
+      <div class="kicker">// С ЧЕМ УХОДИМ</div>
+      <h2>После лекции участник должен иначе смотреть на свой монтажный таймлайн.</h2>
+      <div class="outcome-lanes">
+        <article><b>base</b><h3>найти фрагменты</h3><p>Получить 5-7 clip candidates из длинного видео или расшифровки.</p></article>
+        <article><b>opti</b><h3>ускорить рутину</h3><p>Понять, где AI быстрее: паузы, субтитры, rough cut, multicam.</p></article>
+        <article><b>advanced</b><h3>собрать связку</h3><p>Связать transcript, монтажный ассистент, Premiere / Resolve и quality gate.</p></article>
+        <article><b>scout</b><h3>увидеть рынок</h3><p>Понять, какие инструменты уже надо тестировать в редакции.</p></article>
+      </div>
+    </section>
+
+    <section class="slide dark" id="s03">
+      <div class="kicker">// ПОЗИЦИЯ</div>
+      <h2>Профи может руками быстрее сегодня. Но задача курса — подготовить редакцию к скорости завтра.</h2>
+      <p class="lead narrow">Мы не говорим "доверьте AI монтаж". Мы говорим: снимите с себя черновую механику там, где она уже автоматизируется, и оставьте человеку вкус, контекст и финальное решение.</p>
+    </section>
+
+    <section class="slide" id="s04">
+      <div class="kicker">// TOOL RADAR</div>
+      <h2>Что показываем как рынок инструментов</h2>
+      <div class="tool-radar">
+        <article><b>multicam</b><h3>AutoPod / WizCut / Cola / Premiere Assistant</h3><p>Автопереключение камер по говорящим и аудиодорожкам.</p></article>
+        <article><b>silence</b><h3>Gling / Descript / FireCut</h3><p>Удаление пауз, filler words, bad takes, экспорт XML обратно в монтажку.</p></article>
+        <article><b>shorts</b><h3>Opus Clip / Trendy</h3><p>Поиск фрагментов, вертикализация, субтитры, scoring, публикационный пакет.</p></article>
+        <article><b>agent edit</b><h3>Claude + Premiere MCP / ButterCut</h3><p>Первые сценарии, где ассистент управляет таймлайном или экспортирует проект.</p></article>
+      </div>
+    </section>
+
+    <section class="slide split" id="s05">
+      <div>
+        <div class="kicker">// PROMPT</div>
+        <h2>Промпт не "найди хайлайты". Промпт задает редакционную цель.</h2>
+      </div>
+      <pre class="prompt-block"><code>Ты ассистент видеоредактора.
+
+Материал: [транскрипт / таймкоды / описание видео].
+Цель публикации: [информировать / объяснить / вызвать обсуждение / анонсировать].
+Аудитория: [кто смотрит].
+Запреты: не вырывать из контекста, не усиливать конфликт, не обещать больше, чем есть в видео.
+
+Сделай:
+1. Карту видео по смысловым блокам с таймкодами.
+2. 7 кандидатов на вертикальный клип.
+3. Для каждого: hook, начало, конец, риск потери контекста.
+4. Отдельно: что монтажер должен проверить руками.
+5. Топ-3 для производства и почему.</code></pre>
+    </section>
+
+    <section class="slide dark" id="s06">
+      <div class="kicker">// PRACTICE · 25 МИН</div>
+      <h2>Практика: один длинный материал → три кандидата на клип</h2>
+      <div class="timeline-plan">
+        <article><b>08 мин</b><p>Вставить транскрипт или описание, получить карту видео.</p></article>
+        <article><b>10 мин</b><p>Выбрать 7 кандидатов, выкинуть слабые и рискованные.</p></article>
+        <article><b>07 мин</b><p>Собрать top-3: hook, subtitle chunks, cover text, risk note.</p></article>
+      </div>
+    </section>
+
+    <section class="slide split" id="s07">
+      <div>
+        <div class="kicker">// HUMAN GATE</div>
+        <h2>Что не отдаём AI</h2>
+      </div>
+      <div class="risk-list">
+        <p><b>смысл</b><span>не вырезаем фразу так, чтобы поменять позицию героя</span></p>
+        <p><b>тон</b><span>не делаем трагедию, если в источнике спокойное объяснение</span></p>
+        <p><b>ритм</b><span>AI может резать, но финальный темп держит монтажер</span></p>
+        <p><b>бренд</b><span>субтитры, обложки и графика проходят визуальный gate</span></p>
+      </div>
+    </section>
+
+    <section class="slide dark" id="s08">
+      <div class="kicker">// DEMO SCRIPT</div>
+      <h2>Что показывать вживую</h2>
+      <div class="process-line">
+        <div><b>01</b><span>транскрипт длинного видео</span></div>
+        <div><b>02</b><span>карта смыслов</span></div>
+        <div><b>03</b><span>clip candidates</span></div>
+        <div><b>04</b><span>Gling / Opus / Descript как первый проход</span></div>
+        <div><b>05</b><span>ручной gate монтажера</span></div>
+      </div>
+    </section>
+
+    <section class="slide" id="s09">
+      <div class="kicker">// HUB</div>
+      <h2>В hub сохраняем не красивый клип, а производственное решение.</h2>
+      <div class="homework">
+        <p><b>1.</b> Ссылка на source / transcript.</p>
+        <p><b>2.</b> 7 кандидатов и top-3.</p>
+        <p><b>3.</b> Что AI предложил плохо.</p>
+        <p><b>4.</b> Что монтажер поправил руками.</p>
+        <p><b>5.</b> Какой инструмент стоит тестировать дальше.</p>
+      </div>
+      <div class="final-links">
+        <a href="./deck-02-text.html">Deck 02</a>
+        <a href="./deck-04-visual.html">Deck 04</a>
+        <a href="../index.html">hub</a>
+      </div>
+    </section>
+  </main>
+  <script src="./deck-01-start.js"></script>
+</body>
+</html>

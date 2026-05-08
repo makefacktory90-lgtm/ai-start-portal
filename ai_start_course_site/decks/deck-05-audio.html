@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Deck 05 · Audio OS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./deck-01-start.css">
+  <link rel="stylesheet" href="./deck-practical.css">
+</head>
+<body>
+  <header class="deck-nav">
+    <a class="deck-logo" href="../index.html">AI START</a>
+    <nav><a href="#s01">audio</a><a href="#s02">outcome</a><a href="#s04">prompt</a><a href="#s06">practice</a><a href="#s08">hub</a></nav>
+    <span>Audio · spoken formats</span>
+  </header>
+  <main>
+    <section class="slide hero" id="s01">
+      <div class="hero-copy">
+        <div class="pill">workshop 05 · audio</div>
+        <h1>Письменный текст<br><span>не звучит сам.</span></h1>
+        <p class="lead">Учимся переводить материал в spoken script: короткий аудиофрагмент, подводку, podcast segment, voiceover или сценарий для ведущего без выдуманных фактов и синтетического пафоса.</p>
+      </div>
+      <div class="plain-list">
+        <p><b>source</b> смысл и факты</p>
+        <p><b>voice</b> разговорный ритм</p>
+        <p><b>gate</b> произнести вслух</p>
+      </div>
+    </section>
+
+    <section class="slide manifesto" id="s02">
+      <div class="kicker">// С ЧЕМ УХОДИМ</div>
+      <h2>После лекции участник умеет сделать звучащую версию материала.</h2>
+      <div class="outcome-lanes">
+        <article><b>base</b><h3>spoken script</h3><p>60-90 секунд по исходнику, без добавления фактов.</p></article>
+        <article><b>opti</b><h3>варианты голоса</h3><p>Нейтрально, ведущий, Telegram audio, podcast fragment.</p></article>
+        <article><b>advanced</b><h3>audio gate</h3><p>Проверка ритма, фактов, произношения, риска.</p></article>
+        <article><b>scout</b><h3>tools</h3><p>Descript, ElevenLabs, Adobe Enhance, Whisper, монтажные ассистенты.</p></article>
+      </div>
+    </section>
+
+    <section class="slide dark" id="s03">
+      <div class="kicker">// ПОЗИЦИЯ</div>
+      <h2>Разговорность — это не "добавь эмоций". Это другой синтаксис.</h2>
+      <p class="lead narrow">В устной версии короче фразы, яснее переходы, меньше канцелярита, больше дыхания. Но фактический слой остается тем же.</p>
+    </section>
+
+    <section class="slide split" id="s04">
+      <div><div class="kicker">// PROMPT</div><h2>Промпт для spoken script</h2></div>
+      <pre class="prompt-block"><code>Сделай spoken script по материалу.
+
+Вход:
+- Source Map.
+- Канал: [эфир / подкаст / Telegram audio / voiceover].
+- Длина: [60-90 секунд].
+- Голос: спокойно, ясно, без рекламного пафоса.
+
+Правила:
+1. Не добавляй факты, которых нет в Source Map.
+2. Сохрани смысл и масштаб события.
+3. Пиши так, чтобы это можно было произнести вслух.
+4. Отдельно отметь трудные имена, цифры и места для проверки.
+5. Дай 2 варианта первого предложения.</code></pre>
+    </section>
+
+    <section class="slide" id="s05">
+      <div class="kicker">// TOOL RADAR</div>
+      <h2>Что показываем</h2>
+      <div class="tool-radar">
+        <article><b>transcribe</b><h3>Whisper / Descript</h3><p>Расшифровка, текстовое редактирование, notes.</p></article>
+        <article><b>cleanup</b><h3>Adobe Enhance / Descript</h3><p>Черновая чистка звука и studio sound.</p></article>
+        <article><b>voice</b><h3>ElevenLabs</h3><p>Тесты озвучки, но с отдельным этическим gate.</p></article>
+        <article><b>edit</b><h3>Gling / Premiere</h3><p>Удаление пауз, нарезка, экспорт в монтажку.</p></article>
+      </div>
+    </section>
+
+    <section class="slide dark" id="s06">
+      <div class="kicker">// PRACTICE · 25 МИН</div>
+      <h2>Практика: один материал → spoken script</h2>
+      <div class="timeline-plan">
+        <article><b>08 мин</b><p>Source Map: смысл, факты, имена, цифры.</p></article>
+        <article><b>10 мин</b><p>Скрипт на 60-90 секунд и 2 варианта входа.</p></article>
+        <article><b>07 мин</b><p>Прочитать вслух и отметить места, где язык ломается.</p></article>
+      </div>
+    </section>
+
+    <section class="slide split" id="s07">
+      <div><div class="kicker">// AUDIO GATE</div><h2>Перед выпуском</h2></div>
+      <div class="risk-list">
+        <p><b>факт</b><span>всё есть в Source Map</span></p>
+        <p><b>ритм</b><span>текст можно произнести без спотыканий</span></p>
+        <p><b>тон</b><span>нет искусственной драматизации</span></p>
+        <p><b>этика</b><span>voice cloning только по разрешению и правилам</span></p>
+      </div>
+    </section>
+
+    <section class="slide" id="s08">
+      <div class="kicker">// HUB</div>
+      <h2>Сохраняем spoken example и audio gate.</h2>
+      <div class="final-links">
+        <a href="./deck-04-visual.html">Deck 04</a>
+        <a href="./deck-06-editorial-contour.html">Deck 06</a>
+        <a href="../index.html">hub</a>
+      </div>
+    </section>
+  </main>
+  <script src="./deck-01-start.js"></script>
+</body>
+</html>

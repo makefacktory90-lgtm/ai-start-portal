@@ -14,7 +14,7 @@ const modules = {
       "Собираем спокойную схему: материал, AI draft, human gate, сохраненный пример.",
       "Разделяем личные настройки роли, общие правила редакции и решения компании.",
       "Показываем helicopter view пяти пайплайнов: input, AI step, human gate, output, hub artifact.",
-      "Делаем zoom-in в Text OS: EXO, ToV, Style Graph, Repurpose Boss, QA и update proposal.",
+      "Делаем zoom-in в Text OS: Source Map, ToV, Style Graph, Repurpose Boss, QA и update proposal.",
       "Показываем механику: prework, live demo, практика, запись, transcript, summary, feedback log."
     ],
     artifacts: [
@@ -31,28 +31,28 @@ const modules = {
       "Удачный чат легко потерять. Hub сохраняет примеры, правила и проверки.",
       "AI Start не заменяет редакционное решение. Он делает первый проход управляемым."
     ],
-    a1: ["A1 · понять маршрут", "Открыть hub, найти 5 пайплайнов и понять, где будут записи и задания."],
-    a2: ["A2 · собрать роль", "Отметить, какой пайплайн нужен вашей роли и какие проверки должны остаться личными."],
-    a3: ["A3 · общий стандарт", "Сформулировать, что из личной практики должно попасть в общий AI-hub редакции."]
+    a1: ["Base · понять маршрут", "Открыть hub, найти 5 пайплайнов и понять, где будут записи и задания."],
+    a2: ["Opti · собрать роль", "Отметить, какой пайплайн нужен вашей роли и какие проверки должны остаться личными."],
+    a3: ["Advanced · общий стандарт", "Сформулировать, что из личной практики должно попасть в общий AI-hub редакции."]
   },
   text: {
     crumb: "Pipeline 01",
     code: "PIPELINE · 01",
     title: "Text OS: материал → текстовые форматы",
-    subtitle: "Один исходный материал проходит EXO-разбор, контекст, Tone of Voice, Style Graph, Repurpose Boss и QA. На выходе не один текст, а управляемый publication package.",
+    subtitle: "Один исходный материал проходит Source Map-разбор, контекст, Tone of Voice, Style Graph, Repurpose Boss и QA. На выходе не один текст, а управляемый publication package.",
     posterKicker: "15 МАЯ",
-    posterTitle: "source → EXO → ToV → Style Graph → formats",
+    posterTitle: "source → Source Map → ToV → Style Graph → formats",
     posterSubtitle: "workflow и starter prompt уже в hub",
     sideTitle: "Pipeline 01",
     sideSummary: "Базовый маршрут для текста: из события, заметки, видео или расшифровки в Text OS и публикационный пакет.",
     lessons: [
-      "Делаем EXO-разбор: факты, цитаты, смысл, пробелы, риски.",
+      "Делаем Source Map-разбор: факты, цитаты, смысл, пробелы, риски.",
       "Собираем Tone of Voice и Style Graph draft, если готовых правил еще нет.",
       "Пересобираем материал через Repurpose Boss: сайт, Telegram, social, подписи, карточки.",
       "Прогоняем output через factual, tone и editor risk gate."
     ],
     artifacts: [
-      "EXO-разбор материала",
+      "Source Map-разбор материала",
       "ToV / Style Graph draft",
       "Repurpose Boss map",
       "блок 'нужно проверить'",
@@ -66,9 +66,9 @@ const modules = {
       "Плохой output полезен, если мы сохранили evidence.",
       "Редактору нужен проверяемый черновик, а не гладкая фантазия."
     ],
-    a1: ["A1 · первый пакет", "Сделать EXO, check, site draft, Telegram, social и headline set."],
-    a2: ["A2 · стиль и repurpose", "Собрать ToV / Style Graph draft и показать, как меняются форматы без потери фактов."],
-    a3: ["A3 · update workflow", "Найти повторяющуюся редакторскую правку и предложить изменение Pipeline 01 или новый skill."]
+    a1: ["Base · первый пакет", "Сделать Source Map, check, site draft, Telegram, social и headline set."],
+    a2: ["Opti · стиль и repurpose", "Собрать ToV / Style Graph draft и показать, как меняются форматы без потери фактов."],
+    a3: ["Advanced · update workflow", "Найти повторяющуюся редакторскую правку и предложить изменение Pipeline 01 или новый skill."]
   },
   formats: {
     crumb: "Pipeline 02",
@@ -99,9 +99,9 @@ const modules = {
       "Короткий клип должен быть понятен без потери важного контекста.",
       "Видео-специалист нужен не для красоты, а для реального производственного маршрута."
     ],
-    a1: ["A1 · выбрать клипы", "Получить 5-7 кандидатов и топ-3 с рисками."],
-    a2: ["A2 · публикационный пакет", "Для топ-3 собрать hook, subtitles, cover text, description и Telegram-анонс."],
-    a3: ["A3 · video gate", "Обновить правила отбора клипов по плохим / рискованным примерам."]
+    a1: ["Base · выбрать клипы", "Получить 5-7 кандидатов и топ-3 с рисками."],
+    a2: ["Opti · публикационный пакет", "Для топ-3 собрать hook, subtitles, cover text, description и Telegram-анонс."],
+    a3: ["Advanced · video gate", "Обновить правила отбора клипов по плохим / рискованным примерам."]
   },
   visual: {
     crumb: "Pipeline 03",
@@ -132,9 +132,9 @@ const modules = {
       "Визуал не должен создавать ложный смысл или неподтвержденный факт.",
       "Читаемость на мобильном важнее сложности визуального приема."
     ],
-    a1: ["A1 · структура карточек", "Сделать смысл, факты, 3 формата и структуру карточек."],
-    a2: ["A2 · visual brief", "Собрать brief для дизайнера / Figma / Canva с ограничениями."],
-    a3: ["A3 · visual gate", "Добавить правила против нечитаемости, ложных фактов и перегруза."]
+    a1: ["Base · структура карточек", "Сделать смысл, факты, 3 формата и структуру карточек."],
+    a2: ["Opti · visual brief", "Собрать brief для дизайнера / Figma / Canva с ограничениями."],
+    a3: ["Advanced · visual gate", "Добавить правила против нечитаемости, ложных фактов и перегруза."]
   },
   radar: {
     crumb: "Pipeline 04",
@@ -165,9 +165,9 @@ const modules = {
       "Если текст сложно произнести вслух, его нужно адаптировать под устную речь.",
       "Аудио требует отдельной проверки ритма, произношения и точности фактов."
     ],
-    a1: ["A1 · spoken script", "Сделать смысл, факты, intro и script на 60-90 секунд."],
-    a2: ["A2 · голос ведущего", "Сравнить нейтральную и разговорную версии без лишних оценок."],
-    a3: ["A3 · audio workflow", "Обновить правила, если script звучит искусственно или рискованно."]
+    a1: ["Base · spoken script", "Сделать смысл, факты, intro и script на 60-90 секунд."],
+    a2: ["Opti · голос ведущего", "Сравнить нейтральную и разговорную версии без лишних оценок."],
+    a3: ["Advanced · audio workflow", "Обновить правила, если script звучит искусственно или рискованно."]
   },
   system: {
     crumb: "Pipeline 05",
@@ -198,9 +198,9 @@ const modules = {
       "Один неудачный output - пример для разбора. Повторяющаяся ошибка - кандидат на обновление workflow.",
       "Изменения в общих prompts фиксируются через evidence, owner review и changelog."
     ],
-    a1: ["A1 · digest", "Из строк мониторинга получить темы, важность, идеи и source risks."],
-    a2: ["A2 · content grid", "Собрать неделю по каналам и привязать каждый пункт к пайплайну."],
-    a3: ["A3 · hub update", "По evidence предложить update для context, workflow, prompt или gate."]
+    a1: ["Base · digest", "Из строк мониторинга получить темы, важность, идеи и source risks."],
+    a2: ["Opti · content grid", "Собрать неделю по каналам и привязать каждый пункт к пайплайну."],
+    a3: ["Advanced · hub update", "По evidence предложить update для context, workflow, prompt или gate."]
   },
   clinic: {
     crumb: "Retention",
@@ -231,9 +231,9 @@ const modules = {
       "AI-hub owner поддерживает общие правила, примеры и обновления workflows.",
       "Автоматизировать можно позже. Сначала надо понять, что реально работает."
     ],
-    a1: ["A1 · weekly use", "Один материал в неделю через пайплайн и один сохраненный output."],
-    a2: ["A2 · examples", "Собрать approved / rejected examples и коротко объяснить различие."],
-    a3: ["A3 · review board", "Провести keep / revise / kill / automate later для workflows."]
+    a1: ["Base · weekly use", "Один материал в неделю через пайплайн и один сохраненный output."],
+    a2: ["Opti · examples", "Собрать approved / rejected examples и коротко объяснить различие."],
+    a3: ["Advanced · review board", "Провести keep / revise / kill / automate later для workflows."]
   }
 };
 

@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Deck 07 · Hub Build</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./deck-01-start.css">
+  <link rel="stylesheet" href="./deck-practical.css">
+</head>
+<body>
+  <header class="deck-nav">
+    <a class="deck-logo" href="../index.html">AI START</a>
+    <nav><a href="#s01">hub</a><a href="#s02">outcome</a><a href="#s04">build</a><a href="#s06">practice</a><a href="#s08">next</a></nav>
+    <span>Hub · implementation</span>
+  </header>
+  <main>
+    <section class="slide hero" id="s01">
+      <div class="hero-copy">
+        <div class="pill">workshop 07 · hub build</div>
+        <h1>AI-hub — это не папка.<br><span>Это память редакции.</span></h1>
+        <p class="lead">Собираем структуру, владельцев, примеры, рубрики, tone / style graph, quality gates и правила обновления. Без этого каждый снова начинает с пустого чата.</p>
+      </div>
+      <div class="plain-list">
+        <p><b>folders</b> структура</p>
+        <p><b>examples</b> evidence</p>
+        <p><b>owners</b> ответственность</p>
+      </div>
+    </section>
+
+    <section class="slide manifesto" id="s02">
+      <div class="kicker">// С ЧЕМ УХОДИМ</div>
+      <h2>После лекции у команды есть не теория, а каркас рабочего hub.</h2>
+      <div class="outcome-lanes">
+        <article><b>base</b><h3>структура</h3><p>Где лежат workflows, prompts, examples, gates, changelog.</p></article>
+        <article><b>opti</b><h3>роли</h3><p>Кто добавляет примеры, кто утверждает обновления.</p></article>
+        <article><b>advanced</b><h3>style graph</h3><p>Как накапливать голос редакции через evidence.</p></article>
+        <article><b>scout</b><h3>automation</h3><p>Что потом можно подключать через agents / MCP.</p></article>
+      </div>
+    </section>
+
+    <section class="slide dark" id="s03">
+      <div class="kicker">// АНТИ-ХАОС</div>
+      <h2>Если пример не сохранён, редакция ничему не научилась.</h2>
+      <p class="lead narrow">Хорошие outputs, плохие outputs, ручные правки, повторяющиеся ошибки и решения владельцев должны попадать в hub. Иначе курс закончится красивыми воспоминаниями, а не изменением работы.</p>
+    </section>
+
+    <section class="slide split" id="s04">
+      <div><div class="kicker">// HUB STRUCTURE</div><h2>Минимальная структура</h2></div>
+      <div class="risk-list">
+        <p><b>00_start</b><span>как пользоваться, роли, уровни выхода</span></p>
+        <p><b>pipelines</b><span>текст, видео, визуал, аудио, контур</span></p>
+        <p><b>gates</b><span>факты, видео, визуал, аудио, безопасность</span></p>
+        <p><b>examples</b><span>approved / rejected / needs review</span></p>
+      </div>
+    </section>
+
+    <section class="slide split" id="s05">
+      <div><div class="kicker">// PROMPT</div><h2>Промпт для разбора примера</h2></div>
+      <pre class="prompt-block"><code>Разбери пример для AI-hub.
+
+Вход:
+- source;
+- AI output;
+- финальная правка человека;
+- канал публикации.
+
+Сделай:
+1. Что AI сделал полезно.
+2. Где ошибся: факт, тон, структура, формат, риск.
+3. Какая ручная правка была ключевой.
+4. Какое правило нужно добавить в prompt / Style Graph / gate.
+5. Статус: approved, rejected, needs review.</code></pre>
+    </section>
+
+    <section class="slide dark" id="s06">
+      <div class="kicker">// PRACTICE · 35 МИН</div>
+      <h2>Практика: из материалов редакции собрать первый hub update</h2>
+      <div class="timeline-plan">
+        <article><b>10 мин</b><p>Выбрать 2 примера: удачный и проблемный.</p></article>
+        <article><b>15 мин</b><p>Разобрать по prompt: что сохраняем, что запрещаем.</p></article>
+        <article><b>10 мин</b><p>Сформулировать update proposal и owner.</p></article>
+      </div>
+    </section>
+
+    <section class="slide split" id="s07">
+      <div><div class="kicker">// OWNERS</div><h2>Кто нужен</h2></div>
+      <div class="tool-radar">
+        <article><b>editor owner</b><h3>смысл и качество</h3><p>Решает, что становится правилом.</p></article>
+        <article><b>ops owner</b><h3>структура</h3><p>Следит, чтобы примеры и changelog не умирали.</p></article>
+        <article><b>champion</b><h3>тесты</h3><p>Пробует инструменты и приносит evidence.</p></article>
+        <article><b>legal / security</b><h3>ограничения</h3><p>Данные, права, публикационные риски.</p></article>
+      </div>
+    </section>
+
+    <section class="slide" id="s08">
+      <div class="kicker">// NEXT</div>
+      <h2>На следующий шаг уходим с владельцами и первым changelog.</h2>
+      <div class="final-links">
+        <a href="./deck-06-editorial-contour.html">Deck 06</a>
+        <a href="./deck-08-agents.html">Deck 08</a>
+        <a href="../index.html">hub</a>
+      </div>
+    </section>
+  </main>
+  <script src="./deck-01-start.js"></script>
+</body>
+</html>

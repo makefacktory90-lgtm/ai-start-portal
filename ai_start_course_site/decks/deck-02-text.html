@@ -15,7 +15,7 @@
     <a class="deck-logo" href="../index.html">AI START</a>
     <nav>
       <a href="#s01">text</a>
-      <a href="#s04">exo</a>
+      <a href="#s04">source</a>
       <a href="#s06">style</a>
       <a href="#s10">plastic</a>
       <a href="#s14">package</a>
@@ -29,22 +29,22 @@
       <div class="hero-copy">
         <div class="pill">workshop 02 · Text OS</div>
         <h1>Текст не должен<br><span>звучать пластиково.</span></h1>
-        <p class="lead">Сегодня собираем маршрут: source → EXO → Style Graph → formats → QA. AI помогает разобрать материал и собрать варианты, но редакционный голос, факт и живость держит человек.</p>
+        <p class="lead">Сегодня собираем маршрут: source map → Style Graph → formats → QA. AI помогает разобрать материал и собрать варианты, но редакционный голос, факт и живость держит человек.</p>
       </div>
       <aside class="comic-board" aria-label="Style Graph artwork">
         <img class="hero-art" src="../assets/deck-02-hero-style-graph.png" alt="Style Graph text laboratory">
         <div class="speech">не гладко, а точно</div>
-        <div class="sticker">source → style graph → QA</div>
+        <div class="sticker">source map → style graph → QA</div>
       </aside>
     </section>
 
     <section class="slide manifesto" id="s02">
-      <div class="kicker">// ГЛАВНЫЙ СДВИГ</div>
-      <h2>Не просим AI «написать красиво». Сначала учим его видеть материал.</h2>
+      <div class="kicker">// С ЧЕМ УХОДИМ</div>
+      <h2>После лекции человек должен уметь собрать один редакционный текстовый пакет.</h2>
       <div class="triad">
-        <article><b>01</b><h3>source</h3><p>Что точно есть в материале: факты, цитаты, люди, место, контекст.</p></article>
-        <article><b>02</b><h3>style</h3><p>Как звучит редакция: ритм, словарь, доказательства, запреты.</p></article>
-        <article><b>03</b><h3>gate</h3><p>Что человек проверяет перед выпуском: факт, тон, риск, канал.</p></article>
+        <article><b>BASE</b><h3>безопасный draft</h3><p>Source Map, один текст, блок "проверить человеком".</p></article>
+        <article><b>OPTI</b><h3>пакет форматов</h3><p>Сайт, Telegram, social, заголовки без потери фактов.</p></article>
+        <article><b>ADV</b><h3>правило в hub</h3><p>Один вывод: что поменять в prompt, Style Graph или gate.</p></article>
       </div>
     </section>
 
@@ -62,8 +62,8 @@
 
     <section class="slide split" id="s04">
       <div>
-        <div class="kicker">// EXO</div>
-        <h2>EXO — это разбор источника до первого текста</h2>
+        <div class="kicker">// SOURCE MAP</div>
+        <h2>Source Map — это разбор источника до первого текста</h2>
       </div>
       <div class="exo-grid">
         <div><span>facts</span><strong>что точно есть в источнике</strong></div>
@@ -75,18 +75,23 @@
     </section>
 
     <section class="slide dark" id="s05">
-      <div class="kicker">// PROMPT 01 · EXO</div>
-      <h2>Первый промпт: не писать, а извлечь</h2>
+      <div class="kicker">// PROMPT 01 · SOURCE MAP</div>
+      <h2>Первый промпт: собрать карту материала, а не текст</h2>
       <pre class="prompt-block"><code>Разбери материал как редакционный источник.
 
 Не пиши финальный текст.
 
-1. Выпиши проверяемые факты.
-2. Выпиши людей, организации, места, даты, числа.
-3. Выпиши цитаты отдельно от пересказа.
-4. Отметь, чего не хватает для публикации.
-5. Отметь места, где нельзя усиливать смысл.
-6. Составь список вопросов редактору.
+Сначала задай до 5 уточняющих вопросов, если без них нельзя выбрать формат.
+Если вопросов нет, сразу собери Source Map.
+
+Таблица Source Map:
+1. Факт / утверждение из источника.
+2. Где это видно в источнике: цитата, таймкод, абзац, документ.
+3. Кто действует: человек, организация, роль.
+4. Что можно сказать уверенно.
+5. Что нельзя усиливать, обобщать или додумывать.
+6. Какой формат подходит: сайт, Telegram, соцсети, карточки, видео.
+7. Вопрос редактору перед публикацией.
 
 Если чего-то нет в источнике, пиши: "нет в источнике".</code></pre>
     </section>
@@ -135,12 +140,13 @@
     </section>
 
     <section class="slide dark" id="s09">
-      <div class="kicker">// PRACTICE 01 · 10 МИН</div>
+      <div class="kicker">// PRACTICE 01 · 12 МИН</div>
       <h2>Упражнение: разобрать source до первого текста</h2>
       <div class="exercise">
-        <p><b>03 мин.</b> Вставьте общий материал в EXO prompt.</p>
-        <p><b>04 мин.</b> Проверьте: факты, пробелы, вопросы редактору.</p>
-        <p><b>03 мин.</b> Отметьте один факт, который нельзя усиливать или додумывать.</p>
+        <p><b>03 мин.</b> Вставить материал в Source Map prompt.</p>
+        <p><b>04 мин.</b> Найти 3 утверждения, которые AI не имеет права усилить.</p>
+        <p><b>03 мин.</b> Выбрать 2 формата, где этот материал реально нужен.</p>
+        <p><b>02 мин.</b> Сформулировать вопрос редактору перед выпуском.</p>
       </div>
     </section>
 
@@ -202,7 +208,7 @@
     <section class="slide dark" id="s14">
       <div class="kicker">// PROMPT 04 · PUBLICATION PACKAGE</div>
       <h2>Четвертый промпт: собрать пакет форматов без потери фактов</h2>
-      <pre class="prompt-block"><code>На основе EXO и Style Graph собери publication package.
+      <pre class="prompt-block"><code>На основе Source Map и Style Graph собери publication package.
 
 Форматы:
 1. Сайт: заголовок, лид, структура, что проверить.
@@ -211,7 +217,7 @@
 4. 5 заголовков с разным фокусом.
 
 Правила:
-- не добавляй факты, которых нет в EXO;
+- не добавляй факты, которых нет в Source Map;
 - не усиливай масштаб события;
 - сохраняй Style Graph;
 - все сомнительное вынеси в "нужно проверить".</code></pre>
@@ -269,6 +275,19 @@
       </div>
     </section>
 
+    <section class="slide split" id="s18b">
+      <div>
+        <div class="kicker">// SCOUT</div>
+        <h2>Куда смотреть после лекции: не тулзы ради тулз, а новые рабочие маршруты</h2>
+      </div>
+      <div class="format-table">
+        <div><b>поиск</b><span>Perplexity / Exa для поиска источников, но не для финального текста</span></div>
+        <div><b>текст</b><span>Claude / ChatGPT / Gemini как редакционный черновой слой</span></div>
+        <div><b>видео</b><span>Opus, Gling, Descript, Premiere assistants для первого прохода</span></div>
+        <div><b>визуал</b><span>Higgsfield / Kling / Runway / Canva / Figma как связка, а не одна кнопка</span></div>
+      </div>
+    </section>
+
     <section class="slide dark" id="s19">
       <div class="kicker">// HUB LOOP</div>
       <h2>Хорошие и плохие outputs становятся training examples для редакции</h2>
@@ -288,7 +307,7 @@
       </div>
       <div class="homework">
         <p><b>1.</b> Один безопасный source.</p>
-        <p><b>2.</b> EXO-разбор.</p>
+        <p><b>2.</b> Source Map-разбор.</p>
         <p><b>3.</b> Один пластиковый output и правка через Style Graph.</p>
         <p><b>4.</b> Один publication package.</p>
         <p><b>5.</b> Один update proposal для prompt / gate / Style Graph.</p>
@@ -298,7 +317,7 @@
     <section class="slide dark" id="s21">
       <div class="kicker">// ИТОГ</div>
       <h2>Text OS превращает AI из генератора гладкости в управляемый редакционный инструмент.</h2>
-      <p class="lead narrow">Берем source, извлекаем факты, строим Style Graph, убираем пластик, собираем форматы, проверяем через human gate и сохраняем evidence в hub.</p>
+      <p class="lead narrow">Берем source, собираем Source Map, строим Style Graph, убираем пластик, собираем форматы, проверяем через human gate и сохраняем evidence в hub.</p>
       <div class="final-links">
         <a href="./deck-01-start.html">Deck 01</a>
         <a href="../index.html">открыть hub</a>

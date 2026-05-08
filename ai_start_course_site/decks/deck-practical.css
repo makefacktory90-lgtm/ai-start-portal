@@ -1,0 +1,90 @@
+.outcome-lanes,
+.timeline-plan,
+.tool-radar {
+  display: grid;
+  gap: 12px;
+}
+
+.outcome-lanes {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.outcome-lanes article,
+.timeline-plan article,
+.tool-radar article {
+  min-height: 210px;
+  padding: 18px;
+  border: 2px solid var(--black);
+  border-radius: 18px;
+  background: var(--white);
+  box-shadow: 7px 7px 0 var(--black);
+}
+
+.outcome-lanes b,
+.timeline-plan b,
+.tool-radar b {
+  display: inline-block;
+  margin-bottom: 18px;
+  color: var(--red);
+  font-family: var(--mono);
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+.outcome-lanes h3,
+.tool-radar h3 {
+  margin: 0 0 10px;
+  font-size: clamp(22px, 2vw, 34px);
+  line-height: 1;
+}
+
+.outcome-lanes p,
+.tool-radar p,
+.timeline-plan p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 18px;
+  font-weight: 750;
+  line-height: 1.18;
+}
+
+.timeline-plan {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.tool-radar {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.tool-radar article {
+  min-height: 190px;
+}
+
+.plain-list {
+  display: grid;
+  gap: 18px;
+}
+
+.plain-list p {
+  margin: 0;
+  padding: 16px 0;
+  border-bottom: 2px solid var(--line);
+  font-size: clamp(26px, 2.8vw, 46px);
+  font-weight: 900;
+  line-height: 1;
+}
+
+.plain-list b {
+  color: var(--red);
+  font-family: var(--mono);
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+@media (max-width: 900px) {
+  .outcome-lanes,
+  .timeline-plan,
+  .tool-radar {
+    grid-template-columns: 1fr;
+  }
+}

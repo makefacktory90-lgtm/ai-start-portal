@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Deck 06 · Editorial Contour</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./deck-01-start.css">
+  <link rel="stylesheet" href="./deck-practical.css">
+</head>
+<body>
+  <header class="deck-nav">
+    <a class="deck-logo" href="../index.html">AI START</a>
+    <nav><a href="#s01">contour</a><a href="#s02">outcome</a><a href="#s04">prompt</a><a href="#s06">practice</a><a href="#s08">hub</a></nav>
+    <span>Monitoring · grid · hub</span>
+  </header>
+  <main>
+    <section class="slide hero" id="s01">
+      <div class="hero-copy">
+        <div class="pill">workshop 06 · editorial contour</div>
+        <h1>AI полезен не только в тексте.<br><span>Он держит контур.</span></h1>
+        <p class="lead">Мониторинг, дайджест, рубрики, сетка, повторяющиеся форматы, feedback log и обновление hub. Это занятие про редакционную систему, а не про один output.</p>
+      </div>
+      <div class="plain-list">
+        <p><b>signals</b> источники</p>
+        <p><b>grid</b> недельная сетка</p>
+        <p><b>update</b> правила hub</p>
+      </div>
+    </section>
+
+    <section class="slide manifesto" id="s02">
+      <div class="kicker">// С ЧЕМ УХОДИМ</div>
+      <h2>После лекции редакция понимает, как AI поддерживает регулярность.</h2>
+      <div class="outcome-lanes">
+        <article><b>base</b><h3>weekly digest</h3><p>Собрать темы, источники, риски и идеи материалов.</p></article>
+        <article><b>opti</b><h3>content grid</h3><p>Разложить темы по каналам, форматам и владельцам.</p></article>
+        <article><b>advanced</b><h3>hub update</h3><p>По evidence обновить prompt, context, gate или template.</p></article>
+        <article><b>scout</b><h3>automation later</h3><p>Понять, что можно автоматизировать только после ручной валидации.</p></article>
+      </div>
+    </section>
+
+    <section class="slide dark" id="s03">
+      <div class="kicker">// НЕ АВТОПИЛОТ</div>
+      <h2>AI может группировать сигналы. Важность определяет редакция.</h2>
+      <p class="lead narrow">Автоматизация мониторинга без редакционного правила быстро превращается в шум. Сначала источники, рубрики, критерии важности, риски. Потом уже автоматизация.</p>
+    </section>
+
+    <section class="slide split" id="s04">
+      <div><div class="kicker">// PROMPT</div><h2>Промпт для weekly digest</h2></div>
+      <pre class="prompt-block"><code>Собери редакционный weekly digest из списка сигналов.
+
+Для каждого сигнала укажи:
+1. Тема.
+2. Источник и уровень доверия.
+3. Почему это важно аудитории.
+4. Возможный формат: новость, объяснение, видео, карточки, Telegram.
+5. Риск: факт, контекст, юридический, репутационный.
+6. Что должен решить редактор.
+
+После таблицы предложи content grid на неделю:
+канал / формат / owner / source / gate.</code></pre>
+    </section>
+
+    <section class="slide" id="s05">
+      <div class="kicker">// РОЛИ</div>
+      <h2>Кто что получает</h2>
+      <div class="tool-radar">
+        <article><b>редактор</b><h3>приоритеты</h3><p>Темы, риски, что выпускать, что отложить.</p></article>
+        <article><b>корреспондент</b><h3>задачи</h3><p>Что уточнить, где взять источник, кого спросить.</p></article>
+        <article><b>SMM</b><h3>каналы</h3><p>Telegram, social hooks, карточки, повторы.</p></article>
+        <article><b>owner</b><h3>hub</h3><p>Какие правила обновить по повторяющимся ошибкам.</p></article>
+      </div>
+    </section>
+
+    <section class="slide dark" id="s06">
+      <div class="kicker">// PRACTICE · 30 МИН</div>
+      <h2>Практика: сигналы → недельная сетка</h2>
+      <div class="timeline-plan">
+        <article><b>10 мин</b><p>Собрать digest из 10-15 сигналов.</p></article>
+        <article><b>10 мин</b><p>Выбрать 5 тем и форматы под каналы.</p></article>
+        <article><b>10 мин</b><p>Назначить gate, owner и update proposal.</p></article>
+      </div>
+    </section>
+
+    <section class="slide split" id="s07">
+      <div><div class="kicker">// DECISION</div><h2>Keep / revise / kill / automate later</h2></div>
+      <div class="risk-list">
+        <p><b>keep</b><span>работает и можно повторять</span></p>
+        <p><b>revise</b><span>нужна правка prompt, context или gate</span></p>
+        <p><b>kill</b><span>выглядит красиво, но не помогает работе</span></p>
+        <p><b>automate later</b><span>сначала валидируем руками, потом автоматизируем</span></p>
+      </div>
+    </section>
+
+    <section class="slide" id="s08">
+      <div class="kicker">// HUB</div>
+      <h2>Контур заканчивается changelog, а не вдохновением.</h2>
+      <div class="final-links">
+        <a href="./deck-05-audio.html">Deck 05</a>
+        <a href="./deck-07-hub-tv21.html">Deck 07</a>
+        <a href="../index.html">hub</a>
+      </div>
+    </section>
+  </main>
+  <script src="./deck-01-start.js"></script>
+</body>
+</html>

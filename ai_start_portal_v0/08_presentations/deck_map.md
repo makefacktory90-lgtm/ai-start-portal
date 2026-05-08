@@ -1,193 +1,271 @@
 # Карта web-decks AI Start
 
-Статус: starter v0.3  
-Назначение: список web-decks, которые нужны для готовой программы.
+Статус: practical backbone v0.4
+Назначение: вся программа собирается не как "темы лекций", а как набор изменений в рабочем таймлайне редакции.
 
-## 0. Формат
+## Главный принцип
 
-Презентации собираем не как PPTX, а как web-decks в GitHub с деплоем на Vercel / GitHub Pages.
+Каждая дека отвечает на 4 вопроса:
 
-Референс по формату:
+1. С чем человек уходит после лекции?
+2. Что забирают все на уровне Base?
+3. Что могут усилить практики на уровне Opti / Advanced?
+4. Куда смотреть дальше: инструменты, ссылки, эксперименты, risks?
+
+Если слайд не ведет к действию участника, он подозрительный.
+
+## Уровни выхода
 
 ```text
-https://ai-mindset-talk.vercel.app/
+Base = все уходят с новым действием
+Opti = сильные ускоряют свой участок
+Advanced = owners собирают систему
+Scout = команда понимает, куда движется рынок
 ```
 
-Референс по стилю:
+Подробно:
 
-```text
-https://iraai.ru/masterclass-hassid/
-```
+- `../00_start_here/04_task_levels.md`
 
-Каждый deck должен быть страницей, из которой можно перейти в hub:
+## Деки
 
-- открыть workflow;
-- открыть starter prompt;
-- открыть practice material;
-- открыть feedback log;
-- после встречи открыть запись / транскрипт / резюме.
+### Deck 01. Старт: AI как рабочий слой редакции
 
-PPTX можно будет экспортировать позже, если клиент попросит. Основная сборка - web.
-
-Рабочая карта с уже встроенными упражнениями:
-
-- `ai-start {deck-system} lecture exercises embedded map - 2026-05-05.md`
-
-Первая живая web-презентация:
+Файл:
 
 - `../../ai_start_course_site/decks/deck-01-start.html`
-- `ai-start {speaker-notes} deck 01 start - 2026-05-07.md`
-- `ai-start {speaker-script} deck 01 overview workshop - 2026-05-08.md`
 
-Важно: календарных встреч 10. Внутри 19 мая и 22 мая есть по два учебных chapter/deck, потому что там по два крупных pipeline. Это не новые встречи, а внутренняя структура занятия.
+Что меняется после лекции:
 
-## 1. Общие decks
+- участник понимает, что важны не тулзы, а постановка задачи;
+- видит, что агенты / модели строят инструменты под задачи;
+- понимает схему: source -> AI draft -> human gate -> hub;
+- умеет различить "попробовал чат" и "построил повторяемый маршрут".
 
-### Deck 01. 14 мая: старт и карта AI-системы
+Base:
 
-Задача:
+- описать одну свою рабочую задачу через вход, выход, ограничение и human gate.
 
-- уважительно признать существующий профессиональный опыт участников;
-- объяснить, что AI подключается к их текущим задачам, а не заменяет редакционное решение;
-- показать 5 пайплайнов;
-- показать hub;
-- объяснить роли и A1/A2/A3;
-- показать, как output становится evidence.
+Opti:
 
-Ключевые слайды:
+- выбрать пайплайн, который реально ускоряет личный таймлайн.
 
-1. AI как рабочий слой редакции.
-2. Почему разовый удачный чат трудно повторить.
-3. Материал -> AI draft -> human gate -> saved example.
-4. У каждой роли своя точка подключения AI.
-5. Пять пайплайнов программы.
-6. AI-hub: где не теряются материалы, примеры и проверки.
-7. A1/A2/A3.
-8. Правило: AI drafts, human owns.
-9. Что надо сделать до следующего блока.
+Advanced:
 
-### Deck 02. 15 мая: событие -> текстовые форматы
+- сформулировать, что из личной практики должно попасть в общий hub.
 
-Задача:
+### Deck 02. Text OS: source -> текстовые форматы
 
-- показать Pipeline 01;
-- провести live demo;
-- разобрать фактчекинг;
-- собрать сайт / Telegram / social / headlines.
+Файл:
 
-Ключевые слайды:
+- `../../ai_start_course_site/decks/deck-02-text.html`
 
-1. Один материал не обязан жить в одном формате.
-2. Сначала факты, потом текст.
-3. Output-структура Pipeline 01.
-4. Что AI часто выдумывает.
-5. Factual gate.
-6. Практика в группах.
-7. Что сохранить в hub.
+Что меняется:
 
-### Deck 03. 19 мая: вертикальное видео и визуал
+- участник не просит "напиши красиво";
+- сначала собирает Source Map;
+- проверяет пластик;
+- собирает publication package.
 
-Задача:
+Base:
 
-- показать Pipeline 02 и Pipeline 03;
-- подключить видео-специалиста;
-- дать маршрут длинное видео -> клипы;
-- дать маршрут материал -> visual brief.
+- Source Map + один безопасный draft + human check.
 
-Ключевые слайды:
+Opti:
 
-1. AI не монтирует смысл за редактора.
-2. Как выбирать клипы без потери контекста.
-3. Hook, subtitles, cover, description.
-4. Что проверяет видео-специалист.
-5. Почему image model не пишет финальные карточки.
-6. Visual brief.
-7. Практика.
+- site / Telegram / social / headline set без потери фактов.
 
-### Deck 04. 22 мая: аудио и редакторский контур
+Advanced:
 
-Задача:
+- одно правило для Style Graph, prompt или QA gate.
 
-- показать Pipeline 04 и Pipeline 05;
-- собрать spoken script;
-- показать monitoring -> digest -> content grid;
-- объяснить weekly update.
+### Deck 03. Video Acceleration
 
-Ключевые слайды:
+Файл:
 
-1. Разговорность без выдумки.
-2. Spoken script: структура.
-3. Audio gate.
-4. Редакторский контур: мониторинг, сетка, Telegram, архив.
-5. AI группирует, редактор решает.
-6. Как hub обновляется.
+- `../../ai_start_course_site/decks/deck-03-video.html`
 
-## 2. ТВ-21 decks
+Что меняется:
 
-### Deck 05. 26 мая: AI-hub и репозитории ТВ-21
+- монтажер / редактор видит, где AI может забрать первый проход;
+- команда сравнивает ручной способ и AI-ускоритель;
+- появляется карта инструментов: transcript, clip candidates, паузы, multicam, rough cut.
 
-Задача:
+Base:
 
-- собрать структуру hub ТВ-21;
-- зафиксировать tone of voice;
-- рубрики;
-- источники;
-- templates;
-- owners.
+- из длинного видео / транскрипта получить 5-7 clip candidates и top-3.
 
-### Deck 06. 29 мая: финальная сборка AI Start Kit ТВ-21
+Opti:
 
-Задача:
+- собрать production pack: hook, subtitle chunks, cover text, description, risk note.
 
-- зафиксировать июньский план применения;
-- назначить owners;
-- выбрать тестовые материалы;
-- определить success criteria;
-- закрыть майский цикл.
+Advanced:
 
-## 3. "Северный город" decks
+- описать связку transcript -> assistant -> Premiere / Resolve -> video gate.
 
-### Deck 07. 2 июня: AI-hub и репозитории "Северного города"
+Scout:
 
-Задача:
+- Opus Clip, Gling, Descript, FireCut, AutoPod / multicam tools, Claude / MCP scenarios.
 
-- адаптировать hub под Норильск;
-- рубрики;
-- tone of voice;
-- источники;
-- templates;
-- known constraints.
+### Deck 04. Visual Conveyor
 
-### Deck 08. 5 июня: AI-агенты и полуавтоматические сценарии
+Файл:
 
-Задача:
+- `../../ai_start_course_site/decks/deck-04-visual.html`
 
-- объяснить агентские сценарии простым рабочим языком;
-- показать agent-like scenarios;
-- отделить полуавтоматизацию от автопубликации;
-- собрать next-stage automation candidates.
+Что меняется:
 
-### Deck 09. 9 июня: практика применения и амбассадоры
+- участник понимает, что визуал - это не "сделай картинку";
+- снимает стиль с референсов;
+- собирает prompt project;
+- держит факты в редактируемом слое.
 
-Задача:
+Base:
 
-- прогнать реальные материалы;
-- назначить амбассадоров;
-- показать правила внутренней передачи практики;
-- собрать friction cases.
+- visual brief: смысл, формат, ограничения, текстовый слой, visual gate.
 
-### Deck 10. 11 июня: финальная сборка AI Start Kit
+Opti:
 
-Задача:
+- prompt project для серии: hero, cards, cover, b-roll still, motion seed.
 
-- зафиксировать рабочий комплект;
-- летний режим;
-- owners;
-- possible automation next;
-- 30-day adoption loop.
+Advanced:
 
-## 4. Правило сборки decks
+- связка reference -> Higgsfield / Kling / Runway -> animation -> Figma / Canva template.
 
-Сначала workflow и практика. Потом слайды.
+### Deck 05. Audio OS
 
-Если слайд не ведет к действию участника, он подозрительный. Если он еще и красивый - подозрительный вдвойне.
+Файл:
+
+- `../../ai_start_course_site/decks/deck-05-audio.html`
+
+Что меняется:
+
+- участник переводит письменный материал в spoken script;
+- проверяет произносимость, ритм, факты, voice ethics.
+
+Base:
+
+- 60-90 секунд spoken script по Source Map.
+
+Opti:
+
+- варианты под эфир, Telegram audio, podcast fragment, voiceover.
+
+Advanced:
+
+- audio gate и правила этичного использования voice tools.
+
+### Deck 06. Editorial Contour
+
+Файл:
+
+- `../../ai_start_course_site/decks/deck-06-editorial-contour.html`
+
+Что меняется:
+
+- AI используется не только для output, но и для регулярности;
+- мониторинг превращается в digest, content grid, owner tasks и hub update.
+
+Base:
+
+- weekly digest из сигналов.
+
+Opti:
+
+- content grid по каналам и владельцам.
+
+Advanced:
+
+- keep / revise / kill / automate later для workflow.
+
+### Deck 07. Hub Build
+
+Файл:
+
+- `../../ai_start_course_site/decks/deck-07-hub-tv21.html`
+
+Что меняется:
+
+- hub перестает быть папкой;
+- команда понимает структуру, owners, approved / rejected examples и changelog.
+
+Base:
+
+- минимальная структура hub.
+
+Opti:
+
+- роли и правила добавления примеров.
+
+Advanced:
+
+- Style Graph и prompt updates через evidence.
+
+### Deck 08. Agents
+
+Файл:
+
+- `../../ai_start_course_site/decks/deck-08-agents.html`
+
+Что меняется:
+
+- участник понимает, что агент - это не магический сотрудник;
+- агентский сценарий описывается через задачу, инструменты, ограничения, human gate и память.
+
+Base:
+
+- agent task brief.
+
+Opti:
+
+- tool chain под роль.
+
+Advanced:
+
+- MCP / API сценарий для будущей полуавтоматизации.
+
+### Deck 09. Practice Clinic
+
+Файл:
+
+- `../../ai_start_course_site/decks/deck-09-practice-clinic.html`
+
+Что меняется:
+
+- реальные материалы проходят через пайплайны;
+- вопросы превращаются в действия;
+- появляются ambassadors и friction cases.
+
+Base:
+
+- один реальный кейс через один pipeline.
+
+Opti:
+
+- сравнение "быстрее руками / быстрее через AI".
+
+Advanced:
+
+- update proposal по реальному фейлу.
+
+### Deck 10. Final Kit
+
+Файл:
+
+- `../../ai_start_course_site/decks/deck-10-final-kit.html`
+
+Что меняется:
+
+- финал становится не закрытием курса, а запуском 30-дневного цикла применения.
+
+Base:
+
+- готовый AI Start Kit.
+
+Opti:
+
+- weekly use plan.
+
+Advanced:
+
+- owners, review board, next bets.

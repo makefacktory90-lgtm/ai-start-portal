@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Deck 08 · Agents</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./deck-01-start.css">
+  <link rel="stylesheet" href="./deck-practical.css">
+</head>
+<body>
+  <header class="deck-nav">
+    <a class="deck-logo" href="../index.html">AI START</a>
+    <nav><a href="#s01">agents</a><a href="#s02">outcome</a><a href="#s04">jobs</a><a href="#s06">practice</a><a href="#s08">next</a></nav>
+    <span>Agents · task systems</span>
+  </header>
+  <main>
+    <section class="slide hero" id="s01">
+      <div class="hero-copy">
+        <div class="pill">workshop 08 · agents</div>
+        <h1>Агенты строят инструменты<br><span>под задачу.</span></h1>
+        <p class="lead">Главная мысль курса: важны не тулзы, а постановка задачи. Агент — это не магический сотрудник, а система: цель, контекст, инструменты, ограничения, проверка и память.</p>
+      </div>
+      <div class="plain-list">
+        <p><b>job</b> задача</p>
+        <p><b>tools</b> доступы</p>
+        <p><b>gate</b> проверка</p>
+      </div>
+    </section>
+
+    <section class="slide manifesto" id="s02">
+      <div class="kicker">// С ЧЕМ УХОДИМ</div>
+      <h2>После лекции участник умеет описать agent-like сценарий без фантазий.</h2>
+      <div class="outcome-lanes">
+        <article><b>base</b><h3>task brief</h3><p>Цель, входы, выходы, запреты, human approval.</p></article>
+        <article><b>opti</b><h3>tool chain</h3><p>Какие инструменты агенту нужны: поиск, диск, монтажка, генератор.</p></article>
+        <article><b>advanced</b><h3>MCP scenario</h3><p>Как связать Claude / ChatGPT с рабочим инструментом через MCP или API.</p></article>
+        <article><b>scout</b><h3>automation map</h3><p>Что можно автоматизировать позже, а что нельзя.</p></article>
+      </div>
+    </section>
+
+    <section class="slide dark" id="s03">
+      <div class="kicker">// СПОРНЫЙ ТЕЗИС</div>
+      <h2>Если вы не умеете поставить задачу, агент просто ускорит хаос.</h2>
+      <p class="lead narrow">Поэтому первый навык — не "какую кнопку нажать", а как описать job to be done: вход, выход, критерий качества, риск, владелец решения.</p>
+    </section>
+
+    <section class="slide split" id="s04">
+      <div><div class="kicker">// AGENT BRIEF</div><h2>Шаблон agent-like задачи</h2></div>
+      <pre class="prompt-block"><code>Опиши agent-like сценарий для редакции.
+
+Задача: [что повторяется].
+Входы: [какие материалы].
+Инструменты: [поиск / диск / монтаж / генерация / таблица].
+Выход: [что должно появиться].
+Ограничения: [данные, факты, права, tone of voice].
+Human gate: [кто утверждает и что проверяет].
+Лог: [что сохраняем в hub].
+
+Сделай карту:
+1. Base ручной процесс.
+2. Opti полуавтоматизация.
+3. Advanced агентский сценарий.
+4. Что нельзя автоматизировать.</code></pre>
+    </section>
+
+    <section class="slide" id="s05">
+      <div class="kicker">// ПРИМЕРЫ</div>
+      <h2>Какие сценарии показываем</h2>
+      <div class="tool-radar">
+        <article><b>text agent</b><h3>source → package</h3><p>Собирает Source Map, drafts, QA table, update proposal.</p></article>
+        <article><b>video agent</b><h3>timeline assistant</h3><p>Читает transcript, предлагает cuts, готовит rough cut notes.</p></article>
+        <article><b>visual agent</b><h3>style prompt project</h3><p>Снимает стиль и генерит промпты под Higgsfield / Kling.</p></article>
+        <article><b>hub agent</b><h3>weekly review</h3><p>Собирает changelog и повторяющиеся ошибки.</p></article>
+      </div>
+    </section>
+
+    <section class="slide dark" id="s06">
+      <div class="kicker">// PRACTICE · 30 МИН</div>
+      <h2>Практика: описать один агентский сценарий для своей роли</h2>
+      <div class="timeline-plan">
+        <article><b>10 мин</b><p>Выбрать повторяющуюся задачу, где больно по времени.</p></article>
+        <article><b>10 мин</b><p>Заполнить agent brief: входы, выходы, инструменты, gate.</p></article>
+        <article><b>10 мин</b><p>Отметить, что делаем сейчас руками, что тестируем позже.</p></article>
+      </div>
+    </section>
+
+    <section class="slide split" id="s07">
+      <div><div class="kicker">// GATE</div><h2>Где человек обязателен</h2></div>
+      <div class="risk-list">
+        <p><b>публикация</b><span>agent не выпускает без approval</span></p>
+        <p><b>факты</b><span>источник и проверка обязательны</span></p>
+        <p><b>тон</b><span>редакционный голос не выводится из одного примера</span></p>
+        <p><b>данные</b><span>внутреннее не уходит во внешние инструменты без правил</span></p>
+      </div>
+    </section>
+
+    <section class="slide" id="s08">
+      <div class="kicker">// NEXT</div>
+      <h2>Уходим с картой: что автоматизировать позже, а что держать руками.</h2>
+      <div class="final-links">
+        <a href="./deck-07-hub-tv21.html">Deck 07</a>
+        <a href="./deck-09-practice-clinic.html">Deck 09</a>
+        <a href="../index.html">hub</a>
+      </div>
+    </section>
+  </main>
+  <script src="./deck-01-start.js"></script>
+</body>
+</html>
