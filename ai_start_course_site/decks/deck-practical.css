@@ -81,10 +81,52 @@
   text-transform: uppercase;
 }
 
+.lesson-art {
+  position: relative;
+  display: grid;
+  justify-items: center;
+  gap: 16px;
+  transform: rotate(-2deg);
+}
+
+.lesson-art img {
+  width: min(33vw, 470px);
+  max-width: 100%;
+  display: block;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border: 3px solid var(--black);
+  border-radius: 24px;
+  background: var(--paper);
+  box-shadow: 14px 14px 0 var(--black);
+}
+
+.lesson-art figcaption {
+  max-width: 420px;
+  padding: 11px 16px;
+  border: 2px solid var(--black);
+  border-radius: 999px;
+  background: var(--yellow);
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1.1;
+  text-transform: uppercase;
+  transform: rotate(3deg);
+}
+
 @media (max-width: 900px) {
   .outcome-lanes,
   .timeline-plan,
   .tool-radar {
     grid-template-columns: 1fr;
+  }
+
+  .lesson-art {
+    transform: none;
+  }
+
+  .lesson-art img {
+    width: min(70vw, 340px);
   }
 }
