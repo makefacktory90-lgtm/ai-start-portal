@@ -17,15 +17,30 @@ refs:
 
 Единый стиль для портала, web-decks и рабочих материалов AI Start.
 
-Визуальная идея:
+Визуальная идея v2:
 
 ```text
-premium editorial comic
-Moebius / European sci-fi linework
-nerdy robot co-pilot
-red editorial markup
-paper / ink / workflow
+adult editorial sci-fi command room
+European sci-fi linework + cinematic industrial production design
+weathered robot as production assistant, not mascot
+red editorial markup inside technical interfaces
+paper / graphite / concrete / glass / tension
 ```
+
+Ключевой арт-референс:
+
+```text
+ai_start_course_site/assets/ai-start-art-direction-keyframe-v1.png
+```
+
+Правила v2:
+
+- рисуем мир, а не "робота в карточке";
+- больше архитектуры, воздуха, напряжения, технических интерфейсов;
+- робот не милый и не детский, а рабочий production assistant;
+- допустимы пыльный металл, бетон, стекло, дальняя редакция, стол-монтажка, красные редакторские пометки;
+- hero должен оставлять место под крупную типографику;
+- запрещено: Murzilka / детский журнал / toy robot / glossy 3D / псевдотекст как главный объект.
 
 Не делаем:
 
