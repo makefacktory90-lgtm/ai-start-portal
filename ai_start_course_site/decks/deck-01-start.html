@@ -6,350 +6,333 @@
   <title>Deck 01 · AI Start</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./deck-01-start.css">
 </head>
 <body>
   <header class="deck-nav" aria-label="Навигация презентации">
     <a class="deck-logo" href="../index.html">AI START</a>
     <nav>
-      <a href="#s01">01</a>
-      <a href="#s04">roles</a>
-      <a href="#s07">5</a>
-      <a href="#s10">gates</a>
-      <a href="#s15">tools</a>
-      <a href="#s18">practice</a>
+      <a href="#s01">start</a>
+      <a href="#s04">why</a>
+      <a href="#s08">map</a>
+      <a href="#s13">gates</a>
+      <a href="#s17">practice</a>
+      <a href="#s23">hub</a>
     </nav>
-    <span>14 мая · старт</span>
+    <span>обзорный воркшоп · 01</span>
   </header>
 
   <main>
     <section class="slide hero" id="s01">
-      <div class="kicker">// СТАРТ</div>
-      <h1>AI Start:<br><span>AI как рабочий слой</span> редакции</h1>
-      <p class="lead">У редакции уже есть профессия, процессы и ответственность за выпуск. Сегодня разбираем, где AI может взять черновой слой, а профессиональное решение остается у команды.</p>
-      <div class="hero-strip">
-        <span>input</span>
-        <span>AI step</span>
-        <span>human gate</span>
-        <span>saved example</span>
+      <div class="hero-copy">
+        <div class="pill">workshop 01 · обзорный старт</div>
+        <h1>AI — <em>не</em><br>волшебная кнопка.<br><span>Это новый слой работы.</span></h1>
+        <p class="lead">Сегодня не учимся «тыкать в нейронку». Собираем карту: где AI помогает редакции быстрее думать, где начинаются риски и как не потерять человеческое решение.</p>
+      </div>
+      <aside class="comic-board" aria-label="AI Start system sketch">
+        <div class="robot-card">
+          <svg viewBox="0 0 220 220" role="img" aria-labelledby="robot-title">
+            <title id="robot-title">line-art robot assistant</title>
+            <path d="M72 83c5-21 21-35 45-35s40 14 45 35" />
+            <rect x="54" y="82" width="112" height="82" rx="22" />
+            <circle cx="88" cy="121" r="9" />
+            <circle cx="132" cy="121" r="9" />
+            <path d="M91 146c12 10 30 10 42 0" />
+            <path d="M110 49V25M98 25h24M54 112H29M166 112h25M73 164l-10 25M147 164l10 25" />
+            <path class="red-stroke" d="M39 63c29-28 74-36 120-21" />
+            <path class="red-stroke" d="M62 186c44 18 83 11 113-19" />
+          </svg>
+          <b>AI drafts</b>
+          <span>human owns</span>
+        </div>
+        <div class="speech">не промпт ради промпта, а маршрут</div>
+        <div class="sticker">source → AI step → gate → hub</div>
+      </aside>
+    </section>
+
+    <section class="slide manifesto" id="s02">
+      <div class="kicker">// ТРИ ЦЕЛИ</div>
+      <h2>За 90 минут нужно не «послушать про AI», а переключить режим работы</h2>
+      <div class="triad">
+        <article><b>01</b><h3>вдохновить</h3><p>Показать, что AI — не угроза профессии, а усилитель редакционного мышления.</p></article>
+        <article><b>02</b><h3>показать масштаб</h3><p>Развернуть карту: текст, видео, визуал, аудио, редакционный контур, hub.</p></article>
+        <article><b>03</b><h3>закрыть возражения</h3><p>Клише, безопасность, вред изданию и формат практики встроены в ткань занятия.</p></article>
       </div>
     </section>
 
-    <section class="slide split" id="s02">
+    <section class="slide split" id="s03">
       <div>
-        <div class="kicker">// ОЖИДАНИЕ</div>
-        <h2>Промпты будут.<br>Но начнем не с них.</h2>
+        <div class="kicker">// НЕ Q&A-МАРАФОН</div>
+        <h2>Вопросы не выносим в хвост. Превращаем их в gates.</h2>
       </div>
-      <div class="statement-list">
-        <p>В редакционной работе команда полезна только внутри задачи.</p>
-        <p>Важны источник, формат, ограничения и проверка.</p>
-        <p>Один удачный чат сложно передать команде без маршрута.</p>
-        <p class="red">Поэтому собираем рабочий контур, а не набор фраз.</p>
+      <div class="objection-stack">
+        <div><span>клише</span><strong>как распознать пустую нейрогладкость</strong></div>
+        <div><span>данные</span><strong>что можно и нельзя отдавать AI-сервисам</strong></div>
+        <div><span>репутация</span><strong>когда AI-output правда может навредить изданию</strong></div>
+        <div><span>практика</span><strong>что делаем руками прямо на первом занятии</strong></div>
       </div>
     </section>
 
-    <section class="slide dark" id="s03">
-      <div class="kicker">// НОВЫЙ РАБОЧИЙ СЛОЙ</div>
-      <h2>AI берет черновой проход.<br>Решение остается у человека.</h2>
-      <div class="process-line" aria-label="Порядок работы">
-        <div><b>01</b><span>материал</span></div>
+    <section class="slide dark" id="s04">
+      <div class="kicker">// ГЛАВНЫЙ СДВИГ</div>
+      <h2>Не догонять инструменты.<br><span>Строить рабочую систему.</span></h2>
+      <p class="lead narrow">Сервисы меняются. Рабочий контур остается: входной материал, AI-черновик, человеческая проверка, сохраненный пример, обновленный стандарт.</p>
+      <div class="process-line" aria-label="AI Start process">
+        <div><b>01</b><span>source</span></div>
         <div><b>02</b><span>AI draft</span></div>
-        <div><b>03</b><span>человек проверяет</span></div>
-        <div><b>04</b><span>пример сохраняется</span></div>
-        <div><b>05</b><span>маршрут уточняется</span></div>
+        <div><b>03</b><span>human gate</span></div>
+        <div><b>04</b><span>example</span></div>
+        <div><b>05</b><span>hub update</span></div>
       </div>
     </section>
 
-    <section class="slide split" id="s03b">
+    <section class="slide split" id="s05">
       <div>
-        <div class="kicker">// ПРАКТИКА ВНУТРИ ЗАНЯТИЯ</div>
-        <h2>Практика встроена в занятие</h2>
-      </div>
-      <div class="practice-stack">
-        <div><span>01 · 7 мин</span><strong>выбрать свой участок работы</strong></div>
-        <div><span>02 · 8 мин</span><strong>распознать AI-клише и риски текста</strong></div>
-        <div><span>03 · 12 мин</span><strong>прогнать один starter prompt на общем материале</strong></div>
-        <div><span>между встречами</span><strong>закрепить маршрут на своем материале</strong></div>
-      </div>
-    </section>
-
-    <section class="slide split" id="s04">
-      <div>
-        <div class="kicker">// OS РОЛИ → OS РЕДАКЦИИ</div>
-        <h2>У каждой роли будет своя рабочая сборка</h2>
-      </div>
-      <div class="three-stack">
-        <div><span>роль</span><strong>какие материалы и решения проходят через вас</strong></div>
-        <div><span>редакция</span><strong>какие правила проверки нужны всем</strong></div>
-        <div><span>компания</span><strong>что становится общим стандартом</strong></div>
-      </div>
-    </section>
-
-    <section class="slide" id="s05">
-      <div class="kicker">// ТОЧКИ ПОДКЛЮЧЕНИЯ</div>
-      <h2>AI подключается к уже существующим задачам</h2>
-      <div class="role-grid">
-        <article>
-          <span>редактор</span>
-          <p>Факты, риски, заголовки, решение: что можно выпускать.</p>
-        </article>
-        <article>
-          <span>SMM</span>
-          <p>Telegram, social-анонсы, первые экраны, ритм канала.</p>
-        </article>
-        <article>
-          <span>видео</span>
-          <p>Кандидаты на клипы, hooks, subtitles, cover text.</p>
-        </article>
-        <article>
-          <span>руководитель</span>
-          <p>Owners, gates, общий стандарт и что не берем в систему.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="slide split" id="s05b">
-      <div>
-        <div class="kicker">// ЧТО УЖЕ ЕСТЬ У ТВ-21</div>
-        <h2>У команды уже есть инструменты. Нужен порядок работы.</h2>
+        <div class="kicker">// УЖЕ ЕСТЬ ХАОС ИНСТРУМЕНТОВ</div>
+        <h2>Проблема не в том, что инструментов мало. Проблема в том, что их трудно повторять.</h2>
       </div>
       <div class="inventory-map">
-        <div><span>текст / research</span><strong>ChatGPT · Gemini · Grok · Алиса AI</strong></div>
-        <div><span>монтаж</span><strong>Edius · Premiere · DaVinci · Adobe tools</strong></div>
-        <div><span>визуал</span><strong>Photoshop · Illustrator · StableDiffusion · Flux</strong></div>
-        <div><span>звук</span><strong>Audition · Podcast · Suno AI</strong></div>
+        <div><span>текст / research</span><strong>чаты, поиск, суммаризация, черновики</strong></div>
+        <div><span>видео</span><strong>монтаж, нарезка, вертикали, титры, обложки</strong></div>
+        <div><span>визуал</span><strong>карточки, иллюстрации, заставки, графика</strong></div>
+        <div><span>редконтур</span><strong>планирование, мониторинг, рубрики, приоритеты</strong></div>
       </div>
     </section>
 
-    <section class="slide split" id="s06">
-      <div>
-        <div class="kicker">// ОБЩАЯ ПАМЯТЬ</div>
-        <h2>Удачный прием должен быть доступен команде</h2>
-      </div>
-      <div class="os-stack">
-        <div><span>workflow</span><strong>как проходит задача</strong></div>
-        <div><span>prompt</span><strong>как запускается первый проход</strong></div>
-        <div><span>gate</span><strong>как проверяется выпуск</strong></div>
-        <div><span>example</span><strong>что сработало и что сломалось</strong></div>
-        <div><span>owner</span><strong>кто отвечает за обновление</strong></div>
+    <section class="slide" id="s06">
+      <div class="kicker">// РОЛЬ → РЕДАКЦИЯ → КОМПАНИЯ</div>
+      <h2>Каждый получает свою точку подключения, но стандарт собирается общий</h2>
+      <div class="role-grid">
+        <article><span>редактор</span><p>Факты, риск, тон, заголовки, финальное решение.</p></article>
+        <article><span>SMM</span><p>Telegram, social-анонсы, первый экран, ритм канала.</p></article>
+        <article><span>видео</span><p>Кандидаты на клипы, hooks, subtitles, cover text.</p></article>
+        <article><span>руководитель</span><p>Owners, gates, общий стандарт, что не берем в систему.</p></article>
       </div>
     </section>
 
-    <section class="slide dark" id="s06b">
-      <div class="kicker">// OS КОМПАНИИ</div>
-      <h2>Лидеры изменений решают, что становится стандартом</h2>
-      <p class="lead narrow">Не каждый удачный лайфхак надо превращать в правило. Компания выбирает: берем в общий контур, оставляем личной настройкой, тестируем дальше или убираем.</p>
-      <div class="decision-row">
-        <span>keep</span>
-        <span>revise</span>
-        <span>test</span>
-        <span>kill</span>
-        <span>automate later</span>
+    <section class="slide dark comic" id="s07">
+      <div class="kicker">// AI START KIT</div>
+      <h2>Это не курс «посмотрите, какие есть нейронки».<br>Это сборка редакционного kit.</h2>
+      <div class="kit-stack">
+        <div><b>workflow</b><span>как проходит задача</span></div>
+        <div><b>prompt</b><span>как запускается первый проход</span></div>
+        <div><b>gate</b><span>как проверяется выпуск</span></div>
+        <div><b>example</b><span>что сработало и что сломалось</span></div>
+        <div><b>owner</b><span>кто обновляет стандарт</span></div>
       </div>
     </section>
 
-    <section class="slide" id="s07">
-      <div class="kicker">// 5 МАРШРУТОВ</div>
-      <h2>Пять пайплайнов показывают, куда подключается AI</h2>
+    <section class="slide" id="s08">
+      <div class="kicker">// КАРТА КУРСА</div>
+      <h2>Пять маршрутов показывают масштаб, но первый навык один: управляемый AI-проход</h2>
       <div class="pipeline-matrix" aria-label="Карта пяти пайплайнов">
-        <article>
-          <b>01</b>
-          <h3>Text OS</h3>
-          <p>материал -> EXO -> ToV -> Style Graph -> форматы</p>
-          <span>gate: факт, тон, риск</span>
-        </article>
-        <article>
-          <b>02</b>
-          <h3>Video OS</h3>
-          <p>long video -> candidates -> top-3 -> captions -> cover</p>
-          <span>gate: контекст, права, монтаж</span>
-        </article>
-        <article>
-          <b>03</b>
-          <h3>Visual OS</h3>
-          <p>материал -> visual brief -> cards / title / cover</p>
-          <span>gate: факты, читаемость, бренд</span>
-        </article>
-        <article>
-          <b>04</b>
-          <h3>Audio OS</h3>
-          <p>материал -> intro -> spoken script -> fragment</p>
-          <span>gate: произносимость, интонация</span>
-        </article>
-        <article>
-          <b>05</b>
-          <h3>Editorial OS</h3>
-          <p>сигналы -> digest -> content grid -> update</p>
-          <span>gate: источники, owner, стандарт</span>
-        </article>
+        <article><b>01</b><h3>Text OS</h3><p>материал → факты → форматы → QA</p><span>первый практический маршрут</span></article>
+        <article><b>02</b><h3>Video OS</h3><p>long video → candidates → clips → covers</p><span>вертикали и нарезка</span></article>
+        <article><b>03</b><h3>Visual OS</h3><p>source → visual brief → cards / cover</p><span>обложки, карточки, графика</span></article>
+        <article><b>04</b><h3>Audio OS</h3><p>text → spoken script → audio fragment</p><span>аудиоверсии и подкастовый слой</span></article>
+        <article><b>05</b><h3>Editorial OS</h3><p>signals → digest → grid → update</p><span>контент-сетка и мониторинг</span></article>
       </div>
-    </section>
-
-    <section class="slide split" id="s07b">
-      <div>
-        <div class="kicker">// КАК РАСТЕТ МОЩНОСТЬ</div>
-        <h2>Каждый урок добавляет не сервис, а рабочую способность</h2>
-      </div>
-      <div class="power-stack">
-        <div><span>14 мая</span><strong>видеть работу как систему: input, AI step, human gate, hub</strong></div>
-        <div><span>15 мая</span><strong>превращать материал в текстовый пакет без потери фактов</strong></div>
-        <div><span>19 мая</span><strong>видеть видео и визуал как production pipeline, а не магию инструмента</strong></div>
-        <div><span>22 мая</span><strong>собирать audio/editorial loop и обновлять базу знаний</strong></div>
-      </div>
-    </section>
-
-    <section class="slide dark" id="s08">
-      <div class="kicker">// ZOOM-IN: TEXT OS</div>
-      <h2>Первый рабочий маршрут:<br>материал становится системой форматов</h2>
-      <div class="text-os-flow" aria-label="Text OS workflow">
-        <span>source</span>
-        <span>EXO</span>
-        <span>context</span>
-        <span>ToV</span>
-        <span>Style Graph</span>
-        <span>Repurpose Boss</span>
-        <span>QA</span>
-        <span>hub update</span>
-      </div>
-      <p class="lead narrow">Не ищем “магический промпт”. Разбираем маршрут: как извлечь смысл, удержать голос, пересобрать материал в каналы и сохранить удачный прием для команды.</p>
     </section>
 
     <section class="slide split" id="s09">
       <div>
-        <div class="kicker">// КАК УСТРОЕН ПРОМПТ</div>
-        <h2>Промпт — это упаковка маршрута</h2>
+        <div class="kicker">// СЦЕНАРИЙ ЗАНЯТИЯ</div>
+        <h2>Обзорный воркшоп должен быть не философией, а управляемым прогоном</h2>
       </div>
-      <div class="prompt-card">
-        <p><b>Задача:</b> что нужно получить и для какого канала.</p>
-        <p><b>Источник:</b> какие факты, цитаты и ограничения есть в материале.</p>
-        <p><b>Роль:</b> кто проверяет результат и по каким критериям.</p>
-        <p><b>Формат:</b> структура output, длина, тон, варианты.</p>
-        <p><b>Gate:</b> что обязательно проверить перед выпуском.</p>
+      <div class="agenda">
+        <div><time>00–10</time><strong>почему AI Start — это рабочий слой, а не библиотека промптов</strong></div>
+        <div><time>10–25</time><strong>карта ролей, маршрутов и портала</strong></div>
+        <div><time>25–45</time><strong>ответы на возражения через gates</strong></div>
+        <div><time>45–70</time><strong>практика: source map + smell test + starter prompt</strong></div>
+        <div><time>70–90</time><strong>разбор 2–3 ответов, домашний прогон, следующий шаг</strong></div>
       </div>
     </section>
 
     <section class="slide dark" id="s10">
-      <div class="kicker">// STARTER PROMPT</div>
-      <h2>Первый промпт не пишет финал.<br>Он собирает карту материала.</h2>
-      <pre class="prompt-block"><code>Возьмите материал ниже и разберите его для редакционной работы.
-
-1. Выделите факты, цитаты, действующих лиц и даты.
-2. Отметьте, чего не хватает для уверенной публикации.
-3. Предложите 3 возможных формата: сайт, Telegram, короткий social.
-4. Для каждого формата укажите риск и human gate.
-5. Ничего не додумывайте, если этого нет в источнике.</code></pre>
+      <div class="kicker">// TEXT OS · ZOOM-IN</div>
+      <h2>Первый рабочий маршрут:<br>из материала сделать карту, а не сразу финальный текст</h2>
+      <div class="text-os-flow" aria-label="Text OS workflow">
+        <span>source</span>
+        <span>facts</span>
+        <span>missing</span>
+        <span>formats</span>
+        <span>risks</span>
+        <span>human gate</span>
+        <span>draft</span>
+        <span>hub</span>
+      </div>
+      <p class="lead narrow">Так безопаснее: модель не «изобретает новость», а помогает увидеть структуру материала, пробелы и варианты применения.</p>
     </section>
 
     <section class="slide split" id="s11">
       <div>
-        <div class="kicker">// ВОПРОС А · AI-КЛИШЕ</div>
-        <h2>Нейротекст видно не по факту AI, а по пустой гладкости</h2>
+        <div class="kicker">// PROMPT ANATOMY</div>
+        <h2>Промпт — это не заклинание. Это упаковка метода.</h2>
       </div>
-      <div class="risk-list">
-        <p><b>шаблон</b><span>общие слова без источника: "важный шаг", "новые горизонты"</span></p>
-        <p><b>раздувание</b><span>AI делает событие крупнее, чем оно есть в материале</span></p>
-        <p><b>один ритм</b><span>одинаковые абзацы, симметричные списки, канцелярская уверенность</span></p>
-        <p><b>ложная полнота</b><span>текст звучит готовым, но в нем не хватает фактов и проверок</span></p>
+      <div class="prompt-card">
+        <p><b>Задача:</b> что получить и для какого канала.</p>
+        <p><b>Источник:</b> какие факты, цитаты и ограничения есть.</p>
+        <p><b>Роль:</b> кто проверяет и по каким критериям.</p>
+        <p><b>Формат:</b> структура output, длина, варианты.</p>
+        <p><b>Gate:</b> что обязательно проверить перед выпуском.</p>
       </div>
     </section>
 
     <section class="slide dark" id="s12">
-      <div class="kicker">// MINI-PRACTICE · SMELL TEST</div>
-      <h2>Проверка в зале:<br>найти три места, где текст звучит как шаблон</h2>
-      <div class="exercise">
-        <p><b>01.</b> Отметить фразы, которые можно поставить в любой материал.</p>
-        <p><b>02.</b> Заменить каждую фразу на факт, цитату или конкретное наблюдение.</p>
-        <p><b>03.</b> Записать правило в gate: как не пропускать такую ошибку дальше.</p>
-      </div>
+      <div class="kicker">// STARTER PROMPT</div>
+      <h2>Первый промпт не пишет финал.<br>Он собирает редакционную карту.</h2>
+      <pre class="prompt-block"><code>Возьми материал ниже и разложи его для редакционной работы.
+
+Не пиши финальную публикацию. Сначала сделай карту.
+
+1. Выдели проверяемые факты, действующих лиц, даты, места и цитаты.
+2. Отметь, чего не хватает для уверенной публикации.
+3. Предложи 3 формата: сайт, Telegram, короткий social-анонс.
+4. Для каждого формата укажи риск: факт, тон, контекст, юридическая/репутационная чувствительность.
+5. Сформулируй human gate: что человек обязан проверить перед выпуском.
+6. Ничего не додумывай. Если данных нет, напиши: "нет в источнике".</code></pre>
     </section>
 
     <section class="slide split" id="s13">
       <div>
-        <div class="kicker">// ВОПРОС Б · ДАННЫЕ</div>
-        <h2>Безопасность — это не обещание сервиса, а правило редакции</h2>
+        <div class="kicker">// ВОЗРАЖЕНИЕ 01 · КЛИШЕ</div>
+        <h2>Нейротекст видно не по факту AI, а по пустой гладкости</h2>
       </div>
-      <div class="gate-grid">
-        <div><span>green</span><strong>публичные материалы, утвержденные тексты, открытые источники</strong></div>
-        <div><span>yellow</span><strong>внутренние черновики без персональных данных и коммерческой тайны</strong></div>
-        <div><span>red</span><strong>персональные данные, непубличные документы, доступы, договоры, внутренние расследования</strong></div>
+      <div class="risk-list">
+        <p><b>универсальность</b><span>фразу можно вставить в любой материал</span></p>
+        <p><b>раздувание</b><span>событие звучит крупнее, чем оно есть в источнике</span></p>
+        <p><b>симметрия</b><span>одинаковые абзацы, ровные списки, слишком уверенный тон</span></p>
+        <p><b>ложная полнота</b><span>текст звучит готовым, но не хватает фактов</span></p>
       </div>
     </section>
 
     <section class="slide dark" id="s14">
-      <div class="kicker">// ВОПРОС В · ВРЕД ИЗДАНИЮ</div>
+      <div class="kicker">// MINI-PRACTICE · SMELL TEST</div>
+      <h2>Практика 1:<br>поймать шаблон и заменить его фактом</h2>
+      <div class="exercise two-col">
+        <p><b>04 мин.</b> Найти 3 фразы, которые звучат как пресс-релиз обо всем.</p>
+        <p><b>05 мин.</b> Заменить каждую фразу на факт, цитату, место, героя или число.</p>
+        <p><b>03 мин.</b> Записать правило: какой smell больше не пропускаем в выпуск.</p>
+        <p><b>03 мин.</b> Два ответа разбираем вслух и превращаем в gate.</p>
+      </div>
+    </section>
+
+    <section class="slide split" id="s15">
+      <div>
+        <div class="kicker">// ВОЗРАЖЕНИЕ 02 · ДАННЫЕ</div>
+        <h2>Безопасность — это не вера в сервис. Это правило редакции.</h2>
+      </div>
+      <div class="gate-grid">
+        <div class="green"><span>green</span><strong>публичные материалы, утвержденные тексты, открытые источники</strong></div>
+        <div class="yellow"><span>yellow</span><strong>внутренние черновики без персональных данных и чувствительных деталей</strong></div>
+        <div class="red-zone"><span>red</span><strong>персональные данные, доступы, договоры, непубличные документы, расследования</strong></div>
+      </div>
+    </section>
+
+    <section class="slide dark" id="s16">
+      <div class="kicker">// ВОЗРАЖЕНИЕ 03 · ВРЕД ИЗДАНИЮ</div>
       <h2>Опасен не AI как инструмент.<br>Опасен дешевый неуникальный output.</h2>
       <div class="publication-gate">
-        <div><b>original</b><span>есть собственный факт, наблюдение, герой, место или опыт редакции</span></div>
+        <div><b>original</b><span>есть собственный факт, герой, место или наблюдение редакции</span></div>
         <div><b>verified</b><span>ключевые факты проверены, спорные места отмечены</span></div>
         <div><b>useful</b><span>материал отвечает читателю, а не просто заполняет канал</span></div>
         <div><b>owned</b><span>есть человек, который отвечает за выпуск</span></div>
       </div>
     </section>
 
-    <section class="slide hub-slide" id="s15">
-      <div>
-        <div class="kicker">// ИНСТРУМЕНТЫ КАК СЛОИ</div>
-        <h2>Сервисы выбираем по участку работы</h2>
-        <p>ChatGPT/Codex — рабочий контур. NotebookLM/Gemini — источники и research. Granola/Whisper/Obsidian — фиксация встреч и база знаний. Higgsfield и video tools — визуал, клипы и ускорение производства.</p>
+    <section class="slide manifesto" id="s17">
+      <div class="kicker">// ПРАКТИКА · 25 МИНУТ</div>
+      <h2>На первом занятии делаем руками один безопасный прогон</h2>
+      <div class="workshop-lab">
+        <article><b>01</b><h3>source map</h3><p>Разложить общий материал: факты, пробелы, форматы, риски.</p><small>7 минут</small></article>
+        <article><b>02</b><h3>smell test</h3><p>Поймать AI-клише и заменить на конкретику.</p><small>8 минут</small></article>
+        <article><b>03</b><h3>human gate</h3><p>Сформулировать правило проверки перед выпуском.</p><small>5 минут</small></article>
+        <article><b>04</b><h3>share</h3><p>Разобрать 2–3 ответа и показать, как это попадет в hub.</p><small>5 минут</small></article>
       </div>
+    </section>
+
+    <section class="slide split" id="s18">
+      <div>
+        <div class="kicker">// ЧТО ДАЕМ УЧАСТНИКАМ</div>
+        <h2>Практика не требует рассадки в компьютерный класс, но требует действия</h2>
+      </div>
+      <div class="practice-stack">
+        <div><span>до занятия</span><strong>открыть портал и выбрать ближайший пайплайн</strong></div>
+        <div><span>на занятии</span><strong>пройти общий starter prompt и smell test</strong></div>
+        <div><span>после занятия</span><strong>повторить тот же маршрут на своем материале</strong></div>
+        <div><span>на следующей встрече</span><strong>разобрать, что сломалось, и обновить gate</strong></div>
+      </div>
+    </section>
+
+    <section class="slide dark comic" id="s19">
+      <div class="kicker">// МЕТОДОЛОГИЯ</div>
+      <h2>Обучаем не сервису.<br>Обучаем повторяемому редакционному действию.</h2>
+      <div class="method-board">
+        <div><b>show</b><span>показываем маршрут на общем материале</span></div>
+        <div><b>do</b><span>участник делает маленький кусок сам</span></div>
+        <div><b>check</b><span>проверяем через human gate</span></div>
+        <div><b>save</b><span>сохраняем удачный пример в hub</span></div>
+        <div><b>repeat</b><span>между встречами повторяем на своем материале</span></div>
+      </div>
+    </section>
+
+    <section class="slide hub-slide" id="s20">
+      <div>
+        <div class="kicker">// PORTAL AS PROOF</div>
+        <h2>Портал — это не витрина. Это память курса.</h2>
+        <p>После встреч здесь должны жить workflows, prompts, gates, examples, записи, транскрипты и update log. Иначе вся AI-практика снова расползается по личным чатам.</p>
+      </div>
+      <figure>
+        <img src="../preview.png" alt="AI Start hub preview">
+        <figcaption>hub: маршруты, материалы, quality gates, prompt library</figcaption>
+      </figure>
+    </section>
+
+    <section class="slide split" id="s21">
+      <div>
+        <div class="kicker">// A1 / A2 / A3</div>
+        <h2>Не все должны сразу стать архитекторами системы. И слава богу.</h2>
+      </div>
+      <div class="level-grid">
+        <div><b>A1</b><span>использовать готовый workflow и получить checked output</span></div>
+        <div><b>A2</b><span>адаптировать маршрут под свою роль, канал или материал</span></div>
+        <div><b>A3</b><span>предложить улучшение в общий hub на основе evidence</span></div>
+      </div>
+    </section>
+
+    <section class="slide dark" id="s22">
+      <div class="kicker">// TOOLS AS LAYERS</div>
+      <h2>Инструменты показываем по участкам работы, а не списком «модных нейронок»</h2>
       <div class="tool-map">
         <div><span>thinking</span><strong>ChatGPT · Codex</strong></div>
         <div><span>sources</span><strong>NotebookLM · Gemini</strong></div>
-        <div><span>capture</span><strong>Granola · Whisper → Obsidian</strong></div>
+        <div><span>capture</span><strong>Granola · Whisper · Obsidian</strong></div>
         <div><span>visual/video</span><strong>Higgsfield · Vids · Stitch</strong></div>
         <div><span>acceleration</span><strong>Submagic · OpusClip · Gling</strong></div>
       </div>
     </section>
 
-    <section class="slide hub-slide" id="s16">
-      <div>
-        <div class="kicker">// HUB</div>
-        <h2>Hub нужен,<br>чтобы не терять решения.</h2>
-        <p>После каждой встречи сюда попадают запись, транскрипт, резюме, workflow, prompt, gate, примеры и правки.</p>
-      </div>
-      <figure>
-        <img src="../preview.png" alt="Скриншот локального AI Start hub">
-        <figcaption>рабочая оболочка курса · локальная версия</figcaption>
-      </figure>
-    </section>
-
-    <section class="slide split" id="s17">
-      <div>
-        <div class="kicker">// A1 / A2 / A3</div>
-        <h2>Участие тоже устроено слоями</h2>
-      </div>
-      <div class="level-grid">
-        <div><b>A1</b><span>использовать готовый workflow</span></div>
-        <div><b>A2</b><span>адаптировать под свою роль</span></div>
-        <div><b>A3</b><span>улучшить общий hub по evidence</span></div>
+    <section class="slide" id="s23">
+      <div class="kicker">// ДОМАШНЕЕ ЗАКРЕПЛЕНИЕ</div>
+      <h2>После первого воркшопа участник не «идет думать». Он делает один прогон.</h2>
+      <div class="homework">
+        <p><b>1.</b> Выбрать один реальный материал, который можно безопасно использовать.</p>
+        <p><b>2.</b> Прогнать starter prompt: source map, risks, formats, human gate.</p>
+        <p><b>3.</b> Сохранить output и пометить: что помогло, что было опасно, что нужно уточнить.</p>
+        <p><b>4.</b> Принести на следующий раз один пример: good output или fail output.</p>
       </div>
     </section>
 
-    <section class="slide dark" id="s18">
-      <div class="kicker">// ПРАКТИКА</div>
-      <h2>Упражнение в зале:<br>найти свою точку подключения</h2>
-      <div class="exercise">
-        <p><b>05 мин.</b> Выберите один пайплайн, который ближе всего к вашей роли.</p>
-        <p><b>05 мин.</b> Запишите input, AI step, human gate и output.</p>
-        <p><b>05 мин.</b> Отметьте, что должно сохраниться в общем hub редакции.</p>
-      </div>
-    </section>
-
-    <section class="slide" id="s19">
+    <section class="slide dark" id="s24">
       <div class="kicker">// HUMAN OWNS</div>
       <h2>AI drafts.<br><span>Human owns.</span></h2>
       <p class="lead narrow">AI может предложить структуру, черновик, кандидатов, формулировки и варианты. Ответственность за факт, тон, контекст и выпуск остается у человека.</p>
-    </section>
-
-    <section class="slide final" id="s20">
-      <div class="kicker">// ДО СЛЕДУЮЩЕЙ ВСТРЕЧИ</div>
-      <h2>Не ограничиваемся промптами.<br>Собираем рабочие маршруты с AI.</h2>
       <div class="final-links">
         <a href="../index.html">открыть hub</a>
-        <a href="./deck-02-text.html">следующая презентация</a>
-        <a href="../../ai_start_portal_v0/09_practice_materials/ai-start%20%7Bpractice%7D%20all%20meetings%20exercises%20-%202026-05-05.md">упражнение</a>
-        <a href="../../ai_start_portal_v0/08_presentations/ai-start%20%7Bdeck-system%7D%20lecture%20exercises%20embedded%20map%20-%202026-05-05.md">карта лекции</a>
+        <a href="./deck-02-text.html">следующий deck</a>
+        <a href="../../ai_start_portal_v0/09_practice_materials/ai-start%20%7Bpractice%7D%20all%20meetings%20exercises%20-%202026-05-05.md">практика</a>
+        <a href="../../ai_start_portal_v0/08_presentations/deck_map.md">карта deck</a>
       </div>
     </section>
   </main>
