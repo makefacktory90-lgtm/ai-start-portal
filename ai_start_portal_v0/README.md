@@ -6,10 +6,14 @@ This folder is the markdown content layer for the AI Start hub.
 
 - `AGENTS.md`
 - `01_rules/ai-start {rule} file naming convention - 2026-05-04.md`
+- `00_start_here/04_task_levels.md`
+- `00_start_here/05_course_readiness_audit.md`
+- `00_start_here/06_participant_prework.md`
 - `02_pipelines/`
 - `04_prompt_library/master_prompt_index.md`
 - `07_content_mechanics/release_and_retention_model.md`
 - `08_presentations/deck_map.md`
+- `08_presentations/ai-start {methodology} lesson contracts - 2026-05-09.md`
 
 ## Current source of truth
 
@@ -22,4 +26,3 @@ The 5 pipeline pages are the main course structure:
 5. `02_pipelines/05_editorial_contour/workflow.md`
 
 Older `02_workflows/` content is legacy starter material and should be folded into Pipeline 01 later.
-

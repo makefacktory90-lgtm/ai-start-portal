@@ -26,6 +26,9 @@ Scout = команда понимает, куда движется рынок
 Подробно:
 
 - `../00_start_here/04_task_levels.md`
+- `ai-start {methodology} lesson contracts - 2026-05-09.md`
+- `../00_start_here/05_course_readiness_audit.md`
+- `../00_start_here/06_participant_prework.md`
 
 ## Деки
 
