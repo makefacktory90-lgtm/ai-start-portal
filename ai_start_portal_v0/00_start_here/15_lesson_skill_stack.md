@@ -9,8 +9,9 @@
 
 - Exa: https://exa.ai/
 - Exa docs: https://exa.ai/docs/reference/getting-started
-- Perplexity: https://www.perplexity.ai/
 - Tavily: https://tavily.com/
+- Perplexity: https://www.perplexity.ai/
+  Роль: no-code fallback, если участник пока не идет в Claude Code / Codex и API.
 - Tonya deep research skill: https://github.com/tonyazhuuki/deep-research-skill
 - Tonya TLDR Buddy: https://github.com/tonyazhuuki/tldr_buddy
 - Tonya GitHub: https://github.com/tonyazhuuki
@@ -19,8 +20,10 @@
 Практический навык:
 
 ```text
-search plan -> sources -> source map -> unknowns -> human gate -> hub
+search plan -> Exa/Tavily or Perplexity fallback -> source map -> unknowns -> human gate -> hub
 ```
+
+Позиция курса: Perplexity можно использовать, чтобы быстро начать без кода. Но системный маршрут строим вокруг search API, Claude Code / Codex и hub.
 
 ## Deck 02. Text OS
 

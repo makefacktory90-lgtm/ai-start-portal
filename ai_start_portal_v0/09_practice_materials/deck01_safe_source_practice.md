@@ -103,12 +103,14 @@ Exa: https://exa.ai/
 Вариант без кода:
 
 ```text
-1. Открыть Exa / Perplexity / Tavily / обычный поиск.
+1. Открыть Perplexity.
 2. Взять 3-5 запросов из search plan.
 3. Сохранить 3 источника: сильный, слабый, спорный.
 4. Вернуться в LLM и собрать Source Map.
 5. Отдельно выписать human gate.
 ```
+
+Perplexity в этом курсе не обязательный инструмент, а быстрый вход без кода. Если делаем систему по-нормальному, основной маршрут такой: Exa или Tavily как search API, Claude Code / Codex как сборщик workflow, hub как место хранения промптов и gates.
 
 Вариант через Codex / Claude Code для owners:
 
@@ -117,7 +119,7 @@ Exa: https://exa.ai/
 2. Попросить агента собрать запросы и критерии источников.
 3. Установить / изучить deep-research-skill:
    https://github.com/tonyazhuuki/deep-research-skill
-4. Если есть API-ключ Exa, подключить search endpoint позже как отдельный tool.
+4. Если есть API-ключ Exa или Tavily, подключить search endpoint позже как отдельный tool.
 5. Сохранить удачный prompt в hub.
 ```
 
