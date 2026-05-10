@@ -13,6 +13,8 @@ This folder is the markdown content layer for the AI Start hub.
 - `00_start_here/08_implementation_ladder.md`
 - `00_start_here/09_system_partner_brief.md`
 - `00_start_here/10_demo_talk_track_2026-05-10.md`
+- `00_start_here/11_partner_demo_route_deck01_exercises.md`
+- `00_start_here/12_purchase_decision_for_2026-05-12.md`
 - `02_pipelines/`
 - `04_prompt_library/master_prompt_index.md`
 - `07_content_mechanics/release_and_retention_model.md`
