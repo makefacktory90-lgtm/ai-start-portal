@@ -210,14 +210,34 @@
     </section>
 
     <section class="slide dark" id="s14">
-      <div class="kicker">// ВОЗРАЖЕНИЕ 01 · КЛИШЕ</div>
-      <h2>Пластиковый AI-output ловим не на вкус, а через smell test.</h2>
-      <div class="exercise two-col">
-        <p><b>универсальность</b> фразу можно вставить почти в любой материал.</p>
-        <p><b>раздувание</b> событие звучит крупнее, чем оно есть в source.</p>
-        <p><b>симметрия</b> одинаковые абзацы, слишком ровный тон.</p>
-        <p><b>ложная полнота</b> текст звучит готовым, но фактов не хватает.</p>
+      <div class="kicker">// ВОЗРАЖЕНИЕ = РЕШЕНИЕ</div>
+      <h2>Каждое возражение превращаем в проверку, промпт и файл в hub.</h2>
+      <div class="objection-solution">
+        <div><span>клише</span><strong>smell_test_prompt.md</strong><p>ловит пластиковые фразы и возвращает текст к факту</p></div>
+        <div><span>данные</span><strong>source_safety_gate.md</strong><p>решает, что можно загружать в AI, а что нельзя</p></div>
+        <div><span>репутация</span><strong>publication_gate.md</strong><p>не выпускает шаблонный и непроверенный output</p></div>
+        <div><span>внедрение</span><strong>workflow_card.md</strong><p>фиксирует: source, AI step, human gate, пример</p></div>
       </div>
+    </section>
+
+    <section class="slide dark prompt-slide" id="s14-prompt">
+      <div class="kicker">// CLAUDE CODE / CODEX PROMPT</div>
+      <h2>Промпт для сборки мини-системы под возражение.</h2>
+      <pre class="prompt-block"><code>Ты помогаешь редакции внедрять AI безопасно.
+
+Возражение: [клише / данные / репутация / нет времени].
+
+Собери один рабочий файл для hub:
+1. В чем риск для редакции.
+2. Какой AI-шаг разрешен.
+3. Что AI не имеет права делать.
+4. Human gate: что проверяет человек.
+5. Prompt: текст команды для ChatGPT / Claude.
+6. Output format: таблица или чеклист.
+7. Пример на safe source.
+
+Не пиши общую методологию.
+Сделай файл, который редактор сможет открыть и применить.</code></pre>
     </section>
 
     <section class="slide split" id="s15">
