@@ -132,7 +132,7 @@ Fallback:
 Нужно иметь:
 
 - lesson contracts;
-- tool radar;
+- список инструментов, которыми реально пользуется редакция;
 - AI policy.
 
 ## Lesson 09. Practice clinic

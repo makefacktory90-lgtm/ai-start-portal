@@ -13,9 +13,9 @@ const modules = {
       "Показываем, почему одних промптов недостаточно для редакционного производства.",
       "Собираем спокойную схему: материал, AI draft, human gate, сохраненный пример.",
       "Разделяем личные настройки роли, общие правила редакции и решения компании.",
-      "Показываем helicopter view пяти пайплайнов: input, AI step, human gate, output, hub artifact.",
-      "Делаем zoom-in в Text OS: Source Map, ToV, Style Graph, Repurpose Boss, QA и update proposal.",
-      "Показываем механику: prework, live demo, практика, запись, transcript, summary, feedback log."
+      "Показываем карту пяти рабочих маршрутов: input, AI step, human gate, output, hub artifact.",
+      "Делаем zoom-in в Text OS: Source Map, ToV, Style Graph, Repurpose Boss и QA.",
+      "Показываем механику: подготовка, live demo, практика, запись, transcript и summary."
     ],
     artifacts: [
       "карта роли / редакции / компании",
@@ -221,7 +221,7 @@ const modules = {
     artifacts: [
       "30-day adoption loop",
       "owners list",
-      "feedback log",
+      "список вопросов и улучшений",
       "approved examples",
       "workflow review board"
     ],
