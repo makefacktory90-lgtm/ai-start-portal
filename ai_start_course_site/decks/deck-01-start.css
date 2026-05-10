@@ -633,6 +633,15 @@ a {
   line-height: 1.34;
 }
 
+.compact-tools {
+  gap: 28px;
+}
+
+.compact-tools h2 {
+  max-width: 1080px;
+  font-size: clamp(46px, 6vw, 86px);
+}
+
 .prompt-block code {
   font-family: var(--mono);
 }
