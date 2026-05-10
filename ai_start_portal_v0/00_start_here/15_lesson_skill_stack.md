@@ -25,6 +25,8 @@ search plan -> Exa/Tavily or Perplexity fallback -> source map -> unknowns -> hu
 
 Позиция курса: Perplexity можно использовать, чтобы быстро начать без кода. Но системный маршрут строим вокруг search API, Claude Code / Codex и hub.
 
+Домашнее задание до второго урока: [Codex playground](16_codex_playground_homework.md). Участник ставит Codex, создает рабочую папку и сохраняет первый research-skill / prompt. Вопросы по установке идут в чат.
+
 ## Deck 02. Text OS
 
 Что ставим или показываем:
