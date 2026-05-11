@@ -1,7 +1,6 @@
 # Lesson skill stack
 
-Статус: рабочая карта skills / tools для курса  
-Назначение: ссылки должны быть доступны до старта каждого урока.
+Ссылки на tools и skills по урокам.
 
 ## Deck 01. Start / research layer
 
@@ -11,7 +10,7 @@
 - Exa docs: https://exa.ai/docs/reference/getting-started
 - Tavily: https://tavily.com/
 - Perplexity: https://www.perplexity.ai/
-  Роль: no-code fallback, если участник пока не идет в Claude Code / Codex и API.
+  Роль: вариант без кода.
 - Tonya deep research skill: https://github.com/tonyazhuuki/deep-research-skill
 - Tonya TLDR Buddy: https://github.com/tonyazhuuki/tldr_buddy
 - Tonya GitHub: https://github.com/tonyazhuuki
@@ -23,7 +22,7 @@
 search plan -> Exa/Tavily or Perplexity fallback -> source map -> unknowns -> human gate -> hub
 ```
 
-Позиция курса: Perplexity можно использовать, чтобы быстро начать без кода. Но системный маршрут строим вокруг search API, Claude Code / Codex и hub.
+Perplexity можно использовать, чтобы быстро начать без кода. Системный маршрут: search API, Claude Code / Codex и hub.
 
 Домашнее задание до второго урока: [Codex playground](16_codex_playground_homework.md). Участник ставит Codex, создает рабочую папку и сохраняет первый research-skill / prompt. Вопросы по установке идут в чат.
 
@@ -93,8 +92,8 @@ text -> spoken script -> audio version -> pronunciation gate -> publication note
 - Codex / Claude Code для рабочих папок, markdown и мини-инструментов
 - общий hub курса
 - prompt library
-- feedback log
-- weekly update loop
+- список вопросов и улучшений
+- weekly update
 
 Практический навык:
 
@@ -104,4 +103,4 @@ recurring task -> prompt -> owner -> evidence -> hub update -> next iteration
 
 ## Правило курса
 
-Мы не покупаем и не устанавливаем все сразу. На каждом уроке участник забирает один практический маршрут, один набор ссылок и один маленький шаг внедрения в свою работу.
+На каждом уроке участник получает один практический маршрут, набор ссылок и действие после занятия.
