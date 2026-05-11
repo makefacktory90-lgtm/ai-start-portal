@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Start Kit</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+  <script>
+    if (sessionStorage.getItem("ai-start-portal-auth") !== "ok") {
+      window.location.replace("./index.html");
+    }
+  </script>
+</head>
+<body>
+  <div class="progress"></div>
+  <aside class="sidebar" aria-label="Навигация курса">
+    <div class="brand">
+      <div class="mark" aria-hidden="true"></div>
+      <div>
+        <div class="brand-title">AI START</div>
+        <div class="brand-subtitle">hub // v0.3</div>
+      </div>
+    </div>
+
+    <label class="search">
+        <span>SEARCH</span>
+      <input type="search" placeholder="workflow, чеклист, модуль">
+    </label>
+
+    <nav class="nav">
+      <div class="nav-section">// старт</div>
+      <button class="nav-item active" data-module="intro">
+        <span class="dot filled"></span>
+        <span>
+          <b>00 / START MAP</b>
+          <small>5 пайплайнов + hub</small>
+        </span>
+      </button>
+
+      <div class="nav-section">// модули</div>
+      <button class="nav-item" data-module="text">
+        <span class="dot"></span>
+        <span>
+          <b>01 / ТЕКСТ</b>
+          <small>событие → форматы</small>
+        </span>
+      </button>
+      <button class="nav-item" data-module="formats">
+        <span class="dot"></span>
+        <span>
+          <b>02 / ВИДЕО</b>
+          <small>long → vertical clips</small>
+        </span>
+      </button>
+      <button class="nav-item" data-module="visual">
+        <span class="dot"></span>
+        <span>
+          <b>03 / ВИЗУАЛ</b>
+          <small>карточки · обложки</small>
+        </span>
+      </button>
+      <button class="nav-item" data-module="radar">
+        <span class="dot"></span>
+        <span>
+          <b>04 / АУДИО</b>
+          <small>script · podcast</small>
+        </span>
+      </button>
+      <button class="nav-item" data-module="system">
+        <span class="dot"></span>
+        <span>
+          <b>05 / КОНТУР</b>
+          <small>monitoring · grid</small>
+        </span>
+      </button>
+      <button class="nav-item" data-module="clinic">
+        <span class="dot"></span>
+        <span>
+          <b>06 / RETENTION</b>
+          <small>30 дней применения</small>
+        </span>
+      </button>
+
+      <div class="nav-section">// материалы</div>
+      <a class="nav-link" href="../ai_start_portal_v0/00_start_here/04_task_levels.md">Base / Opti / Advanced</a>
+      <a class="nav-link" href="./decks/deck-01-start.html">Deck 01</a>
+      <a class="nav-link" href="./decks/deck-02-text.html">Deck 02</a>
+      <a class="nav-link" href="./decks/deck-03-video.html">Deck 03</a>
+      <a class="nav-link" href="./decks/deck-04-visual.html">Deck 04</a>
+      <a class="nav-link" href="./decks/deck-05-audio.html">Deck 05</a>
+      <a class="nav-link" href="./decks/deck-06-editorial-contour.html">Deck 06</a>
+      <a class="nav-link" href="./decks/deck-07-hub-tv21.html">Deck 07</a>
+      <a class="nav-link" href="./decks/deck-08-agents.html">Deck 08</a>
+      <a class="nav-link" href="./decks/deck-09-practice-clinic.html">Deck 09</a>
+      <a class="nav-link" href="./decks/deck-10-final-kit.html">Deck 10</a>
+      <a class="nav-link" href="../ai_start_portal_v0/00_start_here/06_participant_prework.md">что подготовить</a>
+      <a class="nav-link" href="../ai_start_portal_v0/09_practice_materials/deck01_safe_source_practice.md">safe source Deck 01</a>
+      <a class="nav-link" href="../ai_start_portal_v0/00_start_here/15_lesson_skill_stack.md">скиллы и инструменты</a>
+      <a class="nav-link" href="../ai_start_portal_v0/00_start_here/16_codex_playground_homework.md">Codex playground</a>
+      <a class="nav-link" href="../ai_start_portal_v0/09_practice_materials/ai-start%20%7Bpractice%7D%20all%20meetings%20exercises%20-%202026-05-05.md">упражнения</a>
+      <a class="nav-link" href="../ai_start_portal_v0/00_start_here/08_implementation_ladder.md">что внедряем после урока</a>
+      <a class="nav-link" href="../ai_start_portal_v0/10_recordings/README.md">записи и домашка</a>
+      <a class="nav-link" href="../ai_start_portal_v0/04_prompt_library/master_prompt_index.md">библиотека промптов</a>
+      <a class="nav-link" href="./purchase-stack.html">что купить</a>
+    </nav>
+  </aside>
+
+  <main class="workspace">
+    <header class="topbar">
+      <div class="crumbs">
+        <span>IRAAI.RU</span>
+        <span>›</span>
+        <span>AI START</span>
+        <span>›</span>
+        <strong id="crumb-title">Start Here</strong>
+      </div>
+      <div class="user-pill"><span></span> LIVE BUILD // 5 DAYS</div>
+    </header>
+
+    <section class="content">
+      <div class="module-head">
+        <div>
+          <a class="back-link" href="../ai_start_portal_v0/00_start_here/01_read_first.md">← IRA & AI / AI START KIT</a>
+          <div class="eyebrow" id="module-code">AI-START · 00</div>
+          <h1 id="module-title">AI Start: 5 пайплайнов, hub и рабочий порядок</h1>
+          <p id="module-subtitle">Единая архитектура курса: библиотека промптов, quality gates, web-decks, AI-hub и механика применения после встреч.</p>
+          <div class="meta">
+            <span>5 пайплайнов</span>
+            <span>AI-hub</span>
+            <span>30 дней применения</span>
+          </div>
+        </div>
+        <figure class="portal-art">
+          <img src="./assets/ai-start-art-direction-keyframe-v1.png" alt="AI Start editorial sci-fi command room artwork">
+          <figcaption>source → AI step → gate → hub</figcaption>
+        </figure>
+      </div>
+
+      <section class="module-status">
+        <div class="status-visual" aria-hidden="true">
+          <span class="pulse-ring"></span>
+          <span class="pulse-dot"></span>
+        </div>
+        <div class="status-copy">
+          <span id="poster-kicker">ДО ЗАНЯТИЯ</span>
+          <strong id="poster-title">материал → workflow → checked draft</strong>
+          <small id="poster-subtitle">запись, транскрипт и резюме появятся после лекции</small>
+        </div>
+        <div class="status-steps" aria-label="Статус материалов">
+          <span class="current">до занятия</span>
+          <span>live</span>
+          <span>запись доступна</span>
+        </div>
+      </section>
+
+      <section class="tool-row" aria-label="Быстрые материалы">
+        <a href="../ai_start_portal_v0/00_start_here/01_read_first.md">старт</a>
+        <a href="../ai_start_portal_v0/00_start_here/04_task_levels.md">уровни</a>
+          <a href="./decks/deck-01-start.html">Deck 01</a>
+          <a href="./decks/deck-02-text.html">Deck 02</a>
+          <a href="./decks/deck-03-video.html">Deck 03</a>
+          <a href="./decks/deck-04-visual.html">Deck 04</a>
+          <a href="./decks/deck-05-audio.html">Deck 05</a>
+          <a href="./decks/deck-06-editorial-contour.html">Deck 06</a>
+          <a href="./decks/deck-07-hub-tv21.html">Deck 07</a>
+          <a href="./decks/deck-08-agents.html">Deck 08</a>
+          <a href="./decks/deck-09-practice-clinic.html">Deck 09</a>
+          <a href="./decks/deck-10-final-kit.html">Deck 10</a>
+      <a href="../ai_start_portal_v0/00_start_here/06_participant_prework.md">что подготовить</a>
+      <a href="../ai_start_portal_v0/09_practice_materials/deck01_safe_source_practice.md">safe source</a>
+      <a href="../ai_start_portal_v0/00_start_here/15_lesson_skill_stack.md">скиллы</a>
+      <a href="../ai_start_portal_v0/00_start_here/16_codex_playground_homework.md">Codex playground</a>
+      <a href="../ai_start_portal_v0/09_practice_materials/ai-start%20%7Bpractice%7D%20all%20meetings%20exercises%20-%202026-05-05.md">exercises</a>
+      <a href="../ai_start_portal_v0/00_start_here/08_implementation_ladder.md">что внедряем</a>
+      <a href="../ai_start_portal_v0/10_recordings/README.md">записи</a>
+      <a href="./purchase-stack.html">что купить</a>
+      <a href="../ai_start_portal_v0/03_quality_gates/factual_check.md">factual check</a>
+      <a href="../ai_start_portal_v0/03_quality_gates/video_quality_gate.md">video gate</a>
+      <a href="../ai_start_portal_v0/03_quality_gates/visual_quality_gate.md">visual gate</a>
+      <a href="../ai_start_portal_v0/03_quality_gates/audio_quality_gate.md">audio gate</a>
+      <a href="../ai_start_portal_v0/03_quality_gates/ai_use_policy.md">AI policy</a>
+      </section>
+
+      <section class="panel-grid">
+        <article class="panel tool-card">
+          <div class="tool-head">
+            <span class="tool-num">01</span>
+            <span class="tool-title">ЧТО ДЕЛАЕМ</span>
+            <span class="tool-toggle">[ + ]</span>
+          </div>
+          <h2>Что делаем на занятии</h2>
+          <ul id="lesson-list"></ul>
+        </article>
+        <article class="panel tool-card">
+          <div class="tool-head">
+            <span class="tool-num">02</span>
+            <span class="tool-title">ЧТО УНОСИТ</span>
+            <span class="tool-toggle">[ + ]</span>
+          </div>
+          <h2>Что участник уносит</h2>
+          <ul id="artifact-list"></ul>
+        </article>
+      </section>
+
+      <section class="insights">
+        <div class="section-num">// ПРИНЦИПЫ</div>
+        <h2>AI подключается к работе,<br>которая уже есть.</h2>
+        <div id="insight-list" class="quote-grid"></div>
+      </section>
+    </section>
+  </main>
+
+  <aside class="rightbar" aria-label="Чеклист модуля">
+    <section class="mini-card">
+      <div class="mini-label">модуль</div>
+      <h2 id="side-title">Start Here</h2>
+      <p id="side-summary">Открыть kit, понять уровни и запустить первый безопасный workflow.</p>
+    </section>
+
+    <section class="check-card">
+      <div class="check-head">
+        <span>чеклист</span>
+        <span id="check-count">0/3</span>
+      </div>
+      <label class="task">
+        <input type="checkbox">
+        <span>
+          <b id="a1-title">Base · сделать</b>
+          <small id="a1-text">Открыть kit, выбрать первый workflow, получить checked draft.</small>
+        </span>
+      </label>
+      <label class="task">
+        <input type="checkbox">
+        <span>
+          <b id="a2-title">Opti · ускорить</b>
+          <small id="a2-text">Сделать версию под другой канал или роль.</small>
+        </span>
+      </label>
+      <label class="task">
+        <input type="checkbox">
+        <span>
+          <b id="a3-title">Advanced · собрать</b>
+          <small id="a3-text">Найти повторяющуюся проблему и предложить update.</small>
+        </span>
+      </label>
+    </section>
+
+    <section class="collection">
+      <div class="mini-label">участнику</div>
+      <a href="./decks/deck-01-start.html">первая лекция</a>
+      <a href="../ai_start_portal_v0/00_start_here/04_task_levels.md">что уносим после занятия</a>
+      <a href="../ai_start_portal_v0/00_start_here/06_participant_prework.md">что подготовить</a>
+      <a href="../ai_start_portal_v0/00_start_here/16_codex_playground_homework.md">Codex playground</a>
+      <a href="../ai_start_portal_v0/09_practice_materials/deck01_safe_source_practice.md">safe source Deck 01</a>
+      <a href="../ai_start_portal_v0/00_start_here/15_lesson_skill_stack.md">скиллы и инструменты</a>
+      <a href="../ai_start_portal_v0/09_practice_materials/ai-start%20%7Bpractice%7D%20all%20meetings%20exercises%20-%202026-05-05.md">упражнения</a>
+      <a href="../ai_start_portal_v0/03_quality_gates/ai_use_policy.md">правила безопасности</a>
+      <a href="../ai_start_portal_v0/10_recordings/README.md">записи и домашка</a>
+    </section>
+  </aside>
+
+  <script src="./script.js"></script>
+</body>
+</html>
