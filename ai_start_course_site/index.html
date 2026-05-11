@@ -56,10 +56,14 @@
 
     h1 {
       margin: 0;
-      font-size: clamp(42px, 9vw, 76px);
+      font-size: clamp(40px, 8vw, 68px);
       font-weight: 900;
-      line-height: 0.9;
+      line-height: 0.98;
       letter-spacing: 0;
+    }
+
+    h1 + p {
+      margin-top: 14px;
     }
 
     p {
@@ -127,6 +131,29 @@
       font-size: 12px;
       font-weight: 900;
       text-transform: uppercase;
+    }
+
+    @media (max-width: 520px) {
+      main {
+        width: min(360px, calc(100vw - 28px));
+        gap: 22px;
+        padding: 34px 34px 40px;
+        box-shadow: 10px 10px 0 var(--black);
+      }
+
+      h1 {
+        font-size: clamp(38px, 13vw, 48px);
+        line-height: 0.96;
+      }
+
+      h1 + p {
+        margin-top: 12px;
+      }
+
+      input,
+      button {
+        min-height: 58px;
+      }
     }
   </style>
 </head>
