@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AI Start · что купить и установить</title>
+  <title>AI Start · что купить / подключить</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -11,222 +11,193 @@
 </head>
 <body>
   <header class="topline">
-    <a href="./index.html" class="back">← AI Start hub</a>
-    <div class="status">v1 · ready for procurement review</div>
+    <a href="./portal.html" class="back">← AI Start portal</a>
+    <div class="status">v4 · final short list</div>
   </header>
 
   <main class="page">
     <section class="hero">
       <div>
         <div class="eyebrow">AI START</div>
-        <h1>Что купить и установить до старта практики</h1>
+        <h1>Что купить / подключить к старту</h1>
         <p>
-          Базовая закупка закрывает рабочий минимум: общий AI-инструмент для практики,
-          knowledge/source layer, transcript route и несколько пилотных мест для видео / визуала.
-          Не покупаем зоопарк сервисов до первых evidence.
+          Для первых занятий нужен короткий набор: основной LLM-доступ,
+          agent layer для рабочей папки и проверенный маршрут транскрибации.
+          Production-сервисы подключаем пилотно, когда понятен конкретный сценарий.
         </p>
       </div>
       <div class="stamp" aria-label="Статус документа">
-        <span>10 MAY</span>
-        <strong>ready for review</strong>
+        <span>12 MAY</span>
+        <strong>short list</strong>
       </div>
     </section>
 
-    <section class="base-strip" aria-label="Базовая рекомендация">
+    <section class="base-strip" aria-label="Короткий список">
       <div>
         <span>01</span>
-        <strong>ChatGPT Business / approved LLM</strong>
-        <small>общий LLM для практики, 30 seats или 15 pair seats</small>
+        <strong>LLM layer</strong>
+        <small>ChatGPT / Claude / Gemini / согласованный корпоративный аналог</small>
       </div>
       <div>
         <span>02</span>
-        <strong>NotebookLM / Gemini</strong>
-        <small>источники, Google-контур, research</small>
+        <strong>Agent layer</strong>
+        <small>Codex / Claude Code для owners, ведущей и advanced-уровня</small>
       </div>
       <div>
         <span>03</span>
-        <strong>Higgsfield pilot</strong>
-        <small>2-3 seats для visual / video hypotheses</small>
+        <strong>Транскрибация</strong>
+        <small>Whisper / MacWhisper / Wispr Flow / текущий route</small>
       </div>
       <div>
         <span>04</span>
-        <strong>1 video acceleration pilot</strong>
-        <small>1-2 seats: Submagic / OpusClip / Gling</small>
+        <strong>Research fallback</strong>
+        <small>Perplexity опционально: быстрый research без API</small>
       </div>
       <div>
         <span>05</span>
-        <strong>Transcript route</strong>
-        <small>Whisper / Granola / Zoom transcript по policy</small>
+        <strong>Production pilots</strong>
+        <small>Higgsfield / OpusClip / Submagic / Gling не покупаем массово</small>
       </div>
     </section>
 
     <section class="section">
       <div class="section-head">
-        <span>// must</span>
-        <h2>Must-have, без которого практику лучше не начинать</h2>
+        <span>// слои</span>
+        <h2>Как объясняем закупку</h2>
+      </div>
+      <div class="layer-list">
+        <article>
+          <span>LLM layer</span>
+          <h3>ChatGPT / Claude / Gemini</h3>
+          <p>Помогают думать, писать, разбирать источники, собирать варианты и видеть слабые места.</p>
+        </article>
+        <article>
+          <span>Agent layer</span>
+          <h3>Codex / Claude Code</h3>
+          <p>Ведут рабочую папку: prompts, gates, examples, source maps, outputs и обновления hub.</p>
+        </article>
+        <article>
+          <span>Production layer</span>
+          <h3>Higgsfield / OpusClip / Submagic / Gling</h3>
+          <p>Делают конкретные операции. Покупаем пилотно, не всем участникам сразу.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <span>// минимум</span>
+        <h2>Минимум для первых двух лекций</h2>
       </div>
       <div class="matrix">
         <article>
           <div class="num">A</div>
-          <h3>ChatGPT Business / approved LLM</h3>
-          <p>Основной рабочий LLM для участников: файлы, анализ, текстовые пайплайны, shared workspace. Если ChatGPT нельзя, нужен согласованный корпоративный LLM.</p>
-          <a href="https://chatgpt.com/pricing/" target="_blank" rel="noreferrer">официальные тарифы</a>
+          <h3>Основной LLM-доступ</h3>
+          <p>Нужен для research, анализа источников, Style Graph, tone of voice, smell test и текстовых черновиков. Подходит ChatGPT, Claude, Gemini или согласованный корпоративный аналог.</p>
+          <a href="https://chatgpt.com/pricing/" target="_blank" rel="noreferrer">ChatGPT</a>
         </article>
         <article>
           <div class="num">B</div>
-          <h3>Codex</h3>
-          <p>Работа с папкой проекта, markdown, hub, prompt library, структурами и обновлениями курса. Нужен ведущей, методологу и owners, не всем участникам.</p>
-          <a href="https://developers.openai.com/codex/cli" target="_blank" rel="noreferrer">установка Codex CLI</a>
+          <h3>Agent layer</h3>
+          <p>Это отдельный слой для работы с папкой, prompts, gates и hub. Нужен Сергею, ведущей и тем, кто идет в advanced. Участники ставят самостоятельно по записи.</p>
+          <a href="https://developers.openai.com/codex/cli" target="_blank" rel="noreferrer">Codex CLI</a>
         </article>
         <article>
           <div class="num">C</div>
-          <h3>NotebookLM</h3>
-          <p>Работа с источниками, цитатами, briefing docs, видео / аудио / PDF и проверяемыми ответами по policy клиента.</p>
-          <a href="https://notebooklm.google.com/" target="_blank" rel="noreferrer">открыть NotebookLM</a>
+          <h3>Транскрибация</h3>
+          <p>Нужна для видео, интервью, эфиров и записей занятий. Можно использовать текущий approved route, Whisper-стек или Wispr Flow для голосового ввода и быстрых заметок.</p>
+          <a href="https://github.com/openai/whisper" target="_blank" rel="noreferrer">Whisper</a>
         </article>
         <article>
           <div class="num">D</div>
-          <h3>Gemini</h3>
-          <p>Google AI-контур: мультимодальность, Deep Research, Drive / Docs по политике Workspace. Проверяем доступ, а не покупаем вслепую.</p>
-          <a href="https://gemini.google/" target="_blank" rel="noreferrer">открыть Gemini</a>
+          <h3>Telegram-чат</h3>
+          <p>Нужен для вопросов по установке, домашке и первым outputs. Это не закупка, но обязательная часть поддержки курса.</p>
         </article>
       </div>
     </section>
 
-    <section class="section split">
-      <div>
-        <div class="section-head">
-          <span>// install</span>
-          <h2>Что проверить после покупки</h2>
-        </div>
-        <ul class="checklist">
-          <li>Вход в рабочий аккаунт не блокируется корпоративной сетью.</li>
-          <li>Hub открывается, материалы и промпты доступны.</li>
-          <li>Codex запускается в папке проекта у ведущей, методолога и owners.</li>
-          <li>NotebookLM создает notebook и принимает тестовый источник.</li>
-          <li>Gemini доступен в разрешенном Google-контуре.</li>
-          <li>Есть понятный маршрут для transcript + timestamps.</li>
-          <li>Есть правило public / internal / restricted source.</li>
-        </ul>
-      </div>
-      <div class="command-box">
-        <span>для технического помощника</span>
-        <pre><code>node --version
-npm --version
-npm i -g @openai/codex
-cd &lt;project-folder&gt;
-codex</code></pre>
-      </div>
-    </section>
-
     <section class="section">
       <div class="section-head">
-        <span>// pilots</span>
-        <h2>Пилоты для видео, визуала и интерфейсных черновиков</h2>
+        <span>// опционально</span>
+        <h2>Что добавляем только при необходимости</h2>
       </div>
-      <div class="service-grid">
+      <div class="service-grid compact">
+        <a href="https://www.perplexity.ai/" target="_blank" rel="noreferrer">
+          <strong>Perplexity</strong>
+          <span>Опционально: быстрый research без кода и API. Можно обойтись основным AI-доступом и обычным search-подходом.</span>
+        </a>
+        <a href="https://ref.evdokimov.ai/AWJxM9ZM?from=WhyNot" target="_blank" rel="noreferrer">
+          <strong>TUN VPN / WhyNot VPN</strong>
+          <span>Опционально: использовать маршрут доступа, который дает Ира, если он согласован с участниками.</span>
+        </a>
+        <a href="https://wisprflow.ai/r?MSBUYAN1" target="_blank" rel="noreferrer">
+          <strong>Wispr Flow</strong>
+          <span>Опционально: голосовой ввод, быстрые заметки и черновики. Запросить промокод на 1 месяц.</span>
+        </a>
+        <a href="https://exa.ai/" target="_blank" rel="noreferrer">
+          <strong>Exa</strong>
+          <span>Search API для researcher-сценариев; достаточно 1 technical owner на пилот.</span>
+        </a>
+        <a href="https://tavily.com/" target="_blank" rel="noreferrer">
+          <strong>Tavily</strong>
+          <span>Альтернатива Exa для agent/search-сценариев; выбираем один основной маршрут.</span>
+        </a>
         <a href="https://higgsfield.ai/" target="_blank" rel="noreferrer">
           <strong>Higgsfield</strong>
-          <span>2-3 seats: AI image / video, visual hypotheses, Marketing Studio</span>
-        </a>
-        <a href="https://www.submagic.co/" target="_blank" rel="noreferrer">
-          <strong>Submagic</strong>
-          <span>1-2 pilot seats: captions, shorts packaging, social video acceleration</span>
+          <span>1-2 места для визуального блока и демонстраций, не для всех участников.</span>
         </a>
         <a href="https://www.opus.pro/" target="_blank" rel="noreferrer">
           <strong>OpusClip</strong>
-          <span>1-2 pilot seats: long video to short clips, reframing, captions</span>
+          <span>Пилот для длинное видео → короткие клипы после решения с видео-специалистом.</span>
         </a>
         <a href="https://www.gling.ai/" target="_blank" rel="noreferrer">
           <strong>Gling</strong>
-          <span>1-2 pilot seats: rough cut, silence / bad takes removal, export to NLE</span>
+          <span>Пилот для rough cut, пауз и подготовки монтажного черновика.</span>
         </a>
-        <a href="https://workspace.google.com/products/vids/" target="_blank" rel="noreferrer">
-          <strong>Google Vids</strong>
-          <span>internal video drafts inside Workspace</span>
-        </a>
-        <a href="https://stitch.withgoogle.com/" target="_blank" rel="noreferrer">
-          <strong>Google Stitch</strong>
-          <span>UI / portal / visual prototypes from natural language</span>
-        </a>
-        <a href="https://granola.to/" target="_blank" rel="noreferrer">
-          <strong>Granola</strong>
-          <span>meeting notes, summaries, action items, call memory</span>
-        </a>
-        <a href="https://obsidian.md/" target="_blank" rel="noreferrer">
-          <strong>Obsidian</strong>
-          <span>local markdown vault for role OS and knowledge base</span>
-        </a>
-        <a href="https://github.com/openai/whisper" target="_blank" rel="noreferrer">
-          <strong>Whisper → Obsidian</strong>
-          <span>transcript route for recordings, then structured notes in vault / hub</span>
+        <a href="https://www.submagic.co/" target="_blank" rel="noreferrer">
+          <strong>Submagic</strong>
+          <span>Пилот для субтитров и упаковки коротких видео, если подтвердит видео-команда.</span>
         </a>
       </div>
     </section>
 
     <section class="section">
       <div class="section-head">
-        <span>// decision</span>
-        <h2>Финальное решение v1 на 12 мая</h2>
+        <span>// решение</span>
+        <h2>Рекомендуемое решение на старт</h2>
       </div>
       <div class="matrix">
         <article>
           <div class="num">1</div>
-          <h3>Must-have</h3>
-          <p>ChatGPT Business / approved LLM, Codex для owners, NotebookLM/Gemini, transcript route.</p>
+          <h3>Проверяем сейчас</h3>
+          <p>Основной LLM-доступ, Telegram-чат, транскрибация, Codex / Claude Code для команды курса и advanced.</p>
         </article>
         <article>
           <div class="num">2</div>
-          <h3>Pilot</h3>
-          <p>Higgsfield 2-3 seats и один video acceleration pilot: OpusClip / Gling / Submagic.</p>
+          <h3>Опции</h3>
+          <p>Perplexity, VPN и Wispr Flow. Эти инструменты не обязательны для всех участников.</p>
         </article>
         <article>
           <div class="num">3</div>
-          <h3>Optional</h3>
-          <p>Claude / Claude Code для 1-3 owners, Obsidian, Google Vids / Stitch как demo.</p>
+          <h3>Пилоты</h3>
+          <p>Exa или Tavily для technical owner, Higgsfield для visual demo, один video acceleration сервис после консультации с видео-специалистом.</p>
         </article>
         <article>
           <div class="num">4</div>
-          <h3>Не покупаем</h3>
-          <p>Много AI-video сервисов сразу, voice cloning без юридического решения, automation seats до evidence.</p>
+          <h3>Не покупаем массово</h3>
+          <p>Несколько video-сервисов одновременно, клонирование голоса, автоматизацию публикаций, отдельные доступы всем участникам без понятного сценария применения.</p>
         </article>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="section-head">
-        <span>// access links</span>
-        <h2>Ссылки для закупки и доступа</h2>
-      </div>
-      <div class="links-list">
-        <a href="https://ref.evdokimov.ai/AWJxM9ZM?from=WhyNot" target="_blank" rel="noreferrer">
-          <span>VPN</span>
-          <strong>WhyNot VPN · рекомендованный доступ</strong>
-          <small>ссылка Иры, использовать только если этот route согласован</small>
-        </a>
-        <a href="https://plati.market/games/chatgpt/1267/" target="_blank" rel="noreferrer">
-          <span>ChatGPT</span>
-          <strong>Plati Market · ChatGPT</strong>
-          <small>канал покупки для согласования, не подменяет корпоративный procurement</small>
-        </a>
-        <a href="https://plati.market/games/claude/1543/" target="_blank" rel="noreferrer">
-          <span>Claude</span>
-          <strong>Plati Market · Claude</strong>
-          <small>опционально для owners / advanced, не всем участникам</small>
-        </a>
       </div>
     </section>
 
     <section class="section final-note">
       <div>
-        <span>// позиция</span>
-        <h2>Как это объяснять спокойно</h2>
+        <span>// коротко</span>
+        <h2>Промокод</h2>
       </div>
       <p>
-        Для старта не нужен список из пятнадцати сервисов. Нужен общий рабочий контур,
-        где участники могут делать практику, а команда курса может обновлять hub.
-        Видео-сервисы показываем как ускорители монтажного участка, а не как замену редакторскому решению.
-        Granola / Whisper / Obsidian показываем как слой фиксации встреч и обновления базы знаний.
+        По Wispr Flow: запросить промокод на 1 месяц. Я не указываю код на странице,
+        пока он не подтвержден, чтобы участники не получили нерабочую ссылку.
       </p>
     </section>
   </main>
