@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Start Skills</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+  <script>
+    if (sessionStorage.getItem("ai-start-portal-auth") !== "ok") {
+      window.location.replace("./index.html");
+    }
+  </script>
+</head>
+<body class="skills-page">
+  <div class="progress"></div>
+  <aside class="sidebar" aria-label="Навигация курса">
+    <div class="brand">
+      <div class="mark" aria-hidden="true"></div>
+      <div>
+        <div class="brand-title">AI START</div>
+        <div class="brand-subtitle">skills // v0.1</div>
+      </div>
+    </div>
+
+    <label class="search">
+      <span>SEARCH</span>
+      <input type="search" placeholder="research, style, video">
+    </label>
+
+    <nav class="nav">
+      <div class="nav-section">// портал</div>
+      <a class="nav-link" href="./portal.html">главная</a>
+      <a class="nav-link" href="./decks/deck-01-start.html">Deck 01</a>
+      <a class="nav-link" href="./decks/deck-02-text.html">Deck 02</a>
+
+      <div class="nav-section">// skills</div>
+      <a class="nav-link" href="#researcher">01 Researcher</a>
+      <a class="nav-link" href="#style-graph">02 Style Graph</a>
+      <a class="nav-link" href="#coming-soon">следующие skills</a>
+
+      <div class="nav-section">// материалы</div>
+      <a class="nav-link" href="./decks/deck-01-start.html">первая лекция</a>
+      <a class="nav-link" href="./decks/deck-02-text.html">вторая лекция</a>
+    </nav>
+  </aside>
+
+  <main class="workspace">
+    <header class="topbar">
+      <div class="crumbs">
+        <span>IRAAI.RU</span>
+        <span>›</span>
+        <span>AI START</span>
+        <span>›</span>
+        <strong>Skills</strong>
+      </div>
+      <div class="user-pill"><span></span> PARTICIPANT MAP</div>
+    </header>
+
+    <section class="content">
+      <div class="module-head skills-hero">
+        <div>
+          <a class="back-link" href="./portal.html">← AI Start portal</a>
+          <div class="eyebrow">AI-START · SKILLS</div>
+          <h1>Карта скиллов</h1>
+          <p id="module-subtitle">Учебная витрина рабочих навыков курса. Сейчас открыты skills для первых двух лекций. Новые skills будут добавляться по мере прохождения программы.</p>
+          <div class="meta">
+            <span>2 active skills</span>
+            <span>Base / Opti / Advanced</span>
+            <span>prompts + gates</span>
+          </div>
+        </div>
+        <figure class="portal-art">
+          <img src="./assets/ai-start-art-direction-keyframe-v1.png" alt="AI Start skills map artwork">
+          <figcaption>source → skill → output → hub</figcaption>
+        </figure>
+      </div>
+
+      <section class="skills-board" aria-label="Карта скиллов">
+        <article class="skill-card priority">
+          <div class="skill-top"><span>01</span><b>Deck 01</b></div>
+          <h2>Researcher</h2>
+          <p>Поиск источников, Source Map, unknowns и human gate для первого безопасного research-прогона.</p>
+          <dl>
+            <dt>открываем</dt><dd>deep-research-skill, Skill Research для телестудии, Source Map prompt</dd>
+            <dt>output</dt><dd>3 источника, 3 unknowns, 1 риск, 1 human gate</dd>
+            <dt>уровень</dt><dd>Base: prompt · Opti: свой source · Advanced: адаптация skill</dd>
+          </dl>
+          <a class="skill-link" href="#researcher">открыть skill</a>
+        </article>
+
+        <article class="skill-card priority">
+          <div class="skill-top"><span>02</span><b>Deck 02</b></div>
+          <h2>Style Graph / Tone of Voice</h2>
+          <p>Голос редакции, анти-пластик, smell test и первые правила tone of voice на основе примеров.</p>
+          <dl>
+            <dt>открываем</dt><dd>ChatGPT / Claude, папку с примерами, Style Graph template</dd>
+            <dt>output</dt><dd>style graph draft, smell test, rewrite gate</dd>
+            <dt>уровень</dt><dd>Base: smell test · Opti: ToV draft · Advanced: style graph</dd>
+          </dl>
+          <a class="skill-link" href="#style-graph">открыть skill</a>
+        </article>
+
+        <article class="skill-card muted" id="coming-soon">
+          <div class="skill-top"><span>03</span><b>Deck 03</b></div>
+          <h2>Video Clips</h2>
+          <p>Длинное видео или транскрипт превращается в кандидаты на вертикальные клипы.</p>
+          <dl>
+            <dt>открываем</dt><dd>transcript, Whisper stack, OpusClip / Gling по доступу</dd>
+            <dt>output</dt><dd>clip candidates, hooks, subtitles, montage gate</dd>
+            <dt>уровень</dt><dd>Base: top-3 · Opti: package · Advanced: video gate</dd>
+          </dl>
+          <span class="skill-soon">откроем к видео-уроку</span>
+        </article>
+
+        <article class="skill-card muted">
+          <div class="skill-top"><span>04</span><b>Deck 04</b></div>
+          <h2>Visual Brief</h2>
+          <p>Source превращается в visual brief, prompt set и проверяемый визуальный формат.</p>
+          <dl>
+            <dt>открываем</dt><dd>reference folder, visual builder, Higgsfield / image stack</dd>
+            <dt>output</dt><dd>brief, prompt set, variants, style gate</dd>
+            <dt>уровень</dt><dd>Base: brief · Opti: prompt set · Advanced: style conveyor</dd>
+          </dl>
+          <span class="skill-soon">откроем к visual-блоку</span>
+        </article>
+
+        <article class="skill-card muted">
+          <div class="skill-top"><span>05</span><b>Deck 05</b></div>
+          <h2>Audio / Transcript</h2>
+          <p>Транскрипт, spoken script, аудиоверсия и gate для звучащего текста.</p>
+          <dl>
+            <dt>открываем</dt><dd>Whisper / MacWhisper / Superwhisper, audio QA</dd>
+            <dt>output</dt><dd>transcript, spoken script, audio package</dd>
+            <dt>уровень</dt><dd>Base: script · Opti: voice version · Advanced: audio workflow</dd>
+          </dl>
+          <span class="skill-soon">откроем к audio-блоку</span>
+        </article>
+
+        <article class="skill-card muted">
+          <div class="skill-top"><span>06</span><b>Final</b></div>
+          <h2>Hub Update</h2>
+          <p>Удачные промпты, gates, examples и recordings сохраняются как повторяемая система.</p>
+          <dl>
+            <dt>открываем</dt><dd>hub, prompt library, recordings, update log</dd>
+            <dt>output</dt><dd>workflow card, approved example, update proposal</dd>
+            <dt>уровень</dt><dd>Base: save · Opti: compare · Advanced: update proposal</dd>
+          </dl>
+          <span class="skill-soon">откроем к финализации</span>
+        </article>
+      </section>
+
+      <section class="skill-detail" id="researcher">
+        <div class="section-num">// SKILL 01 · УРОК 01</div>
+        <h2>Researcher</h2>
+        <p>Научиться искать не просто ссылки, а проверяемый материал для редакционной работы: source map, unknowns, риски и human gate.</p>
+
+        <div class="skill-detail-grid">
+          <article>
+            <h3>База и адаптация</h3>
+            <ul>
+              <li><a href="https://github.com/tonyazhuuki/deep-research-skill" target="_blank" rel="noreferrer">Оригинальная база: Tonya deep-research-skill</a>.</li>
+              <li><a href="https://github.com/makefacktory90-lgtm/ai-start-skills/tree/main/skills/skill-research-tv-studio" target="_blank" rel="noreferrer">TV-форк: Skill Research для телестудии</a>.</li>
+              <li><a href="../ai_start_portal_v0/11_skills/07_source_map_prompt.md">Source Map prompt</a>: минимальный первый шаг перед текстом, сюжетом или карточками.</li>
+            </ul>
+          </article>
+          <article>
+            <h3>Как объясняем</h3>
+            <ul>
+              <li>Сначала показываем общий research-подход.</li>
+              <li>Потом показываем, как меняем его под телестудию: экранность, продюсерский план, риски, gates.</li>
+              <li>Source Map остается рабочей таблицей, а не отдельной нейронкой.</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="skill-detail-grid">
+          <article>
+            <h3>Когда использовать</h3>
+            <ul>
+              <li>Перед текстом, сюжетом, Telegram-постом или коротким видео.</li>
+              <li>Когда источник неполный и нужно понять, что можно утверждать.</li>
+              <li>Когда тема требует проверки по нескольким углам.</li>
+            </ul>
+          </article>
+          <article>
+            <h3>Что нужно до старта</h3>
+            <ul>
+              <li>Безопасный source без персональных данных и внутренних документов.</li>
+              <li>ChatGPT / Claude или другой согласованный LLM.</li>
+              <li>Perplexity как быстрый вход без кода.</li>
+              <li>Рабочая папка `ai-start-playground` для домашки.</li>
+            </ul>
+          </article>
+        </div>
+
+        <h3>Основной prompt</h3>
+        <pre class="skill-prompt"><code>Ты research-команда для редакции ТВ / digital.
+
+Задача: помочь подготовить материал по source ниже.
+Не пиши публикацию. Не делай финальный текст.
+Сначала сделай проверяемую исследовательскую карту.
+
+Роли:
+1. SCOUT FACTS: ищет факты, даты, действующих лиц, место, первоисточники.
+2. SCOUT LOCAL: ищет локальный / городской / отраслевой контекст.
+3. SCOUT SKEPTIC: ищет, что может быть преувеличено, спорно или не доказано.
+4. SCOUT FRESH: проверяет, что могло измениться недавно.
+5. CRITIC: отсекает слабые, рекламные, непроверяемые источники.
+6. ACTION MAPPER: переводит находки в редакционные действия.
+
+Сделай:
+1. Search plan: 8-10 запросов, сгруппированных по ролям.
+2. Source map: source / link / подтверждает / не подтверждает / риск / проверить руками.
+3. Unknowns tracker: чего не хватает для уверенной публикации.
+4. Anti-plastic check: какие формулировки будут звучать как AI-клише.
+5. Action map: сайт, Telegram, social, что пока нельзя выпускать.
+6. Human gate: список проверок перед публикацией.
+
+Правила:
+- не додумывай факты;
+- отделяй "можно сказать" от "хочется сказать";
+- если данных нет, пиши: "нет в источнике".
+
+Source:
+[вставьте материал]</code></pre>
+
+        <div class="skill-detail-grid">
+          <article>
+            <h3>Output format</h3>
+            <ul>
+              <li>Search plan.</li>
+              <li>Source map.</li>
+              <li>Unknowns tracker.</li>
+              <li>Anti-plastic check.</li>
+              <li>Human gate.</li>
+            </ul>
+          </article>
+          <article>
+            <h3>Домашка</h3>
+            <ul>
+              <li>Base: сохранить prompt в `prompts`.</li>
+              <li>Opti: прогнать безопасный source и сохранить Source Map.</li>
+              <li>Advanced: сравнить deep-research-skill и TV-адаптацию, затем предложить адаптацию под свою роль.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="skill-detail" id="style-graph">
+        <div class="section-num">// SKILL 02 · УРОК 02</div>
+        <h2>Style Graph / Tone of Voice</h2>
+        <p>Собрать голос редакции из примеров: ритм, словарь, запреты, анти-стиль и правила правки AI-черновиков.</p>
+
+        <div class="skill-detail-grid">
+          <article>
+            <h3>Когда использовать</h3>
+            <ul>
+              <li>После Source Map, когда нужно собрать текстовые форматы.</li>
+              <li>Если AI пишет слишком гладко, одинаково или рекламно.</li>
+              <li>Когда нужно зафиксировать tone of voice без абстрактного брендбука.</li>
+            </ul>
+          </article>
+          <article>
+            <h3>Что нужно до старта</h3>
+            <ul>
+              <li>3-5 хороших примеров текстов редакции или рубрики.</li>
+              <li>Один AI-черновик или учебный текст для smell test.</li>
+              <li>ChatGPT / Claude и рабочая папка.</li>
+            </ul>
+          </article>
+        </div>
+
+        <h3>Основной prompt</h3>
+        <pre class="skill-prompt"><code>Ты редакционный методолог и style editor.
+
+На основе примеров ниже собери Style Graph draft.
+Не придумывай правила, которых нет в примерах.
+Отделяй наблюдение от вывода.
+
+Сделай:
+1. Ритм: длина фраз, темп, переходы.
+2. Структура: как начинается текст, как раскрывается мысль, как завершается.
+3. Словарь: какие слова и конструкции характерны.
+4. Запреты: какие фразы сразу ломают голос.
+5. Evidence: фрагменты, на которых основан вывод.
+6. Anti-style: признаки пластикового AI-текста.
+7. Rewrite gate: что проверять перед публикацией.
+
+Примеры:
+[вставьте 3-5 текстов]</code></pre>
+
+        <div class="skill-detail-grid">
+          <article>
+            <h3>Human gate</h3>
+            <ul>
+              <li>Правило подтверждено примером, а не придумано моделью.</li>
+              <li>AI не добавил факты или оценки.</li>
+              <li>Текст звучит как редакция, а не как общий пресс-релиз.</li>
+              <li>Финальная правка остается за редактором.</li>
+            </ul>
+          </article>
+          <article>
+            <h3>Домашка</h3>
+            <ul>
+              <li>Base: прогнать один текст через smell test.</li>
+              <li>Opti: собрать черновик `tone_of_voice.md` по 3-5 примерам.</li>
+              <li>Advanced: собрать `style_graph.md` и показать текст до / после / почему так.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <aside class="rightbar" aria-label="Skills checklist">
+    <section class="mini-card">
+      <div class="mini-label">skills</div>
+      <h2>Как пользоваться</h2>
+      <p>Откройте skill нужного урока, скопируйте prompt, сохраните output и human gate в рабочую папку.</p>
+    </section>
+    <section class="collection">
+      <div class="mini-label">первые два</div>
+      <a href="#researcher">01 Researcher</a>
+      <a href="#style-graph">02 Style Graph / ToV</a>
+      <a href="./decks/deck-01-start.html">Deck 01</a>
+      <a href="./decks/deck-02-text.html">Deck 02</a>
+    </section>
+  </aside>
+</body>
+</html>

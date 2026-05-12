@@ -11,7 +11,9 @@
 - Tavily: https://tavily.com/
 - Perplexity: https://www.perplexity.ai/
   Роль: вариант без кода.
-- Tonya deep research skill: https://github.com/tonyazhuuki/deep-research-skill
+- Оригинальная база research skill: https://github.com/tonyazhuuki/deep-research-skill
+- TV-адаптация: Skill Research для телестудии: https://github.com/makefacktory90-lgtm/ai-start-skills/tree/main/skills/skill-research-tv-studio
+- Source Map prompt: ../11_skills/07_source_map_prompt.md
 - Tonya TLDR Buddy: https://github.com/tonyazhuuki/tldr_buddy
 - Tonya GitHub: https://github.com/tonyazhuuki
 - Zhukova workshop reference: https://learn.aimindset.org/x26/workshops/x26-w1-guest-zhukova
@@ -19,10 +21,10 @@
 Практический навык:
 
 ```text
-search plan -> Exa/Tavily or Perplexity fallback -> source map -> unknowns -> human gate -> hub
+base research skill -> TV adaptation -> source map -> unknowns -> human gate -> hub
 ```
 
-Perplexity можно использовать, чтобы быстро начать без кода. Системный маршрут: search API, Claude Code / Codex и hub.
+Perplexity можно использовать, чтобы быстро начать без кода. Системный маршрут: original research method, TV-studio adaptation, Source Map, search API, Claude Code / Codex и hub.
 
 Домашнее задание до второго урока: [Codex playground](16_codex_playground_homework.md). Участник ставит Codex, создает рабочую папку и сохраняет первый research-skill / prompt. Вопросы по установке идут в чат.
 
