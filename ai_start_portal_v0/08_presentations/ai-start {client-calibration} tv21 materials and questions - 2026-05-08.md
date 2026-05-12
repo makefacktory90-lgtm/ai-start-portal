@@ -3,7 +3,7 @@
 Источник:
 
 - локальный файл: `/Users/irinabuyan/Desktop/ИИ-инструменты ТВ-21.pdf`
-- локальный файл: `/Users/irinabuyan/Desktop/Финальная_гибридная_программа_AI_Start_Норникель.docx`
+- локальный файл: `/Users/irinabuyan/Desktop/Финальная_гибридная_программа_AI_Start.docx`
 - Yandex Disk: `https://disk.360.yandex.ru/d/98tgC7A6pED_SQ`
 
 ## Что клиент передал
