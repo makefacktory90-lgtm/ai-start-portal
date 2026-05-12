@@ -261,9 +261,14 @@ function setModule(id) {
     button.classList.toggle("active", button.dataset.module === id);
   });
 
+  const visualCard = $("#visual-side-card");
+  if (visualCard) {
+    visualCard.classList.toggle("is-hidden", id !== "visual");
+  }
 }
 
 $$(".nav-item").forEach((button) => {
+  if (button.disabled) return;
   button.addEventListener("click", () => setModule(button.dataset.module));
 });
 
