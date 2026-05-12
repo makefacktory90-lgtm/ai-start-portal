@@ -59,7 +59,7 @@ Slide spine:
 7. `// HUB` Место, где удачные приемы не теряются.
 8. `// 5 МАРШРУТОВ` Пять пайплайнов как рабочие контуры, а не витрина инструментов.
 9. `// HELICOPTER VIEW` Для каждого: input / AI step / human gate / output / hub artifact.
-10. `// ZOOM-IN: TEXT OS` Source -> EXO -> context -> ToV -> Style Graph -> Repurpose Boss -> QA -> hub update.
+10. `// ZOOM-IN: TEXT OS` Source -> EXA -> context -> ToV -> Style Graph -> Repurpose Boss -> QA -> hub update.
 11. `// A1 / A2 / A3` Использовать, адаптировать, предлагать улучшения.
 12. `// HUMAN OWNS` AI drafts, human owns.
 13. `// ПРАКТИКА` Embedded A1/A2/A3.
@@ -83,7 +83,7 @@ Hub action:
 Slide spine:
 
 1. `// НЕ ПРОМПТ, А TEXT OS` Один исходник не равен одному формату.
-2. `// EXO` Facts, people, dates, quotes, meanings, gaps, risks.
+2. `// EXA` Facts, people, dates, quotes, meanings, gaps, risks.
 3. `// CONTEXT` Что AI должен знать перед письмом.
 4. `// TONE OF VOICE` Как не потерять голос редакции / рубрики / ведущего.
 5. `// STYLE GRAPH` Ритм, словарь, запреты, доказательства, типовые конструкции.
@@ -97,7 +97,7 @@ Slide spine:
 
 Embedded exercise:
 
-- A1: EXO, check, site, Telegram, social, headlines, risks.
+- A1: EXA, check, site, Telegram, social, headlines, risks.
 - A2: ToV / Style Graph draft, Repurpose Boss map.
 - A3: обновить prompt, factual gate или предложить skill для hub.
 

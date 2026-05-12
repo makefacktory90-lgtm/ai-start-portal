@@ -123,7 +123,7 @@
 
 Prompts:
 
-- EXO: facts / people / dates / quotes / meanings / gaps / risks;
+- EXA: facts / people / dates / quotes / meanings / gaps / risks;
 - context briefing;
 - Tone of Voice draft;
 - Style Graph draft;

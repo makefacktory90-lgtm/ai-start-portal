@@ -991,7 +991,11 @@ figcaption {
     min-width: 0;
     justify-self: end;
     max-width: 100%;
-    overflow-x: auto;
+    overflow: hidden;
+  }
+
+  .deck-nav nav a:nth-child(n+4) {
+    display: none;
   }
 
   .deck-nav > span {

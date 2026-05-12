@@ -162,5 +162,5 @@ Deck 01 and portal must share:
 Deck 02 should inherit this system and add the text-specific layer:
 
 ```text
-source → EXO → Style Graph → Repurpose → QA → hub update
+source → EXA → Style Graph → Repurpose → QA → hub update
 ```
