@@ -885,6 +885,34 @@ li {
   color: var(--accent);
 }
 
+.visual-side-card {
+  background: #fff8dd;
+}
+
+.feature-link {
+  padding: 12px;
+  border: 2px solid var(--line);
+  border-radius: 12px;
+  background: var(--panel);
+}
+
+.feature-link b,
+.feature-link small {
+  display: block;
+}
+
+.feature-link b {
+  color: var(--deep);
+  font-size: 13px;
+}
+
+.feature-link small {
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.45;
+}
+
 @media (max-width: 1180px) {
   body {
     grid-template-columns: 260px minmax(0, 1fr);
