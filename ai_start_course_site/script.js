@@ -3,81 +3,77 @@ const modules = {
     crumb: "Start Map",
     code: "AI-START · 14 MAY",
     title: "AI Start: AI как рабочий слой редакции",
-    subtitle: "Карта курса, рабочие маршруты, правила проверки и первый безопасный research-прогон.",
+    subtitle: "У редакции уже есть профессия, процессы и ответственность за выпуск. На старте мы показываем, где AI может взять черновой слой, а профессиональное решение остается у команды.",
     posterKicker: "СТАРТ ПРОГРАММЫ",
     posterTitle: "материал → AI draft → human gate → hub",
     posterSubtitle: "промпты работают только вместе с задачей, форматом и проверкой",
     sideTitle: "14 мая · старт",
-    sideSummary: "Роли, маршруты, human gate и общий hub.",
+    sideSummary: "Фиксируем рамку курса: роли, редакционные маршруты, human gate и общий hub.",
     lessons: [
-      "Разбираем структуру курса и расписание по редакциям.",
-      "Показываем пять рабочих маршрутов: текст, видео, визуал, аудио, редакционный контур.",
-      "Разбираем схему: source, AI step, human gate, hub.",
-      "Делаем первый безопасный research-прогон.",
-      "Фиксируем домашнее задание: Codex playground до второго урока.",
-      "Показываем, где будут записи, задания и материалы."
+      "Показываем, почему одних промптов недостаточно для редакционного производства.",
+      "Собираем спокойную схему: материал, AI draft, human gate, сохраненный пример.",
+      "Разделяем личные настройки роли, общие правила редакции и решения компании.",
+      "Показываем helicopter view пяти пайплайнов: input, AI step, human gate, output, hub artifact.",
+      "Делаем zoom-in в Text OS: Source Map, ToV, Style Graph, Repurpose Boss, QA и update proposal.",
+      "Показываем механику: prework, live demo, практика, запись, transcript, summary, feedback log."
     ],
     artifacts: [
-      "карта курса",
-      "research prompt",
-      "source map",
-      "human gate",
-      "домашнее задание по Codex playground"
+      "карта роли / редакции / компании",
+      "понимание пяти пайплайнов как рабочих контуров",
+      "карта Text OS перед первым практическим занятием",
+      "маршрут работы в hub",
+      "первое правило: AI drafts, human owns"
     ],
     insights: [
-      "AI-запрос начинается с источника, задачи и формата.",
-      "Перед публикацией нужен human gate.",
-      "Удачные промпты, outputs и проверки сохраняются в hub.",
-      "Материалы с ограничениями используем только после обезличивания или замены на synthetic source."
-    ],
-    a1: ["Base · понять маршрут", "Открыть hub, найти 5 пайплайнов и понять, где будут записи и задания."],
-    a2: ["Opti · собрать роль", "Отметить, какой пайплайн нужен вашей роли и какие проверки должны остаться личными."],
-    a3: ["Advanced · общий стандарт", "Сформулировать, что из личной практики должно попасть в общий AI-hub редакции."]
+      "AI полезен, когда привязан к конкретной задаче, формату и проверке.",
+      "У разных ролей будут разные настройки: редактору, оператору, монтажеру, SMM и руководителю не нужен одинаковый AI.",
+      "Лидеры изменений решают, какие удачные приемы становятся стандартом редакции.",
+      "Удачный чат легко потерять. Hub сохраняет примеры, правила и проверки.",
+      "AI Start не заменяет редакционное решение. Он делает первый проход управляемым."
+    ]
   },
   text: {
     crumb: "Pipeline 01",
     code: "PIPELINE · 01",
     title: "Text OS: материал → текстовые форматы",
-    subtitle: "Source Map, стиль, форматы, фактчекинг и публикационный пакет.",
+    subtitle: "Один исходный материал проходит Source Map-разбор, контекст, Tone of Voice, Style Graph, Repurpose Boss и QA. На выходе не один текст, а управляемый publication package.",
     posterKicker: "15 МАЯ",
     posterTitle: "source → Source Map → ToV → Style Graph → formats",
     posterSubtitle: "workflow и starter prompt уже в hub",
     sideTitle: "Pipeline 01",
-    sideSummary: "Маршрут из события, заметки, видео или расшифровки в публикационный пакет.",
+    sideSummary: "Базовый маршрут для текста: из события, заметки, видео или расшифровки в Text OS и публикационный пакет.",
     lessons: [
       "Делаем Source Map-разбор: факты, цитаты, смысл, пробелы, риски.",
-      "Собираем tone of voice и style draft, если готовых правил еще нет.",
-      "Готовим версии для сайта, Telegram, social, подписей и карточек.",
-      "Проверяем факты, тон и редакционные риски."
+      "Собираем Tone of Voice и Style Graph draft, если готовых правил еще нет.",
+      "Пересобираем материал через Repurpose Boss: сайт, Telegram, social, подписи, карточки.",
+      "Прогоняем output через factual, tone и editor risk gate."
     ],
     artifacts: [
       "Source Map-разбор материала",
-      "tone / style draft",
-      "карта форматов",
+      "ToV / Style Graph draft",
+      "Repurpose Boss map",
       "блок 'нужно проверить'",
       "черновик для сайта",
       "Telegram и social",
       "headline set и риски"
     ],
     insights: [
-      "Факт без источника отмечается как непроверенный.",
-      "Для каждого канала нужен отдельный формат задачи.",
-      "Проверка фиксируется перед публикацией."
-    ],
-    a1: ["Base · первый пакет", "Сделать Source Map, check, site draft, Telegram, social и headline set."],
-    a2: ["Opti · стиль и repurpose", "Собрать ToV / Style Graph draft и показать, как меняются форматы без потери фактов."],
-    a3: ["Advanced · update workflow", "Найти повторяющуюся редакторскую правку и предложить изменение Pipeline 01 или новый skill."]
+      "Если факта нет в исходнике, AI не имеет права его уверенно дорисовать.",
+      "Репаковка - это смена задачи формата, а не команда 'укороти'.",
+      "Плохой output полезен, если мы сохранили evidence.",
+      "Редактору нужен проверяемый черновик, а не гладкая фантазия."
+    ]
   },
   formats: {
     crumb: "Pipeline 02",
     code: "PIPELINE · 02",
     title: "Длинное видео → вертикальные клипы",
-    subtitle: "Отбор фрагментов, hooks, subtitles, обложки и публикационный пакет.",
+    subtitle: "Длинный сюжет, эфир или транскрипт превращается в 3-5 кандидатов на короткие вертикальные клипы с хуками, субтитрами, обложками и публикационным пакетом.",
     posterKicker: "19 МАЯ",
     posterTitle: "long video → clip candidates → package",
-    posterSubtitle: "transcript, candidates, hooks, subtitles, covers",
+    posterSubtitle: "нужен видео-специалист для стека, QA и live demo",
     sideTitle: "Pipeline 02",
-    sideSummary: "Отбор кандидатов на клипы и проверка контекста.",
+    sideSummary: "AI помогает найти кандидаты на клипы, но финальный смысл, контекст и монтаж проверяет человек.",
     lessons: [
       "Строим карту длинного видео или транскрипта.",
       "Выбираем 5-7 потенциальных фрагментов.",
@@ -92,24 +88,22 @@ const modules = {
       "video QA checklist"
     ],
     insights: [
+      "AI не монтирует смысл за редактора. Он предлагает кандидаты.",
       "Hook не должен обещать больше, чем есть в видео.",
-      "Клип проверяется на контекст, смысл и монтажную пригодность.",
-      "Результат сохраняется как список кандидатов и production notes."
-    ],
-    a1: ["Base · выбрать клипы", "Получить 5-7 кандидатов и топ-3 с рисками."],
-    a2: ["Opti · публикационный пакет", "Для топ-3 собрать hook, subtitles, cover text, description и Telegram-анонс."],
-    a3: ["Advanced · video gate", "Обновить правила отбора клипов по плохим / рискованным примерам."]
+      "Короткий клип должен быть понятен без потери важного контекста.",
+      "Видео-специалист нужен не для красоты, а для реального производственного маршрута."
+    ]
   },
   visual: {
     crumb: "Pipeline 03",
     code: "PIPELINE · 03",
     title: "Материал → визуал и карточки",
-    subtitle: "Visual brief, карточки, обложки, quote cards и простая инфографика.",
+    subtitle: "Материал превращается в visual brief, карточки, обложку, quote card, простую инфографику или AI-asset. Факты остаются в редактируемом шаблоне, а не в нейрокартинке.",
     posterKicker: "19 МАЯ",
     posterTitle: "meaning → cards → visual brief",
-    posterSubtitle: "visual brief, cards, cover, quality gate",
+    posterSubtitle: "шаблон держит факты, AI дает образ и варианты",
     sideTitle: "Pipeline 03",
-    sideSummary: "Структура визуала, факты, текстовый слой и проверка.",
+    sideSummary: "AI помогает выбрать смысл и структуру визуала, но не пишет финальные фактические карточки как картинку.",
     lessons: [
       "Выделяем главный смысл и факты, которые нельзя исказить.",
       "Выбираем формат: обложка, карточки, инфографика, quote card.",
@@ -124,19 +118,17 @@ const modules = {
       "visual quality gate"
     ],
     insights: [
-      "Факты и текстовый слой остаются редактируемыми.",
-      "AI-asset используется только как часть сборки.",
-      "Визуал проверяется на точность, читаемость и смысл."
-    ],
-    a1: ["Base · структура карточек", "Сделать смысл, факты, 3 формата и структуру карточек."],
-    a2: ["Opti · visual brief", "Собрать brief для дизайнера / Figma / Canva с ограничениями."],
-    a3: ["Advanced · visual gate", "Добавить правила против нечитаемости, ложных фактов и перегруза."]
+      "Не просим image model писать финальный текст с цифрами и цитатами.",
+      "Figma или Canva держат шаблон, AI-asset может быть только частью сборки.",
+      "Визуал не должен создавать ложный смысл или неподтвержденный факт.",
+      "Читаемость на мобильном важнее сложности визуального приема."
+    ]
   },
   radar: {
     crumb: "Pipeline 04",
     code: "PIPELINE · 04",
     title: "Материал → аудио",
-    subtitle: "Аудиоверсия, spoken script, intro hook и подкастовый фрагмент.",
+    subtitle: "Текстовый материал превращается в аудиоверсию, 60-90 секунд spoken script, intro hook или подкастовый фрагмент. Разговорность без выдумки, пожалуйста.",
     posterKicker: "22 МАЯ",
     posterTitle: "article → spoken script → audio fragment",
     posterSubtitle: "script, intro, podcast fragment и audio QA",
@@ -156,19 +148,17 @@ const modules = {
       "audio QA checklist"
     ],
     insights: [
-      "Spoken script проверяется чтением вслух.",
-      "Факты должны соответствовать исходному материалу.",
-      "Перед выпуском проверяются ритм, произношение и точность."
-    ],
-    a1: ["Base · spoken script", "Сделать смысл, факты, intro и script на 60-90 секунд."],
-    a2: ["Opti · голос ведущего", "Сравнить нейтральную и разговорную версии без лишних оценок."],
-    a3: ["Advanced · audio workflow", "Обновить правила, если script звучит искусственно или рискованно."]
+      "Разговорный текст не должен внезапно становиться художественной прозой.",
+      "Ведущий говорит живо, но факты держатся исходника.",
+      "Если текст сложно произнести вслух, его нужно адаптировать под устную речь.",
+      "Аудио требует отдельной проверки ритма, произношения и точности фактов."
+    ]
   },
   system: {
     crumb: "Pipeline 05",
     code: "PIPELINE · 05",
     title: "Редакторский контур: мониторинг, сетка, hub",
-    subtitle: "Мониторинг, digest, контент-сетка, Telegram-регулярность и обновления hub.",
+    subtitle: "AI помогает группировать сигналы, собирать digest, контент-сетку, Telegram-регулярность, архивные идеи, tone of voice и weekly updates. Редактор решает, что важно.",
     posterKicker: "22 МАЯ + ФИНАЛЫ",
     posterTitle: "signals → digest → content grid → update",
     posterSubtitle: "контур удержания и обновления AI-hub",
@@ -188,24 +178,22 @@ const modules = {
       "AI-hub update proposal"
     ],
     insights: [
-      "Мониторинг начинается со списка источников.",
-      "Сигналы группируются по темам, рискам и форматам.",
-      "Повторяющиеся ошибки становятся обновлениями workflow или gate."
-    ],
-    a1: ["Base · digest", "Из строк мониторинга получить темы, важность, идеи и source risks."],
-    a2: ["Opti · content grid", "Собрать неделю по каналам и привязать каждый пункт к пайплайну."],
-    a3: ["Advanced · hub update", "По evidence предложить update для context, workflow, prompt или gate."]
+      "Мониторинг начинается со списка источников, а не с автоматизации.",
+      "AI может сгруппировать сигналы, но важность определяет редакция.",
+      "Один неудачный output - пример для разбора. Повторяющаяся ошибка - кандидат на обновление workflow.",
+      "Изменения в общих prompts фиксируются через evidence, owner review и changelog."
+    ]
   },
   clinic: {
     crumb: "Retention",
     code: "AI-HUB · 30 DAYS",
     title: "Как удерживаем результат после встреч",
-    subtitle: "30-дневный режим применения: материалы, примеры, owners и обновления hub.",
+    subtitle: "После финала редакции получают 30-дневный режим применения: один материал через пайплайн, один клип, одна контент-сетка, одно еженедельное обновление.",
     posterKicker: "ПОСЛЕ ФИНАЛА",
     posterTitle: "use → save evidence → update hub",
-    posterSubtitle: "летний режим применения и case clinic",
+    posterSubtitle: "летний режим применения и office hours / case clinic",
     sideTitle: "AI-hub retention",
-    sideSummary: "Регулярное применение, owners, примеры и обновления.",
+    sideSummary: "Удержание строится на маленьком повторяемом действии и owners, а не на вдохновляющей речи.",
     lessons: [
       "Назначаем 2-3 AI-hub owners от каждой редакции.",
       "Фиксируем минимальную частоту применения.",
@@ -215,18 +203,16 @@ const modules = {
     artifacts: [
       "30-day adoption loop",
       "owners list",
-      "список вопросов и улучшений",
+      "feedback log",
       "approved examples",
       "workflow review board"
     ],
     insights: [
-      "Каждую неделю сохраняется один проверенный пример.",
-      "Owners поддерживают правила, примеры и обновления workflows.",
-      "Автоматизация рассматривается после проверки рабочего маршрута."
-    ],
-    a1: ["Base · weekly use", "Один материал в неделю через пайплайн и один сохраненный output."],
-    a2: ["Opti · examples", "Собрать approved / rejected examples и коротко объяснить различие."],
-    a3: ["Advanced · review board", "Провести keep / revise / kill / automate later для workflows."]
+      "Курс заканчивается не последним Zoom, а первым самостоятельным применением.",
+      "Если примеры не сохраняются, система не учится.",
+      "AI-hub owner поддерживает общие правила, примеры и обновления workflows.",
+      "Автоматизировать можно позже. Сначала надо понять, что реально работает."
+    ]
   }
 };
 
@@ -267,13 +253,6 @@ function setModule(id) {
   $("#poster-subtitle").textContent = data.posterSubtitle;
   $("#side-title").textContent = data.sideTitle;
   $("#side-summary").textContent = data.sideSummary;
-  $("#a1-title").textContent = data.a1[0];
-  $("#a1-text").textContent = data.a1[1];
-  $("#a2-title").textContent = data.a2[0];
-  $("#a2-text").textContent = data.a2[1];
-  $("#a3-title").textContent = data.a3[0];
-  $("#a3-text").textContent = data.a3[1];
-
   renderList("#lesson-list", data.lessons);
   renderList("#artifact-list", data.artifacts);
   renderQuotes(data.insights);
@@ -282,24 +261,10 @@ function setModule(id) {
     button.classList.toggle("active", button.dataset.module === id);
   });
 
-  $$(".check-card input").forEach((input) => {
-    input.checked = false;
-  });
-  updateCount();
-}
-
-function updateCount() {
-  const inputs = $$(".check-card input");
-  const checked = inputs.filter((input) => input.checked).length;
-  $("#check-count").textContent = `${checked}/${inputs.length}`;
 }
 
 $$(".nav-item").forEach((button) => {
   button.addEventListener("click", () => setModule(button.dataset.module));
-});
-
-$$(".check-card input").forEach((input) => {
-  input.addEventListener("change", updateCount);
 });
 
 setModule("intro");
