@@ -816,6 +816,59 @@ a {
   line-height: 1.05;
 }
 
+.layer-stack {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.layer-stack article {
+  min-height: 360px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 22px;
+  border: 2px solid var(--black);
+  background: var(--white);
+  box-shadow: 7px 7px 0 var(--black);
+}
+
+.layer-stack article.accent {
+  background: var(--black);
+  color: var(--white);
+  box-shadow: 7px 7px 0 var(--red);
+}
+
+.layer-stack span {
+  color: var(--red);
+  font-family: var(--mono);
+  font-size: 13px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.layer-stack h3 {
+  margin: 0;
+  font-size: clamp(28px, 3vw, 52px);
+  font-weight: 900;
+  line-height: 0.94;
+  overflow-wrap: anywhere;
+  text-transform: uppercase;
+}
+
+.layer-stack p {
+  margin: 0;
+  color: #34302a;
+  font-size: clamp(18px, 1.55vw, 26px);
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.layer-stack .accent p {
+  color: rgba(255, 253, 248, 0.82);
+}
+
 .method-board {
   grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 1px;
@@ -950,6 +1003,7 @@ figcaption {
   .publication-gate,
   .project-timeline,
   .objection-solution,
+  .layer-stack,
   .kit-stack,
   .method-board,
   .exercise.two-col {
@@ -964,6 +1018,7 @@ figcaption {
   .publication-gate div,
   .project-timeline div,
   .objection-solution div,
+  .layer-stack article,
   .kit-stack div,
   .method-board div {
     min-height: 150px;
