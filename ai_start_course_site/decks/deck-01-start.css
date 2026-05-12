@@ -632,6 +632,7 @@ a {
   gap: 18px;
   padding: 18px;
   background: var(--paper);
+  color: var(--black);
 }
 
 .objection-solution span {
@@ -644,6 +645,7 @@ a {
 
 .objection-solution strong {
   display: block;
+  color: var(--black);
   font-size: clamp(20px, 1.75vw, 30px);
   line-height: 1.02;
 }
@@ -654,6 +656,19 @@ a {
   font-size: clamp(15px, 1.15vw, 19px);
   font-weight: 760;
   line-height: 1.18;
+}
+
+.dark .objection-solution div {
+  background: var(--white);
+  color: var(--black);
+}
+
+.dark .objection-solution strong {
+  color: var(--black);
+}
+
+.dark .objection-solution p {
+  color: #34302a;
 }
 
 .text-os-flow {
