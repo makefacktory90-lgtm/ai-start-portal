@@ -169,7 +169,7 @@
       </div>
     </section>
 
-    <section class="slide split" id="s10">
+    <section class="slide split data-gate-slide" id="s10">
       <div>
         <div class="kicker">// SAFETY GATE</div>
       <h2>Data gate: сначала классифицируем материал, потом решаем, можно ли нести его в AI.</h2>
@@ -214,8 +214,7 @@
         <div><span>no-code fallback</span><strong><a href="https://www.perplexity.ai/" target="_blank" rel="noreferrer">Perplexity</a></strong></div>
         <div><span>base skill</span><strong><a href="https://github.com/tonyazhuuki/deep-research-skill" target="_blank" rel="noreferrer">deep-research-skill</a></strong></div>
         <div><span>tv adaptation</span><strong><a href="https://github.com/makefacktory90-lgtm/ai-start-skills/tree/main/skills/skill-research-tv-studio" target="_blank" rel="noreferrer">Skill Research для телестудии</a></strong></div>
-        <div><span>source map</span><strong><a href="../skills.html#researcher">prompt + output format</a></strong></div>
-        <div><span>reference</span><strong><a href="https://learn.aimindset.org/x26/workshops/x26-w1-guest-zhukova" target="_blank" rel="noreferrer">Zhukova workshop</a> · <a href="https://github.com/tonyazhuuki" target="_blank" rel="noreferrer">GitHub</a></strong></div>
+        <div><span>source map</span><strong><a href="#s14">prompt + output format</a></strong></div>
       </div>
     </section>
 
@@ -236,6 +235,20 @@
 5. ACTION: что можно сделать из этого для сайта, TG, social.
 6. HUMAN GATE: что редактор проверяет руками.
 7. Если данных нет, пиши: "нет в источнике".</code></pre>
+    </section>
+
+    <section class="slide install-slide" id="s14-install">
+      <div>
+        <div class="kicker">// ПРАКТИКА · УСТАНАВЛИВАЕМ RESEARCHER</div>
+        <h2>Сергей показывает setup: рабочая папка, skill, Exa и первый поиск.</h2>
+      </div>
+      <div class="install-grid" aria-label="Установка Researcher">
+        <article><b>01</b><h3>папка</h3><p>Создаем рабочую папку проекта и структуру для sources, prompts, outputs.</p></article>
+        <article><b>02</b><h3>skill</h3><p>Берем deep-research-skill или TV-адаптацию и кладем в рабочий контур.</p></article>
+        <article><b>03</b><h3>Exa</h3><p>Подключаем search API и проверяем, что поиск возвращает источники.</p></article>
+        <article><b>04</b><h3>run</h3><p>Прогоняем первый запрос и смотрим, как из ссылок собирается Source Map.</p></article>
+      </div>
+      <p class="install-note">20 минут live setup, потом вопросы: где поставить, что сломалось, как адаптировать под редакционную задачу.</p>
     </section>
 
     <section class="slide manifesto" id="s15">
@@ -264,12 +277,18 @@
 
     <section class="slide" id="s17">
       <div class="kicker">// ДОМАШНЕЕ ЗАКРЕПЛЕНИЕ</div>
-      <h2>До второго урока: собрать playground и принести первый материал.</h2>
-      <div class="homework">
-        <p><b>1.</b> Если Codex еще не установлен: установить и открыть рабочую папку `ai-start-playground`.</p>
-        <p><b>2.</b> Создать папки: `sources`, `prompts`, `gates`, `outputs`, `hub`.</p>
-        <p><b>3.</b> Поставить первый research-skill / сохранить его промпты в `prompts`.</p>
-        <p><b>4.</b> Принести один реальный или учебный материал для Text OS.</p>
+      <h2>Домашка: базово установить под себя, продвинуто — сделать свой форк.</h2>
+      <div class="homework-levels">
+        <article>
+          <span>base</span>
+          <h3>первый рабочий прогон</h3>
+          <p>Создать рабочую папку, установить research skill, подключить Exa и найти что-нибудь по своей теме.</p>
+        </article>
+        <article>
+          <span>advanced</span>
+          <h3>своя версия skill</h3>
+          <p>Форкнуть skill под свои профессиональные задачи, прогнать материал и принести результат: Source Map + выводы.</p>
+        </article>
       </div>
     </section>
 

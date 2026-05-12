@@ -782,11 +782,22 @@ a {
   gap: 12px;
 }
 
+.data-gate-slide h2 {
+  max-width: 760px;
+  font-size: clamp(34px, 4.7vw, 68px);
+  line-height: 0.96;
+}
+
 .gate-grid div {
   padding: 22px;
   border: 2px solid var(--black);
   background: var(--white);
   box-shadow: 7px 7px 0 var(--black);
+}
+
+.data-gate-slide .gate-grid strong {
+  font-size: clamp(20px, 1.9vw, 30px);
+  line-height: 1.1;
 }
 
 .gate-grid .green {
@@ -958,6 +969,85 @@ figcaption {
   grid-template-columns: 54px 1fr;
 }
 
+.install-slide {
+  background: var(--white);
+}
+
+.install-slide h2 {
+  max-width: 1040px;
+  font-size: clamp(38px, 5.4vw, 82px);
+}
+
+.install-grid,
+.homework-levels {
+  display: grid;
+  gap: 14px;
+}
+
+.install-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.install-grid article,
+.homework-levels article {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 18px;
+  border: 2px solid var(--black);
+  background: var(--paper);
+  box-shadow: 7px 7px 0 var(--black);
+}
+
+.install-grid article {
+  min-height: 300px;
+  padding: 18px;
+}
+
+.install-grid b,
+.homework-levels span {
+  color: var(--red);
+  font-family: var(--mono);
+  font-size: 13px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.install-grid h3,
+.homework-levels h3 {
+  margin: 0;
+  font-size: clamp(28px, 2.7vw, 46px);
+  font-weight: 900;
+  line-height: 0.94;
+  text-transform: uppercase;
+}
+
+.install-grid p,
+.homework-levels p,
+.install-note {
+  margin: 0;
+  font-size: clamp(18px, 1.55vw, 25px);
+  font-weight: 800;
+  line-height: 1.12;
+}
+
+.install-note {
+  max-width: 980px;
+  padding: 14px 18px;
+  border-left: 7px solid var(--red);
+  background: var(--paper);
+}
+
+.homework-levels {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  max-width: 1120px;
+}
+
+.homework-levels article {
+  min-height: 320px;
+  padding: 24px;
+}
+
 .final-links {
   display: flex;
   flex-wrap: wrap;
@@ -1023,6 +1113,8 @@ figcaption {
   .project-timeline,
   .objection-solution,
   .layer-stack,
+  .install-grid,
+  .homework-levels,
   .kit-stack,
   .method-board,
   .exercise.two-col {
@@ -1038,6 +1130,8 @@ figcaption {
   .project-timeline div,
   .objection-solution div,
   .layer-stack article,
+  .install-grid article,
+  .homework-levels article,
   .kit-stack div,
   .method-board div {
     min-height: 150px;
