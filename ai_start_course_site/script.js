@@ -10,8 +10,8 @@ const modules = {
     sideTitle: "14 мая · старт",
     sideSummary: "Фиксируем рамку курса: роли, редакционные маршруты, human gate и общий hub.",
     recording: {
-      title: "Урок 01: запись, таймлайн и материалы",
-      summary: "Запись Zoom подключена. Код доступа: UZ*t#N24. В таймлайне отмечены ключевые блоки: рамка курса, безопасность, skills, Exa, домашка и вопросы.",
+      title: "Урок 01: запись лекции",
+      summary: "Запись Zoom готова. Код доступа: UZ*t#N24. Транскрипт и summary открываются отдельными ссылками.",
       folderUrl: "../ai_start_portal_v0/10_recordings/lesson-01-start/",
       recordingUrl: "https://us06web.zoom.us/rec/share/OxKsTKtVd_BbugFLNPSryL6lJeqrDM1LVsbxg7rQE45VVYPN09tyo7l0XvvbshNs.ww4OFDKpG-Rm4smJ",
       transcriptUrl: "../ai_start_portal_v0/10_recordings/lesson-01-start/transcript.md",
