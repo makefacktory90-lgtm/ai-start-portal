@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1376 768" role="img" aria-labelledby="title desc">
+  <title id="title">Robot writing an editorial draft</title>
+  <desc id="desc">Editorial sci-fi illustration of a robot writing by hand at a desk.</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f7e8c6"/>
+      <stop offset=".47" stop-color="#e7eef2"/>
+      <stop offset="1" stop-color="#0f2340"/>
+    </linearGradient>
+    <linearGradient id="paper" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fff8e5"/>
+      <stop offset="1" stop-color="#f0d892"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="18" dy="22" stdDeviation="0" flood-color="#061524" flood-opacity=".9"/>
+    </filter>
+  </defs>
+  <rect width="1376" height="768" fill="url(#sky)"/>
+  <path d="M0 553c164-51 283-66 430-30 120 29 229 83 374 62 184-27 264-144 572-100v283H0Z" fill="#10243d"/>
+  <path d="M0 605c163-39 284-44 419-7 126 35 268 69 448 33 160-32 265-81 509-47v184H0Z" fill="#f04c2f"/>
+  <circle cx="1128" cy="134" r="58" fill="#ffcc4d" stroke="#061524" stroke-width="8"/>
+  <path d="M85 154h271M124 196h183M1013 252h241M1047 294h166" fill="none" stroke="#061524" stroke-width="9" stroke-linecap="round" opacity=".65"/>
+  <g filter="url(#shadow)">
+    <path d="M246 493h827l70 197H185Z" fill="#f7d36b" stroke="#061524" stroke-width="12" stroke-linejoin="round"/>
+    <path d="M333 434h682l58 74H277Z" fill="#fff0b8" stroke="#061524" stroke-width="12" stroke-linejoin="round"/>
+  </g>
+  <g transform="translate(410 108)" filter="url(#shadow)">
+    <path d="M286 45c82 0 149 64 149 143v118H137V188C137 109 204 45 286 45Z" fill="#dfe9ea" stroke="#061524" stroke-width="13"/>
+    <path d="M195 178c0-44 38-80 86-80h12c48 0 86 36 86 80v34H195Z" fill="#0f2340" stroke="#061524" stroke-width="10"/>
+    <circle cx="246" cy="173" r="18" fill="#ffcc4d"/>
+    <circle cx="330" cy="173" r="18" fill="#ffcc4d"/>
+    <path d="M255 238c34 22 69 22 103 0" fill="none" stroke="#ffcc4d" stroke-width="10" stroke-linecap="round"/>
+    <path d="M274 44V8M300 44V8" stroke="#061524" stroke-width="12" stroke-linecap="round"/>
+    <circle cx="274" cy="8" r="12" fill="#f04c2f" stroke="#061524" stroke-width="8"/>
+    <circle cx="300" cy="8" r="12" fill="#f04c2f" stroke="#061524" stroke-width="8"/>
+    <path d="M137 305h298l69 153H68Z" fill="#a8cfd1" stroke="#061524" stroke-width="13" stroke-linejoin="round"/>
+    <path d="M167 345h238l29 65H139Z" fill="#f7e8c6" stroke="#061524" stroke-width="10"/>
+    <circle cx="286" cy="379" r="21" fill="#f04c2f" stroke="#061524" stroke-width="9"/>
+  </g>
+  <g transform="translate(585 418)">
+    <path d="M-88 16c-98 8-164 46-195 112" fill="none" stroke="#061524" stroke-width="28" stroke-linecap="round"/>
+    <path d="M205 19c91 21 136 68 155 136" fill="none" stroke="#061524" stroke-width="28" stroke-linecap="round"/>
+    <path d="M-91 18c-99 8-163 46-194 110M204 18c91 21 136 68 155 136" fill="none" stroke="#dfe9ea" stroke-width="18" stroke-linecap="round"/>
+    <path d="M318 150l78-61 22 29-83 63Z" fill="#0f2340" stroke="#061524" stroke-width="9" stroke-linejoin="round"/>
+    <path d="M398 85c22-48 47-73 87-86-10 45-29 78-65 112Z" fill="#fff8e5" stroke="#061524" stroke-width="8" stroke-linejoin="round"/>
+    <path d="M400 89c-2 42 3 72 20 104" fill="none" stroke="#061524" stroke-width="8" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(285 477)" filter="url(#shadow)">
+    <path d="M89 0h470c44 0 77 31 66 63l-45 136H41C12 199-8 176 3 151L55 28C61 11 73 0 89 0Z" fill="url(#paper)" stroke="#061524" stroke-width="12" stroke-linejoin="round"/>
+    <path d="M112 61h305M98 101h395M85 142h241" fill="none" stroke="#061524" stroke-width="10" stroke-linecap="round" opacity=".55"/>
+    <path d="M453 143c50-5 84-21 112-51" fill="none" stroke="#f04c2f" stroke-width="13" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(1010 432)" filter="url(#shadow)">
+    <path d="M0 0h174v164H0Z" fill="#0f2340" stroke="#061524" stroke-width="11"/>
+    <path d="M30 39h114M30 76h72M30 113h121" stroke="#ffcc4d" stroke-width="11" stroke-linecap="round"/>
+  </g>
+</svg>

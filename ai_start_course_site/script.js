@@ -7,6 +7,9 @@ const modules = {
     posterKicker: "СТАРТ ПРОГРАММЫ",
     posterTitle: "материал → AI draft → human gate → hub",
     posterSubtitle: "промпты работают только вместе с задачей, форматом и проверкой",
+    artUrl: "./assets/ai-start-art-direction-keyframe-v1.png",
+    artAlt: "AI Start editorial sci-fi command room artwork",
+    artCaption: "source → AI step → gate → hub",
     sideTitle: "14 мая · старт",
     sideSummary: "Фиксируем рамку курса: роли, редакционные маршруты, human gate и общий hub.",
     recording: {
@@ -79,6 +82,9 @@ const modules = {
     posterKicker: "УРОК 02 · ТЕКСТ",
     posterTitle: "source map → voice → draft → de-ai-fy → format → gate",
     posterSubtitle: "лекция, prompt pack и TV Style Graph уже в hub",
+    artUrl: "./assets/portal-lesson-02-robot-writing.svg",
+    artAlt: "Робот пишет редакционный черновик от руки",
+    artCaption: "источник → голос → черновик → проверка",
     sideTitle: "Урок 02 · Text OS",
     sideSummary: "Маршрут для редакционных текстов: от карты источника до нескольких форматов и проверяемого стайл графа.",
     recording: {
@@ -414,6 +420,15 @@ function setModule(id) {
   $("#poster-kicker").textContent = data.posterKicker;
   $("#poster-title").textContent = data.posterTitle;
   $("#poster-subtitle").textContent = data.posterSubtitle;
+  const moduleArt = $("#module-art");
+  const moduleArtCaption = $("#module-art-caption");
+  if (moduleArt) {
+    moduleArt.src = data.artUrl || "./assets/ai-start-art-direction-keyframe-v1.png";
+    moduleArt.alt = data.artAlt || "";
+  }
+  if (moduleArtCaption) {
+    moduleArtCaption.textContent = data.artCaption || "source → AI step → gate → hub";
+  }
   $("#side-title").textContent = data.sideTitle;
   $("#side-summary").textContent = data.sideSummary;
   renderList("#lesson-list", data.lessons);
