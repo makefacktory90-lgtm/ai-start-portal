@@ -425,7 +425,7 @@ function renderRecording(recording) {
     const kicker = document.createElement("span");
     kicker.textContent = "ZOOM RECORDING";
     const title = document.createElement("strong");
-    title.textContent = "открыть запись в zoom";
+    title.textContent = "открыть запись лекции в Zoom";
     const hint = document.createElement("em");
     hint.textContent = "в новом окне можно смотреть на весь экран";
     link.append(kicker, title, hint);
