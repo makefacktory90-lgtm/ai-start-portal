@@ -78,36 +78,28 @@ const modules = {
     subtitle: "Сначала источник и задача. Затем голос, черновик, чистка, формат, гейт и обновление правил. Есть два маршрута: без агентов через prompt pack и в агенте через TV Style Graph.",
     posterKicker: "УРОК 02 · ТЕКСТ",
     posterTitle: "source map → voice → draft → de-ai-fy → format → gate",
-    posterSubtitle: "лекция, prompt pack, TV Style Graph и домашка уже в hub",
+    posterSubtitle: "лекция, prompt pack и TV Style Graph уже в hub",
     sideTitle: "Урок 02 · Text OS",
     sideSummary: "Маршрут для редакционных текстов: от карты источника до нескольких форматов и проверяемого стайл графа.",
     recording: {
-      title: "Урок 02: материалы и домашнее задание",
-      summary: "После занятия здесь появится запись Zoom, транскрипт и таймлайн. Сейчас доступны презентация, prompt pack, TV Style Graph и скиллы для практики.",
+      title: "Урок 02: материалы перед занятием",
+      summary: "Запись Zoom появится после онлайн-трансляции в течение суток. Домашнее задание будет опубликовано после проведения урока. Сейчас доступны презентация, prompt pack, TV Style Graph и скиллы для практики.",
       folderUrl: "../ai_start_portal_v0/10_recordings/README.md",
       recordingUrl: "./decks/deck-02-text.html",
       transcriptUrl: "../ai_start_portal_v0/12_drafts/lesson_02_no_agent_prompt_pack.md",
       summaryUrl: "../ai_start_portal_v0/11_skills/14_style_graph_protocol.md",
-      state: "материалы готовы",
+      state: "запись после трансляции",
       timeline: [
         { time: "00:00", label: "Теория: хороший текст, AI-тон, признаки сгенерированности и редакционная проверка." },
         { time: "25:00", label: "Практика Сергея: путь без агентов через No-Agent Prompt Pack." },
         { time: "45:00", label: "Практика Сергея: путь в агенте через TV Style Graph Protocol." },
-        { time: "65:00", label: "Домашнее задание: Base, Normal, Advanced." }
+        { time: "65:00", label: "Вопросы и домашнее задание после проведения урока." }
       ]
     },
     homework: [
       {
-        level: "Base",
-        text: "В обычном чате: Reverse Prompt, карта источника, De-AI-fy, Humanize, два формата текста."
-      },
-      {
-        level: "Normal",
-        text: "В агенте: папка проекта, TV Style Graph, один источник, пакет форматов, проверка перед выпуском."
-      },
-      {
-        level: "Advanced",
-        text: "Добавить Dramaturgical Text, Format Factory или отдельный форматный скилл для своей передачи."
+        level: "После урока",
+        text: "Домашнее задание появится здесь после проведения занятия."
       }
     ],
     lessons: [
