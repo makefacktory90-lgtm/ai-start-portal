@@ -82,7 +82,7 @@ const modules = {
     posterKicker: "УРОК 02 · ТЕКСТ",
     posterTitle: "source map → voice → draft → de-ai-fy → format → gate",
     posterSubtitle: "лекция, prompt pack и TV Style Graph уже в hub",
-    artUrl: "./assets/portal-lesson-02-robot-writing.svg",
+    artUrl: "./assets/portal-lesson-02-robot-writing.png",
     artAlt: "Робот пишет редакционный черновик от руки",
     artCaption: "источник → голос → черновик → проверка",
     sideTitle: "Урок 02 · Text OS",
