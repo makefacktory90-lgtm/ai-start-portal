@@ -407,37 +407,6 @@ function renderRecording(recording) {
   const timelineState = $("#timeline-state");
   if (timelineState) timelineState.textContent = recording.state;
 
-  const videoSlot = $("#video-slot");
-  videoSlot.innerHTML = "";
-  if (recording.videoUrl) {
-    const video = document.createElement("video");
-    video.controls = true;
-    video.preload = "metadata";
-    video.src = recording.videoUrl;
-    videoSlot.appendChild(video);
-  } else {
-    const link = document.createElement("a");
-    link.className = "video-open-link";
-    link.href = recording.recordingUrl;
-    link.target = "_blank";
-    link.rel = "noopener";
-
-    const kicker = document.createElement("span");
-    kicker.textContent = "ZOOM RECORDING";
-    const title = document.createElement("strong");
-    title.textContent = "открыть запись лекции в Zoom";
-    const hint = document.createElement("em");
-    hint.textContent = "в новом окне можно смотреть на весь экран";
-    link.append(kicker, title, hint);
-    videoSlot.appendChild(link);
-    if (recording.accessCode) {
-      const code = document.createElement("small");
-      code.className = "access-code";
-      code.textContent = `код доступа: ${recording.accessCode}`;
-      videoSlot.appendChild(code);
-    }
-  }
-
   renderTimeline(recording.timeline);
 }
 
