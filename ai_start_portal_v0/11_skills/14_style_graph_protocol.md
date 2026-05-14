@@ -1,4 +1,4 @@
-# 14 Product Style Graph Protocol for TV Editorial Teams
+# 14 TV Style Graph Protocol
 
 Status: draft for lesson 02. Forked from Ira's `style-graph-protocol.md` / Arseniy decision-trace edition and adapted for TV editorial products.
 
@@ -47,7 +47,7 @@ Status: draft for lesson 02. Forked from Ira's `style-graph-protocol.md` / Arsen
 Первая реплика:
 
 ```text
-Начинаем сборку Стайл графа продукта.
+Начинаем сборку TV Style Graph.
 
 Сначала опишите продукт, под который мы собираем граф:
 рубрика, канал, формат, аудитория, регулярная задача.
@@ -279,11 +279,11 @@ Telegram слишком широкий для одного графа.
 
 ```text
 Прогресс графа: ●●○○○○○ 2/7
-До Product Style Graph v1: 5 шагов
+До TV Style Graph v1: 5 шагов
 Следующий шаг: текст, который редакция считает не своим
 ```
 
-`3/7` достаточно для provisional snapshot. `7/7` достаточно для Product Style Graph v1.
+`3/7` достаточно для provisional snapshot. `7/7` достаточно для TV Style Graph v1.
 
 ## Stage 1. Удачные тексты продукта
 
@@ -424,7 +424,7 @@ Trace становится правилом только если:
 Если данных мало, выдавать только временный snapshot:
 
 ```text
-# PROVISIONAL PRODUCT STYLE GRAPH
+# PROVISIONAL TV STYLE GRAPH
 
 Статус: provisional
 Прогресс графа: ●●●○○○○ 3/7
@@ -458,12 +458,12 @@ Trace становится правилом только если:
 [что проверить в следующих 2-3 материалах]
 ```
 
-## Product Style Graph v1
+## TV Style Graph v1
 
 После 7 evidence-шагов:
 
 ```text
-# PRODUCT STYLE GRAPH V1
+# TV STYLE GRAPH V1
 
 ## 1. Паспорт продукта
 - Продукт / рубрика:
@@ -536,7 +536,7 @@ Trace становится правилом только если:
 ## Быстрый старт для агента
 
 ```text
-Запусти Product Style Graph Protocol for TV Editorial Teams.
+Запусти TV Style Graph Protocol.
 
 Не делай портрет стиля после одного примера.
 Работай через evidence, выбор пользователя и decision traces.
