@@ -388,14 +388,14 @@ h1 {
 .portal-art figcaption {
   width: max-content;
   max-width: 100%;
-  margin: 14px auto 0;
-  padding: 10px 16px;
+  margin: 20px auto 0;
+  padding: 8px 14px;
   border: 2px solid var(--deep);
   border-radius: 999px;
   background: var(--yellow);
   color: var(--deep);
   font-family: var(--mono);
-  font-size: 12px;
+  font-size: 10px;
   font-weight: 900;
   text-transform: uppercase;
   transform: rotate(-1.5deg);
