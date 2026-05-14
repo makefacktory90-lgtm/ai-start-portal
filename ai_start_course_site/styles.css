@@ -535,21 +535,15 @@ h1 {
 }
 
 .recording-panel {
-  display: grid;
-  grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
-  gap: 16px;
+  display: block;
   margin: 26px 0 30px;
 }
 
-.recording-main,
-.timeline-card {
+.recording-main {
   border: 2px solid var(--deep);
   border-radius: 18px;
   background: var(--panel);
   box-shadow: 7px 7px 0 var(--deep);
-}
-
-.recording-main {
   padding: 24px;
 }
 
@@ -627,9 +621,7 @@ h1 {
 .video-slot span,
 .video-slot strong,
 .video-slot small,
-.video-slot em,
-.timeline-item span,
-.timeline-item small {
+.video-slot em {
   font-family: var(--mono);
 }
 
@@ -681,68 +673,6 @@ h1 {
   max-height: 420px;
   border: 2px solid var(--deep);
   background: #000;
-}
-
-.timeline-card {
-  padding: 18px;
-}
-
-.timeline-list {
-  display: grid;
-  gap: 10px;
-  margin-top: 16px;
-}
-
-.timeline-item {
-  display: grid;
-  grid-template-columns: 54px 1fr;
-  gap: 12px;
-  align-items: start;
-  padding: 12px;
-  border: 2px solid var(--line);
-  border-radius: 12px;
-  background: var(--bg);
-}
-
-.timeline-item:hover {
-  border-color: var(--deep);
-  background: var(--yellow);
-}
-
-.timeline-item span {
-  color: var(--accent);
-  font-size: 12px;
-  font-weight: 900;
-}
-
-.timeline-item small {
-  color: var(--text-secondary);
-  font-size: 12px;
-  line-height: 1.45;
-}
-
-.homework-panel {
-  margin: 26px 0 30px;
-  padding: 18px;
-  border: 2px solid var(--deep);
-  border-radius: 18px;
-  background: var(--panel);
-  box-shadow: 7px 7px 0 var(--deep);
-}
-
-.homework-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 14px;
-  margin-top: 14px;
-}
-
-.homework-grid .task {
-  min-height: 148px;
-  padding: 14px;
-  border: 2px solid var(--line);
-  border-radius: 14px;
-  background: var(--bg);
 }
 
 .panel-grid {
@@ -1198,7 +1128,6 @@ li {
 
   .module-head,
   .panel-grid,
-  .homework-grid,
   .quote-grid,
   .skills-board,
   .skill-detail-grid,

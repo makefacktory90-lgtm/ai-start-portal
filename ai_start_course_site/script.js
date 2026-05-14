@@ -310,6 +310,7 @@ function renderQuotes(items) {
 
 function renderTimeline(items) {
   const el = $("#timeline-list");
+  if (!el) return;
   const transcriptUrl = $("#transcript-link")?.href || "#";
   el.innerHTML = "";
   items.forEach((item) => {
@@ -357,7 +358,6 @@ function renderHomeworkInto(selector, items) {
 
 function renderHomework(items) {
   renderHomeworkInto("#homework-list", items);
-  renderHomeworkInto("#main-homework-list", items);
 }
 
 function renderRecording(recording) {
@@ -373,7 +373,8 @@ function renderRecording(recording) {
   $("#summary-link").href = recording.summaryUrl;
   $("#summary-link").target = "_blank";
   $("#summary-link").rel = "noopener";
-  $("#timeline-state").textContent = recording.state;
+  const timelineState = $("#timeline-state");
+  if (timelineState) timelineState.textContent = recording.state;
 
   const videoSlot = $("#video-slot");
   videoSlot.innerHTML = "";
