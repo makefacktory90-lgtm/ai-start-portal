@@ -58,11 +58,6 @@
 - слабый пример можно сохранить только как warning;
 - следующий шаг сформулирован конкретно.
 
-## Домашка Base / Opti / Advanced
-
-- Base: сохранить один output и human gate.
-- Opti: сравнить approved и rejected example.
-- Advanced: предложить update для prompt, Style Graph или gate.
 
 ## Ссылки и инструменты
 

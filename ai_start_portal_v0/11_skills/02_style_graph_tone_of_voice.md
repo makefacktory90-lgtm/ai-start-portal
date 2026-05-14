@@ -19,7 +19,7 @@
 
 ## Быстрый prompt без agents / skills
 
-Используйте, если у участника есть только обычный ChatGPT / Claude / Gemini чат.
+Используйте, если у пользовательа есть только обычный ChatGPT / Claude / Gemini чат.
 
 ```text
 Ты профессиональный редактор-стилист.
@@ -98,15 +98,9 @@
 - запрещенные клише отмечены явно;
 - финальная правка остается за редактором.
 
-## Домашка Base / Opti / Advanced
-
-- Base: прогнать один текст через smell test и найти 5 пластиковых мест.
-- Opti: по 3-5 хорошим примерам собрать `tone_of_voice.md`.
-- Advanced: собрать `style_graph.md` и показать один текст до / после / почему так.
 
 ## Ссылки и инструменты
 
-- Deck 02: ../../ai_start_course_site/decks/deck-02-text.html
 - Pipeline 01: ../02_pipelines/01_event_video_to_text/workflow.md
 - Prompt library: ../04_prompt_library/master_prompt_index.md
 - Factual check: ../03_quality_gates/factual_check.md

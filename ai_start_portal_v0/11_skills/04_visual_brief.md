@@ -57,14 +57,7 @@ Source:
 - текст читается на мобильном;
 - стиль не конфликтует с редакцией.
 
-## Домашка Base / Opti / Advanced
-
-- Base: собрать visual brief по одному source.
-- Opti: сделать prompt set и 2-3 варианта направления.
-- Advanced: собрать style prompt project под визуальный язык редакции.
 
 ## Ссылки и инструменты
 
-- Visual deck: ../../ai_start_course_site/decks/deck-04-visual.html
 - Visual quality gate: ../03_quality_gates/visual_quality_gate.md
-- Visual builder: ../../ai_start_course_site/visual-builder.html

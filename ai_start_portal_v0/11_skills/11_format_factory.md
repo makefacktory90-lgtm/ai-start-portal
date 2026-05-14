@@ -1,7 +1,5 @@
 # 11 Format Factory
 
-Status: draft for lesson 02. Do not publish before 15 May.
-
 ## Назначение
 
 Собрать из одного Source Map несколько форматов: сайт, Telegram, social, карточки, заголовки, spoken script. Факты остаются теми же, задача канала меняется.
@@ -71,9 +69,3 @@ Style Graph:
 - кликбейт удален;
 - Style Graph применен не декоративно, а по evidence;
 - редактор выбирает, что выпускать.
-
-## Домашка Base / Opti / Advanced
-
-- Base: сделать 2 формата из одного Source Map.
-- Opti: сделать полный package и QA table.
-- Advanced: сравнить approved / rejected package и обновить prompt.

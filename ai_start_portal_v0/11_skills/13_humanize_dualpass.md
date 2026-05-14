@@ -1,7 +1,5 @@
 # 13 Humanize Dual-Pass
 
-Status: draft for lesson 02. Based on Ira's `humanize.md` and expanded with generated-text red flags.
-
 ## Назначение
 
 Сделать AI-текст менее машинным через два прохода:
@@ -17,7 +15,7 @@ Status: draft for lesson 02. Based on Ira's `humanize.md` and expanded with gene
 - пост похож на универсальный AI-ответ;
 - нужно вернуть авторскую позицию;
 - текст уже проверен по фактам, но интонационно мертвый;
-- участник хочет понять, что можно делегировать AI, а где нужен человек.
+- автор хочет понять, что можно делегировать AI, а где нужен человек.
 
 ## Быстрый prompt для обычного чата
 
@@ -82,9 +80,3 @@ Status: draft for lesson 02. Based on Ira's `humanize.md` and expanded with gene
 - если автор не думает эту мысль, AI не должен ее изображать;
 - финальная версия читается вслух;
 - редактор подтверждает, что все детали есть в источнике.
-
-## Домашка Base / Normal / Advanced
-
-- Base: найти 5 AI-тиков.
-- Normal: сделать два прохода и сравнить версии.
-- Advanced: сохранить approved/rejected examples для Стайл графа.

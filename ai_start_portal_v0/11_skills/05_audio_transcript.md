@@ -58,14 +58,8 @@ Source:
 - ритм не звучит как письменная заметка;
 - ответственный человек слушает финальный фрагмент.
 
-## Домашка Base / Opti / Advanced
-
-- Base: сделать spoken script на 60-90 секунд.
-- Opti: сделать две версии: нейтральную и более разговорную.
-- Advanced: обновить audio workflow, если script звучит искусственно.
 
 ## Ссылки и инструменты
 
-- Audio deck: ../../ai_start_course_site/decks/deck-05-audio.html
 - Pipeline 04: ../02_pipelines/04_material_to_audio/workflow.md
 - Audio quality gate: ../03_quality_gates/audio_quality_gate.md

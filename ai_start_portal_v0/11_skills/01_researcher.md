@@ -81,19 +81,6 @@ Source:
 - неизвестные не превращены в уверенный вывод;
 - перед публикацией есть ответственный редактор.
 
-## Как Показываем На Уроке
-
-Логика для участников:
-
-1. База: оригинальный research skill Тони показывает общий метод глубокого поиска.
-2. Адаптация: `Skill Research для телестудии` показывает, как мы меняем research под редакцию, эфир, визуальность, продюсера и human gates.
-3. Минимальный первый шаг: Source Map prompt, если нужен не полный production package, а быстрая карта источника.
-
-## Домашка Base / Opti / Advanced
-
-- Base: создать папку `ai-start-playground`, сохранить этот prompt в `prompts`.
-- Opti: прогнать безопасный source и сохранить Source Map в `outputs`.
-- Advanced: сравнить оригинальный deep-research-skill и TV-адаптацию, затем предложить адаптацию под свою роль.
 
 ## Ссылки и инструменты
 
@@ -104,5 +91,3 @@ Source:
 - TV-форк: Skill Research для телестудии: https://github.com/makefacktory90-lgtm/ai-start-skills/tree/main/skills/skill-research-tv-studio
 - Source Map prompt: 07_source_map_prompt.md
 - TLDR Buddy: https://github.com/tonyazhuuki/tldr_buddy
-- Codex playground: ../00_start_here/16_codex_playground_homework.md
-- Safe source practice: ../09_practice_materials/deck01_safe_source_practice.md
