@@ -9,6 +9,45 @@ const modules = {
     posterSubtitle: "промпты работают только вместе с задачей, форматом и проверкой",
     sideTitle: "14 мая · старт",
     sideSummary: "Фиксируем рамку курса: роли, редакционные маршруты, human gate и общий hub.",
+    recording: {
+      title: "Урок 01: запись, таймлайн и материалы",
+      summary: "Запись Zoom подключена. Код доступа: UZ*t#N24. В таймлайне отмечены ключевые блоки: рамка курса, безопасность, skills, Exa, домашка и вопросы.",
+      folderUrl: "../ai_start_portal_v0/10_recordings/lesson-01-start/",
+      recordingUrl: "https://us06web.zoom.us/rec/share/OxKsTKtVd_BbugFLNPSryL6lJeqrDM1LVsbxg7rQE45VVYPN09tyo7l0XvvbshNs.ww4OFDKpG-Rm4smJ",
+      transcriptUrl: "../ai_start_portal_v0/10_recordings/lesson-01-start/transcript.md",
+      summaryUrl: "../ai_start_portal_v0/10_recordings/lesson-01-start/summary.md",
+      accessCode: "UZ*t#N24",
+      state: "запись доступна",
+      timeline: [
+        { time: "00:00", label: "Старт записи, сбор участников, технические предупреждения." },
+        { time: "07:00", label: "Представление Иры и рамка: AI для контента, текстов, визуала и видео." },
+        { time: "08:20", label: "Цель урока: карта практикума и почему курс может показаться сложным." },
+        { time: "09:00", label: "Главный принцип: AI drafts, human owns." },
+        { time: "13:00", label: "Пять тем практикума: текст, видео, визуал, аудио, редакторский контур." },
+        { time: "20:00", label: "Портал курса: запись, транскрипт, домашка и материалы в одном месте." },
+        { time: "25:00", label: "Безопасность: зеленый, желтый и красный уровень данных." },
+        { time: "30:00", label: "Research skill для редакции и выбор темы для live demo." },
+        { time: "35:00", label: "Установка и адаптация skill, зачем форкать готовые решения." },
+        { time: "55:00", label: "Exa как внешний поисковый источник и связка skill + Exa." },
+        { time: "65:00", label: "Демонстрация результата research skill и переход к домашке." },
+        { time: "66:00", label: "Домашнее задание: три уровня работы со скиллами для ресерча." },
+        { time: "85:00", label: "Финальные вопросы, группа курса, ссылка на портал." }
+      ]
+    },
+    homework: [
+      {
+        level: "Уровень 1 · Базовый",
+        text: "Возьмите готовые research skills: deep-research-skill и skill для телестудии. Протестируйте на своей теме. Итог: сохраненный результат ресерча, который можно взять в работу."
+      },
+      {
+        level: "Уровень 2 · ОК",
+        text: "Добавьте Exa как дополнительный источник поиска, подключите Exa к агенту и используйте связку skill + Exa. Итог: ресерч с внешним поисковым источником."
+      },
+      {
+        level: "Уровень 3 · Продвинутый",
+        text: "Форкните skill и сделайте свою версию под собственные задачи, источники и формат выдачи. Итог: свой research skill, заточенный под вашу работу."
+      }
+    ],
     lessons: [
       "Показываем, почему одних промптов недостаточно для редакционного производства.",
       "Собираем спокойную схему: материал, AI draft, human gate, сохраненный пример.",
@@ -219,6 +258,35 @@ const modules = {
 const $ = (selector) => document.querySelector(selector);
 const $$ = (selector) => Array.from(document.querySelectorAll(selector));
 
+const defaultRecording = {
+  title: "Запись урока и таймлайн",
+  summary: "Запись, транскрипт и маршрут повторения появятся после занятия.",
+  folderUrl: "../ai_start_portal_v0/10_recordings/README.md",
+  recordingUrl: "../ai_start_portal_v0/10_recordings/README.md",
+  transcriptUrl: "../ai_start_portal_v0/10_recordings/README.md",
+  summaryUrl: "../ai_start_portal_v0/10_recordings/README.md",
+  state: "после урока",
+  timeline: [
+    { time: "--:--", label: "Таймлайн будет собран из Zoom transcript после занятия." },
+    { time: "--:--", label: "Сюда попадут ключевые демо, вопросы и точки для повторения." }
+  ]
+};
+
+const defaultHomework = [
+  {
+    level: "Base",
+    text: "Задание появится после урока: соберем его из записи, транскрипта и демонстрации."
+  },
+  {
+    level: "Optimal",
+    text: "Задание появится после урока: добавим расширенный маршрут без лишней теории."
+  },
+  {
+    level: "Advanced",
+    text: "Задание появится после урока: сюда попадет сложная версия для тех, кто готов углубляться."
+  }
+];
+
 function renderList(selector, items) {
   const el = $(selector);
   el.innerHTML = "";
@@ -240,6 +308,107 @@ function renderQuotes(items) {
   });
 }
 
+function renderTimeline(items) {
+  const el = $("#timeline-list");
+  const transcriptUrl = $("#transcript-link")?.href || "#";
+  el.innerHTML = "";
+  items.forEach((item) => {
+    const row = document.createElement("a");
+    row.className = "timeline-item";
+    row.href = item.url || transcriptUrl;
+    row.target = "_blank";
+    row.rel = "noopener";
+    row.title = "Открыть тайминг и транскрипт";
+
+    const time = document.createElement("span");
+    time.textContent = item.time;
+
+    const label = document.createElement("small");
+    label.textContent = item.label;
+
+    row.append(time, label);
+    el.appendChild(row);
+  });
+}
+
+function renderHomeworkInto(selector, items) {
+  const el = $(selector);
+  if (!el) return;
+  el.innerHTML = "";
+  items.forEach((item, index) => {
+    const task = document.createElement("div");
+    task.className = "task";
+
+    const marker = document.createElement("span");
+    marker.className = "task-marker";
+    marker.textContent = String(index + 1).padStart(2, "0");
+
+    const copy = document.createElement("span");
+    const title = document.createElement("b");
+    title.textContent = item.level;
+    const text = document.createElement("small");
+    text.textContent = item.text;
+
+    copy.append(title, text);
+    task.append(marker, copy);
+    el.appendChild(task);
+  });
+}
+
+function renderHomework(items) {
+  renderHomeworkInto("#homework-list", items);
+  renderHomeworkInto("#main-homework-list", items);
+}
+
+function renderRecording(recording) {
+  $("#recording-title").textContent = recording.title;
+  $("#recording-summary").textContent = recording.summary;
+  $("#recording-folder-link").href = recording.folderUrl;
+  $("#recording-link").href = recording.recordingUrl;
+  $("#recording-link").target = "_blank";
+  $("#recording-link").rel = "noopener";
+  $("#transcript-link").href = recording.transcriptUrl;
+  $("#transcript-link").target = "_blank";
+  $("#transcript-link").rel = "noopener";
+  $("#summary-link").href = recording.summaryUrl;
+  $("#summary-link").target = "_blank";
+  $("#summary-link").rel = "noopener";
+  $("#timeline-state").textContent = recording.state;
+
+  const videoSlot = $("#video-slot");
+  videoSlot.innerHTML = "";
+  if (recording.videoUrl) {
+    const video = document.createElement("video");
+    video.controls = true;
+    video.preload = "metadata";
+    video.src = recording.videoUrl;
+    videoSlot.appendChild(video);
+  } else {
+    const link = document.createElement("a");
+    link.className = "video-open-link";
+    link.href = recording.recordingUrl;
+    link.target = "_blank";
+    link.rel = "noopener";
+
+    const kicker = document.createElement("span");
+    kicker.textContent = "ZOOM RECORDING";
+    const title = document.createElement("strong");
+    title.textContent = "открыть запись в zoom";
+    const hint = document.createElement("em");
+    hint.textContent = "в новом окне можно смотреть на весь экран";
+    link.append(kicker, title, hint);
+    videoSlot.appendChild(link);
+    if (recording.accessCode) {
+      const code = document.createElement("small");
+      code.className = "access-code";
+      code.textContent = `код доступа: ${recording.accessCode}`;
+      videoSlot.appendChild(code);
+    }
+  }
+
+  renderTimeline(recording.timeline);
+}
+
 function setModule(id) {
   const data = modules[id];
   if (!data) return;
@@ -256,6 +425,8 @@ function setModule(id) {
   renderList("#lesson-list", data.lessons);
   renderList("#artifact-list", data.artifacts);
   renderQuotes(data.insights);
+  renderRecording(data.recording || defaultRecording);
+  renderHomework(data.homework || defaultHomework);
 
   $$(".nav-item").forEach((button) => {
     button.classList.toggle("active", button.dataset.module === id);

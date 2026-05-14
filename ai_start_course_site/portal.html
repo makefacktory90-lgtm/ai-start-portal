@@ -154,6 +154,7 @@
         <a href="./skills.html">скиллы и инструменты</a>
         <a href="../ai_start_portal_v0/00_start_here/16_codex_playground_homework.md">Codex playground</a>
         <a href="../ai_start_portal_v0/03_quality_gates/ai_use_policy.md">правила безопасности</a>
+        <a id="recording-folder-link" href="../ai_start_portal_v0/10_recordings/lesson-01-start/">запись + транскрипт</a>
         <a href="./decks/deck-01-start.html">Deck 01</a>
         <span>Deck 02 · скоро</span>
         <span>Deck 03 · скоро</span>
@@ -165,6 +166,38 @@
         <span>Deck 08 · скоро</span>
         <span>Deck 09 · скоро</span>
         <span>Deck 10 · скоро</span>
+      </section>
+
+      <section class="recording-panel" aria-label="Запись и таймлайн урока">
+        <div class="recording-main">
+          <div class="section-num">// ЗАПИСЬ</div>
+          <h2 id="recording-title">Запись урока и таймлайн</h2>
+          <p id="recording-summary">После занятия здесь появится запись Zoom, расшифровка, таймлайн и короткий маршрут повторения.</p>
+          <div class="recording-actions">
+            <a id="recording-link" class="action-link" href="../ai_start_portal_v0/10_recordings/lesson-01-start/recording_link.md" target="_blank" rel="noopener">Смотреть запись</a>
+            <a id="transcript-link" class="action-link muted" href="../ai_start_portal_v0/10_recordings/lesson-01-start/transcript.md">Транскрипт</a>
+            <a id="summary-link" class="action-link muted" href="../ai_start_portal_v0/10_recordings/lesson-01-start/summary.md">Summary</a>
+          </div>
+          <div id="video-slot" class="video-slot">
+            <span>ZOOM RECORDING</span>
+            <strong>ссылка появится после загрузки записи</strong>
+          </div>
+        </div>
+        <div class="timeline-card">
+          <div class="check-head">
+            <span>таймлайн</span>
+            <span id="timeline-state">draft</span>
+          </div>
+          <div id="timeline-list" class="timeline-list"></div>
+        </div>
+      </section>
+
+      <section class="homework-panel" aria-label="Домашнее задание по уровням">
+        <div class="check-head">
+          <span>домашка</span>
+          <span>Base / Optimal / Advanced</span>
+        </div>
+        <div id="main-homework-list" class="homework-grid"></div>
       </section>
 
       <section class="panel-grid">
@@ -208,27 +241,7 @@
         <span>задания после урока</span>
         <span>Base / Optimal / Advanced</span>
       </div>
-      <div class="task">
-        <span class="task-marker">01</span>
-        <span>
-          <b>Base</b>
-          <small>Задание появится после урока: соберем его из записи, транскрипта и демонстрации.</small>
-        </span>
-      </div>
-      <div class="task">
-        <span class="task-marker">02</span>
-        <span>
-          <b>Optimal</b>
-          <small>Задание появится после урока: добавим расширенный маршрут без лишней теории.</small>
-        </span>
-      </div>
-      <div class="task">
-        <span class="task-marker">03</span>
-        <span>
-          <b>Advanced</b>
-          <small>Задание появится после урока: сюда попадет сложная версия для тех, кто готов углубляться.</small>
-        </span>
-      </div>
+      <div id="homework-list"></div>
     </section>
 
     <section class="collection visual-side-card is-hidden" id="visual-side-card">
