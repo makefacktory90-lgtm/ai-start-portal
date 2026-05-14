@@ -39,6 +39,9 @@
       <div class="nav-section">// skills</div>
       <a class="nav-link" href="#deep-research">01 Deep Research</a>
       <a class="nav-link" href="#tv-research">02 TV Research</a>
+      <a class="nav-link" href="#no-agent-pack">03 No-Agent Pack</a>
+      <a class="nav-link" href="#tv-style-graph">04 TV Style Graph</a>
+      <a class="nav-link" href="#advanced-skills">АДВАНС-СКИЛЫ</a>
 
       <div class="nav-section">// материалы</div>
       <a class="nav-link" href="./decks/deck-01-start.html">первая лекция</a>
@@ -63,11 +66,11 @@
           <a class="back-link" href="./portal.html">← AI Start portal</a>
           <div class="eyebrow">AI-START · SKILLS</div>
           <h1>Карта скиллов</h1>
-          <p id="module-subtitle">Карта показывает, зачем нужен skill и какой результат он дает. Сам skill открывается отдельной ссылкой на GitHub, чтобы не превращать портал в свалку простыней.</p>
+          <p id="module-subtitle">Карта показывает, зачем нужен skill или prompt pack и какой результат он дает. Материалы разложены по урокам, а дополнительные инструменты вынесены в отдельный блок АДВАНС-СКИЛЫ.</p>
           <div class="meta">
             <span>урок 01</span>
-            <span>2 research skills</span>
-            <span>GitHub links</span>
+            <span>урок 02</span>
+            <span>АДВАНС-СКИЛЫ</span>
           </div>
         </div>
         <figure class="portal-art">
@@ -76,7 +79,10 @@
         </figure>
       </div>
 
-      <section class="skills-board" aria-label="Карта скиллов">
+      <section class="skills-section" aria-label="Урок 01">
+        <div class="section-num">// УРОК 01</div>
+        <h2>Research: от темы к проверяемой карте источников</h2>
+        <div class="skills-board">
         <article class="skill-card priority" id="deep-research">
           <div class="skill-top"><span>01</span><b>Deck 01</b></div>
           <h2>deep-research-skill</h2>
@@ -100,6 +106,140 @@
           </dl>
           <a class="skill-link" href="https://github.com/makefacktory90-lgtm/ai-start-skills/tree/main/skills/skill-research-tv-studio" target="_blank" rel="noreferrer">открыть на GitHub</a>
         </article>
+        </div>
+      </section>
+
+      <section class="skills-section" aria-label="Урок 02">
+        <div class="section-num">// УРОК 02</div>
+        <h2>Text OS: промпты, чистка AI-тона и TV Style Graph</h2>
+        <div class="skills-board">
+          <article class="skill-card priority" id="no-agent-pack">
+            <div class="skill-top"><span>03</span><b>Deck 02</b></div>
+            <h2>No-Agent Prompt Pack</h2>
+            <p>Пакет для тех, кто работает в обычном чате или проекте: Reverse Prompt, Voice DNA, карта источника, De-AI-fy, Humanize и сборка форматов.</p>
+            <dl>
+              <dt>зачем</dt><dd>Снять боль текстов без агента и без рабочей папки.</dd>
+              <dt>когда</dt><dd>Когда есть только чат, агрегатор моделей или проект Claude.</dd>
+              <dt>output</dt><dd>голос, карта источника, чистый черновик, два формата</dd>
+            </dl>
+            <a class="skill-link" href="https://github.com/makefacktory90-lgtm/ai-start-portal/blob/main/ai_start_portal_v0/12_drafts/lesson_02_no_agent_prompt_pack.md" target="_blank" rel="noreferrer">открыть pack</a>
+          </article>
+
+          <article class="skill-card priority" id="tv-style-graph">
+            <div class="skill-top"><span>04</span><b>Deck 02</b></div>
+            <h2>TV Style Graph Protocol</h2>
+            <p>Агентный протокол для растущего стиля: продукт, рубрика, тон голоса, примеры, запреты, редакционные правки и decision trace.</p>
+            <dl>
+              <dt>зачем</dt><dd>Не держать стиль в голове и не начинать каждый чат с нуля.</dd>
+              <dt>когда</dt><dd>Когда работаете в агенте, в папке проекта или в Claude Code.</dd>
+              <dt>output</dt><dd>отдельный style graph для передачи, рубрики или формата</dd>
+            </dl>
+            <a class="skill-link" href="https://github.com/makefacktory90-lgtm/ai-start-portal/blob/main/ai_start_portal_v0/11_skills/14_style_graph_protocol.md" target="_blank" rel="noreferrer">открыть protocol</a>
+          </article>
+
+          <article class="skill-card" id="de-ai-fy">
+            <div class="skill-top"><span>05</span><b>Deck 02</b></div>
+            <h2>De-AI-fy Text</h2>
+            <p>Проверка текста на пластиковый AI-тон: общие усилители, искусственная глубина, рубленая драматизация, псевдоразговорность и симметрия.</p>
+            <dl>
+              <dt>зачем</dt><dd>Не просить “сделай человечнее”, а показывать точные дефекты.</dd>
+              <dt>когда</dt><dd>После первого черновика и перед сборкой форматов.</dd>
+              <dt>output</dt><dd>диагностика, цитаты проблемных мест, план правки</dd>
+            </dl>
+            <a class="skill-link" href="https://github.com/makefacktory90-lgtm/ai-start-portal/blob/main/ai_start_portal_v0/11_skills/09_de_ai_fy_text.md" target="_blank" rel="noreferrer">открыть skill</a>
+          </article>
+
+          <article class="skill-card" id="humanize">
+            <div class="skill-top"><span>06</span><b>Deck 02</b></div>
+            <h2>Humanize Dual-Pass</h2>
+            <p>Двухпроходная правка: сначала выявить искусственные признаки, затем переписать текст через источник, конкретику, ритм и редакционную позицию.</p>
+            <dl>
+              <dt>зачем</dt><dd>Сделать текст живым без фальшивой эмоциональности.</dd>
+              <dt>когда</dt><dd>Когда черновик уже есть, но звучит гладко и чужим голосом.</dd>
+              <dt>output</dt><dd>переписанный текст и список измененных решений</dd>
+            </dl>
+            <a class="skill-link" href="https://github.com/makefacktory90-lgtm/ai-start-portal/blob/main/ai_start_portal_v0/11_skills/13_humanize_dualpass.md" target="_blank" rel="noreferrer">открыть skill</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="skills-section advanced-skills" id="advanced-skills" aria-label="АДВАНС-СКИЛЫ">
+        <div class="section-num">// АДВАНС-СКИЛЫ</div>
+        <h2>АДВАНС-СКИЛЫ</h2>
+        <p class="advanced-note">Это не обязательный минимум. Используйте, когда базовый маршрут уже понятен и нужно усилить драматургию, формат, упаковку или собрать собственный skill.</p>
+        <div class="skills-board">
+          <article class="skill-card priority" id="dramaturgical">
+            <div class="skill-top"><span>A1</span><b>Advanced</b></div>
+            <h2>Dramaturgical Text</h2>
+            <p>Проверяет редакционный текст как драматургическую конструкцию: вход, напряжение, поворот, смысл, финал, отсутствие пустой исповеди.</p>
+            <dl>
+              <dt>зачем</dt><dd>Чтобы текст держал внимание и не распадался на набор фактов.</dd>
+              <dt>когда</dt><dd>Для длинных постов, сценариев, авторских рубрик и объясняющих материалов.</dd>
+              <dt>output</dt><dd>структурная правка, слабые места, усиленный ход текста</dd>
+            </dl>
+            <a class="skill-link" href="https://github.com/makefacktory90-lgtm/ai-start-portal/blob/main/ai_start_portal_v0/11_skills/10_dramaturgical_text.md" target="_blank" rel="noreferrer">открыть skill</a>
+          </article>
+
+          <article class="skill-card priority" id="format-factory">
+            <div class="skill-top"><span>A2</span><b>Advanced</b></div>
+            <h2>Format Factory</h2>
+            <p>Превращает один источник в набор форматов: Telegram, сайт, анонс, заголовки, карточки, сценарный вход, не теряя факты и ограничения.</p>
+            <dl>
+              <dt>зачем</dt><dd>Не “укоротить”, а изменить задачу текста под канал.</dd>
+              <dt>когда</dt><dd>Когда нужен пакет материалов из одной карты источника.</dd>
+              <dt>output</dt><dd>несколько форматов с проверкой фактов и рисков</dd>
+            </dl>
+            <a class="skill-link" href="https://github.com/makefacktory90-lgtm/ai-start-portal/blob/main/ai_start_portal_v0/11_skills/11_format_factory.md" target="_blank" rel="noreferrer">открыть skill</a>
+          </article>
+
+          <article class="skill-card" id="voice-source">
+            <div class="skill-top"><span>A3</span><b>Advanced</b></div>
+            <h2>Voice to Editorial Source</h2>
+            <p>Маршрут для голосового ввода: надиктованный поток превращается в факты, вопросы, пробелы, карту источника и черновую структуру.</p>
+            <dl>
+              <dt>зачем</dt><dd>Экономить время на выезде, в дороге или после события.</dd>
+              <dt>когда</dt><dd>Когда проще наговорить материал, чем сразу печатать.</dd>
+              <dt>output</dt><dd>source map из голоса, вопросы редактору, черновой план</dd>
+            </dl>
+            <a class="skill-link" href="https://github.com/makefacktory90-lgtm/ai-start-portal/blob/main/ai_start_portal_v0/11_skills/08_voice_to_editorial_source.md" target="_blank" rel="noreferrer">открыть skill</a>
+          </article>
+
+          <article class="skill-card" id="prompt-to-skill">
+            <div class="skill-top"><span>A4</span><b>Advanced</b></div>
+            <h2>Prompt to Skill</h2>
+            <p>Помогает превратить удачный промпт или повторяющийся workflow в нормальный skill с ролью, входами, выходами, gate и правилами обновления.</p>
+            <dl>
+              <dt>зачем</dt><dd>Не хранить рабочие промпты в хаосе чатов.</dd>
+              <dt>когда</dt><dd>Когда один и тот же промпт уже используется регулярно.</dd>
+              <dt>output</dt><dd>черновик skill, структура, проверки, инструкция применения</dd>
+            </dl>
+            <a class="skill-link" href="https://github.com/makefacktory90-lgtm/ai-start-portal/blob/main/ai_start_portal_v0/11_skills/12_prompt_to_skill.md" target="_blank" rel="noreferrer">открыть skill</a>
+          </article>
+
+          <article class="skill-card" id="source-map">
+            <div class="skill-top"><span>A5</span><b>Advanced</b></div>
+            <h2>Source Map Prompt</h2>
+            <p>Отдельный промпт для доказательной карты источника: факты, цитаты, пробелы, риски, что можно утверждать и что нельзя усиливать.</p>
+            <dl>
+              <dt>зачем</dt><dd>Держать доказательную карту отдельно от финального текста.</dd>
+              <dt>когда</dt><dd>Перед любым текстом, где есть факты, цитаты или риск ошибки.</dd>
+              <dt>output</dt><dd>source map, ограничения, вопросы перед публикацией</dd>
+            </dl>
+            <a class="skill-link" href="https://github.com/makefacktory90-lgtm/ai-start-portal/blob/main/ai_start_portal_v0/11_skills/07_source_map_prompt.md" target="_blank" rel="noreferrer">открыть skill</a>
+          </article>
+
+          <article class="skill-card" id="style-tov">
+            <div class="skill-top"><span>A6</span><b>Advanced</b></div>
+            <h2>Style Graph / Tone of Voice</h2>
+            <p>Базовый материал про снятие тона голоса и стиля до полноценного TV Style Graph: словарь, ритм, запреты, позиция, структура.</p>
+            <dl>
+              <dt>зачем</dt><dd>Снять голос продукта до того, как писать новый текст.</dd>
+              <dt>когда</dt><dd>Если еще рано идти в агентный protocol, но стиль уже нужен.</dd>
+              <dt>output</dt><dd>карточка ToV, правила, запреты, примеры</dd>
+            </dl>
+            <a class="skill-link" href="https://github.com/makefacktory90-lgtm/ai-start-portal/blob/main/ai_start_portal_v0/11_skills/02_style_graph_tone_of_voice.md" target="_blank" rel="noreferrer">открыть skill</a>
+          </article>
+        </div>
       </section>
     </section>
   </main>
@@ -115,6 +255,21 @@
       <a href="#deep-research">01 deep-research-skill</a>
       <a href="#tv-research">02 Skill Research для ТВ</a>
       <a href="./decks/deck-01-start.html">Deck 01</a>
+    </section>
+    <section class="collection">
+      <div class="mini-label">урок 02</div>
+      <a href="#no-agent-pack">No-Agent Prompt Pack</a>
+      <a href="#tv-style-graph">TV Style Graph</a>
+      <a href="#de-ai-fy">De-AI-fy Text</a>
+      <a href="#humanize">Humanize</a>
+      <a href="./decks/deck-02-text.html">Deck 02</a>
+    </section>
+    <section class="collection">
+      <div class="mini-label">АДВАНС-СКИЛЫ</div>
+      <a href="#dramaturgical">Dramaturgical Text</a>
+      <a href="#format-factory">Format Factory</a>
+      <a href="#voice-source">Voice to Editorial Source</a>
+      <a href="#prompt-to-skill">Prompt to Skill</a>
     </section>
   </aside>
 </body>
