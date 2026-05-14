@@ -601,6 +601,31 @@ h1 {
   margin-top: 24px;
 }
 
+.homework-panel {
+  display: none;
+  margin: 26px 0 30px;
+  padding: 18px;
+  border: 2px solid var(--deep);
+  border-radius: 18px;
+  background: var(--panel);
+  box-shadow: 7px 7px 0 var(--deep);
+}
+
+.homework-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 14px;
+}
+
+.homework-grid .task {
+  min-height: 148px;
+  padding: 14px;
+  border: 2px solid var(--line);
+  border-radius: 14px;
+  background: var(--bg);
+}
+
 .panel,
 .mini-card,
 .check-card,
@@ -1054,6 +1079,10 @@ li {
   .rightbar {
     display: none;
   }
+
+  .homework-panel {
+    display: block;
+  }
 }
 
 @media (max-width: 820px) {
@@ -1083,6 +1112,7 @@ li {
 
   .module-head,
   .panel-grid,
+  .homework-grid,
   .quote-grid,
   .skills-board,
   .skill-detail-grid,

@@ -389,6 +389,7 @@ function renderHomeworkInto(selector, items) {
 
 function renderHomework(items) {
   renderHomeworkInto("#homework-list", items);
+  renderHomeworkInto("#main-homework-list", items);
 }
 
 function renderRecording(recording) {
