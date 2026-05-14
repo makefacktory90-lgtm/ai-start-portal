@@ -72,35 +72,66 @@ const modules = {
     ]
   },
   text: {
-    crumb: "Pipeline 01",
-    code: "PIPELINE · 01",
-    title: "Text OS: материал → текстовые форматы",
-    subtitle: "Один исходный материал проходит Source Map-разбор, контекст, Tone of Voice, Style Graph, Repurpose Boss и QA. На выходе не один текст, а управляемый publication package.",
-    posterKicker: "15 МАЯ",
-    posterTitle: "source → Source Map → ToV → Style Graph → formats",
-    posterSubtitle: "workflow и starter prompt уже в hub",
-    sideTitle: "Pipeline 01",
-    sideSummary: "Базовый маршрут для текста: из события, заметки, видео или расшифровки в Text OS и публикационный пакет.",
+    crumb: "Text OS",
+    code: "LESSON · 02",
+    title: "Text OS: управляемая работа с текстом",
+    subtitle: "Сначала источник и задача. Затем голос, черновик, чистка, формат, гейт и обновление правил. Есть два маршрута: без агентов через prompt pack и в агенте через TV Style Graph.",
+    posterKicker: "УРОК 02 · ТЕКСТ",
+    posterTitle: "source map → voice → draft → de-ai-fy → format → gate",
+    posterSubtitle: "лекция, prompt pack, TV Style Graph и домашка уже в hub",
+    sideTitle: "Урок 02 · Text OS",
+    sideSummary: "Маршрут для редакционных текстов: от карты источника до нескольких форматов и проверяемого стайл графа.",
+    recording: {
+      title: "Урок 02: материалы и домашнее задание",
+      summary: "После занятия здесь появится запись Zoom, транскрипт и таймлайн. Сейчас доступны презентация, prompt pack, TV Style Graph и скиллы для практики.",
+      folderUrl: "../ai_start_portal_v0/10_recordings/README.md",
+      recordingUrl: "./decks/deck-02-text.html",
+      transcriptUrl: "../ai_start_portal_v0/12_drafts/lesson_02_no_agent_prompt_pack.md",
+      summaryUrl: "../ai_start_portal_v0/11_skills/14_style_graph_protocol.md",
+      state: "материалы готовы",
+      timeline: [
+        { time: "00:00", label: "Теория: хороший текст, AI-тон, признаки сгенерированности и редакционная проверка." },
+        { time: "25:00", label: "Практика Сергея: путь без агентов через No-Agent Prompt Pack." },
+        { time: "45:00", label: "Практика Сергея: путь в агенте через TV Style Graph Protocol." },
+        { time: "65:00", label: "Домашнее задание: Base, Normal, Advanced." }
+      ]
+    },
+    homework: [
+      {
+        level: "Base",
+        text: "В обычном чате: Reverse Prompt, карта источника, De-AI-fy, Humanize, два формата текста."
+      },
+      {
+        level: "Normal",
+        text: "В агенте: папка проекта, TV Style Graph, один источник, пакет форматов, проверка перед выпуском."
+      },
+      {
+        level: "Advanced",
+        text: "Добавить Dramaturgical Text, Format Factory или отдельный форматный скилл для своей передачи."
+      }
+    ],
     lessons: [
-      "Делаем Source Map-разбор: факты, цитаты, смысл, пробелы, риски.",
-      "Собираем Tone of Voice и Style Graph draft, если готовых правил еще нет.",
-      "Пересобираем материал через Repurpose Boss: сайт, Telegram, social, подписи, карточки.",
-      "Прогоняем output через factual, tone и editor risk gate."
+      "Разбираем, почему AI-текст часто выглядит пластиковым и какие редакционные дефекты режут глаз.",
+      "Показываем, почему хороший процесс начинается с карты источника, а не с команды 'напишите текст'.",
+      "Собираем базовый путь без агентов: Reverse Prompt, Source Map, De-AI-fy, Humanize, пакет форматов.",
+      "Собираем агентский путь: рабочая папка, TV Style Graph, отдельные графы под передачу, рубрику или формат.",
+      "Фиксируем, что AI-черновик правится как текст младшего копирайтера: конкретно, голосом, с примерами и запретами."
     ],
     artifacts: [
-      "Source Map-разбор материала",
-      "ToV / Style Graph draft",
-      "Repurpose Boss map",
-      "блок 'нужно проверить'",
-      "черновик для сайта",
-      "Telegram и social",
-      "headline set и риски"
+      "Deck 02: Text OS",
+      "No-Agent Prompt Pack",
+      "TV Style Graph Protocol",
+      "De-AI-fy Text",
+      "Humanize Dual-Pass",
+      "Dramaturgical Text",
+      "Format Factory",
+      "Вики-страница: признаки сгенерированности текста"
     ],
     insights: [
-      "Если факта нет в исходнике, AI не имеет права его уверенно дорисовать.",
-      "Репаковка - это смена задачи формата, а не команда 'укороти'.",
-      "Плохой output полезен, если мы сохранили evidence.",
-      "Редактору нужен проверяемый черновик, а не гладкая фантазия."
+      "AI-текст не обязан сразу быть хорошим. Это черновик, который нужно править и обучать на конкретных примерах.",
+      "Один стайл граф не подходит всей редакции: отдельные передачи, рубрики и форматы требуют отдельных графов.",
+      "Если факта нет в источнике, AI не имеет права уверенно его дорисовать.",
+      "Система растет только тогда, когда удачные правки, запреты и примеры сохраняются в рабочей папке."
     ]
   },
   formats: {
