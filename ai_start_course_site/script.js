@@ -88,24 +88,37 @@ const modules = {
     sideTitle: "Урок 02 · Text OS",
     sideSummary: "Маршрут для редакционных текстов: от карты источника до нескольких форматов и проверяемого стайл графа.",
     recording: {
-      title: "Урок 02: материалы перед занятием",
-      summary: "Запись Zoom появится после онлайн-трансляции в течение суток. Домашнее задание будет опубликовано после проведения урока. Сейчас доступны презентация, prompt pack, TV Style Graph и скиллы для практики.",
-      folderUrl: "../ai_start_portal_v0/10_recordings/README.md",
-      recordingUrl: "./decks/deck-02-text.html",
-      transcriptUrl: "../ai_start_portal_v0/12_drafts/lesson_02_no_agent_prompt_pack.md",
-      summaryUrl: "../ai_start_portal_v0/11_skills/14_style_graph_protocol.md",
-      state: "запись после трансляции",
+      title: "Урок 02: запись лекции",
+      summary: "Запись Zoom готова. Код доступа: LL7?U29?. Транскрипт, summary и домашнее задание открываются отдельными ссылками.",
+      folderUrl: "../ai_start_portal_v0/10_recordings/lesson-02-text-os/",
+      recordingUrl: "https://us06web.zoom.us/rec/share/TiKykudX1PX0gb4SvPyUcTyPXD8VeGfnwz3--hj3N2A_lm3_JCPCGB4elcDR59d1.R3DFLlMN2Ent7wBh",
+      transcriptUrl: "../ai_start_portal_v0/10_recordings/lesson-02-text-os/transcript.md",
+      summaryUrl: "../ai_start_portal_v0/10_recordings/lesson-02-text-os/summary.md",
+      state: "запись доступна",
       timeline: [
-        { time: "00:00", label: "Теория: хороший текст, AI-тон, признаки сгенерированности и редакционная проверка." },
-        { time: "25:00", label: "Практика Сергея: путь без агентов через No-Agent Prompt Pack." },
-        { time: "45:00", label: "Практика Сергея: путь в агенте через TV Style Graph Protocol." },
-        { time: "65:00", label: "Вопросы и домашнее задание после проведения урока." }
+        { time: "00:00", label: "Организация: портал, запись первого урока, где лежат скиллы." },
+        { time: "05:00", label: "Сергей: как открыть Claude Code и зачем агенту рабочая папка." },
+        { time: "18:00", label: "Теория Text OS: источник, задача, голос, черновик, чистка, формат, проверка." },
+        { time: "35:00", label: "AI-тон: почему появляется пластиковый текст и как давать правки." },
+        { time: "55:00", label: "Практика без агента: No-Agent Prompt Pack, Voice DNA, Reverse Prompt." },
+        { time: "70:00", label: "De-AI-fy и Humanize: как диагностировать и переписывать черновик." },
+        { time: "82:00", label: "Практика с агентом: установка TV Style Graph Protocol." },
+        { time: "95:00", label: "Style Graph под продукт: рубрика, формат, примеры, good/bad, decision trace." },
+        { time: "125:00", label: "Вопросы и домашнее задание: Base, Normal, Advanced." }
       ]
     },
     homework: [
       {
-        level: "После урока",
-        text: "Домашнее задание появится здесь после проведения занятия."
+        level: "Base",
+        text: "В обычном чате: взять один источник, собрать карту источника, запустить Reverse Prompt / Voice DNA, применить De-AI-fy и Humanize, сделать два формата текста."
+      },
+      {
+        level: "Normal",
+        text: "В агенте: создать папку под конкретный продукт, положить примеры и правила, запустить TV Style Graph, написать один текст и пройти проверку перед выпуском."
+      },
+      {
+        level: "Advanced",
+        text: "Добавить Dramaturgical Text, Format Factory, Voice to Editorial Source, Source Map Prompt или Prompt to Skill под свою передачу, рубрику или авторский формат."
       }
     ],
     lessons: [
@@ -405,6 +418,9 @@ function renderRecording(recording) {
   $("#summary-link").rel = "noopener";
   const timelineState = $("#timeline-state");
   if (timelineState) timelineState.textContent = recording.state;
+  $$(".status-steps span").forEach((step) => {
+    step.classList.toggle("current", step.textContent.trim() === recording.state);
+  });
 
   renderTimeline(recording.timeline);
 }
