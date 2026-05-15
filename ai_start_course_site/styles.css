@@ -828,6 +828,35 @@ li {
   background: var(--panel);
 }
 
+.guide-quick-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.guide-quick-links a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 10px 14px;
+  border: 2px solid var(--deep);
+  border-radius: 999px;
+  background: var(--yellow);
+  color: var(--deep);
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+  box-shadow: 4px 4px 0 var(--accent);
+}
+
+.guide-quick-links a:first-child {
+  background: var(--accent);
+  color: var(--panel);
+  box-shadow: 4px 4px 0 var(--deep);
+}
+
 .skill-card {
   position: relative;
   display: grid;
