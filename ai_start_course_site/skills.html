@@ -36,7 +36,8 @@
       <a class="nav-link" href="./decks/deck-01-start.html">Deck 01</a>
       <a class="nav-link" href="./decks/deck-02-text.html">Deck 02</a>
 
-      <div class="nav-section">// skills</div>
+      <div class="nav-section">// скиллы и гайды</div>
+      <a class="nav-link" href="#skills-guides">Скиллы и гайды</a>
       <a class="nav-link" href="#deep-research">01 Deep Research</a>
       <a class="nav-link" href="#tv-research">02 TV Research</a>
       <a class="nav-link" href="#no-agent-pack">03 No-Agent Pack</a>
@@ -64,10 +65,11 @@
       <div class="module-head skills-hero">
         <div>
           <a class="back-link" href="./portal.html">← AI Start portal</a>
-          <div class="eyebrow">AI-START · SKILLS</div>
-          <h1>Карта скиллов</h1>
-          <p id="module-subtitle">Карта показывает, зачем нужен skill или prompt pack и какой результат он дает. Материалы разложены по урокам, а дополнительные инструменты вынесены в отдельный блок АДВАНС-СКИЛЫ.</p>
+          <div class="eyebrow">AI-START · SKILLS & GUIDES</div>
+          <h1>Скиллы и гайды</h1>
+          <p id="module-subtitle">Карта показывает, зачем нужен skill или prompt pack и какой результат он дает. Материалы разложены по урокам, а гайды помогают установить скиллы и открыть Claude Code без доступа к GitHub.</p>
           <div class="meta">
+            <span>Яндекс.Диск</span>
             <span>урок 01</span>
             <span>урок 02</span>
             <span>АДВАНС-СКИЛЫ</span>
@@ -78,6 +80,49 @@
           <figcaption>source → skill → output → hub</figcaption>
         </figure>
       </div>
+
+      <section class="skills-section guide-section" id="skills-guides" aria-label="Скиллы и гайды">
+        <div class="section-num">// СКИЛЛЫ И ГАЙДЫ</div>
+        <h2>Скачать материалы и открыть инструкции.</h2>
+        <p class="advanced-note">Если GitHub недоступен, используйте Яндекс.Диск. PDF-гайды можно открыть прямо с портала.</p>
+        <div class="skills-board guide-board">
+          <article class="skill-card priority">
+            <div class="skill-top"><span>00</span><b>Материалы</b></div>
+            <h2>Скиллы на Яндекс.Диске</h2>
+            <p>Папка со скиллами и prompt pack для тех, у кого нет доступа к GitHub или кому удобнее скачать архивом.</p>
+            <dl>
+              <dt>зачем</dt><dd>Скачать все материалы курса без GitHub.</dd>
+              <dt>когда</dt><dd>Если корпоративная сеть блокирует GitHub или не получается открыть raw-файлы.</dd>
+              <dt>output</dt><dd>локальная папка со скиллами по урокам</dd>
+            </dl>
+            <a class="skill-link" href="https://disk.yandex.ru/d/r0dkFxz8_QCxaw" target="_blank" rel="noreferrer">открыть Яндекс.Диск</a>
+          </article>
+
+          <article class="skill-card">
+            <div class="skill-top"><span>G1</span><b>PDF</b></div>
+            <h2>Как установить скилл</h2>
+            <p>Короткий гайд по установке скиллов: куда нажать, что вставить, как проверить, что скилл появился и готов к работе.</p>
+            <dl>
+              <dt>зачем</dt><dd>Не искать установку по чату и не зависеть от GitHub-интерфейса.</dd>
+              <dt>когда</dt><dd>Перед первой установкой research skill, TV Style Graph или advanced-скиллов.</dd>
+              <dt>output</dt><dd>установленный skill в рабочем инструменте</dd>
+            </dl>
+            <a class="skill-link" href="./guides/kak-ustanovit-skill-guide.pdf" target="_blank" rel="noreferrer">открыть PDF</a>
+          </article>
+
+          <article class="skill-card">
+            <div class="skill-top"><span>G2</span><b>PDF</b></div>
+            <h2>Как открыть Claude Code</h2>
+            <p>Гайд для входа в Claude Code и начала работы с агентом, папкой проекта и материалами курса.</p>
+            <dl>
+              <dt>зачем</dt><dd>Быстро перейти от обычного чата к агентному workflow.</dd>
+              <dt>когда</dt><dd>Перед практикой с TV Style Graph и рабочей папкой продукта.</dd>
+              <dt>output</dt><dd>открытый Claude Code и готовая среда для практики</dd>
+            </dl>
+            <a class="skill-link" href="./guides/kak-otkryt-claude-code.pdf" target="_blank" rel="noreferrer">открыть PDF</a>
+          </article>
+        </div>
+      </section>
 
       <section class="skills-section" aria-label="Урок 01">
         <div class="section-num">// УРОК 01</div>
@@ -248,7 +293,14 @@
     <section class="mini-card">
       <div class="mini-label">skills</div>
       <h2>Как пользоваться</h2>
-      <p>Сначала смотрим, зачем skill нужен. Если подходит под задачу, открываем GitHub и работаем уже по полной инструкции.</p>
+      <p>Сначала смотрим, зачем skill нужен. Если GitHub недоступен, открываем Яндекс.Диск и PDF-гайды.</p>
+    </section>
+    <section class="collection">
+      <div class="mini-label">скиллы и гайды</div>
+      <a href="#skills-guides">Скачать скиллы</a>
+      <a href="https://disk.yandex.ru/d/r0dkFxz8_QCxaw" target="_blank" rel="noreferrer">Яндекс.Диск</a>
+      <a href="./guides/kak-ustanovit-skill-guide.pdf" target="_blank" rel="noreferrer">Как установить скилл</a>
+      <a href="./guides/kak-otkryt-claude-code.pdf" target="_blank" rel="noreferrer">Как открыть Claude Code</a>
     </section>
     <section class="collection">
       <div class="mini-label">урок 01</div>

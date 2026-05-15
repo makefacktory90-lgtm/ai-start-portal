@@ -94,6 +94,7 @@ const modules = {
       recordingUrl: "https://us06web.zoom.us/rec/share/TiKykudX1PX0gb4SvPyUcTyPXD8VeGfnwz3--hj3N2A_lm3_JCPCGB4elcDR59d1.R3DFLlMN2Ent7wBh",
       transcriptUrl: "../ai_start_portal_v0/10_recordings/lesson-02-text-os/transcript.md",
       summaryUrl: "../ai_start_portal_v0/10_recordings/lesson-02-text-os/summary.md",
+      accessCode: "LL7?U29?",
       state: "запись доступна",
       timeline: [
         { time: "00:00", label: "Организация: портал, запись первого урока, где лежат скиллы." },
@@ -110,7 +111,7 @@ const modules = {
     homework: [
       {
         level: "Base",
-        text: "В обычном чате: взять один источник, собрать карту источника, запустить Reverse Prompt / Voice DNA, применить De-AI-fy и Humanize, сделать два формата текста."
+        text: "В обычном чате: взять промпт из No-Agent Prompt Pack, создать tone of voice, написать текст с новым tone of voice и почистить AI-признаки через De-AI-fy."
       },
       {
         level: "Normal",
@@ -307,6 +308,7 @@ const defaultRecording = {
   recordingUrl: "../ai_start_portal_v0/10_recordings/README.md",
   transcriptUrl: "../ai_start_portal_v0/10_recordings/README.md",
   summaryUrl: "../ai_start_portal_v0/10_recordings/README.md",
+  accessCode: "",
   state: "после урока",
   timeline: [
     { time: "--:--", label: "Таймлайн будет собран из Zoom transcript после занятия." },
@@ -408,8 +410,14 @@ function renderRecording(recording) {
   $("#recording-summary").textContent = recording.summary;
   $("#recording-folder-link").href = recording.folderUrl;
   $("#recording-link").href = recording.recordingUrl;
+  $("#recording-link").textContent = "Смотреть запись Zoom";
   $("#recording-link").target = "_blank";
   $("#recording-link").rel = "noopener";
+  const recordingCode = $("#recording-code");
+  if (recordingCode) {
+    recordingCode.hidden = !recording.accessCode;
+    recordingCode.querySelector("strong").textContent = recording.accessCode || "";
+  }
   $("#transcript-link").href = recording.transcriptUrl;
   $("#transcript-link").target = "_blank";
   $("#transcript-link").rel = "noopener";

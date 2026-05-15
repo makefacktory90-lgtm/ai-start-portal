@@ -566,6 +566,36 @@ h1 {
   line-height: 1.55;
 }
 
+.recording-code {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 16px;
+  padding: 10px 12px;
+  border: 2px solid var(--deep);
+  border-radius: 12px;
+  background: var(--cream);
+  color: var(--deep);
+  font-family: var(--mono);
+  box-shadow: 4px 4px 0 var(--deep);
+}
+
+.recording-code[hidden] {
+  display: none;
+}
+
+.recording-code span {
+  font-size: 11px;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+}
+
+.recording-code strong {
+  font-size: 16px;
+  letter-spacing: 0;
+}
+
 .recording-actions {
   display: flex;
   flex-wrap: wrap;
@@ -778,6 +808,24 @@ li {
 
 .advanced-skills .skill-card {
   background: #fffaf0;
+}
+
+.guide-section {
+  margin-top: 44px;
+  padding: 24px;
+  border: 2px solid var(--deep);
+  border-radius: 18px;
+  background: #fff8dd;
+  box-shadow: 9px 9px 0 var(--deep);
+}
+
+.guide-board {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.guide-board .skill-card {
+  min-height: 330px;
+  background: var(--panel);
 }
 
 .skill-card {
