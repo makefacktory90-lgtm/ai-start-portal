@@ -3,134 +3,341 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Deck 03 · Video Acceleration</title>
+  <title>Deck 03 · Visual & Video Factory</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./deck-01-start.css">
   <link rel="stylesheet" href="./deck-practical.css">
+  <link rel="stylesheet" href="./deck-03-visual-video.css">
 </head>
 <body>
-  <header class="deck-nav">
+  <header class="deck-nav" aria-label="Навигация презентации">
     <a class="deck-logo" href="../index.html">AI START</a>
     <nav>
-      <a href="#s01">video</a>
-      <a href="#s02">outcome</a>
-      <a href="#s04">tools</a>
-      <a href="#s06">practice</a>
-      <a href="#s09">hub</a>
+      <a href="#s01">старт</a>
+      <a href="#s04">сервисы</a>
+      <a href="#s08">инфраструктура</a>
+      <a href="#s11">видео</a>
+      <a href="#s16">профи</a>
+      <a href="#s19">домашка</a>
     </nav>
-    <span>Video · acceleration</span>
+    <span>03 · visual + video</span>
   </header>
+
   <main>
-    <section class="slide hero" id="s01">
+    <section class="slide hero visual-video-hero" id="s01">
       <div class="hero-copy">
-        <div class="pill">workshop 03 · video</div>
-        <h1>AI не заменяет монтажера.<br><span>Он забирает первый проход.</span></h1>
-        <p class="lead">Показываем редакциям не мечту про автосюжет, а реальные ускорители: расшифровка, поиск фрагментов, автонарезка, паузы, multicam, субтитры, вертикальные версии и rough cut.</p>
+        <div class="pill">лекция 03 · картинки и видео</div>
+        <h1>От сервисов к собственной production-инфраструктуре.</h1>
+        <p class="lead">Сначала используем готовые сервисы, затем собираем повторяемый визуальный процесс, после этого переходим к видео и завершаем практикой реального продакшена.</p>
       </div>
-      <figure class="lesson-art">
+      <figure class="dual-art" aria-label="Visual and video robots">
+        <img src="../assets/deck-04-hero-visual-robot.png" alt="Robot building visual style prompt board">
         <img src="../assets/deck-03-hero-video-robot.png" alt="Robot editing multicamera video timeline">
-        <figcaption>long video → clip candidates → gate</figcaption>
+        <figcaption>services → style → agent → video → production</figcaption>
       </figure>
     </section>
 
     <section class="slide manifesto" id="s02">
-      <div class="kicker">// С ЧЕМ УХОДИМ</div>
-      <h2>После лекции участник должен иначе смотреть на свой монтажный таймлайн.</h2>
-      <div class="outcome-lanes">
-        <article><b>base</b><h3>найти фрагменты</h3><p>Получить 5-7 clip candidates из длинного видео или расшифровки.</p></article>
-        <article><b>opti</b><h3>ускорить рутину</h3><p>Понять, где AI быстрее: паузы, субтитры, rough cut, multicam.</p></article>
-        <article><b>advanced</b><h3>собрать связку</h3><p>Связать transcript, монтажный ассистент, Premiere / Resolve и quality gate.</p></article>
-        <article><b>scout</b><h3>увидеть рынок</h3><p>Понять, какие инструменты уже надо тестировать в редакции.</p></article>
+      <div class="kicker">// ЛОГИКА УРОКА</div>
+      <h2>Сначала готовые инструменты. Потом свой повторяемый процесс.</h2>
+      <div class="outcome-lanes compact-lanes">
+        <article><b>01 · сервисы</b><h3>быстрый вход</h3><p>Готовые интерфейсы для картинок, видео, captions, клипов и visual assets.</p></article>
+        <article><b>02 · визуал</b><h3>снять стиль</h3><p>Полный промпт анализирует цвет, свет, композицию, фактуру и recipe for series.</p></article>
+        <article><b>03 · инфраструктура</b><h3>собрать под себя</h3><p>Агент, skill, MCP/API, Higgsfield, visual lab и правила повторения.</p></article>
+        <article><b>04 · видео</b><h3>разобрать материал</h3><p>Транскрипт, смысловая карта, хуки, candidates, brief и fact-check.</p></article>
       </div>
     </section>
 
-    <section class="slide dark" id="s03">
-      <div class="kicker">// ПОЗИЦИЯ</div>
-      <h2>Профи может руками быстрее сегодня. Но задача курса — подготовить редакцию к скорости завтра.</h2>
-      <p class="lead narrow">Мы не говорим "доверьте AI монтаж". Мы говорим: снимите с себя черновую механику там, где она уже автоматизируется, и оставьте человеку вкус, контекст и финальное решение.</p>
-    </section>
-
-    <section class="slide" id="s04">
-      <div class="kicker">// TOOL RADAR</div>
-      <h2>Что показываем как рынок инструментов</h2>
-      <div class="tool-radar">
-        <article><b>multicam</b><h3>AutoPod / WizCut / Cola / Premiere Assistant</h3><p>Автопереключение камер по говорящим и аудиодорожкам.</p></article>
-        <article><b>silence</b><h3>Gling / Descript / FireCut</h3><p>Удаление пауз, filler words, bad takes, экспорт XML обратно в монтажку.</p></article>
-        <article><b>shorts</b><h3>Opus Clip / Trendy</h3><p>Поиск фрагментов, вертикализация, субтитры, scoring, публикационный пакет.</p></article>
-        <article><b>agent edit</b><h3>Claude + Premiere MCP / ButterCut</h3><p>Первые сценарии, где ассистент управляет таймлайном или экспортирует проект.</p></article>
-      </div>
-    </section>
-
-    <section class="slide split" id="s05">
+    <section class="slide evidence-slide" id="s03">
       <div>
-        <div class="kicker">// PROMPT</div>
-        <h2>Промпт не "найди хайлайты". Промпт задает редакционную цель.</h2>
+        <div class="kicker">// ОТКУДА ПРИШЛИ</div>
+        <h2>Раньше нейрокартинка была аттракционом. Теперь это production layer.</h2>
       </div>
-      <pre class="prompt-block"><code>Ты ассистент видеоредактора.
-
-Материал: [транскрипт / таймкоды / описание видео].
-Цель публикации: [информировать / объяснить / вызвать обсуждение / анонсировать].
-Аудитория: [кто смотрит].
-Запреты: не вырывать из контекста, не усиливать конфликт, не обещать больше, чем есть в видео.
-
-Сделай:
-1. Карту видео по смысловым блокам с таймкодами.
-2. 7 кандидатов на вертикальный клип.
-3. Для каждого: hook, начало, конец, риск потери контекста.
-4. Отдельно: что монтажер должен проверить руками.
-5. Топ-3 для производства и почему.</code></pre>
+      <div class="then-now">
+        <figure class="midjourney-card bad-ai">
+          <img src="../assets/lesson-03-midjourney-versions.jpeg" alt="Сравнение ранних и новых версий Midjourney на портретах">
+          <figcaption>
+            <b>2022-ish</b>
+            <strong>ранние версии: лица плывут, тело ломается, реализм еще не держится</strong>
+            <span>Показываем как исторический контраст: с чего начиналась гонка качества.</span>
+          </figcaption>
+        </figure>
+        <figure class="time-video-card">
+          <video src="../assets/lesson-03-time-video.mp4" controls preload="metadata" playsinline></video>
+          <figcaption><b>2026</b><span>AI-ролик как proof: теперь обсуждаем, как встроить это в production.</span></figcaption>
+        </figure>
+      </div>
     </section>
 
-    <section class="slide dark" id="s06">
-      <div class="kicker">// PRACTICE · 25 МИН</div>
-      <h2>Практика: один длинный материал → три кандидата на клип</h2>
+    <section class="slide split" id="s04">
+      <div>
+        <div class="kicker">// СЕРВИСЫ · ПЕРВЫЙ ВХОД</div>
+        <h2>Сервис — это готовый инструмент, который уже собран под задачу.</h2>
+      </div>
+      <div class="route-compare">
+        <article>
+          <b>что удобно</b>
+          <p>Открыли интерфейс, загрузили материал, получили первые варианты.</p>
+          <span>Подходит для быстрого теста, поиска направления и демонстрации возможностей.</span>
+        </article>
+        <article>
+          <b>что неудобно</b>
+          <p>Каждый раз нужно заново идти в сервис и руками собирать промпт.</p>
+          <span>Часть стиля можно сохранить, но повторяемость всё равно держится на человеке.</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="slide service-showcase" id="s05">
+      <div>
+        <div class="kicker">// КАК ВЫГЛЯДЯТ РАБОЧИЕ ВХОДЫ</div>
+        <h2>Смотрим на функцию сервиса в процессе.</h2>
+      </div>
+      <div class="service-screen-grid">
+        <figure><img src="../assets/service-screens/recraft.png" alt="Recraft interface screenshot"><figcaption>Recraft · визуальный стиль</figcaption></figure>
+        <figure><img src="../assets/service-screens/krea.png" alt="Krea interface screenshot"><figcaption>Krea · creative suite</figcaption></figure>
+        <figure><img src="../assets/service-screens/higgsfield.png" alt="Higgsfield interface screenshot"><figcaption>Higgsfield · image/video assets</figcaption></figure>
+        <figure><img src="../assets/service-screens/kling.png" alt="Kling interface screenshot"><figcaption>Kling · image-to-video</figcaption></figure>
+        <figure><img src="../assets/service-screens/pixverse.png" alt="PixVerse interface screenshot"><figcaption>PixVerse · video tests</figcaption></figure>
+        <figure><img src="../assets/service-screens/imagineart.png" alt="ImagineArt interface screenshot"><figcaption>ImagineArt · first tests</figcaption></figure>
+      </div>
+    </section>
+
+    <section class="slide credits-slide" id="s06">
+      <div>
+        <div class="kicker">// КАК НЕ ПОКУПАТЬ ВСЕ ПОДРЯД</div>
+        <h2>Перед закупкой подписок используем бесплатные кредиты и временные доступы.</h2>
+      </div>
+      <div class="credit-grid">
+        <article><b>изображения</b><p>ImagineArt и Recraft дают бесплатные кредиты или бесплатный тариф для первых тестов.</p></article>
+        <article><b>видео</b><p>PixVerse дает ежедневные кредиты; Kling часто дает ограниченный бесплатный вход.</p></article>
+        <article><b>исследование</b><p>NotebookLM можно использовать бесплатно; тарифа хватает для источников и транскриптов.</p></article>
+        <article><b>временные окна</b><p>Конкурсы AI-видео вроде Project Odyssey иногда дают пакеты доступов к нейросетям.</p></article>
+      </div>
+    </section>
+
+    <section class="slide visual-proof" id="s07">
+      <div>
+        <div class="kicker">// РЕАЛЬНЫЕ ФОРМАТЫ РЕДАКЦИИ</div>
+        <h2>Сервис делает ассет. Редакция отвечает за формат, смысл и проверку.</h2>
+      </div>
+      <div class="proof-grid">
+        <img src="../assets/tv21-visual-news-1.png" alt="TV21 news graphic example 1">
+        <img src="../assets/tv21-visual-news-2.png" alt="TV21 news graphic example 2">
+        <img src="../assets/tv21-visual-news-3.png" alt="TV21 news graphic example 3">
+      </div>
+      <p class="source-note">Факты, цифры, имена, должности и титры должны оставаться проверяемыми слоями.</p>
+    </section>
+
+    <section class="slide split prompt-artifact-slide" id="s08">
+      <div>
+        <div class="kicker">// ПОЛНЫЙ ВИЗУАЛЬНЫЙ ПРОМПТ</div>
+        <h2>Сначала снимаем ДНК стиля. Потом просим серию изображений.</h2>
+      </div>
+      <div class="prompt-artifact">
+        <b>image style DNA prompt</b>
+        <p>You are an art director with 15 years of experience in fashion and advertising.</p>
+        <p>I'm uploading an image. Analyze its DNA like a professional.</p>
+        <span>В полном файле: COLOR, LIGHT, COMPOSITION, TEXTURE, MOOD, REFERENCES, detailed breakdown, recipe for series и one-line tags.</span>
+        <div class="artifact-links">
+          <a href="../assets/prompts/prompt-image-style-dna-analysis.pdf" target="_blank" rel="noreferrer">полный prompt PDF</a>
+          <a href="../assets/prompts/prompt-image-style-dna-analysis.md" target="_blank" rel="noreferrer">полный prompt MD</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide dark pipeline-slide" id="s09">
+      <div class="kicker">// ДРУГОЙ ПУТЬ · СВОЯ ИНФРАСТРУКТУРА</div>
+      <h2>Агент позволяет не повторять промпт руками каждый раз.</h2>
+      <div class="factory-line">
+        <div><b>01</b><span>style DNA</span><small>снимаем стиль полным промптом</small></div>
+        <div><b>02</b><span>skill</span><small>сохраняем правила работы</small></div>
+        <div><b>03</b><span>MCP/API</span><small>подключаем генератор</small></div>
+        <div><b>04</b><span>Higgsfield</span><small>делаем ассеты в едином стиле</small></div>
+        <div><b>05</b><span>review</span><small>утверждаем варианты</small></div>
+        <div><b>06</b><span>reuse</span><small>повторяем процесс без сборки с нуля</small></div>
+      </div>
+    </section>
+
+    <section class="slide constructor-slide" id="s10">
+      <div>
+        <div class="kicker">// HTML-КОНСТРУКТОР</div>
+        <h2>Следующий шаг — собрать visual lab под задачи редакции.</h2>
+      </div>
+      <div class="constructor-layout">
+        <figure>
+          <img src="../visual-builder-preview.png" alt="AI Start Visual Builder preview">
+          <figcaption>формат, текстовые слои, метафора, export</figcaption>
+        </figure>
+        <div class="constructor-check">
+          <p><b>что фиксируем</b><span>размеры, сетку, шрифты, цвета, типы карточек и ограничения</span></p>
+          <p><b>что делает агент</b><span>собирает HTML-конструктор и адаптирует его под редакционный формат</span></p>
+          <p><b>что отдаю</b><span><a href="../assets/guides/visual-constructor-guide.pdf" target="_blank" rel="noreferrer">гайд по visual lab</a> и рабочий пример конструктора</span></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide split" id="s11">
+      <div>
+        <div class="kicker">// ПЕРЕХОД К ВИДЕО</div>
+        <h2>С видео тот же принцип: сначала разбираем материал, потом выбираем инструмент.</h2>
+      </div>
+      <div class="deliverable-list">
+        <p><b>материал</b><span>длинный ролик, эфир, интервью, сюжет, запись встречи или транскрипт</span></p>
+        <p><b>анализ</b><span>что происходит в кадре, что считывается за кадром, где смысловые блоки</span></p>
+        <p><b>нарезка</b><span>3 сюжета, хуки, candidates, top-3 и риски потери контекста</span></p>
+        <p><b>инструмент</b><span>Gemini / Claude / ChatGPT / NotebookLM / Opus / Submagic / Gling / агент</span></p>
+      </div>
+    </section>
+
+    <section class="slide split prompt-artifact-slide" id="s12">
+      <div>
+        <div class="kicker">// БАЗОВЫЙ ВИДЕО-ПАЙПЛАЙН</div>
+        <h2>Первый сценарий: транскрипт → промпт → карта нарезки.</h2>
+      </div>
+      <div class="prompt-artifact">
+        <b>video texture analysis prompt</b>
+        <p>Ты работаешь как продюсер, видеоредактор и шеф-редактор новостного формата.</p>
+        <span>Загрузите видео или транскрипт, попросите разобрать кадр, закадр, смысловые блоки, 3 сюжета, лучший вариант, production brief и fact-check list.</span>
+        <div class="artifact-links">
+          <a href="../assets/prompts/prompt-video-texture-analysis.pdf" target="_blank" rel="noreferrer">полный prompt PDF</a>
+          <a href="../assets/prompts/prompt-video-texture-analysis.md" target="_blank" rel="noreferrer">полный prompt MD</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide dark pipeline-slide" id="s13">
+      <div class="kicker">// ПРОФЕССИОНАЛЬНЫЙ ВИДЕО-ПАЙПЛАЙН</div>
+      <h2>Второй сценарий: агент работает с папкой проекта и сам собирает разбор.</h2>
+      <div class="factory-line video-line">
+        <div><b>01</b><span>input/video</span><small>кладем файл в папку агента</small></div>
+        <div><b>02</b><span>transcript</span><small>агент делает или читает расшифровку</small></div>
+        <div><b>03</b><span>frames</span><small>достает контрольные кадры</small></div>
+        <div><b>04</b><span>story map</span><small>собирает смысловые блоки</small></div>
+        <div><b>05</b><span>cuts</span><small>предлагает хуки и нарезку</small></div>
+        <div><b>06</b><span>brief</span><small>готовит ТЗ и может нарезать черновик</small></div>
+      </div>
+    </section>
+
+    <section class="slide tool-radar-slide" id="s14">
+      <div class="kicker">// СЕРВИСЫ ДЛЯ ВИДЕО ДО ПРАКТИКИ</div>
+      <h2>Показываем инструменты по месту в production-процессе.</h2>
+      <div class="tool-radar wide-radar">
+        <article><b>analysis</b><h3>Gemini / NotebookLM</h3><p>Видео, транскрипт, источники, смысловые блоки и справка к материалу.</p></article>
+        <article><b>clips</b><h3>Opus / Submagic</h3><p>Поиск фрагментов, captions, вертикальные версии и публикационный пакет.</p></article>
+        <article><b>rough cut</b><h3>Gling / Descript</h3><p>Паузы, лишние дубли, текстовый монтаж и быстрый черновик.</p></article>
+        <article><b>motion assets</b><h3>Higgsfield / Kling</h3><p>Image-to-video, b-roll, motion seed, визуальные вставки и тесты движения.</p></article>
+      </div>
+      <div class="service-links" aria-label="Ссылки на сервисы для показа">
+        <a href="https://www.opus.pro/agent" target="_blank" rel="noreferrer">Opus Agent</a>
+        <a href="https://www.gling.ai/#how-it-works" target="_blank" rel="noreferrer">Gling</a>
+        <a href="https://www.submagic.co/" target="_blank" rel="noreferrer">Submagic</a>
+        <a href="https://dreamina.capcut.com/create/ai-drawing" target="_blank" rel="noreferrer">Dreamina / CapCut</a>
+        <a href="https://notebooklm.google.com/" target="_blank" rel="noreferrer">NotebookLM</a>
+        <a href="https://www.recraft.ai/" target="_blank" rel="noreferrer">Recraft</a>
+      </div>
+    </section>
+
+    <section class="slide split" id="s15">
+      <div>
+        <div class="kicker">// ДВА ФОРМАТА РАБОТЫ</div>
+        <h2>Для старта достаточно базового сценария. Для регулярной работы нужен агентный.</h2>
+      </div>
+      <div class="route-compare work-modes">
+        <article>
+          <b>base</b>
+          <p>Видео → транскрипт → полный промпт → карта сюжетов.</p>
+          <span>быстро, понятно, можно сделать в любой сильной нейросети</span>
+        </article>
+        <article>
+          <b>agent</b>
+          <p>Видео в папку → агент анализирует, предлагает нарезку и готовит brief.</p>
+          <span><a href="../assets/prompts/video-editorial-pipeline-codex-claude.pdf" target="_blank" rel="noreferrer">открыть большой гайд по пайплайну</a></span>
+        </article>
+      </div>
+    </section>
+
+    <section class="slide practice-vladimir" id="s16">
+      <div class="kicker">// СЕКРЕТЫ ПРОФИ</div>
+      <h2>Владимир работает на стыке двух слоев: реальный продакшен и AI-production.</h2>
+      <div class="video-stack pro-secret-grid">
+        <article><b>production</b><p>как мыслит монтажер и режиссер</p></article>
+        <article><b>AI tools</b><p>где нейросети ускоряют, а где мешают</p></article>
+        <article><b>timing</b><p>как выбирать фрагменты, хуки и ритм</p></article>
+        <article><b>quality gate</b><p>что проверять перед публикацией</p></article>
+      </div>
+    </section>
+
+    <section class="slide practice-vladimir" id="s17">
+      <div class="kicker">// ВЛАДИМИР · ПРАКТИКА · 40 МИН</div>
+      <h2>Секреты профи реального продакшена.</h2>
       <div class="timeline-plan">
-        <article><b>08 мин</b><p>Вставить транскрипт или описание, получить карту видео.</p></article>
-        <article><b>10 мин</b><p>Выбрать 7 кандидатов, выкинуть слабые и рискованные.</p></article>
-        <article><b>07 мин</b><p>Собрать top-3: hook, subtitle chunks, cover text, risk note.</p></article>
+        <article><b>10 мин</b><p>Показывает исходник: видео, транскрипт, ограничения, цель публикации.</p></article>
+        <article><b>10 мин</b><p>Собирает candidates, хуки и top-3 с рисками потери контекста.</p></article>
+        <article><b>10 мин</b><p>Показывает rough cut / captions / reframe / cover logic.</p></article>
+        <article><b>10 мин</b><p>Формирует публикационный пакет и проходит video gate.</p></article>
       </div>
     </section>
 
-    <section class="slide split" id="s07">
-      <div>
-        <div class="kicker">// HUMAN GATE</div>
-        <h2>Что не отдаём AI</h2>
-      </div>
-      <div class="risk-list">
-        <p><b>смысл</b><span>не вырезаем фразу так, чтобы поменять позицию героя</span></p>
-        <p><b>тон</b><span>не делаем трагедию, если в источнике спокойное объяснение</span></p>
-        <p><b>ритм</b><span>AI может резать, но финальный темп держит монтажер</span></p>
-        <p><b>бренд</b><span>субтитры, обложки и графика проходят визуальный gate</span></p>
+    <section class="slide dark" id="s18">
+      <div class="kicker">// HUMAN GATE</div>
+      <h2>Факты, лица, цитаты, титры и бренд не отдаем на автопилот.</h2>
+      <div class="risk-list gate-grid">
+        <p><b>визуал</b><span>текст и цифры не запекаются в картинку</span></p>
+        <p><b>видео</b><span>hook не обещает больше, чем исходник дает</span></p>
+        <p><b>монтаж</b><span>обрезка не меняет позицию героя</span></p>
+        <p><b>права</b><span>проверяем, что можно загружать и публиковать</span></p>
       </div>
     </section>
 
-    <section class="slide dark" id="s08">
-      <div class="kicker">// DEMO SCRIPT</div>
-      <h2>Что показывать вживую</h2>
-      <div class="process-line">
-        <div><b>01</b><span>транскрипт длинного видео</span></div>
-        <div><b>02</b><span>карта смыслов</span></div>
-        <div><b>03</b><span>clip candidates</span></div>
-        <div><b>04</b><span>Gling / Opus / Descript как первый проход</span></div>
-        <div><b>05</b><span>ручной gate монтажера</span></div>
+    <section class="slide homework-levels-slide" id="s19">
+      <div class="kicker">// ДОМАШКА · 3 УРОВНЯ</div>
+      <h2>Домашка строится как лестница: от простого повтора к собственному пайплайну.</h2>
+      <div class="homework-levels">
+        <article>
+          <b>уровень 1</b>
+          <h3>разобрать стиль и видео вручную</h3>
+          <p>Снимите стиль изображения полным visual prompt. По видео сделайте транскрипт, вставьте video prompt в Gemini / Claude / ChatGPT и получите план нарезки.</p>
+        </article>
+        <article>
+          <b>уровень 2</b>
+          <h3>подключить Higgsfield через MCP</h3>
+          <p>Сохраните стиль, подключите генератор к агенту, сделайте серию картинок или video assets в одном стиле, затем оформите это как skill.</p>
+        </article>
+        <article>
+          <b>уровень 3</b>
+          <h3>собрать свою инфраструктуру</h3>
+          <p>Создайте visual constructor и агентный видео-пайплайн: файл в папку, агент анализирует, находит хуки, предлагает монтаж и готовит brief.</p>
+        </article>
       </div>
-    </section>
-
-    <section class="slide" id="s09">
-      <div class="kicker">// HUB</div>
-      <h2>В hub сохраняем не красивый клип, а производственное решение.</h2>
-      <div class="homework">
-        <p><b>1.</b> Ссылка на source / transcript.</p>
-        <p><b>2.</b> 7 кандидатов и top-3.</p>
-        <p><b>3.</b> Что AI предложил плохо.</p>
-        <p><b>4.</b> Что монтажер поправил руками.</p>
-        <p><b>5.</b> Какой инструмент стоит тестировать дальше.</p>
+      <div class="prompt-downloads" aria-label="Материалы урока">
+        <article>
+          <b>image prompt</b>
+          <h3>ДНК визуального стиля</h3>
+          <p>Полный промпт для анализа изображения и recipe for series.</p>
+          <a href="../assets/prompts/prompt-image-style-dna-analysis.pdf" target="_blank" rel="noreferrer">PDF</a>
+          <a href="../assets/prompts/prompt-image-style-dna-analysis.md" target="_blank" rel="noreferrer">MD</a>
+        </article>
+        <article>
+          <b>video prompt</b>
+          <h3>анализ фактуры ролика</h3>
+          <p>Кадр, закадр, смысловые блоки, 3 сюжета, brief и fact-check.</p>
+          <a href="../assets/prompts/prompt-video-texture-analysis.pdf" target="_blank" rel="noreferrer">PDF</a>
+          <a href="../assets/prompts/prompt-video-texture-analysis.md" target="_blank" rel="noreferrer">MD</a>
+        </article>
+        <article>
+          <b>pipeline guide</b>
+          <h3>видео в карту сюжетов</h3>
+          <p>Базовый и агентный сценарии для Codex / Claude.</p>
+          <a href="../assets/prompts/video-editorial-pipeline-codex-claude.pdf" target="_blank" rel="noreferrer">PDF</a>
+        </article>
       </div>
       <div class="final-links">
-        <a href="./deck-02-text.html">Deck 02</a>
-        <a href="./deck-04-visual.html">Deck 04</a>
+        <a href="../visual-builder.html">visual lab</a>
+        <a href="../assets/guides/visual-constructor-guide.pdf" target="_blank" rel="noreferrer">constructor guide</a>
+        <a href="../assets/guides/higgsfield-mcp-guide.pdf" target="_blank" rel="noreferrer">Higgsfield MCP</a>
         <a href="../index.html">hub</a>
       </div>
     </section>
