@@ -138,7 +138,7 @@
 
 .midjourney-card img {
   width: 100%;
-  height: clamp(285px, 31vh, 330px);
+  height: clamp(315px, 33vh, 360px);
   object-fit: contain;
   object-position: center;
   border: 2px solid var(--black);
@@ -148,12 +148,12 @@
 
 .midjourney-card figcaption {
   display: grid;
-  gap: 9px;
+  gap: 7px;
 }
 
 .midjourney-card b {
   width: max-content;
-  padding: 8px 12px;
+  padding: 7px 11px;
   border: 2px solid var(--black);
   border-radius: 999px;
   background: var(--white);
@@ -167,7 +167,7 @@
 .midjourney-card strong {
   max-width: 620px;
   color: var(--black);
-  font-size: clamp(21px, 1.85vw, 27px);
+  font-size: clamp(20px, 1.7vw, 25px);
   font-weight: 950;
   line-height: 0.92;
 }
@@ -181,7 +181,7 @@
   background: transparent;
   color: #332f2a;
   font-family: var(--sans);
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 850;
   line-height: 1.08;
   text-transform: none;
