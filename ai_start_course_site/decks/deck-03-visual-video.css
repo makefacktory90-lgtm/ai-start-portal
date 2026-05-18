@@ -261,6 +261,17 @@
   box-shadow: 8px 8px 0 var(--black);
 }
 
+.outcome-lanes a,
+.credit-grid a,
+.deliverable-list a,
+.homework-levels a,
+.constructor-check a {
+  color: var(--black);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+
 .route-compare b,
 .deliverable-list b,
 .constructor-check b,
@@ -408,6 +419,12 @@
   gap: 14px;
 }
 
+.service-screen-grid > a {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
 .service-screen-grid figure {
   margin: 0;
   overflow: hidden;
@@ -415,6 +432,11 @@
   border-radius: 18px;
   background: var(--white);
   box-shadow: 7px 7px 0 var(--black);
+}
+
+.service-screen-grid > a:hover figure {
+  transform: translate(1px, 1px);
+  box-shadow: 5px 5px 0 var(--black);
 }
 
 .service-screen-grid img {
