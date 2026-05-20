@@ -218,109 +218,59 @@ const modules = {
       "Сильный prompt нужно сохранять как рабочий маршрут, иначе он снова потеряется в чате."
     ]
   },
-  visual: {
-    crumb: "Visual Lab",
-    code: "LESSON · 03 · LAB",
-    title: "Visual lab: конструктор, стиль и генерация",
-    subtitle: "Практический слой третьего урока: visual builder, гайды, prompts и skill-маршруты для повторяемой визуальной серии.",
-    posterKicker: "УРОК 03 · VISUAL LAB",
-    posterTitle: "style recipe → constructor → series → visual gate",
-    posterSubtitle: "конструктор, гайды и промпты открыты",
-    artUrl: "./assets/deck-04-hero-visual-robot.png",
-    artAlt: "Робот собирает визуальный стиль и карточки",
-    artCaption: "visual recipe → prompt → template",
-    sideTitle: "Visual lab",
-    sideSummary: "Открыть visual builder, снять style DNA и сохранить повторяемый визуальный маршрут.",
-    recording: {
-      title: "Урок 03: запись и visual lab",
-      summary: "Запись Zoom готова. Код доступа: Z*Vzy2p9. Для практики откройте Deck 03, visual builder, visual constructor guide и image style DNA prompt.",
-      folderUrl: "../ai_start_portal_v0/10_recordings/lesson-03-visual-video/",
-      recordingUrl: "https://us06web.zoom.us/rec/share/Qwhba1JW094TSmlk51x2_cuS3tZbj5VBDO7QdWmr6hTmn4HIHyCz59s4EuDY007A.3sOAjLuHa5MEbBHL",
-      transcriptUrl: "../ai_start_portal_v0/10_recordings/lesson-03-visual-video/transcript.md",
-      summaryUrl: "../ai_start_portal_v0/10_recordings/lesson-03-visual-video/summary.md",
-      accessCode: "Z*Vzy2p9",
-      state: "запись доступна",
-      timeline: [
-        { time: "10:00", label: "Image style DNA: как снять визуальную систему с референса." },
-        { time: "40:00", label: "Visual lab: конструктор карточек и обложек." },
-        { time: "60:00", label: "Higgsfield MCP и подключение генератора к агентному процессу." },
-        { time: "105:00", label: "Visual gate: проверка фактов, прав и визуальной согласованности." }
-      ]
-    },
+  radar: {
+    crumb: "Готовим",
+    code: "LESSON · 04",
+    title: "Урок 04 готовится",
+    subtitle: "Аудио и редакторский контур откроются после живого занятия в пятницу, 22 мая 2026. До этого участникам доступны материалы до визуального блока включительно.",
+    posterKicker: "ОТКРОЕТСЯ 22 МАЯ",
+    posterTitle: "аудио-блок пока закрыт",
+    posterSubtitle: "материалы готовы, но будут открыты после занятия",
+    artUrl: "./assets/deck-05-hero-audio-robot.png",
+    artAlt: "Робот собирает аудио-материалы к следующему занятию",
+    artCaption: "готовим следующий модуль",
+    sideTitle: "Урок 04 · закрыт",
+    sideSummary: "Аудио и редакторский контур откроются после занятия 22 мая.",
     homework: [
       {
-        level: "Base",
-        text: "Разберите один референс через image style DNA prompt и сохраните recipe for series."
+        level: "Пока закрыто",
+        text: "Домашнее задание появится после занятия 22 мая."
       },
       {
-        level: "Optimal",
-        text: "Соберите серию ассетов в одном стиле через visual lab или генератор и сохраните настройки."
+        level: "Что делать сейчас",
+        text: "Закройте домашнее задание по уроку 03: visual style recipe, video texture analysis и production brief."
       },
       {
-        level: "Advanced",
-        text: "Соберите собственный HTML visual constructor под формат вашей редакции."
+        level: "Следующий шаг",
+        text: "Вернитесь к аудио-блоку после живого разбора в пятницу."
       }
     ],
     lessons: [
-      "Снимаем стиль с референса через полный prompt.",
-      "Собираем repeatable recipe: цвета, свет, композиция, типографика, запреты.",
-      "Используем visual builder для карточки, обложки или шаблона.",
-      "Сохраняем удачные настройки как prompt, skill или workflow.",
-      "Проверяем результат через visual quality gate."
+      "Материалы будут открыты после живого занятия.",
+      "Сейчас участникам доступны стартовый, текстовый и визуально-видео блоки.",
+      "До пятницы нужно работать с домашним заданием урока 03."
     ],
     artifacts: [
-      "Visual builder",
-      "Visual constructor guide",
-      "Higgsfield MCP guide",
-      "Image style DNA prompt",
-      "Visual quality gate"
+      "Урок 04 · откроется 22 мая",
+      "Deck 04 · закрыт до занятия",
+      "audio gate · закрыт до занятия"
     ],
     insights: [
-      "Стиль нужно описывать так, чтобы его можно было повторить, а не просто оценить.",
-      "Конструктор нужен для стабильного формата: меньше ручной возни, больше контроля.",
-      "Генеративный визуал проходит те же проверки: права, лица, факты, титры и соответствие задаче."
-    ]
-  },
-  radar: {
-    crumb: "Pipeline 04",
-    code: "PIPELINE · 04",
-    title: "Материал → аудио",
-    subtitle: "Текстовый материал превращается в аудиоверсию, 60-90 секунд spoken script, intro hook или подкастовый фрагмент. Разговорность без выдумки, пожалуйста.",
-    posterKicker: "22 МАЯ",
-    posterTitle: "article → spoken script → audio fragment",
-    posterSubtitle: "script, intro, podcast fragment и audio QA",
-    sideTitle: "Pipeline 04",
-    sideSummary: "Адаптируем письменный материал в звучащий текст, не добавляя фактов ради живости.",
-    lessons: [
-      "Извлекаем главный смысл и обязательные факты.",
-      "Пишем intro hook и spoken script на 60-90 секунд.",
-      "Делаем подкастовый фрагмент с естественными переходами.",
-      "Проверяем, можно ли текст нормально произнести вслух."
-    ],
-    artifacts: [
-      "intro hook",
-      "spoken script",
-      "подкастовый фрагмент",
-      "места для слов ведущего",
-      "audio QA checklist"
-    ],
-    insights: [
-      "Разговорный текст не должен внезапно становиться художественной прозой.",
-      "Ведущий говорит живо, но факты держатся исходника.",
-      "Если текст сложно произнести вслух, его нужно адаптировать под устную речь.",
-      "Аудио требует отдельной проверки ритма, произношения и точности фактов."
+      "Аудио-блок требует живого разбора: без него участники увидят инструменты, но не поймут ограничения.",
+      "Публикуем следующий модуль только после того, как задана рамка применения и проверки.",
+      "До пятницы фокус остается на визуале и видео."
     ]
   },
   system: {
     crumb: "Pipeline 05",
     code: "PIPELINE · 05",
-    title: "Редакторский контур: мониторинг, сетка, hub",
-    subtitle: "AI помогает группировать сигналы, собирать digest, контент-сетку, Telegram-регулярность, архивные идеи, tone of voice и weekly updates. Редактор решает, что важно.",
-    posterKicker: "22 МАЯ + ФИНАЛЫ",
-    posterTitle: "signals → digest → content grid → update",
-    posterSubtitle: "контур удержания и обновления AI-hub",
+    title: "Редакторский контур: monitoring, grid, hub",
+    subtitle: "Отдельный системный слой для тех, кто хочет глубже разобрать monitoring, weekly digest, owners, update proposals и evidence-based улучшение AI-hub.",
+    posterKicker: "PIPELINE 05",
+    posterTitle: "signals → digest → owners → hub update",
+    posterSubtitle: "отдельный deep dive по редакторской регулярности",
     sideTitle: "Pipeline 05",
-    sideSummary: "Редакторский контур связывает мониторинг, планирование, tone of voice и еженедельное улучшение hub.",
+    sideSummary: "Отдельный разбор monitoring и AI-hub для owners и выпускающих редакторов.",
     lessons: [
       "Собираем monitoring rows и группируем темы.",
       "Отмечаем важность, риски источников и идеи материалов.",
@@ -478,6 +428,21 @@ function renderHomeworkInto(selector, items) {
 function renderHomework(items) {
   renderHomeworkInto("#homework-list", items);
   renderHomeworkInto("#main-homework-list", items);
+
+  const fallbackSlots = [
+    { title: "#a1-title", text: "#a1-text" },
+    { title: "#a2-title", text: "#a2-text" },
+    { title: "#a3-title", text: "#a3-text" }
+  ];
+
+  fallbackSlots.forEach((slot, index) => {
+    const item = items[index];
+    const titleEl = $(slot.title);
+    const textEl = $(slot.text);
+    if (!titleEl || !textEl || !item) return;
+    titleEl.textContent = item.level;
+    textEl.textContent = item.text;
+  });
 }
 
 function renderRecording(recording) {
@@ -573,10 +538,6 @@ function setModule(id) {
     button.classList.toggle("active", button.dataset.module === id);
   });
 
-  const visualCard = $("#visual-side-card");
-  if (visualCard) {
-    visualCard.classList.toggle("is-hidden", id !== "visual");
-  }
 }
 
 $$(".nav-item").forEach((button) => {
