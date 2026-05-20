@@ -53,62 +53,118 @@
 ### 1.3 De-AI-fy check
 
 ```text
-Проверь текст на AI-гладкость.
-Ищи:
-- общие фразы без смысла;
-- канцелярит;
-- рекламный тон;
-- одинаковый ритм предложений;
-- пустые выводы;
-- слова, которых нормальный редактор не сказал бы.
+Проверь текст на признаки нейросетевого стиля.
 
-Сначала дай список проблем с примерами.
-Потом предложи более человеческую версию, не добавляя новых фактов.
+Отметь точные места:
+1. "Это не X, это Y" / "дело не в X, дело в Y".
+2. Рубленые короткие предложения подряд.
+3. "И знаете что?", "а знаете что?", "и вот что я понял(а)".
+4. Исповедь без конкретной пользы для читателя.
+5. Общие усилители без факта.
+6. Рекламный или пресс-релизный тон.
+7. Риторические финалы, которые звучат глубоко, но ничего не добавляют.
+
+Для каждого места дай:
+- цитату;
+- почему плохо;
+- как переписать проще и живее;
+- что читатель должен забрать из этого фрагмента.
+
+Не переписывай весь текст, пока не покажешь диагностику.
 ```
 
-### 1.4 Lesson contract prompt
-
-Использовать перед каждым занятием, чтобы не скатиться в "лекцию про AI".
+### 1.4 Voice dump -> editorial source
 
 ```text
-Собери контракт урока для практического курса редакции.
+Я надиктовал(а) сырой поток мыслей.
 
-Не пиши общие тезисы.
+Не пиши публикацию.
+Сначала преврати это в рабочую редакционную заготовку.
 
-Дай:
-1. Что участник должен уметь после урока.
-2. Входной материал.
-3. Практика на занятии по шагам.
-4. Base outcome.
-5. Opti outcome.
-6. Advanced outcome.
-7. Quality gate.
-8. Что сохранить в hub.
-9. Homework.
-10. Что показать как Scout / куда смотреть дальше.
+Сделай:
+1. Главная мысль.
+2. Факты, которые прозвучали.
+3. Предположения и оценки отдельно от фактов.
+4. Что нужно проверить.
+5. Какие форматы возможны: сайт, Telegram, social, карточки, видео, аудио.
+6. Что спросить у редактора перед текстом.
 
-Проверь: есть ли конкретное действие в рабочем таймлайне редакции.
-Если действия нет, предложи более практичную версию.
+Если мысль обрывается или не хватает данных, не додумывай. Пометь: "нужно уточнить".
 ```
 
-### 1.5 Source safety classifier
+### 1.5 Prompt -> skill candidate
 
 ```text
-Классифицируй исходный материал перед использованием в AI.
+Разбери этот удачный prompt chain как кандидат в skill.
 
-Категории:
-- public source: можно использовать во внешних AI-сервисах;
-- internal source: можно использовать только после разрешения / обезличивания;
-- restricted source: нельзя загружать во внешние AI-сервисы;
-- synthetic source: учебный материал без реальных внутренних данных.
+Сделай:
+1. Название skill.
+2. Когда использовать.
+3. Какие входы нужны.
+4. Пошаговый workflow.
+5. Output format.
+6. Human gate.
+7. Какие примеры сохранить.
+8. Какие ошибки запретить.
+9. Что положить в references.
+10. Черновик SKILL.md.
+```
 
-Для материала дай:
-1. категория;
-2. почему;
-3. что нужно обезличить;
-4. какие инструменты допустимы;
-5. что должен проверить человек;
-6. безопасная версия для учебной практики.
+### 1.6 No-agent Style Card
+
+```text
+Роль: ты сильный редактор-стилист и методолог текста.
+
+Я дам тебе 3-5 моих текстов или текстов редакции.
+Твоя задача: собрать практическую Style Card, чтобы новые AI-черновики можно было править ближе к этому стилю.
+
+Важно:
+- не делай красивый психологический портрет автора;
+- не придумывай правила, которых нет в примерах;
+- каждый вывод подтверждай evidence: короткой цитатой или точным фрагментом;
+- отдельно выпиши anti-style: что точно будет звучать чужеродно;
+- не обещай "идеально скопировать" стиль;
+- если примеров мало, помечай вывод как гипотезу.
+
+Собери:
+1. Voice position.
+2. Tone range.
+3. Lexicon.
+4. Syntax and rhythm.
+5. Structure.
+6. Evidence habits.
+7. Reader relationship.
+8. Formatting.
+9. Punctuation / typography.
+10. Anti-style.
+11. Rewrite checklist.
+12. Confidence: stable rule / hypothesis.
+
+Формат ответа:
+## Style Card
+| аспект | правило | evidence | confidence |
+## Evidence
+## Anti-style
+## Rewrite checklist
+## Что нужно уточнить у автора
+```
+
+### 1.7 No-agent rewrite / format package
+
+```text
+Роль: ты редактор, который собирает текстовые форматы из source.
+
+У меня есть source и Style Card.
+Задача: подготовить текстовые форматы, сохранив факты, стиль и редакционную осторожность.
+
+Работай в 4 шага:
+1. Source lock: что можно использовать, что нельзя утверждать, что проверить.
+2. Anti-AI gate: нейросетевые конструкции, рубленая драматизация, общие усилители без факта.
+3. Draft formats: основной текст, Telegram, social, 5 заголовков.
+4. Editor gate: таблица рисков.
+
+Не добавляй факты вне source. Если факта нет, пиши "нет в source".
+Сначала покажи Source lock и Anti-AI gate, потом draft formats.
 ```
 
 ## 2. Pipeline prompts
@@ -135,6 +191,10 @@ Prompts:
 - headline set;
 - editor risk list.
 - skill / workflow update proposal.
+- voice dump -> editorial source.
+- prompt -> skill candidate.
+- no-agent Style Card.
+- no-agent rewrite / format package.
 
 ### Pipeline 02. Длинное видео -> вертикальные клипы
 
@@ -170,8 +230,17 @@ Prompts:
 - quote card copy;
 - carousel outline;
 - visual brief;
+- visual style extraction;
+- image style DNA analysis;
 - AI asset prompt;
 - visual QA.
+
+Отдельный prompt:
+
+```text
+04_prompt_library/visual_style_extraction_prompt.md
+04_prompt_library/prompt_image_style_dna_analysis.md
+```
 
 ### Pipeline 04. Материал -> аудио
 
@@ -206,6 +275,36 @@ Prompts:
 - tone-of-voice calibration;
 - weekly analytics reflection;
 - AI-hub update proposal.
+
+### Pipeline 06. Видео -> редакционная карта сюжетов в Codex / Claude
+
+Главный файл:
+
+```text
+02_pipelines/06_video_to_editorial_story_map/workflow.md
+```
+
+Prompts:
+
+- empty Codex / Claude setup;
+- video source profile;
+- transcript extraction;
+- key frame extraction;
+- what happens on screen;
+- what happens behind the story;
+- semantic story map;
+- 3 editorial angles;
+- best story selection;
+- production brief;
+- fact-check list;
+- video texture analysis prompt;
+- human gate.
+
+Отдельный prompt:
+
+```text
+04_prompt_library/prompt_video_texture_analysis.md
+```
 
 ## 3. Update prompt
 

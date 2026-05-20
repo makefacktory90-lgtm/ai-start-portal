@@ -147,63 +147,138 @@ const modules = {
     ]
   },
   formats: {
-    crumb: "Pipeline 02",
-    code: "PIPELINE · 02",
-    title: "Длинное видео → вертикальные клипы",
-    subtitle: "Длинный сюжет, эфир или транскрипт превращается в 3-5 кандидатов на короткие вертикальные клипы с хуками, субтитрами, обложками и публикационным пакетом.",
-    posterKicker: "19 МАЯ",
-    posterTitle: "long video → clip candidates → package",
-    posterSubtitle: "нужен видео-специалист для стека, QA и live demo",
-    sideTitle: "Pipeline 02",
-    sideSummary: "AI помогает найти кандидаты на клипы, но финальный смысл, контекст и монтаж проверяет человек.",
+    crumb: "Visual + Video",
+    code: "LESSON · 03",
+    title: "Урок 03: визуальная и видео-фабрика",
+    subtitle: "Разбираем, как снимать визуальный стиль с референса, превращать длинное видео или транскрипт в карту нарезки и собирать повторяемый процесс через промпты, гайды и visual lab.",
+    posterKicker: "УРОК 03 · ВИДЕО + ВИЗУАЛ",
+    posterTitle: "reference → style DNA → video map → brief → gate",
+    posterSubtitle: "запись, Deck 03, visual lab, промпты и гайды уже в hub",
+    artUrl: "./assets/deck-03-hero-video-robot.png",
+    artAlt: "Робот собирает видео и визуальные материалы курса",
+    artCaption: "style DNA → video texture → production brief",
+    sideTitle: "Урок 03 · Видео + визуал",
+    sideSummary: "Практика по визуальному стилю, генеративным сервисам, анализу видео и повторяемым production prompts.",
+    recording: {
+      title: "Урок 03: запись лекции",
+      summary: "Запись Zoom готова. Код доступа: Z*Vzy2p9. Презентация, домашнее задание, гайды и промпты открываются отдельными ссылками.",
+      folderUrl: "../ai_start_portal_v0/10_recordings/lesson-03-visual-video/",
+      recordingUrl: "https://us06web.zoom.us/rec/share/Qwhba1JW094TSmlk51x2_cuS3tZbj5VBDO7QdWmr6hTmn4HIHyCz59s4EuDY007A.3sOAjLuHa5MEbBHL",
+      transcriptUrl: "../ai_start_portal_v0/10_recordings/lesson-03-visual-video/transcript.md",
+      summaryUrl: "../ai_start_portal_v0/10_recordings/lesson-03-visual-video/summary.md",
+      accessCode: "Z*Vzy2p9",
+      state: "запись доступна",
+      timeline: [
+        { time: "00:00", label: "Старт урока и рамка: визуал и видео как повторяемая фабрика, а не набор разовых генераций." },
+        { time: "10:00", label: "Визуальный стиль: как разбирать референс через image style DNA prompt." },
+        { time: "25:00", label: "Recipe for series: цвет, свет, композиция, фактура и ограничения для серии материалов." },
+        { time: "40:00", label: "Visual lab и HTML-конструктор: как собрать шаблон под карточки, обложки и повторяемые форматы." },
+        { time: "60:00", label: "Генеративные сервисы и Higgsfield MCP: где ручной prompt, а где агентный маршрут." },
+        { time: "80:00", label: "Видео-пайплайн: длинное видео или транскрипт превращается в карту, хуки, варианты сюжета и production brief." },
+        { time: "105:00", label: "Quality gate: факты, лица, цитаты, титры, права, визуальная согласованность." },
+        { time: "120:00", label: "Домашнее задание: Base, Optimal, Advanced и что сохранить в hub." }
+      ]
+    },
+    homework: [
+      {
+        level: "Base",
+        text: "Возьмите одно изображение-референс, разберите его через prompt-image-style-dna-analysis и сохраните RECIPE FOR SERIES. Затем возьмите длинное видео или транскрипт, прогоните через prompt-video-texture-analysis и получите карту материала, 3 сюжета и production brief."
+      },
+      {
+        level: "Optimal",
+        text: "Подключите Higgsfield через MCP по гайду или повторите маршрут вручную в выбранном генераторе. Сделайте серию изображений или video assets в одном стиле и сохраните удачный prompt / настройки как workflow."
+      },
+      {
+        level: "Advanced",
+        text: "Соберите свой HTML visual constructor и агентный видео-пайплайн: файл в папку, анализ, хуки, нарезка, brief и human gate по фактам, лицам, цитатам, титрам и правам."
+      }
+    ],
     lessons: [
-      "Строим карту длинного видео или транскрипта.",
-      "Выбираем 5-7 потенциальных фрагментов.",
-      "Собираем hook, subtitle chunks, обложку и описание.",
-      "Проверяем риск потери контекста и монтажную пригодность."
+      "Разбираем визуальный стиль не на уровне 'красиво', а как набор повторяемых решений: свет, цвет, композиция, фактура, типографика, запреты.",
+      "Показываем полный image style DNA prompt и как из него получить recipe for series.",
+      "Открываем Deck 03 и visual lab: участник может собрать обложку, карточку или шаблон прямо в браузере.",
+      "Разбираем Higgsfield MCP guide и маршрут подключения генератора к агенту.",
+      "Показываем video texture prompt: видео или транскрипт превращается в карту смыслов, хуки, варианты нарезки и production brief.",
+      "Фиксируем human gate для визуала и видео: факты, лица, цитаты, титры, права и редакционная ответственность."
     ],
     artifacts: [
-      "карта видео",
-      "5-7 clip candidates",
-      "топ-3 для производства",
-      "hooks и subtitle chunks",
-      "video QA checklist"
+      "Deck 03: Visual + Video Factory",
+      "Visual lab / HTML visual constructor",
+      "Visual constructor guide",
+      "Higgsfield MCP guide",
+      "Image style DNA prompt",
+      "Video texture analysis prompt",
+      "Video editorial pipeline guide",
+      "Домашнее задание урока 03"
     ],
     insights: [
-      "AI не монтирует смысл за редактора. Он предлагает кандидаты.",
-      "Hook не должен обещать больше, чем есть в видео.",
-      "Короткий клип должен быть понятен без потери важного контекста.",
-      "Видео-специалист нужен не для красоты, а для реального производственного маршрута."
+      "Визуальная генерация становится рабочей только тогда, когда у нее есть recipe, ограничения и проверка результата.",
+      "Один хороший референс можно превратить в систему: style DNA, prompt set, шаблон и quality gate.",
+      "Видео-пайплайн начинается не с монтажа, а с карты материала: что есть, где смысл, какие хуки не врут источнику.",
+      "Сильный prompt нужно сохранять как рабочий маршрут, иначе он снова потеряется в чате."
     ]
   },
   visual: {
-    crumb: "Pipeline 03",
-    code: "PIPELINE · 03",
-    title: "Материал → визуал и карточки",
-    subtitle: "Материал превращается в visual brief, карточки, обложку, quote card, простую инфографику или AI-asset. Факты остаются в редактируемом шаблоне, а не в нейрокартинке.",
-    posterKicker: "19 МАЯ",
-    posterTitle: "meaning → cards → visual brief",
-    posterSubtitle: "шаблон держит факты, AI дает образ и варианты",
-    sideTitle: "Pipeline 03",
-    sideSummary: "AI помогает выбрать смысл и структуру визуала, но не пишет финальные фактические карточки как картинку.",
+    crumb: "Visual Lab",
+    code: "LESSON · 03 · LAB",
+    title: "Visual lab: конструктор, стиль и генерация",
+    subtitle: "Практический слой третьего урока: visual builder, гайды, prompts и skill-маршруты для повторяемой визуальной серии.",
+    posterKicker: "УРОК 03 · VISUAL LAB",
+    posterTitle: "style recipe → constructor → series → visual gate",
+    posterSubtitle: "конструктор, гайды и промпты открыты",
+    artUrl: "./assets/deck-04-hero-visual-robot.png",
+    artAlt: "Робот собирает визуальный стиль и карточки",
+    artCaption: "visual recipe → prompt → template",
+    sideTitle: "Visual lab",
+    sideSummary: "Открыть visual builder, снять style DNA и сохранить повторяемый визуальный маршрут.",
+    recording: {
+      title: "Урок 03: запись и visual lab",
+      summary: "Запись Zoom готова. Код доступа: Z*Vzy2p9. Для практики откройте Deck 03, visual builder, visual constructor guide и image style DNA prompt.",
+      folderUrl: "../ai_start_portal_v0/10_recordings/lesson-03-visual-video/",
+      recordingUrl: "https://us06web.zoom.us/rec/share/Qwhba1JW094TSmlk51x2_cuS3tZbj5VBDO7QdWmr6hTmn4HIHyCz59s4EuDY007A.3sOAjLuHa5MEbBHL",
+      transcriptUrl: "../ai_start_portal_v0/10_recordings/lesson-03-visual-video/transcript.md",
+      summaryUrl: "../ai_start_portal_v0/10_recordings/lesson-03-visual-video/summary.md",
+      accessCode: "Z*Vzy2p9",
+      state: "запись доступна",
+      timeline: [
+        { time: "10:00", label: "Image style DNA: как снять визуальную систему с референса." },
+        { time: "40:00", label: "Visual lab: конструктор карточек и обложек." },
+        { time: "60:00", label: "Higgsfield MCP и подключение генератора к агентному процессу." },
+        { time: "105:00", label: "Visual gate: проверка фактов, прав и визуальной согласованности." }
+      ]
+    },
+    homework: [
+      {
+        level: "Base",
+        text: "Разберите один референс через image style DNA prompt и сохраните recipe for series."
+      },
+      {
+        level: "Optimal",
+        text: "Соберите серию ассетов в одном стиле через visual lab или генератор и сохраните настройки."
+      },
+      {
+        level: "Advanced",
+        text: "Соберите собственный HTML visual constructor под формат вашей редакции."
+      }
+    ],
     lessons: [
-      "Выделяем главный смысл и факты, которые нельзя исказить.",
-      "Выбираем формат: обложка, карточки, инфографика, quote card.",
-      "Собираем структуру карточек и visual brief.",
-      "Проверяем читаемость, фактологию и риск ложного визуального факта."
+      "Снимаем стиль с референса через полный prompt.",
+      "Собираем repeatable recipe: цвета, свет, композиция, типографика, запреты.",
+      "Используем visual builder для карточки, обложки или шаблона.",
+      "Сохраняем удачные настройки как prompt, skill или workflow.",
+      "Проверяем результат через visual quality gate."
     ],
     artifacts: [
-      "главный смысл",
-      "структура карточек",
-      "текст для visual format",
-      "visual brief",
-      "visual quality gate"
+      "Visual builder",
+      "Visual constructor guide",
+      "Higgsfield MCP guide",
+      "Image style DNA prompt",
+      "Visual quality gate"
     ],
     insights: [
-      "Не просим image model писать финальный текст с цифрами и цитатами.",
-      "Figma или Canva держат шаблон, AI-asset может быть только частью сборки.",
-      "Визуал не должен создавать ложный смысл или неподтвержденный факт.",
-      "Читаемость на мобильном важнее сложности визуального приема."
+      "Стиль нужно описывать так, чтобы его можно было повторить, а не просто оценить.",
+      "Конструктор нужен для стабильного формата: меньше ручной возни, больше контроля.",
+      "Генеративный визуал проходит те же проверки: права, лица, факты, титры и соответствие задаче."
     ]
   },
   radar: {
@@ -406,24 +481,57 @@ function renderHomework(items) {
 }
 
 function renderRecording(recording) {
-  $("#recording-title").textContent = recording.title;
-  $("#recording-summary").textContent = recording.summary;
-  $("#recording-folder-link").href = recording.folderUrl;
-  $("#recording-link").href = recording.recordingUrl;
-  $("#recording-link").textContent = "Смотреть запись Zoom";
-  $("#recording-link").target = "_blank";
-  $("#recording-link").rel = "noopener";
+  const recordingTitle = $("#recording-title");
+  const recordingSummary = $("#recording-summary");
+  const recordingFolderLink = $("#recording-folder-link");
+  if (!recordingTitle || !recordingSummary || !recordingFolderLink) {
+    return;
+  }
+
+  recordingTitle.textContent = recording.title;
+  recordingSummary.textContent = recording.summary;
+  recordingFolderLink.href = recording.folderUrl;
+  const quickRecordingLink = $("#quick-recording-link");
+  if (quickRecordingLink) {
+    quickRecordingLink.href = recording.recordingUrl;
+    quickRecordingLink.target = "_blank";
+    quickRecordingLink.rel = "noopener";
+  }
+  const heroRecordingLink = $("#hero-recording-link");
+  if (heroRecordingLink) {
+    heroRecordingLink.href = recording.recordingUrl;
+    heroRecordingLink.target = "_blank";
+    heroRecordingLink.rel = "noopener";
+  }
+  const heroRecordingCode = $("#hero-recording-code");
+  if (heroRecordingCode) {
+    heroRecordingCode.hidden = !recording.accessCode;
+    heroRecordingCode.querySelector("b").textContent = recording.accessCode || "";
+  }
+  const recordingLink = $("#recording-link");
+  if (recordingLink) {
+    recordingLink.href = recording.recordingUrl;
+    recordingLink.textContent = "Смотреть запись Zoom";
+    recordingLink.target = "_blank";
+    recordingLink.rel = "noopener";
+  }
   const recordingCode = $("#recording-code");
   if (recordingCode) {
     recordingCode.hidden = !recording.accessCode;
     recordingCode.querySelector("strong").textContent = recording.accessCode || "";
   }
-  $("#transcript-link").href = recording.transcriptUrl;
-  $("#transcript-link").target = "_blank";
-  $("#transcript-link").rel = "noopener";
-  $("#summary-link").href = recording.summaryUrl;
-  $("#summary-link").target = "_blank";
-  $("#summary-link").rel = "noopener";
+  const transcriptLink = $("#transcript-link");
+  if (transcriptLink) {
+    transcriptLink.href = recording.transcriptUrl;
+    transcriptLink.target = "_blank";
+    transcriptLink.rel = "noopener";
+  }
+  const summaryLink = $("#summary-link");
+  if (summaryLink) {
+    summaryLink.href = recording.summaryUrl;
+    summaryLink.target = "_blank";
+    summaryLink.rel = "noopener";
+  }
   const timelineState = $("#timeline-state");
   if (timelineState) timelineState.textContent = recording.state;
   $$(".status-steps span").forEach((step) => {
