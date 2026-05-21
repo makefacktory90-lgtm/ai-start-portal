@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Deck 04 · Audio & Editorial Contour</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./deck-01-start.css">
+  <link rel="stylesheet" href="./deck-practical.css">
+</head>
+<body>
+  <header class="deck-nav">
+    <a class="deck-logo" href="../index.html">AI START</a>
+    <nav>
+      <a href="#s01">start</a>
+      <a href="#s04">audio</a>
+      <a href="#s08">contour</a>
+      <a href="#s11">browser</a>
+      <a href="#s14">skills</a>
+      <a href="#s17">practice</a>
+    </nav>
+    <span>Audio + editorial contour</span>
+  </header>
+
+  <main>
+    <section class="slide hero" id="s01">
+      <div class="hero-copy">
+        <div class="pill">урок 04 · аудио и редакторский пульт</div>
+        <h1>Материал <span>звучит</span>.<br>Редактор <span>держит контур</span>.</h1>
+        <p class="lead">Сначала собираем spoken script и музыкальную подложку. Затем строим редакторский пульт: сигналы, риски, сетка, задачи и обновления hub.</p>
+      </div>
+      <figure class="lesson-art">
+        <img src="../assets/deck-05-hero-audio-robot.png" alt="Robot recording spoken script with waveform">
+        <figcaption>source map -> audio package -> editorial contour</figcaption>
+      </figure>
+    </section>
+
+    <section class="slide manifesto" id="s02">
+      <div class="kicker">// ЧТО УНОСИМ</div>
+      <h2>Это не урок про инструменты. Это урок про рабочий пульт редактора.</h2>
+      <div class="outcome-lanes">
+        <article><b>audio</b><h3>spoken package</h3><p>Source Map, spoken script, intro hook, подкастовый фрагмент, prompt для Suno и audio gate.</p></article>
+        <article><b>contour</b><h3>weekly digest</h3><p>Сигналы, источники, риски, важность для аудитории и вопросы редактору.</p></article>
+        <article><b>grid</b><h3>content board</h3><p>Темы раскладываются по каналам, форматам, владельцам, дедлайнам и human gates.</p></article>
+        <article><b>hub</b><h3>system update</h3><p>Удачные prompts, плохие outputs, правки и повторяющиеся ошибки становятся обновлением hub.</p></article>
+      </div>
+    </section>
+
+    <section class="slide dark" id="s03">
+      <div class="kicker">// ПОЗИЦИЯ</div>
+      <h2>СИИ не решает, что важно. СИИ раскладывает поле так, чтобы редактор быстрее принял решение.</h2>
+      <p class="lead narrow">Редактор оставляет за собой источник доверия, важность темы, риск, выпуск, запрет на публикацию и обновление правил. Если отдать это машине, получится не ускорение, а автоматизированный шум. Ну да, красиво, но бесполезно. Мы же не за этим собрались.</p>
+    </section>
+
+    <section class="slide split" id="s04">
+      <div>
+        <div class="kicker">// PART 01 · AUDIO</div>
+        <h2>Материал -> spoken script</h2>
+      </div>
+      <pre class="prompt-block"><code>Сделай spoken script по материалу.
+
+Вход:
+- Source Map или исходный текст.
+- Канал: эфир / Telegram audio / podcast fragment / voiceover.
+- Длина: 60-90 секунд.
+- Голос: спокойно, ясно, без рекламного пафоса.
+
+Сделай:
+1. Главный смысл.
+2. Факты, которые нельзя менять.
+3. Intro hook.
+4. Spoken script.
+5. Места, где ведущему лучше говорить своими словами.
+6. Pronunciation notes: имена, география, числа.
+7. Audio gate перед записью.
+
+Правила:
+- не добавляй новых фактов;
+- не подменяй смысл эмоциями;
+- пиши так, чтобы это можно было произнести вслух.</code></pre>
+    </section>
+
+    <section class="slide split" id="s05">
+      <div>
+        <div class="kicker">// SUNO PROMPT</div>
+        <h2>Музыкальная подложка: голос всегда важнее музыки.</h2>
+      </div>
+      <pre class="prompt-block"><code>Instrumental only. No vocals. No lyrics.
+
+Create a professional TV editorial music bed for a spoken news or explainer segment.
+Purpose: support narration, not compete with it.
+Mood: restrained, modern, focused, credible.
+Tempo: medium, around 100 BPM.
+Hook: subtle repeating rhythmic pulse.
+Structure: quiet intro, steady main section, light development, clean ending.
+Instrumentation: soft electronic drums, controlled bass pulse, minimal synth motif, light atmospheric texture.
+Mix: voice-first, no harsh highs, no huge lows, no dramatic peaks, no distracting melody.
+Avoid: epic trailer, pop song, sentimentality, comedy, aggressive percussion, orchestral excess.</code></pre>
+    </section>
+
+    <section class="slide" id="s06">
+      <div class="kicker">// AUDIO TOOL RADAR</div>
+      <h2>Что показываем в аудио-блоке</h2>
+      <div class="tool-radar">
+        <article><b>script</b><h3>Claude / ChatGPT</h3><p>Source Map, spoken rewrite, intro hook, подкастовый фрагмент и пометки для ведущего.</p></article>
+        <article><b>soundtrack</b><h3>Suno</h3><p>Музыкальная подложка, настроение, ритмический хук и быстрые варианты под сюжет.</p></article>
+        <article><b>voice</b><h3>ElevenLabs</h3><p>Озвучка и дубляж как отдельный слой с этической проверкой и редакторским контролем.</p></article>
+        <article><b>cleanup</b><h3>Adobe Podcast</h3><p>Чистка голоса, выравнивание и быстрый технический cleanup перед монтажом.</p></article>
+      </div>
+    </section>
+
+    <section class="slide dark" id="s07">
+      <div class="kicker">// AUDIO GATE</div>
+      <h2>Аудио проверяется ушами, а не только глазами.</h2>
+      <div class="risk-list">
+        <p><b>факты</b><span>нет новых фактов, цифр, оценок и причинно-следственных связей без source</span></p>
+        <p><b>произносимость</b><span>ведущий может прочитать текст вслух без канцелярита и спотыканий</span></p>
+        <p><b>имена</b><span>ударения, география, должности и названия проверены человеком</span></p>
+        <p><b>музыка</b><span>подложка поддерживает голос, а не делает из новости трейлер к катастрофе</span></p>
+        <p><b>этика</b><span>voice tools и дубляж используются только там, где это разрешено и уместно</span></p>
+      </div>
+    </section>
+
+    <section class="slide hero" id="s08">
+      <div class="hero-copy">
+        <div class="pill">part 02 · editorial contour</div>
+        <h1>Редакторский контур - это <span>цикл решений</span>, а не табличка.</h1>
+        <p class="lead">Контур соединяет мониторинг, source map, digest, content grid, task package, human gate, публикацию, разбор результата и update hub.</p>
+      </div>
+      <figure class="lesson-art">
+        <img src="../assets/deck-06-hero-contour-robot.png" alt="Robot sorting monitoring signals into content grid">
+        <figcaption>signals -> digest -> grid -> update</figcaption>
+      </figure>
+    </section>
+
+    <section class="slide dark" id="s09">
+      <div class="kicker">// DEFINITION</div>
+      <h2>Что такое редакторский контур?</h2>
+      <div class="risk-list">
+        <p><b>monitoring</b><span>собираем сигналы: темы, источники, повторы, вопросы аудитории</span></p>
+        <p><b>source map</b><span>отделяем факт от предположения, цитату от пересказа, риск от идеи</span></p>
+        <p><b>digest</b><span>группируем сигналы в понятную картину недели или дня</span></p>
+        <p><b>grid</b><span>раскладываем решения по каналам, форматам, owners и дедлайнам</span></p>
+        <p><b>update</b><span>после выпуска обновляем prompt, gate, пример или запрет в hub</span></p>
+      </div>
+    </section>
+
+    <section class="slide" id="s10">
+      <div class="kicker">// ЧТО УЖЕ ЕСТЬ</div>
+      <h2>Не начинаем с нуля. У редакции уже есть набор рабочих промптов.</h2>
+      <div class="tool-radar">
+        <article><b>01</b><h3>Researcher</h3><p>Ищет источники, unknowns, риски и вопросы перед публикацией.</p></article>
+        <article><b>07</b><h3>Source Map</h3><p>Разделяет "можно утверждать" и "хочется красиво сказать".</p></article>
+        <article><b>14</b><h3>TV Style Graph</h3><p>Держит голос продукта, рубрики или канала через evidence и decision trace.</p></article>
+        <article><b>11</b><h3>Format Factory</h3><p>Из одного проверенного source делает сайт, Telegram, видео, карточки и аудио.</p></article>
+        <article><b>05</b><h3>Audio / Transcript</h3><p>Транскрипт, spoken script, intro hook и audio QA.</p></article>
+        <article><b>06</b><h3>Hub Update</h3><p>Сохраняет удачные и плохие outputs как обновление системы.</p></article>
+      </div>
+    </section>
+
+    <section class="slide split" id="s11">
+      <div>
+        <div class="kicker">// BROWSER ROUTE</div>
+        <h2>Base: редактор работает в браузере.</h2>
+      </div>
+      <pre class="prompt-block"><code>Собери редакционный digest из сигналов ниже.
+
+Не пиши публикацию. Не придумывай факты.
+
+Для каждого сигнала укажи:
+1. тема;
+2. источник и уровень доверия;
+3. что подтверждено;
+4. что не подтверждено;
+5. почему это важно аудитории;
+6. возможный формат: сайт / Telegram / видео / визуал / аудио;
+7. риск: факт, контекст, юридический, репутационный;
+8. что должен решить редактор;
+9. next step и owner.
+
+После таблицы дай:
+- top-5 тем недели;
+- что нельзя выпускать без проверки;
+- какие материалы можно собрать быстро;
+- какие вопросы вынести редактору.</code></pre>
+    </section>
+
+    <section class="slide" id="s12">
+      <div class="kicker">// PROJECT / COWORK</div>
+      <h2>Opti: делаем project, где редактору не надо каждый раз объяснять контекст.</h2>
+      <div class="outcome-lanes">
+        <article><b>rules</b><h3>правила редакции</h3><p>Что нельзя публиковать, какие источники сильные, где нужен человек.</p></article>
+        <article><b>voice</b><h3>тон продукта</h3><p>Style Graph, anti-style, примеры хороших и плохих формулировок.</p></article>
+        <article><b>templates</b><h3>шаблоны</h3><p>Digest, content grid, task package, update proposal, gates.</p></article>
+        <article><b>memory</b><h3>история решений</h3><p>Что уже пробовали, что сломалось, что стало правилом.</p></article>
+      </div>
+    </section>
+
+    <section class="slide dark" id="s13">
+      <div class="kicker">// CLAUDE CODE / CODEX</div>
+      <h2>Advanced: агентная папка нужна owners, а не всем участникам.</h2>
+      <p class="lead narrow">В браузере редактор получает быстрый результат. В Claude Code / Codex owner ведет систему: файлы, prompts, gates, examples, changelog. Если сразу тащить всех в агентный режим, половина людей начнет воевать с интерфейсом вместо редакционной задачи. Красиво? Нет. Зато правда.</p>
+      <div class="timeline-plan">
+        <article><b>browser</b><p>быстрый digest, source map, content grid</p></article>
+        <article><b>project</b><p>постоянные правила, голос, шаблоны, knowledge</p></article>
+        <article><b>agent</b><p>папка hub, skills, outputs, changelog, обновления</p></article>
+      </div>
+    </section>
+
+    <section class="slide" id="s14">
+      <div class="kicker">// ЧТО ДОБАВЛЯЕМ ОБЯЗАТЕЛЬНО</div>
+      <h2>Новый обязательный слой: Editorial Control Prompt.</h2>
+      <div class="homework">
+        <p><b>Daily digest.</b> Сигналы дня, источники, риски, что выпускать, что нельзя выпускать.</p>
+        <p><b>Content grid.</b> Канал, формат, owner, дедлайн, source, human gate.</p>
+        <p><b>Task package.</b> Что получает корреспондент, SMM, монтажер, дизайнер или ведущий.</p>
+        <p><b>Update proposal.</b> Что меняем в prompt, skill, gate или template после реального output.</p>
+      </div>
+    </section>
+
+    <section class="slide split" id="s15">
+      <div>
+        <div class="kicker">// PROMPT · CONTENT GRID</div>
+        <h2>Из digest в недельную сетку</h2>
+      </div>
+      <pre class="prompt-block"><code>На основе digest собери content grid на неделю.
+
+Для каждой темы укажи:
+1. приоритет: high / medium / low;
+2. формат: сайт / Telegram / видео / визуал / аудио;
+3. зачем аудитории;
+4. source, на который можно опереться;
+5. что нужно проверить;
+6. owner;
+7. дедлайн;
+8. human gate;
+9. что можно переиспользовать в других каналах.
+
+После сетки дай редакторское решение:
+- keep;
+- revise;
+- kill;
+- automate later.
+
+Не превращай сетку в автопубликацию. Финальное решение принимает редактор.</code></pre>
+    </section>
+
+    <section class="slide split" id="s16">
+      <div>
+        <div class="kicker">// PROMPT · HUB UPDATE</div>
+        <h2>Контур заканчивается update, а не вдохновением.</h2>
+      </div>
+      <pre class="prompt-block"><code>Сделай update proposal для AI-hub.
+
+Дано:
+- source;
+- prompt или skill;
+- output;
+- правки редактора;
+- что сработало;
+- что сломалось.
+
+Собери:
+1. Какой workflow / skill обновляем.
+2. Evidence: 3-5 конкретных наблюдений.
+3. Decision: keep / revise / kill / automate later.
+4. Что добавить в hub: prompt, gate, example, warning.
+5. Owner.
+6. Как проверить, что обновление помогло.
+
+Правило:
+не обновляем систему по одному восторгу. Нужен evidence.</code></pre>
+    </section>
+
+    <section class="slide" id="s17">
+      <div class="kicker">// ВНЕШНИЕ НАБЛЮДЕНИЯ</div>
+      <h2>Что берем из внешних workflow, а что не тащим в курс целиком</h2>
+      <div class="tool-radar">
+        <article><b>workflow > prompt</b><h3>Claude workflow libraries</h3><p>Берем принцип: не список команд, а маршрут от входа до результата.</p></article>
+        <article><b>skills handoff</b><h3>medsci-skills</h3><p>Берем идею: skills передают output друг другу, как производственная цепочка.</p></article>
+        <article><b>project files</b><h3>long-form editing</h3><p>Берем боль: если source of truth живет отдельно от AI, редактор тонет в ручном sync.</p></article>
+        <article><b>AI-patterns</b><h3>humanizer skills</h3><p>Берем не "детектор", а список повторяющихся машинных дефектов для редакторского gate.</p></article>
+      </div>
+    </section>
+
+    <section class="slide dark" id="s18">
+      <div class="kicker">// LIVE DEMO · 25 МИН</div>
+      <h2>Демо редакторского контура</h2>
+      <div class="timeline-plan">
+        <article><b>05 мин</b><p>Открыть Claude / ChatGPT в браузере и вставить 8-12 сигналов.</p></article>
+        <article><b>07 мин</b><p>Собрать digest: источники, риски, важность, вопросы редактору.</p></article>
+        <article><b>07 мин</b><p>Разложить top-5 в content grid: канал, формат, owner, gate.</p></article>
+        <article><b>06 мин</b><p>Показать project/cowork: где живут правила, prompts, gates и update proposal.</p></article>
+      </div>
+    </section>
+
+    <section class="slide" id="s19">
+      <div class="kicker">// ПРАКТИКА</div>
+      <h2>Домашка по уровням</h2>
+      <div class="homework">
+        <p><b>Base.</b> Собрать digest из 8-12 сигналов: источники, риски, важность, что проверить.</p>
+        <p><b>Opti.</b> Из digest собрать content grid на неделю: канал, формат, owner, дедлайн, gate.</p>
+        <p><b>Advanced.</b> Сделать project/cowork или агентную папку с prompts, gates, examples и update proposal.</p>
+        <p><b>В hub.</b> Сохранить один хороший digest, один спорный output и одно предложение по обновлению правила.</p>
+      </div>
+    </section>
+
+    <section class="slide" id="s20">
+      <div class="kicker">// SOURCES</div>
+      <h2>Что можно открыть после занятия</h2>
+      <div class="final-links">
+        <a href="../skills.html#lesson-03-guides">гайды и промпты курса</a>
+        <a href="https://github.com/Aperivue/medsci-skills" target="_blank" rel="noreferrer">skills handoff example</a>
+        <a href="https://github.com/Aboudjem/humanizer-skill" target="_blank" rel="noreferrer">AI pattern skill</a>
+        <a href="https://github.com/SNL-UCSB/paper-writing-skill" target="_blank" rel="noreferrer">structured writing skill</a>
+        <a href="https://www.reddit.com/r/ClaudeAI/comments/1scfvd6/i_got_tired_of_ai_prompt_lists_so_i_built_full/" target="_blank" rel="noreferrer">workflow > prompt</a>
+        <a href="../index.html">hub</a>
+      </div>
+    </section>
+  </main>
+  <script src="./deck-01-start.js"></script>
+</body>
+</html>
