@@ -12,9 +12,10 @@
   <style>
     body {
       --audio: #ffb82e;
-      --audio-soft: #fff0c9;
-      --contour: #22a699;
-      --contour-soft: #dff7f0;
+      --audio-soft: #fff2cf;
+      --contour: #1e9787;
+      --contour-soft: #ddf7f2;
+      --contour-line: #8fcfc5;
     }
 
     .audio-part {
@@ -25,8 +26,8 @@
 
     .contour-part {
       background:
-        linear-gradient(135deg, rgba(34, 166, 153, 0.18), transparent 50%),
-        var(--paper);
+        linear-gradient(135deg, rgba(30, 151, 135, 0.16), transparent 54%),
+        var(--white);
     }
 
     .audio-part .pill,
@@ -42,7 +43,26 @@
     .contour-part .outcome-lanes b,
     .contour-part .timeline-plan b {
       background: var(--contour);
-      color: var(--black);
+      color: var(--white);
+    }
+
+    .audio-part .outcome-lanes article,
+    .audio-part .timeline-plan article,
+    .audio-part .tool-radar article {
+      background: rgba(255, 253, 248, 0.96);
+    }
+
+    .contour-part .outcome-lanes article,
+    .contour-part .timeline-plan article,
+    .contour-part .tool-radar article {
+      background: rgba(255, 255, 255, 0.98);
+      border-color: var(--black);
+      box-shadow: 7px 7px 0 rgba(30, 151, 135, 0.2);
+    }
+
+    .contour-part .risk-list p,
+    .contour-part .homework p {
+      border-bottom-color: var(--contour-line);
     }
 
     .part-divider {
@@ -53,11 +73,181 @@
 
     .part-divider h2 {
       color: var(--paper);
-      max-width: 980px;
+      max-width: 1020px;
     }
 
     .part-divider .lead {
-      color: rgba(255, 253, 248, 0.78);
+      color: rgba(255, 253, 248, 0.8);
+    }
+
+    .route-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .route-grid article,
+    .audio-example-board article {
+      min-height: 260px;
+      padding: 22px;
+      border: 2px solid var(--black);
+      border-radius: 22px;
+      background: var(--white);
+      box-shadow: 9px 9px 0 rgba(8, 7, 6, 0.16);
+      display: grid;
+      align-content: start;
+      gap: 14px;
+    }
+
+    .route-grid b,
+    .audio-example-board b {
+      display: inline-block;
+      width: max-content;
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-family: var(--mono);
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    .route-grid h3,
+    .audio-example-board h3 {
+      margin: 0;
+      font-size: clamp(28px, 2.5vw, 46px);
+      line-height: 0.94;
+    }
+
+    .route-grid p,
+    .audio-example-board p,
+    .route-grid li {
+      margin: 0;
+      color: #2c2823;
+      font-size: clamp(18px, 1.7vw, 27px);
+      font-weight: 800;
+      line-height: 1.12;
+    }
+
+    .route-grid ul {
+      margin: 0;
+      padding-left: 22px;
+      display: grid;
+      gap: 8px;
+    }
+
+    .route-grid article.browser-step b,
+    .audio-example-board b {
+      background: var(--audio);
+      color: var(--black);
+    }
+
+    .route-grid article.project-step b {
+      background: var(--contour);
+      color: var(--white);
+    }
+
+    .route-grid article.agent-step b {
+      background: var(--black);
+      color: var(--white);
+    }
+
+    .audio-example-board {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .audio-example-board article {
+      min-height: 220px;
+      background:
+        linear-gradient(180deg, rgba(255, 184, 46, 0.12), rgba(255, 253, 248, 0.96));
+    }
+
+    .audio-example-board .placeholder {
+      display: inline-flex;
+      width: max-content;
+      padding: 7px 10px;
+      border: 1px solid var(--black);
+      background: var(--black);
+      color: var(--white);
+      font-family: var(--mono);
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    .community-board {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .community-board article {
+      min-height: 240px;
+      padding: 20px;
+      border: 2px solid var(--black);
+      background: rgba(255, 255, 255, 0.98);
+      box-shadow: 7px 7px 0 rgba(30, 151, 135, 0.2);
+      display: grid;
+      align-content: start;
+      gap: 12px;
+    }
+
+    .community-board b {
+      width: max-content;
+      padding: 8px 11px;
+      background: var(--contour);
+      color: var(--white);
+      font-family: var(--mono);
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    .community-board h3 {
+      margin: 0;
+      font-size: clamp(24px, 2vw, 38px);
+      line-height: 0.96;
+    }
+
+    .community-board p {
+      margin: 0;
+      font-size: clamp(18px, 1.7vw, 26px);
+      font-weight: 800;
+      line-height: 1.12;
+      color: #2c2823;
+    }
+
+    .note-box {
+      max-width: 1040px;
+      padding: 22px 24px;
+      border: 2px solid var(--black);
+      border-radius: 24px;
+      background: rgba(255, 255, 255, 0.96);
+      box-shadow: 8px 8px 0 rgba(30, 151, 135, 0.18);
+    }
+
+    .note-box p {
+      margin: 0;
+      font-size: clamp(22px, 2vw, 33px);
+      font-weight: 800;
+      line-height: 1.16;
+      color: var(--black);
+    }
+
+    .note-box b {
+      color: var(--red);
+      font-family: var(--mono);
+      font-size: 13px;
+      text-transform: uppercase;
+    }
+
+    @media (max-width: 900px) {
+      .route-grid,
+      .audio-example-board,
+      .community-board {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
@@ -67,9 +257,9 @@
     <nav>
       <a href="#s01">start</a>
       <a href="#s03">audio</a>
-      <a href="#s09">contour</a>
-      <a href="#s13">prompts</a>
-      <a href="#s18">practice</a>
+      <a href="#s10">browser</a>
+      <a href="#s15">project</a>
+      <a href="#s19">practice</a>
     </nav>
     <span>Audio + editorial contour</span>
   </header>
@@ -78,168 +268,203 @@
     <section class="slide hero audio-part" id="s01">
       <div class="hero-copy">
         <div class="pill">часть 01 · аудио</div>
-        <h1>Сначала <span>звук</span>.<br>Потом <span>контур выпуска</span>.</h1>
-        <p class="lead">Аудио - отдельный навык: озвучка, подкаст, музыкальная подложка, чистка голоса. После этого переходим к редакторскому контуру: как из материалов, новостей и задач собрать понятный план выпуска.</p>
+        <h1>Сначала <span>звук</span>.<br>Потом <span>редакторский контур</span>.</h1>
+        <p class="lead">Первая часть урока про аудио: озвучка, подкасты, музыкальная подложка и чистка звука. Вторая часть про редакторскую работу с СИИ: как быстро собрать дайджест, план выпуска и рабочее ТЗ, не потеряв смысл и контроль.</p>
       </div>
       <figure class="lesson-art">
         <img src="../assets/deck-05-hero-audio-robot.png" alt="Robot recording spoken script with waveform">
-        <figcaption>source map -> voice -> music -> clean audio</figcaption>
+        <figcaption>source map -> voice -> music -> review</figcaption>
       </figure>
     </section>
 
     <section class="slide manifesto audio-part" id="s02">
       <div class="kicker">// ЧТО ЗАКРЫВАЕМ В АУДИО</div>
-      <h2>На базовом уровне аудио уже можно закрывать несколькими понятными инструментами.</h2>
+      <h2>Аудио не надо путать с редакторским контуром. Это отдельный и понятный навык.</h2>
       <div class="outcome-lanes">
-        <article><b>voice</b><h3>озвучка</h3><p>Текст → голос для подводки, ролика, подкастового фрагмента или внутреннего черновика.</p></article>
-        <article><b>podcast</b><h3>подкаст из источников</h3><p>Документы, статьи, заметки или ссылки → разговорный audio overview.</p></article>
-        <article><b>music</b><h3>музыкальная подложка</h3><p>Prompt → короткий bed под речь: новостной, объясняющий, тревожный, промо.</p></article>
-        <article><b>clean</b><h3>чистка звука</h3><p>Плохая запись → более чистый голос через Enhance Speech.</p></article>
+        <article><b>озвучка</b><h3>голос</h3><p>Текст в чистую озвучку для ролика, подводки, демо, подкаста или чернового объяснения.</p></article>
+        <article><b>подкаст</b><h3>разговорный формат</h3><p>Из документов, статей и заметок быстро собираем audio overview или черновой выпуск.</p></article>
+        <article><b>музыка</b><h3>подложка</h3><p>Короткий bed под речь: без пафоса, без битвы с голосом, без дешевой драматургии.</p></article>
+        <article><b>чистка</b><h3>улучшение записи</h3><p>Приводим голос в порядок, если исходник шумный, тихий или просто записан на бегу.</p></article>
       </div>
     </section>
 
     <section class="slide audio-part" id="s03">
-      <div class="kicker">// AUDIO MAP</div>
-      <h2>Два аудио-маршрута: озвучка и музыка. Не мешаем их в одну кашу.</h2>
+      <div class="kicker">// ИНСТРУМЕНТЫ ДЛЯ АУДИО</div>
+      <h2>Показываем только то, что можно объяснить за урок и быстро повторить.</h2>
       <div class="tool-radar">
-        <article><b>озвучка</b><h3>ElevenLabs</h3><p>Сильный TTS, голоса, дубляж, voiceover. Хорошо для финальной озвучки, но нужен ethical gate.</p></article>
-        <article><b>подкаст</b><h3>NotebookLM</h3><p>Самый простой путь: загрузить источники и получить разговорный audio overview.</p></article>
-        <article><b>музыка</b><h3>Suno</h3><p>Быстрый bed под речь: можно сделать несколько настроений и выбрать не раздражающий вариант.</p></article>
-        <article><b>музыка</b><h3>ElevenLabs Music</h3><p>Музыкальная генерация с настройкой частей трека. Использовать как альтернативу Suno.</p></article>
-        <article><b>черновик</b><h3>Gemini / AI Studio</h3><p>Подходит для тестовой озвучки и звуковых экспериментов. Для финала проверять стабильность и качество.</p></article>
-        <article><b>чистка</b><h3>Adobe Podcast</h3><p>Enhance Speech быстро вытягивает голос из плохой записи. Не магия, но часто спасает.</p></article>
+        <article><b>free</b><h3>NotebookLM</h3><p>Самый простой маршрут для подкастового разбора источников. Бесплатный старт, удобно для учебного сценария.</p></article>
+        <article><b>free</b><h3>Adobe Podcast</h3><p>Enhance Speech быстро чистит голос. Хорошо для сравнения «до / после» прямо на уроке.</p></article>
+        <article><b>trial</b><h3>ElevenLabs</h3><p>Сильная озвучка и дубляж. Есть бесплатный вход, но для серьезной работы обычно быстро упираемся в лимиты.</p></article>
+        <article><b>paid</b><h3>Suno</h3><p>Музыка и подложка. Бесплатный режим есть, но вечером отдельно тестим, где заканчивается игрушка и начинается работа.</p></article>
+        <article><b>trial</b><h3>Wondercraft</h3><p>Готовый AI podcast flow. Удобен, если нужно быстро собрать разговорный формат с голосами.</p></article>
+        <article><b>cn / trial</b><h3>MiniMax Audio</h3><p>Китайский запасной маршрут для TTS и тестов. Полезно показать как альтернативу западным сервисам.</p></article>
       </div>
     </section>
 
     <section class="slide audio-part" id="s04">
-      <div class="kicker">// ПОДКАСТЫ БЫСТРО</div>
-      <h2>Если нужен "подкаст из темы", не надо сразу строить студию NASA.</h2>
-      <div class="tool-radar">
-        <article><b>base</b><h3>NotebookLM</h3><p>Лучший учебный путь: источники → Audio Overview. Подходит для разбора документов, лекций, статей.</p></article>
-        <article><b>opti</b><h3>Wondercraft</h3><p>AI podcast generator с голосами и режимом диалога. Хорош для более управляемого аудиопродукта.</p></article>
-        <article><b>quick</b><h3>Smallest AI Podcast</h3><p>Быстрый free text-to-podcast: вставить текст и получить двух ведущих.</p></article>
-        <article><b>studio</b><h3>Podcastle</h3><p>Браузерная студия: запись, монтаж, voiceover и упаковка подкастового выпуска.</p></article>
-        <article><b>cn / free</b><h3>MiniMax Audio</h3><p>Китайский TTS, есть бесплатные пробы. Полезно как запасной путь для голосов и тестов.</p></article>
-        <article><b>free path</b><h3>Gemini + NotebookLM</h3><p>Самый дешевый маршрут: собрать сценарий в Gemini, источники и audio overview - в NotebookLM.</p></article>
+      <div class="kicker">// ЧТО СКАЗАТЬ ПРО СЕРВИСЫ</div>
+      <h2>На базовом уровне уже можно закрыть почти весь учебный сценарий.</h2>
+      <div class="route-grid">
+        <article class="browser-step">
+          <b>озвучка</b>
+          <h3>ElevenLabs</h3>
+          <p>Для чистой синтетической озвучки, demo voiceover и дубляжа.</p>
+          <ul>
+            <li>подходит для финального звука лучше, чем браузерные игрушки</li>
+            <li>нужна проверка фактов, ударений и уместности голоса</li>
+          </ul>
+        </article>
+        <article class="project-step">
+          <b>подкаст</b>
+          <h3>NotebookLM + Wondercraft</h3>
+          <p>Первый дает быстрый audio overview по источникам, второй помогает упаковать это в более управляемый выпуск.</p>
+        </article>
+        <article class="agent-step">
+          <b>музыка</b>
+          <h3>Suno + MiniMax</h3>
+          <p>Suno для музыкальной подложки, MiniMax как дополнительный маршрут для голоса и тестов, если нужен запасной вариант.</p>
+        </article>
       </div>
     </section>
 
     <section class="slide split audio-part" id="s05">
       <div>
         <div class="kicker">// PROMPT · ОЗВУЧКА</div>
-        <h2>Сначала делаем текст, который можно произнести.</h2>
+        <h2>Сначала делаем текст, который можно произнести вслух без мучений.</h2>
       </div>
-      <pre class="prompt-block"><code>Сделай звучащий текст по материалу.
+      <pre class="prompt-block"><code>Сделай текст для озвучки по материалу.
 
 Вход:
 - исходный текст / Source Map / транскрипт;
 - формат: подводка / voiceover / podcast fragment / Telegram audio;
 - длина: 45-90 секунд;
-- голос: спокойный редакторский, без рекламного пафоса.
+- голос: спокойный, ясный, редакторский.
 
 Сделай:
 1. Главный смысл.
 2. Факты, которые нельзя менять.
-3. Intro hook на 1-2 фразы.
+3. Hook на 1-2 фразы.
 4. Текст для озвучки.
-5. Слова, имена, географию и цифры для проверки.
+5. Имена, цифры, названия и ударения, которые надо проверить.
 6. Где ведущему лучше сказать своими словами.
 
 Правила:
 - не добавляй новые факты;
 - не драматизируй;
-- пиши так, чтобы это можно было прочитать вслух.</code></pre>
+- не пиши как официальный пресс-релиз;
+- пиши так, чтобы это можно было произнести вслух.</code></pre>
     </section>
 
     <section class="slide split audio-part" id="s06">
       <div>
-        <div class="kicker">// PROMPT · SUNO / MUSIC</div>
-        <h2>Музыка должна поддерживать речь, а не затаптывать ее сапогами.</h2>
+        <div class="kicker">// PROMPT · МУЗЫКАЛЬНАЯ ПОДЛОЖКА</div>
+        <h2>Музыка должна помогать речи, а не ломать ей ноги.</h2>
       </div>
       <pre class="prompt-block"><code>Instrumental only. No vocals. No lyrics.
 
-Create a professional TV editorial music bed for a spoken news or explainer segment.
-Purpose: support narration, not compete with it.
+Create a professional editorial music bed for spoken narration.
+Purpose: support voice, not compete with it.
 Mood: restrained, modern, focused, credible.
 Tempo: medium, around 100 BPM.
-Hook: subtle repeating rhythmic pulse.
 Structure: quiet intro, steady main section, light development, clean ending.
 Instrumentation: soft electronic drums, controlled bass pulse, minimal synth motif, light atmospheric texture.
 Mix: voice-first, no harsh highs, no huge lows, no dramatic peaks, no distracting melody.
 Avoid: epic trailer, pop song, sentimentality, comedy, aggressive percussion, orchestral excess.</code></pre>
     </section>
 
-    <section class="slide dark audio-part" id="s07">
-      <div class="kicker">// AUDIO GATE</div>
-      <h2>Проверка аудио: редактор слушает, а не просто смотрит на waveform.</h2>
-      <div class="risk-list">
-        <p><b>смысл</b><span>озвучка не добавила фактов, которых нет в source</span></p>
-        <p><b>произношение</b><span>имена, должности, география, числа и ударения проверены</span></p>
-        <p><b>ритм</b><span>текст можно произнести, он не звучит как письменная заметка</span></p>
-        <p><b>музыка</b><span>подложка не спорит с голосом, не делает фальшивую драму</span></p>
-        <p><b>этика</b><span>синтетический голос, дубляж и voice clone разрешены и уместны</span></p>
+    <section class="slide audio-part" id="s07">
+      <div class="kicker">// МЕСТО ДЛЯ ПРИМЕРОВ АУДИО</div>
+      <h2>После промптовки сюда ставим 3 коротких примера дорожек и сравнение free / paid.</h2>
+      <div class="audio-example-board">
+        <article>
+          <b>пример 01</b>
+          <h3>озвучка</h3>
+          <span class="placeholder">сюда добавим аудио</span>
+          <p>Сравним черновую озвучку и финальный вариант. Отдельно отметим дикцию, ударения и темп.</p>
+        </article>
+        <article>
+          <b>пример 02</b>
+          <h3>подложка</h3>
+          <span class="placeholder">сюда добавим аудио</span>
+          <p>Покажем, когда музыка поддерживает речь, а когда начинает выпендриваться и мешать.</p>
+        </article>
+        <article>
+          <b>пример 03</b>
+          <h3>free / paid</h3>
+          <span class="placeholder">сюда добавим аудио</span>
+          <p>Сюда ставим тест платного и бесплатного Suno, чтобы не спорить на вере, а слушать результат.</p>
+        </article>
       </div>
     </section>
 
-    <section class="slide dark audio-part" id="s08">
-      <div class="kicker">// LIVE DEMO · AUDIO</div>
-      <h2>Показываем завтра</h2>
-      <div class="timeline-plan">
-        <article><b>05 мин</b><p>Берем один материал и делаем текст для озвучки.</p></article>
-        <article><b>07 мин</b><p>Генерим музыкальную подложку в Suno и обсуждаем, где она мешает.</p></article>
-        <article><b>05 мин</b><p>Показываем NotebookLM: источники → audio overview.</p></article>
-        <article><b>05 мин</b><p>Чистим кусок звука в Adobe Podcast Enhance Speech.</p></article>
+    <section class="slide audio-part" id="s08">
+      <div class="kicker">// ПРОВЕРКА АУДИО</div>
+      <h2>Редактор слушает результат, а не просто радуется, что нейросеть что-то спела.</h2>
+      <div class="risk-list">
+        <p><b>смысл</b><span>озвучка не добавила фактов, которых не было в исходнике</span></p>
+        <p><b>произношение</b><span>имена, география, числа и ударения не развалились</span></p>
+        <p><b>ритм</b><span>текст можно прочитать вслух, он не звучит как бумажный доклад</span></p>
+        <p><b>музыка</b><span>подложка не спорит с голосом и не делает фальшивую драму</span></p>
+        <p><b>деньги</b><span>если сервис бесплатный, сразу говорим о лимитах и где он перестает быть рабочим</span></p>
       </div>
     </section>
 
     <section class="slide part-divider" id="s09">
       <div class="kicker">// ЧАСТЬ 02</div>
-      <h2>Теперь не звук. Теперь выпуск: как редактор работает с СИИ, чтобы быстрее видеть поле и собирать план.</h2>
-      <p class="lead">Убираем шифры. "Редакционные сигналы" - это все, что прилетает в работу и может стать материалом.</p>
+      <h2>Теперь не аудио. Теперь редакторский контур: как из материалов собрать понятный выпуск.</h2>
+      <p class="lead">Порядок такой: сначала браузер, потом проект с правилами и промптами, и только потом agent route для тех, кто ведет hub.</p>
     </section>
 
     <section class="slide contour-part" id="s10">
-      <div class="kicker">// ЧТО ТАКОЕ СИГНАЛЫ</div>
-      <h2>Сигнал - это не магическое слово. Это сырье для редакторского решения.</h2>
-      <div class="tool-radar">
-        <article><b>новости</b><h3>повестка дня</h3><p>городские события, происшествия, решения, заявления, релизы, официальные сообщения.</p></article>
-        <article><b>видео</b><h3>эфиры и сюжеты</h3><p>транскрипты, таймкоды, интервью, длинные записи, материалы операторов.</p></article>
-        <article><b>аудитория</b><h3>вопросы людей</h3><p>комментарии, обращения, жалобы, часто повторяющиеся темы, локальные боли.</p></article>
-        <article><b>редакция</b><h3>планы и идеи</h3><p>что лежит в бэклоге, что надо обновить, что можно переупаковать.</p></article>
-        <article><b>источники</b><h3>документы и ссылки</h3><p>сайты, отчеты, Telegram-каналы, таблицы, пресс-релизы, внутренние approved sources.</p></article>
-        <article><b>результаты</b><h3>что уже вышло</h3><p>публикации, охваты, вопросы после выхода, ошибки, повторы.</p></article>
+      <div class="kicker">// ПОРЯДОК ОБУЧЕНИЯ</div>
+      <h2>Не начинаем с Claude Code. Начинаем с работы редактора, а не с интерфейса.</h2>
+      <div class="route-grid">
+        <article class="browser-step">
+          <b>шаг 01</b>
+          <h3>браузер</h3>
+          <p>Вставили материалы, получили дайджест, план и рабочее ТЗ. Люди сразу понимают пользу.</p>
+        </article>
+        <article class="project-step">
+          <b>шаг 02</b>
+          <h3>проект / cowork</h3>
+          <p>Сохраняем правила, промпты, примеры, запреты и удачные формулировки. Это уже система.</p>
+        </article>
+        <article class="agent-step">
+          <b>шаг 03</b>
+          <h3>agent route</h3>
+          <p>Подключаем только для тех, кто реально будет вести hub, обновлять правила и собирать повторяемый процесс.</p>
+        </article>
       </div>
     </section>
 
-    <section class="slide dark contour-part" id="s11">
-      <div class="kicker">// РЕДАКТОРСКИЙ КОНТУР</div>
-      <h2>Контур - это путь от сырья к решению.</h2>
-      <div class="risk-list">
-        <p><b>1. собрать</b><span>берем новости, транскрипты, комментарии, релизы, планы, ссылки</span></p>
-        <p><b>2. проверить</b><span>что подтверждено, что не подтверждено, где риск</span></p>
-        <p><b>3. выбрать</b><span>что важно аудитории и что редакция готова выпускать</span></p>
-        <p><b>4. разложить</b><span>канал, формат, ответственный, срок, проверка человеком</span></p>
-        <p><b>5. обновить</b><span>если AI ошибся или помог - меняем prompt, gate, example или правило</span></p>
+    <section class="slide contour-part" id="s11">
+      <div class="kicker">// ЧТО МОЖНО СДЕЛАТЬ В БРАУЗЕРЕ</div>
+      <h2>Первый рабочий маршрут для редактора: без папок, skills и плагинов.</h2>
+      <div class="outcome-lanes">
+        <article><b>вставили</b><h3>материалы</h3><p>Новости, транскрипты, ссылки, релизы, комментарии, идеи редакции.</p></article>
+        <article><b>получили</b><h3>дайджест</h3><p>Что важно, что подтверждено, где риск и что стоит взять в работу.</p></article>
+        <article><b>собрали</b><h3>план</h3><p>Формат, канал, приоритет, дедлайн, ответственный и human gate.</p></article>
+        <article><b>раздали</b><h3>ТЗ</h3><p>Корреспонденту, SMM, монтажеру, дизайнеру или ведущему.</p></article>
       </div>
     </section>
 
     <section class="slide contour-part" id="s12">
-      <div class="kicker">// ЧТО УЖЕ ИЗУЧИЛИ</div>
-      <h2>Мы не выдаем новую магическую пачку. Мы собираем уже изученные промпты в систему.</h2>
+      <div class="kicker">// ЧТО ТАКОЕ СИГНАЛЫ</div>
+      <h2>Сигнал - это любое сырье, которое может стать редакционным решением.</h2>
       <div class="tool-radar">
-        <article><b>Researcher</b><h3>где проверить</h3><p>Находит источники, unknowns и вопросы перед выпуском.</p></article>
-        <article><b>Source Map</b><h3>что можно утверждать</h3><p>Отделяет факт, цитату, пересказ, риск и ручную проверку.</p></article>
-        <article><b>TV Style Graph</b><h3>как говорить</h3><p>Держит голос конкретной рубрики, продукта или канала.</p></article>
-        <article><b>Format Factory</b><h3>куда выпускать</h3><p>Из одного source делает сайт, Telegram, видео, карточки, аудио.</p></article>
-        <article><b>Audio / Transcript</b><h3>как звучать</h3><p>Транскрипт, spoken script, intro hook, audio QA.</p></article>
-        <article><b>Hub Update</b><h3>что менять</h3><p>Фиксирует, что сработало, что сломалось и какое правило обновить.</p></article>
+        <article><b>новости</b><h3>повестка</h3><p>События, происшествия, решения, заявления, официальные сообщения.</p></article>
+        <article><b>эфир</b><h3>транскрипты</h3><p>Интервью, длинные записи, таймкоды, куски прошлых выпусков, съемочный материал.</p></article>
+        <article><b>аудитория</b><h3>обратная связь</h3><p>Комментарии, жалобы, вопросы, повторяющиеся боли и реакции после публикации.</p></article>
+        <article><b>редакция</b><h3>внутренние планы</h3><p>Бэклог тем, рубрики, идеи продюсера, график съемок, задачи на неделю.</p></article>
+        <article><b>источники</b><h3>документы</h3><p>Пресс-релизы, таблицы, сайты, approved sources, внутренние справки и отчеты.</p></article>
+        <article><b>архив</b><h3>что уже вышло</h3><p>Предыдущие публикации, охваты, ошибки, повторы, что стоит переупаковать.</p></article>
       </div>
     </section>
 
     <section class="slide split contour-part" id="s13">
       <div>
         <div class="kicker">// PROMPT · РЕДАКТОРСКИЙ ДАЙДЖЕСТ</div>
-        <h2>Первый обязательный промпт: из сырья в понятную картину.</h2>
+        <h2>Первый обязательный промпт: из сырья в понятную картину дня.</h2>
       </div>
       <pre class="prompt-block"><code>Собери редакторский дайджест из материалов ниже.
 
@@ -251,7 +476,7 @@ Avoid: epic trailer, pop song, sentimentality, comedy, aggressive percussion, or
 1. Что это за тема простыми словами.
 2. Откуда взято: ссылка / источник / кто принес.
 3. Что подтверждено.
-4. Что НЕ подтверждено.
+4. Что не подтверждено.
 5. Почему это может быть важно аудитории.
 6. Риск: факт, контекст, юридический, репутационный.
 7. Что проверить человеку.
@@ -264,7 +489,7 @@ Avoid: epic trailer, pop song, sentimentality, comedy, aggressive percussion, or
     <section class="slide split contour-part" id="s14">
       <div>
         <div class="kicker">// PROMPT · ПЛАН ВЫПУСКА</div>
-        <h2>Второй обязательный промпт: из дайджеста в план.</h2>
+        <h2>Второй обязательный промпт: из дайджеста в план выпуска.</h2>
       </div>
       <pre class="prompt-block"><code>На основе дайджеста собери план выпуска на неделю.
 
@@ -286,10 +511,21 @@ Avoid: epic trailer, pop song, sentimentality, comedy, aggressive percussion, or
 - можно автоматизировать позже.</code></pre>
     </section>
 
-    <section class="slide split contour-part" id="s15">
+    <section class="slide contour-part" id="s15">
+      <div class="kicker">// ЧТО КЛАДЕМ В ПРОЕКТ</div>
+      <h2>Когда браузерный маршрут понятен, собираем проект с правилами и примерами.</h2>
+      <div class="outcome-lanes">
+        <article><b>правила</b><h3>что можно и нельзя</h3><p>Фактические запреты, юридические ограничения, тональность, human gate.</p></article>
+        <article><b>промпты</b><h3>рабочие шаблоны</h3><p>Дайджест, план, ТЗ, озвучка, Source Map, обновление hub.</p></article>
+        <article><b>примеры</b><h3>удачно и неудачно</h3><p>Нужны хорошие output'ы и плохие output'ы, чтобы команда понимала границу качества.</p></article>
+        <article><b>структура</b><h3>единая точка доступа</h3><p>Все лежит в одном месте, а не в десяти чатах, заметках и голосовых.</p></article>
+      </div>
+    </section>
+
+    <section class="slide split contour-part" id="s16">
       <div>
         <div class="kicker">// PROMPT · ЗАДАНИЕ КОМАНДЕ</div>
-        <h2>Третий обязательный промпт: из темы в конкретное ТЗ.</h2>
+        <h2>Третий обязательный промпт: из темы в внятное рабочее ТЗ.</h2>
       </div>
       <pre class="prompt-block"><code>Собери редакционное задание по выбранной теме.
 
@@ -309,24 +545,39 @@ Avoid: epic trailer, pop song, sentimentality, comedy, aggressive percussion, or
 Не пиши финальный материал. Сделай рабочее ТЗ.</code></pre>
     </section>
 
-    <section class="slide contour-part" id="s16">
-      <div class="kicker">// ГДЕ РАБОТАТЬ</div>
-      <h2>Три уровня: браузер, проект, агентная папка.</h2>
-      <div class="outcome-lanes">
-        <article><b>base</b><h3>браузер</h3><p>Claude / ChatGPT / Gemini. Быстро вставить материалы и получить дайджест, план, ТЗ.</p></article>
-        <article><b>opti</b><h3>проект / cowork</h3><p>Хранятся правила редакции, голос, шаблоны, запреты, промпты и примеры.</p></article>
-        <article><b>advanced</b><h3>Claude Code / Codex</h3><p>Для owners: папка hub, skills, outputs, gates, changelog. Не тащим всех туда сразу.</p></article>
-        <article><b>rule</b><h3>человек решает</h3><p>AI раскладывает поле. Редактор выбирает важность, риск, выпуск и запрет.</p></article>
+    <section class="slide contour-part" id="s17">
+      <div class="kicker">// ЧТО ПОДСМОТРЕЛИ У СООБЩЕСТВА</div>
+      <h2>GitHub и Reddit сходятся в трех вещах: держать источники, версионировать промпты и собирать плохие кейсы.</h2>
+      <div class="community-board">
+        <article>
+          <b>github</b>
+          <h3>промпты как рабочие файлы</h3>
+          <p>Нормальные команды хранят промпты рядом с правилами и обновляют их как часть процесса, а не как магию в личке.</p>
+        </article>
+        <article>
+          <b>reddit</b>
+          <h3>люди быстрее верят в дайджест, чем в агента</h3>
+          <p>Сначала нужен видимый результат в браузере. Сложная агентная схема без понятной пользы только отпугивает редакторов.</p>
+        </article>
+        <article>
+          <b>общий вывод</b>
+          <h3>ошибки тоже надо сохранять</h3>
+          <p>Полезнее всего библиотека плохих output'ов: где модель додумала, упростила, пропустила риск или перепутала тон.</p>
+        </article>
       </div>
     </section>
 
-    <section class="slide dark contour-part" id="s17">
-      <div class="kicker">// СПОР С ИРОЙ</div>
-      <h2>Я бы не начинал с Claude Code. Да, я зануда. Зато люди не сбегут.</h2>
-      <p class="lead narrow">Сначала показываем браузер: вставили материалы, получили дайджест и план. Потом проект: туда положили правила и промпты. И только потом agent route для тех, кто будет вести hub. Если сразу открыть редакторам папки, skills и плагины, они будут изучать интерфейс вместо редакторской работы. А мы не кружок по страданию, у нас курс.</p>
+    <section class="slide contour-part" id="s18">
+      <div class="kicker">// AGENT ROUTE</div>
+      <h2>Agent route нужен не всем. Он нужен тем, кто ведет hub и собирает повторяемую систему.</h2>
+      <div class="note-box">
+        <p><b>Для кого.</b> Руководитель направления, продюсер, редактор-методист, owner AI-процесса.</p>
+        <p><b>Что там лежит.</b> Hub, history удачных и плохих кейсов, skills, правила, changelog, шаблоны обновления.</p>
+        <p><b>Почему не всем сразу.</b> Если открыть это на старте всей редакции, люди начнут изучать интерфейс вместо редакторской работы.</p>
+      </div>
     </section>
 
-    <section class="slide split contour-part" id="s18">
+    <section class="slide split contour-part" id="s19">
       <div>
         <div class="kicker">// PROMPT · ОБНОВЛЕНИЕ HUB</div>
         <h2>Контур заканчивается не восторгом, а обновлением правила.</h2>
@@ -350,43 +601,32 @@ Avoid: epic trailer, pop song, sentimentality, comedy, aggressive percussion, or
 7. Как проверить, что стало лучше.
 
 Правило:
-не обновляем систему по одному восторгу. Нужны примеры.</code></pre>
-    </section>
-
-    <section class="slide dark contour-part" id="s19">
-      <div class="kicker">// LIVE DEMO · КОНТУР</div>
-      <h2>Демо второй части</h2>
-      <div class="timeline-plan">
-        <article><b>05 мин</b><p>Берем 8-12 материалов: новости, ссылки, комментарии, транскрипт, идеи редакции.</p></article>
-        <article><b>07 мин</b><p>Запускаем промпт "редакторский дайджест". Разбираем, что подтверждено и где риск.</p></article>
-        <article><b>07 мин</b><p>Запускаем промпт "план выпуска". Получаем форматы, каналы, owners и gates.</p></article>
-        <article><b>06 мин</b><p>Показываем project/cowork: где лежат промпты, правила, примеры и обновления.</p></article>
-      </div>
+не обновляем систему по одному удачному впечатлению. Нужны примеры.</code></pre>
     </section>
 
     <section class="slide contour-part" id="s20">
       <div class="kicker">// ДОМАШКА</div>
-      <h2>Что сделать после урока</h2>
+      <h2>Домашка должна собрать урок в рабочий контур, а не в красивую презентацию без следа.</h2>
       <div class="homework">
-        <p><b>Base.</b> Сделать одно аудио: spoken script + prompt для подложки + audio gate.</p>
-        <p><b>Opti.</b> Сделать редакторский дайджест из 8-12 материалов и план выпуска на неделю.</p>
-        <p><b>Advanced.</b> Собрать project/cowork или агентную папку: prompts, gates, examples, hub update.</p>
-        <p><b>В hub.</b> Сохранить один удачный prompt, один плохой output и одно предложение по обновлению правила.</p>
+        <p><b>base</b><span>Сделать одно аудио: текст для озвучки, prompt для подложки и короткую проверку результата.</span></p>
+        <p><b>опти</b><span>Собрать редакторский дайджест из 8-12 материалов и на его основе план выпуска на неделю.</span></p>
+        <p><b>проект</b><span>Сложить в одно место правила, три обязательных промпта и по одному хорошему и плохому примеру.</span></p>
+        <p><b>hub</b><span>Подготовить одно предложение по обновлению правила: что именно надо поправить и почему.</span></p>
       </div>
     </section>
 
     <section class="slide contour-part" id="s21">
-      <div class="kicker">// ССЫЛКИ</div>
+      <div class="kicker">// ССЫЛКИ И РЕСУРСЫ</div>
       <h2>Что можно открыть после занятия</h2>
       <div class="final-links">
-        <a href="https://notebooklm.google.com/" target="_blank" rel="noreferrer">NotebookLM</a>
-        <a href="https://podcast.adobe.com/" target="_blank" rel="noreferrer">Adobe Podcast</a>
-        <a href="https://elevenlabs.io/music" target="_blank" rel="noreferrer">ElevenLabs Music</a>
-        <a href="https://www.wondercraft.ai/create/podcasts" target="_blank" rel="noreferrer">Wondercraft</a>
-        <a href="https://podcastle.ai/" target="_blank" rel="noreferrer">Podcastle</a>
-        <a href="https://podcast.smallest.ai/" target="_blank" rel="noreferrer">Smallest AI Podcast</a>
-        <a href="https://www.minimax.io/audio/text-to-speech/chinese" target="_blank" rel="noreferrer">MiniMax Audio</a>
-        <a href="../index.html">hub</a>
+        <a href="https://notebooklm.google.com/" target="_blank" rel="noreferrer">NotebookLM · free start</a>
+        <a href="https://podcast.adobe.com/" target="_blank" rel="noreferrer">Adobe Podcast · free plan</a>
+        <a href="https://suno.com/" target="_blank" rel="noreferrer">Suno · free + paid</a>
+        <a href="https://elevenlabs.io/" target="_blank" rel="noreferrer">ElevenLabs · free + paid</a>
+        <a href="https://www.wondercraft.ai/create/podcasts" target="_blank" rel="noreferrer">Wondercraft · trial</a>
+        <a href="https://podcastle.ai/" target="_blank" rel="noreferrer">Podcastle · free + paid</a>
+        <a href="https://podcast.smallest.ai/" target="_blank" rel="noreferrer">Smallest AI Podcast · free start</a>
+        <a href="https://www.minimax.io/audio/text-to-speech/chinese" target="_blank" rel="noreferrer">MiniMax Audio · trial</a>
       </div>
     </section>
   </main>
