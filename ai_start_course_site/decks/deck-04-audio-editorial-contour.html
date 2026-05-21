@@ -9,83 +9,152 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./deck-01-start.css">
   <link rel="stylesheet" href="./deck-practical.css">
+  <style>
+    body {
+      --audio: #ffb82e;
+      --audio-soft: #fff0c9;
+      --contour: #22a699;
+      --contour-soft: #dff7f0;
+    }
+
+    .audio-part {
+      background:
+        linear-gradient(135deg, rgba(255, 184, 46, 0.22), transparent 48%),
+        var(--paper);
+    }
+
+    .contour-part {
+      background:
+        linear-gradient(135deg, rgba(34, 166, 153, 0.18), transparent 50%),
+        var(--paper);
+    }
+
+    .audio-part .pill,
+    .audio-part .tool-radar b,
+    .audio-part .outcome-lanes b,
+    .audio-part .timeline-plan b {
+      background: var(--audio);
+      color: var(--black);
+    }
+
+    .contour-part .pill,
+    .contour-part .tool-radar b,
+    .contour-part .outcome-lanes b,
+    .contour-part .timeline-plan b {
+      background: var(--contour);
+      color: var(--black);
+    }
+
+    .part-divider {
+      align-content: center;
+      background: var(--black);
+      color: var(--paper);
+    }
+
+    .part-divider h2 {
+      color: var(--paper);
+      max-width: 980px;
+    }
+
+    .part-divider .lead {
+      color: rgba(255, 253, 248, 0.78);
+    }
+  </style>
 </head>
 <body>
   <header class="deck-nav">
     <a class="deck-logo" href="../index.html">AI START</a>
     <nav>
       <a href="#s01">start</a>
-      <a href="#s04">audio</a>
-      <a href="#s08">contour</a>
-      <a href="#s11">browser</a>
-      <a href="#s14">skills</a>
-      <a href="#s17">practice</a>
+      <a href="#s03">audio</a>
+      <a href="#s09">contour</a>
+      <a href="#s13">prompts</a>
+      <a href="#s18">practice</a>
     </nav>
     <span>Audio + editorial contour</span>
   </header>
 
   <main>
-    <section class="slide hero" id="s01">
+    <section class="slide hero audio-part" id="s01">
       <div class="hero-copy">
-        <div class="pill">урок 04 · аудио и редакторский пульт</div>
-        <h1>Материал <span>звучит</span>.<br>Редактор <span>держит контур</span>.</h1>
-        <p class="lead">Сначала собираем spoken script и музыкальную подложку. Затем строим редакторский пульт: сигналы, риски, сетка, задачи и обновления hub.</p>
+        <div class="pill">часть 01 · аудио</div>
+        <h1>Сначала <span>звук</span>.<br>Потом <span>контур выпуска</span>.</h1>
+        <p class="lead">Аудио - отдельный навык: озвучка, подкаст, музыкальная подложка, чистка голоса. После этого переходим к редакторскому контуру: как из материалов, новостей и задач собрать понятный план выпуска.</p>
       </div>
       <figure class="lesson-art">
         <img src="../assets/deck-05-hero-audio-robot.png" alt="Robot recording spoken script with waveform">
-        <figcaption>source map -> audio package -> editorial contour</figcaption>
+        <figcaption>source map -> voice -> music -> clean audio</figcaption>
       </figure>
     </section>
 
-    <section class="slide manifesto" id="s02">
-      <div class="kicker">// ЧТО УНОСИМ</div>
-      <h2>Это не урок про инструменты. Это урок про рабочий пульт редактора.</h2>
+    <section class="slide manifesto audio-part" id="s02">
+      <div class="kicker">// ЧТО ЗАКРЫВАЕМ В АУДИО</div>
+      <h2>На базовом уровне аудио уже можно закрывать несколькими понятными инструментами.</h2>
       <div class="outcome-lanes">
-        <article><b>audio</b><h3>spoken package</h3><p>Source Map, spoken script, intro hook, подкастовый фрагмент, prompt для Suno и audio gate.</p></article>
-        <article><b>contour</b><h3>weekly digest</h3><p>Сигналы, источники, риски, важность для аудитории и вопросы редактору.</p></article>
-        <article><b>grid</b><h3>content board</h3><p>Темы раскладываются по каналам, форматам, владельцам, дедлайнам и human gates.</p></article>
-        <article><b>hub</b><h3>system update</h3><p>Удачные prompts, плохие outputs, правки и повторяющиеся ошибки становятся обновлением hub.</p></article>
+        <article><b>voice</b><h3>озвучка</h3><p>Текст → голос для подводки, ролика, подкастового фрагмента или внутреннего черновика.</p></article>
+        <article><b>podcast</b><h3>подкаст из источников</h3><p>Документы, статьи, заметки или ссылки → разговорный audio overview.</p></article>
+        <article><b>music</b><h3>музыкальная подложка</h3><p>Prompt → короткий bed под речь: новостной, объясняющий, тревожный, промо.</p></article>
+        <article><b>clean</b><h3>чистка звука</h3><p>Плохая запись → более чистый голос через Enhance Speech.</p></article>
       </div>
     </section>
 
-    <section class="slide dark" id="s03">
-      <div class="kicker">// ПОЗИЦИЯ</div>
-      <h2>СИИ не решает, что важно. СИИ раскладывает поле так, чтобы редактор быстрее принял решение.</h2>
-      <p class="lead narrow">Редактор оставляет за собой источник доверия, важность темы, риск, выпуск, запрет на публикацию и обновление правил. Если отдать это машине, получится не ускорение, а автоматизированный шум. Ну да, красиво, но бесполезно. Мы же не за этим собрались.</p>
+    <section class="slide audio-part" id="s03">
+      <div class="kicker">// AUDIO MAP</div>
+      <h2>Два аудио-маршрута: озвучка и музыка. Не мешаем их в одну кашу.</h2>
+      <div class="tool-radar">
+        <article><b>озвучка</b><h3>ElevenLabs</h3><p>Сильный TTS, голоса, дубляж, voiceover. Хорошо для финальной озвучки, но нужен ethical gate.</p></article>
+        <article><b>подкаст</b><h3>NotebookLM</h3><p>Самый простой путь: загрузить источники и получить разговорный audio overview.</p></article>
+        <article><b>музыка</b><h3>Suno</h3><p>Быстрый bed под речь: можно сделать несколько настроений и выбрать не раздражающий вариант.</p></article>
+        <article><b>музыка</b><h3>ElevenLabs Music</h3><p>Музыкальная генерация с настройкой частей трека. Использовать как альтернативу Suno.</p></article>
+        <article><b>черновик</b><h3>Gemini / AI Studio</h3><p>Подходит для тестовой озвучки и звуковых экспериментов. Для финала проверять стабильность и качество.</p></article>
+        <article><b>чистка</b><h3>Adobe Podcast</h3><p>Enhance Speech быстро вытягивает голос из плохой записи. Не магия, но часто спасает.</p></article>
+      </div>
     </section>
 
-    <section class="slide split" id="s04">
+    <section class="slide audio-part" id="s04">
+      <div class="kicker">// ПОДКАСТЫ БЫСТРО</div>
+      <h2>Если нужен "подкаст из темы", не надо сразу строить студию NASA.</h2>
+      <div class="tool-radar">
+        <article><b>base</b><h3>NotebookLM</h3><p>Лучший учебный путь: источники → Audio Overview. Подходит для разбора документов, лекций, статей.</p></article>
+        <article><b>opti</b><h3>Wondercraft</h3><p>AI podcast generator с голосами и режимом диалога. Хорош для более управляемого аудиопродукта.</p></article>
+        <article><b>quick</b><h3>Smallest AI Podcast</h3><p>Быстрый free text-to-podcast: вставить текст и получить двух ведущих.</p></article>
+        <article><b>studio</b><h3>Podcastle</h3><p>Браузерная студия: запись, монтаж, voiceover и упаковка подкастового выпуска.</p></article>
+        <article><b>cn / free</b><h3>MiniMax Audio</h3><p>Китайский TTS, есть бесплатные пробы. Полезно как запасной путь для голосов и тестов.</p></article>
+        <article><b>free path</b><h3>Gemini + NotebookLM</h3><p>Самый дешевый маршрут: собрать сценарий в Gemini, источники и audio overview - в NotebookLM.</p></article>
+      </div>
+    </section>
+
+    <section class="slide split audio-part" id="s05">
       <div>
-        <div class="kicker">// PART 01 · AUDIO</div>
-        <h2>Материал -> spoken script</h2>
+        <div class="kicker">// PROMPT · ОЗВУЧКА</div>
+        <h2>Сначала делаем текст, который можно произнести.</h2>
       </div>
-      <pre class="prompt-block"><code>Сделай spoken script по материалу.
+      <pre class="prompt-block"><code>Сделай звучащий текст по материалу.
 
 Вход:
-- Source Map или исходный текст.
-- Канал: эфир / Telegram audio / podcast fragment / voiceover.
-- Длина: 60-90 секунд.
-- Голос: спокойно, ясно, без рекламного пафоса.
+- исходный текст / Source Map / транскрипт;
+- формат: подводка / voiceover / podcast fragment / Telegram audio;
+- длина: 45-90 секунд;
+- голос: спокойный редакторский, без рекламного пафоса.
 
 Сделай:
 1. Главный смысл.
 2. Факты, которые нельзя менять.
-3. Intro hook.
-4. Spoken script.
-5. Места, где ведущему лучше говорить своими словами.
-6. Pronunciation notes: имена, география, числа.
-7. Audio gate перед записью.
+3. Intro hook на 1-2 фразы.
+4. Текст для озвучки.
+5. Слова, имена, географию и цифры для проверки.
+6. Где ведущему лучше сказать своими словами.
 
 Правила:
-- не добавляй новых фактов;
-- не подменяй смысл эмоциями;
-- пиши так, чтобы это можно было произнести вслух.</code></pre>
+- не добавляй новые факты;
+- не драматизируй;
+- пиши так, чтобы это можно было прочитать вслух.</code></pre>
     </section>
 
-    <section class="slide split" id="s05">
+    <section class="slide split audio-part" id="s06">
       <div>
-        <div class="kicker">// SUNO PROMPT</div>
-        <h2>Музыкальная подложка: голос всегда важнее музыки.</h2>
+        <div class="kicker">// PROMPT · SUNO / MUSIC</div>
+        <h2>Музыка должна поддерживать речь, а не затаптывать ее сапогами.</h2>
       </div>
       <pre class="prompt-block"><code>Instrumental only. No vocals. No lyrics.
 
@@ -100,222 +169,223 @@ Mix: voice-first, no harsh highs, no huge lows, no dramatic peaks, no distractin
 Avoid: epic trailer, pop song, sentimentality, comedy, aggressive percussion, orchestral excess.</code></pre>
     </section>
 
-    <section class="slide" id="s06">
-      <div class="kicker">// AUDIO TOOL RADAR</div>
-      <h2>Что показываем в аудио-блоке</h2>
-      <div class="tool-radar">
-        <article><b>script</b><h3>Claude / ChatGPT</h3><p>Source Map, spoken rewrite, intro hook, подкастовый фрагмент и пометки для ведущего.</p></article>
-        <article><b>soundtrack</b><h3>Suno</h3><p>Музыкальная подложка, настроение, ритмический хук и быстрые варианты под сюжет.</p></article>
-        <article><b>voice</b><h3>ElevenLabs</h3><p>Озвучка и дубляж как отдельный слой с этической проверкой и редакторским контролем.</p></article>
-        <article><b>cleanup</b><h3>Adobe Podcast</h3><p>Чистка голоса, выравнивание и быстрый технический cleanup перед монтажом.</p></article>
-      </div>
-    </section>
-
-    <section class="slide dark" id="s07">
+    <section class="slide dark audio-part" id="s07">
       <div class="kicker">// AUDIO GATE</div>
-      <h2>Аудио проверяется ушами, а не только глазами.</h2>
+      <h2>Проверка аудио: редактор слушает, а не просто смотрит на waveform.</h2>
       <div class="risk-list">
-        <p><b>факты</b><span>нет новых фактов, цифр, оценок и причинно-следственных связей без source</span></p>
-        <p><b>произносимость</b><span>ведущий может прочитать текст вслух без канцелярита и спотыканий</span></p>
-        <p><b>имена</b><span>ударения, география, должности и названия проверены человеком</span></p>
-        <p><b>музыка</b><span>подложка поддерживает голос, а не делает из новости трейлер к катастрофе</span></p>
-        <p><b>этика</b><span>voice tools и дубляж используются только там, где это разрешено и уместно</span></p>
+        <p><b>смысл</b><span>озвучка не добавила фактов, которых нет в source</span></p>
+        <p><b>произношение</b><span>имена, должности, география, числа и ударения проверены</span></p>
+        <p><b>ритм</b><span>текст можно произнести, он не звучит как письменная заметка</span></p>
+        <p><b>музыка</b><span>подложка не спорит с голосом, не делает фальшивую драму</span></p>
+        <p><b>этика</b><span>синтетический голос, дубляж и voice clone разрешены и уместны</span></p>
       </div>
     </section>
 
-    <section class="slide hero" id="s08">
-      <div class="hero-copy">
-        <div class="pill">part 02 · editorial contour</div>
-        <h1>Редакторский контур - это <span>цикл решений</span>, а не табличка.</h1>
-        <p class="lead">Контур соединяет мониторинг, source map, digest, content grid, task package, human gate, публикацию, разбор результата и update hub.</p>
-      </div>
-      <figure class="lesson-art">
-        <img src="../assets/deck-06-hero-contour-robot.png" alt="Robot sorting monitoring signals into content grid">
-        <figcaption>signals -> digest -> grid -> update</figcaption>
-      </figure>
-    </section>
-
-    <section class="slide dark" id="s09">
-      <div class="kicker">// DEFINITION</div>
-      <h2>Что такое редакторский контур?</h2>
-      <div class="risk-list">
-        <p><b>monitoring</b><span>собираем сигналы: темы, источники, повторы, вопросы аудитории</span></p>
-        <p><b>source map</b><span>отделяем факт от предположения, цитату от пересказа, риск от идеи</span></p>
-        <p><b>digest</b><span>группируем сигналы в понятную картину недели или дня</span></p>
-        <p><b>grid</b><span>раскладываем решения по каналам, форматам, owners и дедлайнам</span></p>
-        <p><b>update</b><span>после выпуска обновляем prompt, gate, пример или запрет в hub</span></p>
+    <section class="slide dark audio-part" id="s08">
+      <div class="kicker">// LIVE DEMO · AUDIO</div>
+      <h2>Показываем завтра</h2>
+      <div class="timeline-plan">
+        <article><b>05 мин</b><p>Берем один материал и делаем текст для озвучки.</p></article>
+        <article><b>07 мин</b><p>Генерим музыкальную подложку в Suno и обсуждаем, где она мешает.</p></article>
+        <article><b>05 мин</b><p>Показываем NotebookLM: источники → audio overview.</p></article>
+        <article><b>05 мин</b><p>Чистим кусок звука в Adobe Podcast Enhance Speech.</p></article>
       </div>
     </section>
 
-    <section class="slide" id="s10">
-      <div class="kicker">// ЧТО УЖЕ ЕСТЬ</div>
-      <h2>Не начинаем с нуля. У редакции уже есть набор рабочих промптов.</h2>
+    <section class="slide part-divider" id="s09">
+      <div class="kicker">// ЧАСТЬ 02</div>
+      <h2>Теперь не звук. Теперь выпуск: как редактор работает с СИИ, чтобы быстрее видеть поле и собирать план.</h2>
+      <p class="lead">Убираем шифры. "Редакционные сигналы" - это все, что прилетает в работу и может стать материалом.</p>
+    </section>
+
+    <section class="slide contour-part" id="s10">
+      <div class="kicker">// ЧТО ТАКОЕ СИГНАЛЫ</div>
+      <h2>Сигнал - это не магическое слово. Это сырье для редакторского решения.</h2>
       <div class="tool-radar">
-        <article><b>01</b><h3>Researcher</h3><p>Ищет источники, unknowns, риски и вопросы перед публикацией.</p></article>
-        <article><b>07</b><h3>Source Map</h3><p>Разделяет "можно утверждать" и "хочется красиво сказать".</p></article>
-        <article><b>14</b><h3>TV Style Graph</h3><p>Держит голос продукта, рубрики или канала через evidence и decision trace.</p></article>
-        <article><b>11</b><h3>Format Factory</h3><p>Из одного проверенного source делает сайт, Telegram, видео, карточки и аудио.</p></article>
-        <article><b>05</b><h3>Audio / Transcript</h3><p>Транскрипт, spoken script, intro hook и audio QA.</p></article>
-        <article><b>06</b><h3>Hub Update</h3><p>Сохраняет удачные и плохие outputs как обновление системы.</p></article>
+        <article><b>новости</b><h3>повестка дня</h3><p>городские события, происшествия, решения, заявления, релизы, официальные сообщения.</p></article>
+        <article><b>видео</b><h3>эфиры и сюжеты</h3><p>транскрипты, таймкоды, интервью, длинные записи, материалы операторов.</p></article>
+        <article><b>аудитория</b><h3>вопросы людей</h3><p>комментарии, обращения, жалобы, часто повторяющиеся темы, локальные боли.</p></article>
+        <article><b>редакция</b><h3>планы и идеи</h3><p>что лежит в бэклоге, что надо обновить, что можно переупаковать.</p></article>
+        <article><b>источники</b><h3>документы и ссылки</h3><p>сайты, отчеты, Telegram-каналы, таблицы, пресс-релизы, внутренние approved sources.</p></article>
+        <article><b>результаты</b><h3>что уже вышло</h3><p>публикации, охваты, вопросы после выхода, ошибки, повторы.</p></article>
       </div>
     </section>
 
-    <section class="slide split" id="s11">
-      <div>
-        <div class="kicker">// BROWSER ROUTE</div>
-        <h2>Base: редактор работает в браузере.</h2>
+    <section class="slide dark contour-part" id="s11">
+      <div class="kicker">// РЕДАКТОРСКИЙ КОНТУР</div>
+      <h2>Контур - это путь от сырья к решению.</h2>
+      <div class="risk-list">
+        <p><b>1. собрать</b><span>берем новости, транскрипты, комментарии, релизы, планы, ссылки</span></p>
+        <p><b>2. проверить</b><span>что подтверждено, что не подтверждено, где риск</span></p>
+        <p><b>3. выбрать</b><span>что важно аудитории и что редакция готова выпускать</span></p>
+        <p><b>4. разложить</b><span>канал, формат, ответственный, срок, проверка человеком</span></p>
+        <p><b>5. обновить</b><span>если AI ошибся или помог - меняем prompt, gate, example или правило</span></p>
       </div>
-      <pre class="prompt-block"><code>Собери редакционный digest из сигналов ниже.
+    </section>
+
+    <section class="slide contour-part" id="s12">
+      <div class="kicker">// ЧТО УЖЕ ИЗУЧИЛИ</div>
+      <h2>Мы не выдаем новую магическую пачку. Мы собираем уже изученные промпты в систему.</h2>
+      <div class="tool-radar">
+        <article><b>Researcher</b><h3>где проверить</h3><p>Находит источники, unknowns и вопросы перед выпуском.</p></article>
+        <article><b>Source Map</b><h3>что можно утверждать</h3><p>Отделяет факт, цитату, пересказ, риск и ручную проверку.</p></article>
+        <article><b>TV Style Graph</b><h3>как говорить</h3><p>Держит голос конкретной рубрики, продукта или канала.</p></article>
+        <article><b>Format Factory</b><h3>куда выпускать</h3><p>Из одного source делает сайт, Telegram, видео, карточки, аудио.</p></article>
+        <article><b>Audio / Transcript</b><h3>как звучать</h3><p>Транскрипт, spoken script, intro hook, audio QA.</p></article>
+        <article><b>Hub Update</b><h3>что менять</h3><p>Фиксирует, что сработало, что сломалось и какое правило обновить.</p></article>
+      </div>
+    </section>
+
+    <section class="slide split contour-part" id="s13">
+      <div>
+        <div class="kicker">// PROMPT · РЕДАКТОРСКИЙ ДАЙДЖЕСТ</div>
+        <h2>Первый обязательный промпт: из сырья в понятную картину.</h2>
+      </div>
+      <pre class="prompt-block"><code>Собери редакторский дайджест из материалов ниже.
+
+Материалы могут быть: новости, ссылки, релизы, комментарии, идеи, транскрипты, планы.
 
 Не пиши публикацию. Не придумывай факты.
 
-Для каждого сигнала укажи:
-1. тема;
-2. источник и уровень доверия;
-3. что подтверждено;
-4. что не подтверждено;
-5. почему это важно аудитории;
-6. возможный формат: сайт / Telegram / видео / визуал / аудио;
-7. риск: факт, контекст, юридический, репутационный;
-8. что должен решить редактор;
-9. next step и owner.
+Для каждого пункта укажи:
+1. Что это за тема простыми словами.
+2. Откуда взято: ссылка / источник / кто принес.
+3. Что подтверждено.
+4. Что НЕ подтверждено.
+5. Почему это может быть важно аудитории.
+6. Риск: факт, контекст, юридический, репутационный.
+7. Что проверить человеку.
+8. Возможный формат: сайт / Telegram / видео / визуал / аудио.
+9. Следующий шаг: взять в работу / уточнить / отложить / не брать.
 
-После таблицы дай:
-- top-5 тем недели;
-- что нельзя выпускать без проверки;
-- какие материалы можно собрать быстро;
-- какие вопросы вынести редактору.</code></pre>
+В конце дай top-5 тем и вопросы редактору.</code></pre>
     </section>
 
-    <section class="slide" id="s12">
-      <div class="kicker">// PROJECT / COWORK</div>
-      <h2>Opti: делаем project, где редактору не надо каждый раз объяснять контекст.</h2>
-      <div class="outcome-lanes">
-        <article><b>rules</b><h3>правила редакции</h3><p>Что нельзя публиковать, какие источники сильные, где нужен человек.</p></article>
-        <article><b>voice</b><h3>тон продукта</h3><p>Style Graph, anti-style, примеры хороших и плохих формулировок.</p></article>
-        <article><b>templates</b><h3>шаблоны</h3><p>Digest, content grid, task package, update proposal, gates.</p></article>
-        <article><b>memory</b><h3>история решений</h3><p>Что уже пробовали, что сломалось, что стало правилом.</p></article>
-      </div>
-    </section>
-
-    <section class="slide dark" id="s13">
-      <div class="kicker">// CLAUDE CODE / CODEX</div>
-      <h2>Advanced: агентная папка нужна owners, а не всем участникам.</h2>
-      <p class="lead narrow">В браузере редактор получает быстрый результат. В Claude Code / Codex owner ведет систему: файлы, prompts, gates, examples, changelog. Если сразу тащить всех в агентный режим, половина людей начнет воевать с интерфейсом вместо редакционной задачи. Красиво? Нет. Зато правда.</p>
-      <div class="timeline-plan">
-        <article><b>browser</b><p>быстрый digest, source map, content grid</p></article>
-        <article><b>project</b><p>постоянные правила, голос, шаблоны, knowledge</p></article>
-        <article><b>agent</b><p>папка hub, skills, outputs, changelog, обновления</p></article>
-      </div>
-    </section>
-
-    <section class="slide" id="s14">
-      <div class="kicker">// ЧТО ДОБАВЛЯЕМ ОБЯЗАТЕЛЬНО</div>
-      <h2>Новый обязательный слой: Editorial Control Prompt.</h2>
-      <div class="homework">
-        <p><b>Daily digest.</b> Сигналы дня, источники, риски, что выпускать, что нельзя выпускать.</p>
-        <p><b>Content grid.</b> Канал, формат, owner, дедлайн, source, human gate.</p>
-        <p><b>Task package.</b> Что получает корреспондент, SMM, монтажер, дизайнер или ведущий.</p>
-        <p><b>Update proposal.</b> Что меняем в prompt, skill, gate или template после реального output.</p>
-      </div>
-    </section>
-
-    <section class="slide split" id="s15">
+    <section class="slide split contour-part" id="s14">
       <div>
-        <div class="kicker">// PROMPT · CONTENT GRID</div>
-        <h2>Из digest в недельную сетку</h2>
+        <div class="kicker">// PROMPT · ПЛАН ВЫПУСКА</div>
+        <h2>Второй обязательный промпт: из дайджеста в план.</h2>
       </div>
-      <pre class="prompt-block"><code>На основе digest собери content grid на неделю.
+      <pre class="prompt-block"><code>На основе дайджеста собери план выпуска на неделю.
 
 Для каждой темы укажи:
-1. приоритет: high / medium / low;
-2. формат: сайт / Telegram / видео / визуал / аудио;
-3. зачем аудитории;
-4. source, на который можно опереться;
-5. что нужно проверить;
-6. owner;
-7. дедлайн;
-8. human gate;
-9. что можно переиспользовать в других каналах.
+1. Приоритет: высокий / средний / низкий.
+2. Формат: новость / объяснение / видео / карточки / подводка / аудио.
+3. Канал: сайт / Telegram / соцсети / эфир / внутренний канал.
+4. Почему это нужно аудитории.
+5. На какой source опираемся.
+6. Что нужно проверить до публикации.
+7. Ответственный: редактор / корреспондент / SMM / монтажер / дизайнер.
+8. Дедлайн.
+9. Human gate: кто принимает финальное решение.
 
-После сетки дай редакторское решение:
-- keep;
-- revise;
-- kill;
-- automate later.
-
-Не превращай сетку в автопубликацию. Финальное решение принимает редактор.</code></pre>
+В конце раздели:
+- можно делать сейчас;
+- нужно уточнить;
+- не берем;
+- можно автоматизировать позже.</code></pre>
     </section>
 
-    <section class="slide split" id="s16">
+    <section class="slide split contour-part" id="s15">
       <div>
-        <div class="kicker">// PROMPT · HUB UPDATE</div>
-        <h2>Контур заканчивается update, а не вдохновением.</h2>
+        <div class="kicker">// PROMPT · ЗАДАНИЕ КОМАНДЕ</div>
+        <h2>Третий обязательный промпт: из темы в конкретное ТЗ.</h2>
       </div>
-      <pre class="prompt-block"><code>Сделай update proposal для AI-hub.
+      <pre class="prompt-block"><code>Собери редакционное задание по выбранной теме.
+
+Тема:
+[вставьте тему из плана]
+
+Сделай:
+1. Что нужно получить на выходе.
+2. Кому задача: корреспондент / SMM / монтажер / дизайнер / ведущий.
+3. Какие факты и источники уже есть.
+4. Чего не хватает.
+5. Какие вопросы задать герою / эксперту / редактору.
+6. Формат результата.
+7. Ограничения: что нельзя утверждать, показывать, обещать.
+8. Проверка перед выпуском.
+
+Не пиши финальный материал. Сделай рабочее ТЗ.</code></pre>
+    </section>
+
+    <section class="slide contour-part" id="s16">
+      <div class="kicker">// ГДЕ РАБОТАТЬ</div>
+      <h2>Три уровня: браузер, проект, агентная папка.</h2>
+      <div class="outcome-lanes">
+        <article><b>base</b><h3>браузер</h3><p>Claude / ChatGPT / Gemini. Быстро вставить материалы и получить дайджест, план, ТЗ.</p></article>
+        <article><b>opti</b><h3>проект / cowork</h3><p>Хранятся правила редакции, голос, шаблоны, запреты, промпты и примеры.</p></article>
+        <article><b>advanced</b><h3>Claude Code / Codex</h3><p>Для owners: папка hub, skills, outputs, gates, changelog. Не тащим всех туда сразу.</p></article>
+        <article><b>rule</b><h3>человек решает</h3><p>AI раскладывает поле. Редактор выбирает важность, риск, выпуск и запрет.</p></article>
+      </div>
+    </section>
+
+    <section class="slide dark contour-part" id="s17">
+      <div class="kicker">// СПОР С ИРОЙ</div>
+      <h2>Я бы не начинал с Claude Code. Да, я зануда. Зато люди не сбегут.</h2>
+      <p class="lead narrow">Сначала показываем браузер: вставили материалы, получили дайджест и план. Потом проект: туда положили правила и промпты. И только потом agent route для тех, кто будет вести hub. Если сразу открыть редакторам папки, skills и плагины, они будут изучать интерфейс вместо редакторской работы. А мы не кружок по страданию, у нас курс.</p>
+    </section>
+
+    <section class="slide split contour-part" id="s18">
+      <div>
+        <div class="kicker">// PROMPT · ОБНОВЛЕНИЕ HUB</div>
+        <h2>Контур заканчивается не восторгом, а обновлением правила.</h2>
+      </div>
+      <pre class="prompt-block"><code>Сделай предложение по обновлению AI-hub.
 
 Дано:
-- source;
-- prompt или skill;
-- output;
-- правки редактора;
-- что сработало;
-- что сломалось.
+- какой prompt / skill использовали;
+- какой source был на входе;
+- какой output получился;
+- что исправил редактор;
+- что повторяется не первый раз.
 
 Собери:
-1. Какой workflow / skill обновляем.
-2. Evidence: 3-5 конкретных наблюдений.
-3. Decision: keep / revise / kill / automate later.
-4. Что добавить в hub: prompt, gate, example, warning.
-5. Owner.
-6. Как проверить, что обновление помогло.
+1. Какой prompt / skill / gate надо обновить.
+2. Evidence: 3 конкретных примера.
+3. Что меняем.
+4. Какой пример добавить в hub.
+5. Какой warning добавить.
+6. Кто owner.
+7. Как проверить, что стало лучше.
 
 Правило:
-не обновляем систему по одному восторгу. Нужен evidence.</code></pre>
+не обновляем систему по одному восторгу. Нужны примеры.</code></pre>
     </section>
 
-    <section class="slide" id="s17">
-      <div class="kicker">// ВНЕШНИЕ НАБЛЮДЕНИЯ</div>
-      <h2>Что берем из внешних workflow, а что не тащим в курс целиком</h2>
-      <div class="tool-radar">
-        <article><b>workflow > prompt</b><h3>Claude workflow libraries</h3><p>Берем принцип: не список команд, а маршрут от входа до результата.</p></article>
-        <article><b>skills handoff</b><h3>medsci-skills</h3><p>Берем идею: skills передают output друг другу, как производственная цепочка.</p></article>
-        <article><b>project files</b><h3>long-form editing</h3><p>Берем боль: если source of truth живет отдельно от AI, редактор тонет в ручном sync.</p></article>
-        <article><b>AI-patterns</b><h3>humanizer skills</h3><p>Берем не "детектор", а список повторяющихся машинных дефектов для редакторского gate.</p></article>
-      </div>
-    </section>
-
-    <section class="slide dark" id="s18">
-      <div class="kicker">// LIVE DEMO · 25 МИН</div>
-      <h2>Демо редакторского контура</h2>
+    <section class="slide dark contour-part" id="s19">
+      <div class="kicker">// LIVE DEMO · КОНТУР</div>
+      <h2>Демо второй части</h2>
       <div class="timeline-plan">
-        <article><b>05 мин</b><p>Открыть Claude / ChatGPT в браузере и вставить 8-12 сигналов.</p></article>
-        <article><b>07 мин</b><p>Собрать digest: источники, риски, важность, вопросы редактору.</p></article>
-        <article><b>07 мин</b><p>Разложить top-5 в content grid: канал, формат, owner, gate.</p></article>
-        <article><b>06 мин</b><p>Показать project/cowork: где живут правила, prompts, gates и update proposal.</p></article>
+        <article><b>05 мин</b><p>Берем 8-12 материалов: новости, ссылки, комментарии, транскрипт, идеи редакции.</p></article>
+        <article><b>07 мин</b><p>Запускаем промпт "редакторский дайджест". Разбираем, что подтверждено и где риск.</p></article>
+        <article><b>07 мин</b><p>Запускаем промпт "план выпуска". Получаем форматы, каналы, owners и gates.</p></article>
+        <article><b>06 мин</b><p>Показываем project/cowork: где лежат промпты, правила, примеры и обновления.</p></article>
       </div>
     </section>
 
-    <section class="slide" id="s19">
-      <div class="kicker">// ПРАКТИКА</div>
-      <h2>Домашка по уровням</h2>
+    <section class="slide contour-part" id="s20">
+      <div class="kicker">// ДОМАШКА</div>
+      <h2>Что сделать после урока</h2>
       <div class="homework">
-        <p><b>Base.</b> Собрать digest из 8-12 сигналов: источники, риски, важность, что проверить.</p>
-        <p><b>Opti.</b> Из digest собрать content grid на неделю: канал, формат, owner, дедлайн, gate.</p>
-        <p><b>Advanced.</b> Сделать project/cowork или агентную папку с prompts, gates, examples и update proposal.</p>
-        <p><b>В hub.</b> Сохранить один хороший digest, один спорный output и одно предложение по обновлению правила.</p>
+        <p><b>Base.</b> Сделать одно аудио: spoken script + prompt для подложки + audio gate.</p>
+        <p><b>Opti.</b> Сделать редакторский дайджест из 8-12 материалов и план выпуска на неделю.</p>
+        <p><b>Advanced.</b> Собрать project/cowork или агентную папку: prompts, gates, examples, hub update.</p>
+        <p><b>В hub.</b> Сохранить один удачный prompt, один плохой output и одно предложение по обновлению правила.</p>
       </div>
     </section>
 
-    <section class="slide" id="s20">
-      <div class="kicker">// SOURCES</div>
+    <section class="slide contour-part" id="s21">
+      <div class="kicker">// ССЫЛКИ</div>
       <h2>Что можно открыть после занятия</h2>
       <div class="final-links">
-        <a href="../skills.html#lesson-03-guides">гайды и промпты курса</a>
-        <a href="https://github.com/Aperivue/medsci-skills" target="_blank" rel="noreferrer">skills handoff example</a>
-        <a href="https://github.com/Aboudjem/humanizer-skill" target="_blank" rel="noreferrer">AI pattern skill</a>
-        <a href="https://github.com/SNL-UCSB/paper-writing-skill" target="_blank" rel="noreferrer">structured writing skill</a>
-        <a href="https://www.reddit.com/r/ClaudeAI/comments/1scfvd6/i_got_tired_of_ai_prompt_lists_so_i_built_full/" target="_blank" rel="noreferrer">workflow > prompt</a>
+        <a href="https://notebooklm.google.com/" target="_blank" rel="noreferrer">NotebookLM</a>
+        <a href="https://podcast.adobe.com/" target="_blank" rel="noreferrer">Adobe Podcast</a>
+        <a href="https://elevenlabs.io/music" target="_blank" rel="noreferrer">ElevenLabs Music</a>
+        <a href="https://www.wondercraft.ai/create/podcasts" target="_blank" rel="noreferrer">Wondercraft</a>
+        <a href="https://podcastle.ai/" target="_blank" rel="noreferrer">Podcastle</a>
+        <a href="https://podcast.smallest.ai/" target="_blank" rel="noreferrer">Smallest AI Podcast</a>
+        <a href="https://www.minimax.io/audio/text-to-speech/chinese" target="_blank" rel="noreferrer">MiniMax Audio</a>
         <a href="../index.html">hub</a>
       </div>
     </section>
