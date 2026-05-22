@@ -563,4 +563,4 @@ $$(".nav-item").forEach((button) => {
   button.addEventListener("click", () => setModule(button.dataset.module));
 });
 
-setModule("intro");
+setModule("radar");
