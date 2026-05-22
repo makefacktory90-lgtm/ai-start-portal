@@ -270,9 +270,9 @@
     <nav>
       <a href="#s01">start</a>
       <a href="#s03">audio</a>
-      <a href="#s10">browser</a>
-      <a href="#s15">project</a>
-      <a href="#s19">practice</a>
+      <a href="#s11">browser</a>
+      <a href="#s16">project</a>
+      <a href="#s20">practice</a>
     </nav>
     <span>Audio + editorial contour</span>
   </header>
@@ -370,22 +370,42 @@
 
     <section class="slide split audio-part" id="s06">
       <div>
-        <div class="kicker">// PROMPT · МУЗЫКАЛЬНАЯ ПОДЛОЖКА</div>
-        <h2>Промпт для музыкальной подложки под речь.</h2>
+        <div class="kicker">// SUNO · РАЗНИЦА ПРОМПТОВ</div>
+        <h2>Базовый и профессиональный промпт для музыкальной подложки в новостном сюжете.</h2>
       </div>
-      <pre class="prompt-block"><code>Instrumental only. No vocals. No lyrics.
+      <pre class="prompt-block"><code>Базовый промпт
+Style:
+Short instrumental news bed for a TV studio, 15 seconds, modern broadcast music, clean electronic pulse, light percussion, subtle synths, confident and neutral tone, professional newsroom atmosphere, no vocals, no choir, no cinematic trailer, no heavy bass, no dramatic hits
 
-Create a professional editorial music bed for spoken narration.
-Purpose: support voice, not compete with it.
-Mood: restrained, modern, focused, credible.
-Tempo: medium, around 100 BPM.
-Structure: quiet intro, steady main section, light development, clean ending.
-Instrumentation: soft electronic drums, controlled bass pulse, minimal synth motif, light atmospheric texture.
-Mix: voice-first, no harsh highs, no huge lows, no dramatic peaks, no distracting melody.
-Avoid: epic trailer, pop song, sentimentality, comedy, aggressive percussion, orchestral excess.</code></pre>
+Профессиональный промпт
+Style:
+Professional instrumental TV news opener, 15-second broadcast bed for a newsroom package, modern editorial sound, precise electronic pulse, restrained percussion, short synth motif, clean transient attack, controlled low end, neutral authority, polished network-style mix, no vocals, no choir, no cinematic trailer, no epic rise, no aggressive drums, no melodic lead, voice-friendly arrangement
+
+Lyrics:
+[Intro]
+tight electronic pulse, clean startup, no impact boom
+
+[Main]
+steady newsroom rhythm, subtle synth motif, controlled energy, broadcast clarity
+
+[End]
+short resolved finish, clean stop, no long tail</code></pre>
     </section>
 
     <section class="slide audio-part" id="s07">
+      <div class="kicker">// SUNO · ПОДСКАЗКИ И ОБУЧЕНИЕ</div>
+      <h2>Где искать подсказки, примеры и рекомендации по работе с Suno.</h2>
+      <div class="tool-radar">
+        <article><b>official</b><h3><a href="https://suno.com/" target="_blank" rel="noreferrer">Suno</a></h3><p>Основной продукт. Здесь создаются треки, тестируются формулировки и сравниваются результаты.</p></article>
+        <article><b>official</b><h3><a href="https://help.suno.com/" target="_blank" rel="noreferrer">Suno Help Center</a></h3><p>База знаний по функциям платформы, обновлениям, рабочим сценариям и настройкам.</p></article>
+        <article><b>official</b><h3><a href="https://help.suno.com/en/articles/9010177" target="_blank" rel="noreferrer">Music Glossary for Suno</a></h3><p>Словарь музыкальных терминов, которые помогают точнее задавать стиль, структуру и характер звучания.</p></article>
+        <article><b>official</b><h3><a href="https://help.suno.com/en/articles/10625537" target="_blank" rel="noreferrer">Suno Sounds</a></h3><p>Материал по описанию отдельных звуков и аудио-элементов. Полезен для уточнения формулировок.</p></article>
+        <article><b>community</b><h3><a href="https://www.reddit.com/r/SunoAI/comments/1qk766q/how_to_write_great_prompts_for_suno/" target="_blank" rel="noreferrer">Prompting discussion</a></h3><p>Практический разбор того, как пользователи структурируют промпты для инструментальной музыки.</p></article>
+        <article><b>practice</b><h3>Как обучаться</h3><p>Сначала тестируем короткие задачи на одном жанре, затем сравниваем базовый и профессиональный промпт и фиксируем удачные формулировки.</p></article>
+      </div>
+    </section>
+
+    <section class="slide audio-part" id="s08">
       <div class="kicker">// МЕСТО ДЛЯ ПРИМЕРОВ АУДИО</div>
       <h2>Здесь размещаем примеры аудиодорожек и сравнение free / paid.</h2>
       <div class="audio-example-board">
@@ -410,7 +430,7 @@ Avoid: epic trailer, pop song, sentimentality, comedy, aggressive percussion, or
       </div>
     </section>
 
-    <section class="slide audio-part" id="s08">
+    <section class="slide audio-part" id="s09">
       <div class="kicker">// ПРОВЕРКА АУДИО</div>
       <h2>Проверка результата перед использованием в работе.</h2>
       <div class="risk-list">
@@ -422,13 +442,13 @@ Avoid: epic trailer, pop song, sentimentality, comedy, aggressive percussion, or
       </div>
     </section>
 
-    <section class="slide part-divider" id="s09">
+    <section class="slide part-divider" id="s10">
       <div class="kicker">// ЧАСТЬ 02</div>
       <h2>Редакторский контур: как из материалов собрать понятный план выпуска.</h2>
       <p class="lead">Порядок работы такой: сначала браузер, затем проект с правилами и промптами, и только после этого agent route для тех, кто отвечает за hub.</p>
     </section>
 
-    <section class="slide contour-part" id="s10">
+    <section class="slide contour-part" id="s11">
       <div class="kicker">// ПОРЯДОК ОБУЧЕНИЯ</div>
       <h2>Обучение строим от редакторской задачи к инструменту, а не наоборот.</h2>
       <div class="route-grid">
@@ -450,7 +470,7 @@ Avoid: epic trailer, pop song, sentimentality, comedy, aggressive percussion, or
       </div>
     </section>
 
-    <section class="slide contour-part" id="s11">
+    <section class="slide contour-part" id="s12">
       <div class="kicker">// ЧТО МОЖНО СДЕЛАТЬ В БРАУЗЕРЕ</div>
       <h2>Первый рабочий маршрут для редактора: без сложной технической среды.</h2>
       <div class="outcome-lanes">
@@ -461,7 +481,7 @@ Avoid: epic trailer, pop song, sentimentality, comedy, aggressive percussion, or
       </div>
     </section>
 
-    <section class="slide contour-part" id="s12">
+    <section class="slide contour-part" id="s13">
       <div class="kicker">// ЧТО ТАКОЕ СИГНАЛЫ</div>
       <h2>Сигнал - это любое сырье, которое может стать редакционным решением.</h2>
       <div class="tool-radar">
@@ -474,7 +494,7 @@ Avoid: epic trailer, pop song, sentimentality, comedy, aggressive percussion, or
       </div>
     </section>
 
-    <section class="slide split contour-part" id="s13">
+    <section class="slide split contour-part" id="s14">
       <div>
         <div class="kicker">// PROMPT · РЕДАКТОРСКИЙ ДАЙДЖЕСТ</div>
         <h2>Первый обязательный промпт: из сырья в понятную картину дня.</h2>
@@ -499,7 +519,7 @@ Avoid: epic trailer, pop song, sentimentality, comedy, aggressive percussion, or
 В конце дай top-5 тем и вопросы редактору.</code></pre>
     </section>
 
-    <section class="slide split contour-part" id="s14">
+    <section class="slide split contour-part" id="s15">
       <div>
         <div class="kicker">// PROMPT · ПЛАН ВЫПУСКА</div>
         <h2>Второй обязательный промпт: из дайджеста в план выпуска.</h2>
@@ -524,7 +544,7 @@ Avoid: epic trailer, pop song, sentimentality, comedy, aggressive percussion, or
 - можно автоматизировать позже.</code></pre>
     </section>
 
-    <section class="slide contour-part" id="s15">
+    <section class="slide contour-part" id="s16">
       <div class="kicker">// ЧТО КЛАДЕМ В ПРОЕКТ</div>
       <h2>Когда браузерный маршрут понятен, переносим материалы в проект с правилами и примерами.</h2>
       <div class="outcome-lanes">
@@ -535,7 +555,7 @@ Avoid: epic trailer, pop song, sentimentality, comedy, aggressive percussion, or
       </div>
     </section>
 
-    <section class="slide split contour-part" id="s16">
+    <section class="slide split contour-part" id="s17">
       <div>
         <div class="kicker">// PROMPT · ЗАДАНИЕ КОМАНДЕ</div>
         <h2>Третий обязательный промпт: из темы в внятное рабочее ТЗ.</h2>
@@ -558,7 +578,7 @@ Avoid: epic trailer, pop song, sentimentality, comedy, aggressive percussion, or
 Не пиши финальный материал. Сделай рабочее ТЗ.</code></pre>
     </section>
 
-    <section class="slide contour-part" id="s17">
+    <section class="slide contour-part" id="s18">
       <div class="kicker">// ЧТО ПОДСМОТРЕЛИ У СООБЩЕСТВА</div>
       <h2>Полезные практики из GitHub и Reddit для редакторской команды.</h2>
       <div class="community-board">
@@ -580,7 +600,7 @@ Avoid: epic trailer, pop song, sentimentality, comedy, aggressive percussion, or
       </div>
     </section>
 
-    <section class="slide contour-part" id="s18">
+    <section class="slide contour-part" id="s19">
       <div class="kicker">// AGENT ROUTE</div>
       <h2>Agent route нужен ограниченной группе сотрудников, которые отвечают за развитие процесса.</h2>
       <div class="note-box">
@@ -590,7 +610,7 @@ Avoid: epic trailer, pop song, sentimentality, comedy, aggressive percussion, or
       </div>
     </section>
 
-    <section class="slide split contour-part" id="s19">
+    <section class="slide split contour-part" id="s20">
       <div>
         <div class="kicker">// PROMPT · ОБНОВЛЕНИЕ HUB</div>
         <h2>По итогам работы обновляем правила и шаблоны.</h2>
@@ -617,7 +637,7 @@ Avoid: epic trailer, pop song, sentimentality, comedy, aggressive percussion, or
 обновление опирается на примеры и повторяющиеся наблюдения.</code></pre>
     </section>
 
-    <section class="slide contour-part" id="s20">
+    <section class="slide contour-part" id="s21">
       <div class="kicker">// ДОМАШНЕЕ ЗАДАНИЕ</div>
       <h2>Домашнее задание</h2>
       <div class="homework">
@@ -628,7 +648,7 @@ Avoid: epic trailer, pop song, sentimentality, comedy, aggressive percussion, or
       </div>
     </section>
 
-    <section class="slide contour-part" id="s21">
+    <section class="slide contour-part" id="s22">
       <div class="kicker">// ССЫЛКИ И РЕСУРСЫ</div>
       <h2>Что можно открыть после занятия</h2>
       <div class="final-links">
