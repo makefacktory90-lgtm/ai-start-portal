@@ -171,6 +171,25 @@
         linear-gradient(180deg, rgba(255, 184, 46, 0.12), rgba(255, 253, 248, 0.96));
     }
 
+    .audio-example-board audio {
+      width: 100%;
+      min-width: 0;
+    }
+
+    .audio-example-board .media-link {
+      display: inline-flex;
+      width: max-content;
+      padding: 8px 12px;
+      border: 1px solid var(--black);
+      border-radius: 999px;
+      background: var(--white);
+      color: var(--black);
+      font-family: var(--mono);
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
     .audio-example-board .placeholder {
       display: inline-flex;
       width: max-content;
@@ -411,21 +430,24 @@ short resolved finish, clean stop, no long tail</code></pre>
       <div class="audio-example-board">
         <article>
           <b>пример 01</b>
-          <h3>озвучка</h3>
-          <span class="placeholder">сюда добавим аудио</span>
-          <p>Пример озвучки: дикция, темп, ударения и общее качество подачи.</p>
+          <h3>Podcast example</h3>
+          <audio controls preload="none" src="../assets/audio/lesson-04-podcast-example.m4a"></audio>
+          <a class="media-link" href="../assets/audio/lesson-04-podcast-example.m4a" target="_blank" rel="noreferrer">слушать файл</a>
+          <p>Пример подкастового фрагмента для разбора подачи, темпа и структуры аудио-материала.</p>
         </article>
         <article>
           <b>пример 02</b>
-          <h3>подложка</h3>
-          <span class="placeholder">сюда добавим аудио</span>
-          <p>Пример подложки: насколько музыка поддерживает речь и не мешает восприятию текста.</p>
+          <h3>Studio Pulse</h3>
+          <audio controls preload="none" src="https://cdn1.suno.ai/8febac24-6f1b-4509-b095-b53df066c027.mp3"></audio>
+          <a class="media-link" href="https://suno.com/song/8febac24-6f1b-4509-b095-b53df066c027?sh=yhYqIajVOyJqD3CC" target="_blank" rel="noreferrer">открыть в suno</a>
+          <p>Пример базового промпта для новостной музыкальной подложки.</p>
         </article>
         <article>
           <b>пример 03</b>
           <h3>free / paid</h3>
-          <span class="placeholder">сюда добавим аудио</span>
-          <p>Сравнение бесплатного и платного режима на одном типе задачи.</p>
+          <audio controls preload="none" src="https://cdn1.suno.ai/9941302e-3688-46b2-89d3-317fabc4ccd8.mp3"></audio>
+          <a class="media-link" href="https://suno.com/song/9941302e-3688-46b2-89d3-317fabc4ccd8?sh=7UovSJ0CvNTMBRbY" target="_blank" rel="noreferrer">открыть в suno</a>
+          <p>Пример более детализированного промпта для сравнения результата на той же задаче.</p>
         </article>
       </div>
     </section>
