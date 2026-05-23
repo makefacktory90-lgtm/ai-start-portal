@@ -1,8 +1,8 @@
 const modules = {
   intro: {
-    crumb: "Start Map",
-    code: "AI-START · 14 MAY",
-    title: "AI Start: AI как рабочий слой редакции",
+    crumb: "Старт курса",
+    code: "УРОК · 01",
+    title: "Урок 01: старт курса и карта программы",
     subtitle: "У редакции уже есть профессия, процессы и ответственность за выпуск. На старте мы показываем, где AI может взять черновой слой, а профессиональное решение остается у команды.",
     posterKicker: "СТАРТ ПРОГРАММЫ",
     posterTitle: "материал → AI draft → human gate → hub",
@@ -10,7 +10,7 @@ const modules = {
     artUrl: "./assets/ai-start-art-direction-keyframe-v1.png",
     artAlt: "AI Start editorial sci-fi command room artwork",
     artCaption: "source → AI step → gate → hub",
-    sideTitle: "14 мая · старт",
+    sideTitle: "Урок 01 · Старт курса",
     sideSummary: "Фиксируем рамку курса: роли, редакционные маршруты, human gate и общий hub.",
     recording: {
       title: "Урок 01: запись лекции",
@@ -76,13 +76,13 @@ const modules = {
     resources: [
       { label: "Запись Zoom", href: "https://us06web.zoom.us/rec/share/OxKsTKtVd_BbugFLNPSryL6lJeqrDM1LVsbxg7rQE45VVYPN09tyo7l0XvvbshNs.ww4OFDKpG-Rm4smJ", external: true },
       { label: "Транскрипт", href: "../ai_start_portal_v0/10_recordings/lesson-01-start/transcript.md" },
-      { label: "Summary", href: "../ai_start_portal_v0/10_recordings/lesson-01-start/summary.md" }
+      { label: "Краткое резюме", href: "../ai_start_portal_v0/10_recordings/lesson-01-start/summary.md" }
     ]
   },
   text: {
-    crumb: "Text OS",
-    code: "LESSON · 02",
-    title: "Text OS: управляемая работа с текстом",
+    crumb: "Урок 02",
+    code: "УРОК · 02",
+    title: "Урок 02: управляемая работа с текстом",
     subtitle: "Сначала источник и задача. Затем голос, черновик, чистка, формат, гейт и обновление правил. Есть два маршрута: без агентов через prompt pack и в агенте через TV Style Graph.",
     posterKicker: "УРОК 02 · ТЕКСТ",
     posterTitle: "source map → voice → draft → de-ai-fy → format → gate",
@@ -153,13 +153,13 @@ const modules = {
     resources: [
       { label: "Запись Zoom", href: "https://us06web.zoom.us/rec/share/TiKykudX1PX0gb4SvPyUcTyPXD8VeGfnwz3--hj3N2A_lm3_JCPCGB4elcDR59d1.R3DFLlMN2Ent7wBh", external: true },
       { label: "Транскрипт", href: "../ai_start_portal_v0/10_recordings/lesson-02-text-os/transcript.md" },
-      { label: "Summary", href: "../ai_start_portal_v0/10_recordings/lesson-02-text-os/summary.md" },
+      { label: "Краткое резюме", href: "../ai_start_portal_v0/10_recordings/lesson-02-text-os/summary.md" },
       { label: "Домашнее задание", href: "./decks/deck-02-text.html" }
     ]
   },
   formats: {
-    crumb: "Visual + Video",
-    code: "LESSON · 03",
+    crumb: "Урок 03",
+    code: "УРОК · 03",
     title: "Урок 03: визуальная и видео-фабрика",
     subtitle: "Разбираем, как снимать визуальный стиль с референса, превращать длинное видео или транскрипт в карту нарезки и собирать повторяемый процесс через промпты, гайды и visual lab.",
     posterKicker: "УРОК 03 · ВИДЕО + ВИЗУАЛ",
@@ -230,14 +230,14 @@ const modules = {
     ],
     resources: [
       { label: "Запись Zoom", href: "https://us06web.zoom.us/rec/share/Qwhba1JW094TSmlk51x2_cuS3tZbj5VBDO7QdWmr6hTmn4HIHyCz59s4EuDY007A.3sOAjLuHa5MEbBHL", external: true },
-      { label: "Deck 03", href: "./decks/deck-03-video.html" },
-      { label: "Visual hub", href: "./visual-builder.html" },
+      { label: "Презентация", href: "./decks/deck-03-video.html" },
+      { label: "Визуальный конструктор", href: "./visual-builder.html" },
       { label: "Домашнее задание", href: "../ai_start_portal_v0/10_recordings/lesson-03-visual-video/summary.md" }
     ]
   },
   radar: {
-    crumb: "Audio + Contour",
-    code: "LESSON · 04",
+    crumb: "Урок 04",
+    code: "УРОК · 04",
     title: "Урок 04: аудио и редакторский контур",
     subtitle: "Запись урока, презентация, аудио-примеры и блок промптов уже открыты на портале. Модуль собран как рабочий маршрут: аудио, Suno, примеры, редакторский контур и prompt-блок.",
     posterKicker: "УРОК 04 · АУДИО + КОНТУР",
