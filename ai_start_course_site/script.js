@@ -72,6 +72,11 @@ const modules = {
       "Лидеры изменений решают, какие удачные приемы становятся стандартом редакции.",
       "Удачный чат легко потерять. Hub сохраняет примеры, правила и проверки.",
       "AI Start не заменяет редакционное решение. Он делает первый проход управляемым."
+    ],
+    resources: [
+      { label: "Запись Zoom", href: "https://us06web.zoom.us/rec/share/OxKsTKtVd_BbugFLNPSryL6lJeqrDM1LVsbxg7rQE45VVYPN09tyo7l0XvvbshNs.ww4OFDKpG-Rm4smJ", external: true },
+      { label: "Транскрипт", href: "../ai_start_portal_v0/10_recordings/lesson-01-start/transcript.md" },
+      { label: "Summary", href: "../ai_start_portal_v0/10_recordings/lesson-01-start/summary.md" }
     ]
   },
   text: {
@@ -144,6 +149,12 @@ const modules = {
       "Один стайл граф не подходит всей редакции: отдельные передачи, рубрики и форматы требуют отдельных графов.",
       "Если факта нет в источнике, AI не имеет права уверенно его дорисовать.",
       "Система растет только тогда, когда удачные правки, запреты и примеры сохраняются в рабочей папке."
+    ],
+    resources: [
+      { label: "Запись Zoom", href: "https://us06web.zoom.us/rec/share/TiKykudX1PX0gb4SvPyUcTyPXD8VeGfnwz3--hj3N2A_lm3_JCPCGB4elcDR59d1.R3DFLlMN2Ent7wBh", external: true },
+      { label: "Транскрипт", href: "../ai_start_portal_v0/10_recordings/lesson-02-text-os/transcript.md" },
+      { label: "Summary", href: "../ai_start_portal_v0/10_recordings/lesson-02-text-os/summary.md" },
+      { label: "Домашнее задание", href: "./decks/deck-02-text.html" }
     ]
   },
   formats: {
@@ -216,6 +227,12 @@ const modules = {
       "Один хороший референс можно превратить в систему: style DNA, prompt set, шаблон и quality gate.",
       "Видео-пайплайн начинается не с монтажа, а с карты материала: что есть, где смысл, какие хуки не врут источнику.",
       "Сильный prompt нужно сохранять как рабочий маршрут, иначе он снова потеряется в чате."
+    ],
+    resources: [
+      { label: "Запись Zoom", href: "https://us06web.zoom.us/rec/share/Qwhba1JW094TSmlk51x2_cuS3tZbj5VBDO7QdWmr6hTmn4HIHyCz59s4EuDY007A.3sOAjLuHa5MEbBHL", external: true },
+      { label: "Deck 03", href: "./decks/deck-03-video.html" },
+      { label: "Visual hub", href: "./visual-builder.html" },
+      { label: "Домашнее задание", href: "../ai_start_portal_v0/10_recordings/lesson-03-visual-video/summary.md" }
     ]
   },
   radar: {
@@ -278,6 +295,13 @@ const modules = {
       "Сохраняем неудачные результаты и формулировки промптов, чтобы разбирать ошибки и уточнять правила работы.",
       "Обновляем базу по итогам практики: фиксируем, что сработало, что не сработало и что требует уточнения.",
       "Сохраняем результат в общем контуре: промпты, примеры, ограничения и проверенные сценарии использования."
+    ],
+    resources: [
+      { label: "Запись Zoom", href: "https://us06web.zoom.us/rec/share/zz0mKewp3bP6veqIoLr87t-FmuWXyp9Lsmet1_xfAGSaCm3axK7StvB6IRr2ons.wS4wJ1PpFEC6QJTJ", external: true },
+      { label: "Презентация", href: "./decks/deck-04-audio-editorial-contour.html" },
+      { label: "Аудио-примеры", href: "./decks/deck-04-audio-editorial-contour.html#s08" },
+      { label: "Промпты урока", href: "./decks/deck-04-audio-editorial-contour.html#s05" },
+      { label: "Домашнее задание", href: "./decks/deck-04-audio-editorial-contour.html#s21" }
     ]
   },
   system: {
@@ -464,6 +488,22 @@ function renderHomework(items) {
   });
 }
 
+function renderLessonMaterials(items) {
+  const el = $("#lesson-materials");
+  if (!el) return;
+  el.innerHTML = "";
+  (items || []).forEach((item) => {
+    const link = document.createElement("a");
+    link.href = item.href;
+    link.textContent = item.label;
+    if (item.external) {
+      link.target = "_blank";
+      link.rel = "noopener";
+    }
+    el.appendChild(link);
+  });
+}
+
 function renderRecording(recording) {
   const recordingTitle = $("#recording-title");
   const recordingSummary = $("#recording-summary");
@@ -552,6 +592,7 @@ function setModule(id) {
   renderQuotes(data.insights);
   renderRecording(data.recording || defaultRecording);
   renderHomework(data.homework || defaultHomework);
+  renderLessonMaterials(data.resources || []);
 
   $$(".nav-item").forEach((button) => {
     button.classList.toggle("active", button.dataset.module === id);
