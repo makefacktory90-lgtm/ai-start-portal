@@ -238,23 +238,92 @@ const modules = {
   radar: {
     crumb: "Урок 04",
     code: "УРОК · 04",
-    title: "Урок 04: AI-hub и репозитории редакции",
+    title: "Урок 04: аудио и редакторский контур",
+    subtitle: "Запись урока, презентация, аудио-примеры и блок промптов уже открыты на портале. Модуль собран как рабочий маршрут: аудио, Suno, примеры, редакторский контур и prompt-блок.",
+    posterKicker: "УРОК 04 · АУДИО + КОНТУР",
+    posterTitle: "audio → examples → prompts → editorial contour",
+    posterSubtitle: "запись, deck и примеры уже доступны",
+    artUrl: "./assets/deck-05-hero-audio-robot.png",
+    artAlt: "Робот работает с аудио и редакторскими материалами",
+    artCaption: "audio → prompts → contour",
+    sideTitle: "Урок 04 · открыт",
+    sideSummary: "Аудио, Suno, примеры дорожек и редакторский контур уже доступны в portal и в deck.",
+    recording: {
+      title: "Урок 04: запись лекции",
+      summary: "Запись Zoom готова. Код доступа: ?+#LG6Jx. Deck, аудио-примеры и prompt-блок уже открыты.",
+      folderUrl: "./decks/deck-04-audio-editorial-contour.html",
+      recordingUrl: "https://us06web.zoom.us/rec/share/zz0mKewp3bP6veqIoLr87t-FmuWXyp9Lsmet1_xfAGSaCm3axK7StvB6IRr2ons.wS4wJ1PpFEC6QJTJ",
+      transcriptUrl: "./decks/deck-04-audio-editorial-contour.html#s14",
+      summaryUrl: "./decks/deck-04-audio-editorial-contour.html",
+      accessCode: "?+#LG6Jx",
+      state: "запись доступна",
+      timeline: [
+        { time: "audio", label: "Инструменты для озвучки, подкастов, музыкальной подложки и чистки звука." },
+        { time: "suno", label: "Разница между базовым и профессиональным промптом, примеры и источники для обучения." },
+        { time: "examples", label: "Подкастовый пример и два трека Suno для сравнения результата." },
+        { time: "contour", label: "Редакторский контур: сигналы, дайджест, план выпуска и рабочее ТЗ." }
+      ]
+    },
+    homework: [
+      {
+        level: "Base",
+        text: "Подготовить одно аудио: текст для озвучки, промпт для подложки и короткую проверку результата."
+      },
+      {
+        level: "Optimal",
+        text: "Собрать редакторский дайджест из 8-12 материалов и на его основе подготовить план выпуска на неделю."
+      },
+      {
+        level: "Hub",
+        text: "Сложить в одно место правила, обязательные промпты, один удачный пример и одно предложение по обновлению правила."
+      }
+    ],
+    lessons: [
+      "Разбираем аудио-инструменты для озвучки, подкастов, музыкальной подложки и чистки звука.",
+      "Показываем блок Suno: разница между базовым и профессиональным промптом, а также источники для обучения.",
+      "Слушаем подкастовый пример и два музыкальных примера, встроенных прямо в презентацию.",
+      "Переходим к редакторскому контуру: сигналы, дайджест, план выпуска и рабочее задание для команды."
+    ],
+    artifacts: [
+      "Deck 04: аудио + редакторский контур",
+      "Zoom-запись урока 04",
+      "Suno prompts: базовый и профессиональный",
+      "Аудио-примеры: подкаст + 2 Suno tracks"
+    ],
+    insights: [
+      "Сохраняем удачные результаты как опорные примеры для команды и следующих запусков.",
+      "Сохраняем неудачные результаты и формулировки промптов, чтобы разбирать ошибки и уточнять правила работы.",
+      "Обновляем базу по итогам практики: фиксируем, что сработало, что не сработало и что требует уточнения.",
+      "Сохраняем результат в общем контуре: промпты, примеры, ограничения и проверенные сценарии использования."
+    ],
+    resources: [
+      { label: "Запись Zoom", href: "https://us06web.zoom.us/rec/share/zz0mKewp3bP6veqIoLr87t-FmuWXyp9Lsmet1_xfAGSaCm3axK7StvB6IRr2ons.wS4wJ1PpFEC6QJTJ", external: true },
+      { label: "Презентация", href: "./decks/deck-04-audio-editorial-contour.html" },
+      { label: "Аудио-примеры", href: "./decks/deck-04-audio-editorial-contour.html#s08" },
+      { label: "Промпты урока", href: "./decks/deck-04-audio-editorial-contour.html#s05" },
+      { label: "Домашнее задание", href: "./decks/deck-04-audio-editorial-contour.html#s21" }
+    ]
+  },
+  system: {
+    crumb: "Урок 05",
+    code: "УРОК · 05",
+    title: "Урок 05: AI-hub и репозитории редакции",
     subtitle: "Запись урока, презентация, гайд и домашнее задание открыты на портале. Модуль показывает, как хранить материалы, базовые промпты, рабочие промпты и обновления в управляемом репозитории.",
-    posterKicker: "УРОК 04 · AI-HUB + РЕПОЗИТОРИИ",
+    posterKicker: "УРОК 05 · AI-HUB + РЕПОЗИТОРИИ",
     posterTitle: "portal → repository → prompts → update loop",
     posterSubtitle: "запись, презентация, гайд и домашнее задание доступны",
     artUrl: "./assets/deck-07-hero-hub-robot.png",
     artAlt: "Робот организует редакционный AI-hub и репозиторий",
     artCaption: "hub → storage → repository → update loop",
-    sideTitle: "Урок 04 · AI-hub",
+    sideTitle: "Урок 05 · AI-hub",
     sideSummary: "Портал, репозиторий редакции, Яндекс.Диск, GitHub, Claude и регулярное обновление рабочих промптов.",
     recording: {
-      title: "Урок 04: запись лекции",
+      title: "Урок 05: запись лекции",
       summary: "Запись Zoom готова. Код доступа: Y!&hzAf0. Презентация, гайд и домашнее задание открываются по ссылкам этого урока.",
-      folderUrl: "./decks/deck-04-ai-hub-repository-tv21.html",
+      folderUrl: "./decks/deck-05-ai-hub-repository-tv21.html",
       recordingUrl: "https://us06web.zoom.us/rec/share/2zPPom3yDm10XtDRLGQXP_GgjwptkALRCe_TbhWqZpZip8g2Ctv_tSyUMu2owNdn.7VYSSSuikROgpAVZ",
       transcriptUrl: "./assets/guides/yandex-disk-claude-repository-guide.pdf",
-      summaryUrl: "./decks/deck-04-ai-hub-repository-tv21.html#s07",
+      summaryUrl: "./decks/deck-05-ai-hub-repository-tv21.html#s07",
       accessCode: "Y!&hzAf0",
       state: "запись доступна",
       timeline: [
@@ -285,8 +354,8 @@ const modules = {
       "Фиксируем порядок регулярного обновления рабочих промптов через Claude на основе практики редакции."
     ],
     artifacts: [
-      "Deck 04: AI-hub и репозитории редакции",
-      "Zoom-запись урока 04",
+      "Deck 05: AI-hub и репозитории редакции",
+      "Zoom-запись урока 05",
       "Гайд: Яндекс.Диск + Claude",
       "Домашнее задание по двум уровням репозитория",
       "Update loop для рабочих промптов"
@@ -299,40 +368,10 @@ const modules = {
     ],
     resources: [
       { label: "Запись Zoom", href: "https://us06web.zoom.us/rec/share/2zPPom3yDm10XtDRLGQXP_GgjwptkALRCe_TbhWqZpZip8g2Ctv_tSyUMu2owNdn.7VYSSSuikROgpAVZ", external: true },
-      { label: "Презентация", href: "./decks/deck-04-ai-hub-repository-tv21.html" },
-      { label: "Домашнее задание", href: "./decks/deck-04-ai-hub-repository-tv21.html#s07" },
+      { label: "Презентация", href: "./decks/deck-05-ai-hub-repository-tv21.html" },
+      { label: "Домашнее задание", href: "./decks/deck-05-ai-hub-repository-tv21.html#s07" },
       { label: "Гайд PDF", href: "./assets/guides/yandex-disk-claude-repository-guide.pdf" },
       { label: "Гайд Markdown", href: "./assets/guides/yandex-disk-claude-repository-guide.md" }
-    ]
-  },
-  system: {
-    crumb: "Pipeline 05",
-    code: "PIPELINE · 05",
-    title: "Редакторский контур: monitoring, grid, hub",
-    subtitle: "Отдельный системный слой для тех, кто хочет глубже разобрать monitoring, weekly digest, owners, update proposals и evidence-based улучшение AI-hub.",
-    posterKicker: "PIPELINE 05",
-    posterTitle: "signals → digest → owners → hub update",
-    posterSubtitle: "отдельный deep dive по редакторской регулярности",
-    sideTitle: "Pipeline 05",
-    sideSummary: "Отдельный разбор monitoring и AI-hub для owners и выпускающих редакторов.",
-    lessons: [
-      "Собираем monitoring rows и группируем темы.",
-      "Отмечаем важность, риски источников и идеи материалов.",
-      "Собираем content grid на неделю.",
-      "Пишем weekly update proposal для AI-hub по evidence."
-    ],
-    artifacts: [
-      "weekly digest",
-      "content grid",
-      "source risk notes",
-      "ideas for formats",
-      "AI-hub update proposal"
-    ],
-    insights: [
-      "Мониторинг начинается со списка источников, а не с автоматизации.",
-      "AI может сгруппировать сигналы, но важность определяет редакция.",
-      "Один неудачный output - пример для разбора. Повторяющаяся ошибка - кандидат на обновление workflow.",
-      "Изменения в общих prompts фиксируются через evidence, owner review и changelog."
     ]
   },
   clinic: {

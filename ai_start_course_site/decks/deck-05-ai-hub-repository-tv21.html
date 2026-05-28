@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Deck 05 · AI-hub и репозитории ТВ-21</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./deck-01-start.css">
+  <link rel="stylesheet" href="./deck-practical.css">
+</head>
+<body>
+  <header class="deck-nav" aria-label="Навигация презентации">
+    <a class="deck-logo" href="../index.html">AI START</a>
+    <nav>
+      <a href="#s01">старт</a>
+      <a href="#s02">hub</a>
+      <a href="#s03">структура</a>
+      <a href="#s04">disk</a>
+      <a href="#s05">github</a>
+      <a href="#s06">практика</a>
+      <a href="#s07">домашка</a>
+    </nav>
+    <span>05 · AI-hub + repository</span>
+  </header>
+
+  <main>
+    <section class="slide hero" id="s01">
+      <div class="hero-copy">
+        <div class="pill">лекция 05 · AI-hub и репозитории</div>
+        <h1>Собираем рабочую систему<br><span>для материалов редакции.</span></h1>
+        <p class="lead">Показываем, где хранятся уроки, записи, промпты, гайды, skills и рабочие ссылки. Затем собираем структуру репозитория редакции в Яндекс.Диске и GitHub.</p>
+      </div>
+      <figure class="lesson-art">
+        <img src="../assets/deck-07-hero-hub-robot.png" alt="AI-hub repository structure">
+        <figcaption>hub → storage → repository → update loop</figcaption>
+      </figure>
+    </section>
+
+    <section class="slide manifesto" id="s02">
+      <div class="kicker">// РАМКА ЗАНЯТИЯ</div>
+      <h2>AI-hub нужен, чтобы курс превратился в управляемую рабочую практику.</h2>
+      <div class="outcome-lanes">
+        <article><b>01 · portal</b><h3>единый вход</h3><p>Уроки, записи Zoom, презентации и материалы курса лежат в одном месте.</p></article>
+        <article><b>02 · prompts</b><h3>библиотека</h3><p>Промпты, гайды, quality gates и skills доступны для повторного применения.</p></article>
+        <article><b>03 · source</b><h3>материалы</h3><p>Редакция дает ссылку на папку, куда можно загружать рабочий контент.</p></article>
+        <article><b>04 · owners</b><h3>обновления</h3><p>Ответственные поддерживают структуру, версии и понятный порядок работы.</p></article>
+      </div>
+    </section>
+
+    <section class="slide split" id="s03">
+      <div>
+        <div class="kicker">// СТРУКТУРА ПОРТАЛА</div>
+        <h2>Показываем карту портала.</h2>
+      </div>
+      <div class="risk-list">
+        <p><b>уроки</b><span>страницы занятий, записи, презентации, домашние задания</span></p>
+        <p><b>промпты</b><span>рабочие шаблоны для текста, видео, визуала, аудио и редакторского контура</span></p>
+        <p><b>skills</b><span>сохраненные сценарии работы, которые можно повторять в агенте</span></p>
+        <p><b>диск</b><span>активная ссылка редакции для загрузки и разбора собственных материалов</span></p>
+      </div>
+    </section>
+
+    <section class="slide dark" id="s04">
+      <div class="kicker">// ПРАКТИКА · ЯНДЕКС.ДИСК</div>
+      <h2>Собираем репозиторий редакции в Яндекс.Диске.</h2>
+      <div class="timeline-plan">
+        <article><b>папки</b><p>Создаем базовую структуру: sources, prompts, outputs, examples, gates, updates.</p></article>
+        <article><b>подключение</b><p>Показываем, как подключить Яндекс.Диск к рабочей среде через коннектор.</p></article>
+        <article><b>порядок</b><p>Фиксируем правила именования, версии и место для материалов редакции.</p></article>
+      </div>
+    </section>
+
+    <section class="slide split" id="s05">
+      <div>
+        <div class="kicker">// ВТОРОЙ ВАРИАНТ · GITHUB</div>
+        <h2>Та же логика может жить в GitHub-репозитории.</h2>
+      </div>
+      <div class="tool-radar">
+        <article><b>структура</b><h3>папки и README</h3><p>Показываем, как описать вход, правила и назначение каждого раздела.</p></article>
+        <article><b>версии</b><h3>обновления</h3><p>Фиксируем изменения промптов, гайдов, gates и рабочих шаблонов.</p></article>
+        <article><b>доступы</b><h3>роли</h3><p>Разделяем просмотр, редактирование и ответственность за обновления.</p></article>
+        <article><b>публикация</b><h3>hub mirror</h3><p>Показываем, как структура репозитория может быть отражена в портале.</p></article>
+      </div>
+    </section>
+
+    <section class="slide" id="s06">
+      <div class="kicker">// ПРАКТИЧЕСКОЕ ЗАНЯТИЕ</div>
+      <h2>Итог: понятный порядок хранения и обновления.</h2>
+      <div class="process-line" aria-label="Порядок практики">
+        <div><b>01</b><span>показываем hub</span></div>
+        <div><b>02</b><span>получаем ссылку редакции</span></div>
+        <div><b>03</b><span>собираем Яндекс.Диск</span></div>
+        <div><b>04</b><span>показываем GitHub</span></div>
+        <div><b>05</b><span>фиксируем следующие гайды</span></div>
+      </div>
+      <p class="lead narrow">После урока на портале появятся гайды: как работать с репозиторием на Яндекс.Диске через Claude.</p>
+      <div class="final-links">
+        <a href="../assets/guides/yandex-disk-claude-repository-guide.pdf" target="_blank" rel="noreferrer">Гайд · Яндекс.Диск + Claude</a>
+        <a href="../portal.html">AI Start hub</a>
+        <a href="./deck-03-video.html">Презентация 03</a>
+        <a href="./deck-07-hub-tv21.html">Hub build</a>
+      </div>
+    </section>
+
+    <section class="slide dark" id="s07">
+      <div class="kicker">// ДОМАШНЕЕ ЗАДАНИЕ</div>
+      <h2>Два уровня работы с редакционным репозиторием.</h2>
+      <div class="timeline-plan">
+        <article><b>base · Яндекс.Диск</b><p>Начать работать с репозиторием редакции на Яндекс.Диске: создать структуру, разнести материалы, базовые промпты и рабочие промпты по отдельным папкам.</p></article>
+        <article><b>advanced · GitHub</b><p>Начать работать с репозиторием в GitHub: перенести структуру, оформить README, зафиксировать правила обновления и роли владельцев.</p></article>
+        <article><b>update loop · Claude</b><p>Подключить репозиторий к Claude и настроить минимум ежемесячное обновление папки рабочих промптов на основе практики редакции.</p></article>
+      </div>
+      <p class="lead narrow">Базовые промпты храним как стабильную основу. Рабочие промпты обновляем по результатам применения, правок редактора и повторяющихся задач.</p>
+      <div class="final-links">
+        <a href="../assets/guides/yandex-disk-claude-repository-guide.pdf" target="_blank" rel="noreferrer">Открыть гайд</a>
+        <a href="../assets/guides/yandex-disk-claude-repository-guide.md" target="_blank" rel="noreferrer">Markdown-версия</a>
+      </div>
+    </section>
+  </main>
+  <script src="./deck-01-start.js"></script>
+</body>
+</html>
