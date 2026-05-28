@@ -238,70 +238,71 @@ const modules = {
   radar: {
     crumb: "Урок 04",
     code: "УРОК · 04",
-    title: "Урок 04: аудио и редакторский контур",
-    subtitle: "Запись урока, презентация, аудио-примеры и блок промптов уже открыты на портале. Модуль собран как рабочий маршрут: аудио, Suno, примеры, редакторский контур и prompt-блок.",
-    posterKicker: "УРОК 04 · АУДИО + КОНТУР",
-    posterTitle: "audio → examples → prompts → editorial contour",
-    posterSubtitle: "запись, deck и примеры уже доступны",
-    artUrl: "./assets/deck-05-hero-audio-robot.png",
-    artAlt: "Робот работает с аудио и редакторскими материалами",
-    artCaption: "audio → prompts → contour",
-    sideTitle: "Урок 04 · открыт",
-    sideSummary: "Аудио, Suno, примеры дорожек и редакторский контур уже доступны в portal и в deck.",
+    title: "Урок 04: AI-hub и репозитории редакции",
+    subtitle: "Запись урока, презентация, гайд и домашнее задание открыты на портале. Модуль показывает, как хранить материалы, базовые промпты, рабочие промпты и обновления в управляемом репозитории.",
+    posterKicker: "УРОК 04 · AI-HUB + РЕПОЗИТОРИИ",
+    posterTitle: "portal → repository → prompts → update loop",
+    posterSubtitle: "запись, презентация, гайд и домашнее задание доступны",
+    artUrl: "./assets/deck-07-hero-hub-robot.png",
+    artAlt: "Робот организует редакционный AI-hub и репозиторий",
+    artCaption: "hub → storage → repository → update loop",
+    sideTitle: "Урок 04 · AI-hub",
+    sideSummary: "Портал, репозиторий редакции, Яндекс.Диск, GitHub, Claude и регулярное обновление рабочих промптов.",
     recording: {
       title: "Урок 04: запись лекции",
-      summary: "Запись Zoom готова. Код доступа: ?+#LG6Jx. Deck, аудио-примеры и prompt-блок уже открыты.",
-      folderUrl: "./decks/deck-04-audio-editorial-contour.html",
-      recordingUrl: "https://us06web.zoom.us/rec/share/zz0mKewp3bP6veqIoLr87t-FmuWXyp9Lsmet1_xfAGSaCm3axK7StvB6IRr2ons.wS4wJ1PpFEC6QJTJ",
-      transcriptUrl: "./decks/deck-04-audio-editorial-contour.html#s14",
-      summaryUrl: "./decks/deck-04-audio-editorial-contour.html",
-      accessCode: "?+#LG6Jx",
+      summary: "Запись Zoom готова. Код доступа: Y!&hzAf0. Презентация, гайд и домашнее задание открываются по ссылкам этого урока.",
+      folderUrl: "./decks/deck-04-ai-hub-repository-tv21.html",
+      recordingUrl: "https://us06web.zoom.us/rec/share/2zPPom3yDm10XtDRLGQXP_GgjwptkALRCe_TbhWqZpZip8g2Ctv_tSyUMu2owNdn.7VYSSSuikROgpAVZ",
+      transcriptUrl: "./assets/guides/yandex-disk-claude-repository-guide.pdf",
+      summaryUrl: "./decks/deck-04-ai-hub-repository-tv21.html#s07",
+      accessCode: "Y!&hzAf0",
       state: "запись доступна",
       timeline: [
-        { time: "audio", label: "Инструменты для озвучки, подкастов, музыкальной подложки и чистки звука." },
-        { time: "suno", label: "Разница между базовым и профессиональным промптом, примеры и источники для обучения." },
-        { time: "examples", label: "Подкастовый пример и два трека Suno для сравнения результата." },
-        { time: "contour", label: "Редакторский контур: сигналы, дайджест, план выпуска и рабочее ТЗ." }
+        { time: "portal", label: "Показываем структуру портала: уроки, записи, промпты, skills, гайды и рабочие ссылки." },
+        { time: "disk", label: "Собираем репозиторий редакции на Яндекс.Диске и разделяем базовые и рабочие промпты." },
+        { time: "github", label: "Показываем продвинутый вариант: репозиторий в GitHub, README, роли и правила обновления." },
+        { time: "homework", label: "Фиксируем домашнее задание: Яндекс.Диск, GitHub и ежемесячный update loop через Claude." }
       ]
     },
     homework: [
       {
-        level: "Base",
-        text: "Подготовить одно аудио: текст для озвучки, промпт для подложки и короткую проверку результата."
+        level: "Base · Яндекс.Диск",
+        text: "Начать работать с репозиторием редакции на Яндекс.Диске: создать структуру, разнести материалы, базовые промпты и рабочие промпты по отдельным папкам."
       },
       {
-        level: "Optimal",
-        text: "Собрать редакторский дайджест из 8-12 материалов и на его основе подготовить план выпуска на неделю."
+        level: "Advanced · GitHub",
+        text: "Начать работать с репозиторием в GitHub: перенести структуру, оформить README, зафиксировать правила обновления и роли владельцев."
       },
       {
-        level: "Hub",
-        text: "Сложить в одно место правила, обязательные промпты, один удачный пример и одно предложение по обновлению правила."
+        level: "Update loop · Claude",
+        text: "Подключить репозиторий к Claude и настроить минимум ежемесячное обновление папки рабочих промптов на основе практики редакции."
       }
     ],
     lessons: [
-      "Разбираем аудио-инструменты для озвучки, подкастов, музыкальной подложки и чистки звука.",
-      "Показываем блок Suno: разница между базовым и профессиональным промптом, а также источники для обучения.",
-      "Слушаем подкастовый пример и два музыкальных примера, встроенных прямо в презентацию.",
-      "Переходим к редакторскому контуру: сигналы, дайджест, план выпуска и рабочее задание для команды."
+      "Показываем, как устроен портал: где лежат записи, презентации, промпты, гайды и рабочие ссылки.",
+      "Собираем структуру хранения для редакции: источники, базовые промпты, рабочие промпты, примеры, gates и updates.",
+      "Разбираем базовый вариант репозитория на Яндекс.Диске и продвинутый вариант в GitHub.",
+      "Фиксируем порядок регулярного обновления рабочих промптов через Claude на основе практики редакции."
     ],
     artifacts: [
-      "Deck 04: аудио + редакторский контур",
+      "Deck 04: AI-hub и репозитории редакции",
       "Zoom-запись урока 04",
-      "Suno prompts: базовый и профессиональный",
-      "Аудио-примеры: подкаст + 2 Suno tracks"
+      "Гайд: Яндекс.Диск + Claude",
+      "Домашнее задание по двум уровням репозитория",
+      "Update loop для рабочих промптов"
     ],
     insights: [
-      "Сохраняем удачные результаты как опорные примеры для команды и следующих запусков.",
-      "Сохраняем неудачные результаты и формулировки промптов, чтобы разбирать ошибки и уточнять правила работы.",
-      "Обновляем базу по итогам практики: фиксируем, что сработало, что не сработало и что требует уточнения.",
-      "Сохраняем результат в общем контуре: промпты, примеры, ограничения и проверенные сценарии использования."
+      "Базовые промпты хранятся как стабильная основа курса.",
+      "Рабочие промпты обновляются по результатам применения, правок редактора и повторяющихся задач.",
+      "Яндекс.Диск используется как синхронизированная рабочая папка, которую можно открыть в Claude / Codex Work.",
+      "GitHub подходит для продвинутого варианта, где важны версии, README, changelog и роли владельцев."
     ],
     resources: [
-      { label: "Запись Zoom", href: "https://us06web.zoom.us/rec/share/zz0mKewp3bP6veqIoLr87t-FmuWXyp9Lsmet1_xfAGSaCm3axK7StvB6IRr2ons.wS4wJ1PpFEC6QJTJ", external: true },
-      { label: "Презентация", href: "./decks/deck-04-audio-editorial-contour.html" },
-      { label: "Аудио-примеры", href: "./decks/deck-04-audio-editorial-contour.html#s08" },
-      { label: "Промпты урока", href: "./decks/deck-04-audio-editorial-contour.html#s05" },
-      { label: "Домашнее задание", href: "./decks/deck-04-audio-editorial-contour.html#s21" }
+      { label: "Запись Zoom", href: "https://us06web.zoom.us/rec/share/2zPPom3yDm10XtDRLGQXP_GgjwptkALRCe_TbhWqZpZip8g2Ctv_tSyUMu2owNdn.7VYSSSuikROgpAVZ", external: true },
+      { label: "Презентация", href: "./decks/deck-04-ai-hub-repository-tv21.html" },
+      { label: "Домашнее задание", href: "./decks/deck-04-ai-hub-repository-tv21.html#s07" },
+      { label: "Гайд PDF", href: "./assets/guides/yandex-disk-claude-repository-guide.pdf" },
+      { label: "Гайд Markdown", href: "./assets/guides/yandex-disk-claude-repository-guide.md" }
     ]
   },
   system: {
