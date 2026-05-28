@@ -80,12 +80,12 @@
 - не пиши лишнюю теорию;
 - опирайся только на входные данные и явно отмечай допущения.
 
-Усили промпт:
+Выберите 1-2 усилителя под задачу:
 1. задай 3 уточняющих вопроса;
 2. оцени черновик по шкале 1-10;
 3. предложи 5 способов усилить результат;
 4. подключи 2 временных экспертов;
-5. сделай pre-mortem и post-mortem;
+5. сделай pre-mortem или post-mortem;
 6. покажи 2-3 варианта структуры;
 7. выдели риски и пробелы;
 8. выдай финальную версию только после self-check.</code></pre>
@@ -105,10 +105,10 @@
     <section class="slide split" id="s07">
       <div><div class="kicker">// MARKETING LIBRARY</div><h2>Маркетингу лучше давать не теорию, а библиотеку готовых контуров</h2></div>
       <div class="tool-radar">
-        <article><b>ICP research</b><h3>портрет аудитории</h3><p>Skill для исследования целевой аудитории: сегменты, язык аудитории, цифры, анти-аудитория, план действий.<br><a href="https://iraai.ru/skills/research-icp.html" target="_blank" rel="noreferrer">iraai.ru/skills/research-icp.html</a></p></article>
-        <article><b>prompt audit</b><h3>аудит сайта и оффера</h3><p>Готовый prompt для аудита сайта: роль, скоринг, оценка эффекта, 30-дневный план, self-check.<br><a href="https://iraai.ru/prompt-audit/" target="_blank" rel="noreferrer">iraai.ru/prompt-audit</a></p></article>
-        <article><b>creative score</b><h3>I·D·E·E·A·S</h3><p>Scorecard для оценки маркетинговых идей, сообщений и креатива.<br><a href="https://ideeas.copyfighter.space/" target="_blank" rel="noreferrer">ideeas.copyfighter.space</a></p></article>
-        <article><b>github packs</b><h3>готовые skill libraries</h3><p>ICP, campaign brief, monitoring, CRO, content quality, growth experiments.<br><a href="https://github.com/ericosiu/ai-marketing-skills" target="_blank" rel="noreferrer">ai-marketing-skills</a><br><a href="https://github.com/gooseworks-ai/goose-skills" target="_blank" rel="noreferrer">goose-skills</a></p></article>
+        <article><b>ICP research</b><h3>портрет аудитории</h3><p>Skill для исследования целевой аудитории: сегменты, язык аудитории, цифры, анти-аудитория, план действий.</p><a class="resource-link" href="https://iraai.ru/skills/research-icp.html" target="_blank" rel="noreferrer">Открыть research-icp</a></article>
+        <article><b>prompt audit</b><h3>аудит сайта и оффера</h3><p>Готовый prompt для аудита сайта: роль, скоринг, оценка эффекта, 30-дневный план, self-check.</p><a class="resource-link" href="https://iraai.ru/prompt-audit/" target="_blank" rel="noreferrer">Открыть prompt-audit</a></article>
+        <article><b>creative score</b><h3>I·D·E·E·A·S</h3><p>Scorecard для оценки маркетинговых идей, сообщений и креатива.</p><a class="resource-link" href="https://ideeas.copyfighter.space/" target="_blank" rel="noreferrer">Открыть I·D·E·E·A·S</a></article>
+        <article><b>github packs</b><h3>готовые skill libraries</h3><p>ICP, campaign brief, monitoring, CRO, content quality, growth experiments.</p><a class="resource-link" href="https://github.com/ericosiu/ai-marketing-skills" target="_blank" rel="noreferrer">Открыть ai-marketing-skills</a><a class="resource-link" href="https://github.com/gooseworks-ai/goose-skills" target="_blank" rel="noreferrer">Открыть goose-skills</a></article>
       </div>
     </section>
 
@@ -183,20 +183,36 @@
       </div>
     </section>
 
-    <section class="slide" id="s15">
-      <div class="kicker">// PROJECTS + INFRA</div>
-      <h2>Проекты разделяем по папкам и правилам, инфраструктуру обсуждаем отдельным техническим контуром</h2>
-      <p class="lead narrow">Для каждого проекта: отдельная папка, собственный `CLAUDE.md`, локальные примеры и правила применения. На общий уровень выносятся только нейтральные рабочие настройки. По инфраструктуре можно рассматривать провайдеров вроде Hetzner, DigitalOcean, OVHcloud и Akamai Cloud (Linode), а выбор подрядчика и специалиста целесообразно делать отдельно, после дополнительного подтверждения и согласования с IT и безопасностью.</p>
+    <section class="slide split" id="s15">
+      <div>
+        <div class="kicker">// PROJECTS + INFRA</div>
+        <h2>Проекты разделяем по папкам и правилам, инфраструктуру обсуждаем отдельным техническим контуром</h2>
+        <p class="lead narrow">Для каждого проекта нужен свой рабочий контур. Общие привычки можно держать наверху, но продуктовые и редакционные правила должны жить внутри конкретного проекта.</p>
+      </div>
+      <div class="risk-list">
+        <p><b>projects</b><span>отдельная папка, собственный `CLAUDE.md`, локальные примеры и правила применения</span></p>
+        <p><b>shared layer</b><span>только нейтральные рабочие настройки, без продуктовой специфики</span></p>
+        <p><b>infra</b><span>отдельный технический контур: Hetzner, DigitalOcean, OVHcloud, Akamai Cloud (Linode)</span></p>
+        <p><b>specialist</b><span>подрядчика и специалиста лучше рекомендовать отдельно, после дополнительного подтверждения</span></p>
+      </div>
     </section>
 
-    <section class="slide" id="s16">
-      <div class="kicker">// STRATEGY + NEXT</div>
-      <h2>Финал курса - это не закрытие темы, а запуск управляемого цикла внедрения.</h2>
-      <p class="lead narrow">На выходе у команды должна остаться не “память о лекциях”, а рабочая система: prompt base, pilot cases по отделам, owners, weekly review, examples и понятный следующий трехмесячный шаг.</p>
-      <div class="final-links">
-        <a href="./deck-09-practice-clinic.html">Deck 09</a>
-        <a href="./deck-01-start.html">Deck 01</a>
-        <a href="../index.html">hub</a>
+    <section class="slide split" id="s16">
+      <div>
+        <div class="kicker">// STRATEGY + NEXT</div>
+        <h2>Финал курса - это не закрытие темы, а запуск управляемого цикла внедрения.</h2>
+        <p class="lead narrow">На выходе у команды должна остаться не “память о лекциях”, а рабочая система: prompt base, pilot cases по отделам, owners, weekly review, examples и понятный следующий трехмесячный шаг.</p>
+        <div class="final-links">
+          <a href="./deck-09-practice-clinic.html">Deck 09</a>
+          <a href="./deck-01-start.html">Deck 01</a>
+          <a href="../index.html">hub</a>
+        </div>
+      </div>
+      <div class="plain-list">
+        <p><b>1</b> один участок работы на отдел</p>
+        <p><b>2</b> устойчивый полезный результат</p>
+        <p><b>3</b> сохранение в hub и review</p>
+        <p><b>4</b> переход к следующему уровню</p>
       </div>
     </section>
   </main>
