@@ -13,88 +13,109 @@
 <body>
   <header class="deck-nav">
     <a class="deck-logo" href="../index.html">AI START</a>
-    <nav><a href="#s01">final</a><a href="#s02">outcome</a><a href="#s04">kit</a><a href="#s06">30 days</a><a href="#s08">close</a></nav>
-    <span>Final · adoption loop</span>
+    <nav><a href="#s01">final</a><a href="#s02">focus</a><a href="#s04">prompt</a><a href="#s06">plan</a><a href="#s08">infra</a></nav>
+    <span>Final · implementation plan</span>
   </header>
   <main>
     <section class="slide hero" id="s01">
       <div class="hero-copy">
-        <div class="pill">workshop 10 · final kit</div>
-        <h1>Курс заканчивается<br><span>первым рабочим циклом.</span></h1>
-        <p class="lead">Финал не про "спасибо, было интересно". Финал про комплект: workflows, examples, owners, gates, tool radar, 30-day adoption loop и что тестируем дальше.</p>
+        <div class="pill">лекция 06 · финальная сборка AI Start Kit для ТВ-21</div>
+        <h1>Финальная встреча фиксирует<br><span>порядок внедрения на июнь.</span></h1>
+        <p class="lead">На этом этапе команде нужен не обзор возможностей, а рабочий порядок применения: единые принципы постановки задачи, разделение проектов, ответственные, тестовые материалы и критерии оценки результата.</p>
       </div>
       <figure class="lesson-art">
         <img src="../assets/deck-10-hero-final-robot.png" alt="Robot closing final AI Start kit with calendar">
-        <figcaption>kit → owners → 30-day loop</figcaption>
+        <figcaption>prompt guide → owners → June loop</figcaption>
       </figure>
     </section>
 
     <section class="slide manifesto" id="s02">
-      <div class="kicker">// С ЧЕМ УХОДИМ</div>
-      <h2>После финала у редакции есть рабочий комплект, а не папка с лекциями.</h2>
+      <div class="kicker">// ТЕКУЩИЙ ЭТАП</div>
+      <h2>Команда уже работает с промптами. Следующий шаг - перевести отдельные удачные сессии в управляемый процесс.</h2>
       <div class="outcome-lanes">
-        <article><b>base</b><h3>kit</h3><p>5 workflows, prompts, gates, examples, где что лежит.</p></article>
-        <article><b>opti</b><h3>weekly use</h3><p>Как применять один pipeline каждую неделю.</p></article>
-        <article><b>advanced</b><h3>owners</h3><p>Кто обновляет hub и принимает решения.</p></article>
-        <article><b>scout</b><h3>next bets</h3><p>Какие инструменты и автоматизации тестировать дальше.</p></article>
+        <article><b>1</b><h3>единый подход</h3><p>Одна логика построения промпта для разных функций: редакция, маркетинг, HR, аналитика.</p></article>
+        <article><b>2</b><h3>границы проектов</h3><p>Понимание, какие правила закрепляются на уровне проекта, а какие могут быть общими.</p></article>
+        <article><b>3</b><h3>план внедрения</h3><p>Последовательность тестов на июнь, ответственные и формат еженедельного review.</p></article>
+        <article><b>4</b><h3>инфраструктура</h3><p>Список направлений для дополнительной проверки с IT и службой безопасности.</p></article>
       </div>
     </section>
 
     <section class="slide dark" id="s03">
-      <div class="kicker">// ПРАВДА</div>
-      <h2>Если после курса никто не использует hub, значит мы сделали музей.</h2>
-      <p class="lead narrow">Наша цель — не музей. Наша цель — маленький повторяемый рабочий цикл, который редакция может выдержать без внешней магии.</p>
+      <div class="kicker">// ОСНОВНОЙ ПРИНЦИП</div>
+      <h2>Качество результата определяется качеством постановки задачи.</h2>
+      <p class="lead narrow">Промпт следует рассматривать как краткое рабочее задание: с целью, входными данными, форматом результата, ограничениями и критериями проверки.</p>
     </section>
 
     <section class="slide split" id="s04">
-      <div><div class="kicker">// FINAL KIT</div><h2>Что должно быть готово</h2></div>
+      <div><div class="kicker">// PROMPT DNA</div><h2>Базовая ДНК промпта для ТВ-команды</h2></div>
       <div class="risk-list">
-        <p><b>workflows</b><span>текст, видео, визуал, аудио, контур</span></p>
-        <p><b>examples</b><span>approved / rejected / needs review</span></p>
-        <p><b>gates</b><span>факты, безопасность, визуал, аудио, видео</span></p>
-        <p><b>owners</b><span>кто ведет weekly review и changelog</span></p>
+        <p><b>роль</b><span>кто помогает: редактор, аналитик, маркетолог, HR, ресерчер, продюсер</span></p>
+        <p><b>задача</b><span>что именно нужно сделать и зачем это нужно команде</span></p>
+        <p><b>условия</b><span>какой вход даем: заметка, расшифровка, вакансия, бриф, таблица, ссылки, ограничения</span></p>
+        <p><b>ограничения</b><span>что нельзя выдумывать, что проверяет человек, какой формат ответа нужен</span></p>
       </div>
     </section>
 
     <section class="slide split" id="s05">
-      <div><div class="kicker">// REVIEW PROMPT</div><h2>Финальный промпт для ревью комплекта</h2></div>
-      <pre class="prompt-block"><code>Проверь AI Start Kit как рабочую систему редакции.
+      <div><div class="kicker">// PROMPT BOOSTERS</div><h2>Как усиливать промпт после первой версии</h2></div>
+      <pre class="prompt-block"><code>Ты помогаешь мне как [роль / функция].
 
-Оцени:
-1. Есть ли понятный вход для новичка.
-2. Есть ли 5 рабочих pipelines.
-3. Есть ли quality gates.
-4. Есть ли approved / rejected examples.
-5. Есть ли owners и weekly review.
-6. Что непонятно без автора курса.
-7. Что надо упростить до первого самостоятельного применения.</code></pre>
+Задача:
+[что нужно сделать и зачем].
+
+Входные данные:
+[что я даю].
+
+Сделай:
+1. [главный результат]
+2. [дополнительный результат]
+3. [что отметить как риск / пробел / вопрос]
+
+Формат ответа:
+[таблица / список / memo / steps].
+
+Важно:
+- не выдумывай факты;
+- если данных не хватает, пометь это отдельно;
+- не пиши лишнюю теорию;
+- опирайся только на входные данные и явно отмечай допущения.
+
+Усили промпт:
+1. задай 3 уточняющих вопроса;
+2. оцени черновик по шкале 1-10;
+3. предложи 5 способов усилить результат;
+4. подключи 2 временных экспертов;
+5. сделай pre-mortem и post-mortem;
+6. покажи 2-3 варианта структуры;
+7. выдели риски и пробелы;
+8. выдай финальную версию только после self-check.</code></pre>
     </section>
 
     <section class="slide dark" id="s06">
-      <div class="kicker">// 30 DAYS</div>
-      <h2>30-дневный цикл применения</h2>
+      <div class="kicker">// THINKING MODES</div>
+      <h2>Какие режимы мышления можно подключать внутри промпта</h2>
       <div class="timeline-plan">
-        <article><b>week 1</b><p>Один текстовый package и один saved example.</p></article>
-        <article><b>week 2</b><p>Один video / visual test и один rejected example.</p></article>
-        <article><b>week 3</b><p>Один editorial contour digest и content grid.</p></article>
-        <article><b>week 4</b><p>Review: keep, revise, kill, automate later.</p></article>
+        <article><b>эксперты</b><p>Подключить 2-3 временные роли: редактор, фактчекер, маркетолог, HR, юрист, продюсер.</p></article>
+        <article><b>критика</b><p>Попросить систему оценить результат по шкале 1-10 и назвать, что мешает уровню 9-10.</p></article>
+        <article><b>шляпы</b><p>Разделить ответ на режимы: факты, риски, идеи, сомнения, решение, следующий шаг.</p></article>
+        <article><b>postmortem</b><p>Спросить: почему такой результат может не сработать в реальной редакционной или маркетинговой задаче.</p></article>
       </div>
     </section>
 
     <section class="slide split" id="s07">
-      <div><div class="kicker">// NEXT BETS</div><h2>Что смотреть после курса</h2></div>
+      <div><div class="kicker">// MARKETING PIPELINES</div><h2>Что можно дать маркетингу корпоративной компании</h2></div>
       <div class="tool-radar">
-        <article><b>video agents</b><h3>timeline + transcript</h3><p>Claude / MCP / Premiere-like сценарии для rough cuts.</p></article>
-        <article><b>visual conveyor</b><h3>style projects</h3><p>Собственные prompt projects под визуальный язык редакции.</p></article>
-        <article><b>monitoring</b><h3>source radar</h3><p>Автоматизация дайджестов только после утвержденных источников.</p></article>
-        <article><b>governance</b><h3>AI policy</h3><p>Данные, права, disclosure, human approval.</p></article>
+        <article><b>audience / icp</b><h3>сегменты и роли</h3><p>Определение целевой аудитории, buyer persona, язык боли, критерии выбора и ограничения по сегментам.</p></article>
+        <article><b>campaign brief</b><h3>кампания под задачу</h3><p>Сбор campaign brief: цель, аудитория, сообщения, каналы, контент-календарь, метрики, ограничения.</p></article>
+        <article><b>monitoring</b><h3>рынок и конкуренты</h3><p>Competitor monitoring, обзоры контента, рекламных сообщений, отзывов, тем и изменений в позиционировании.</p></article>
+        <article><b>content / cro</b><h3>качество и конверсия</h3><p>Content quality gate, оценка landing pages, структурирование обратной связи и выявление тем для следующих материалов.</p></article>
       </div>
     </section>
 
     <section class="slide" id="s08">
-      <div class="kicker">// CLOSE</div>
-      <h2>Финальная фраза: AI не забирает профессию. Он поднимает требования к постановке задачи.</h2>
-      <p class="lead narrow">Кто умеет формулировать задачу, проверять результат и собирать систему, тот ускоряется. Кто ждет кнопку "сделай хорошо", тот получает красивый шум.</p>
+      <div class="kicker">// STRATEGY + NEXT</div>
+      <h2>Как вести внедрение: от prompt discipline к маркетингу и стратегии</h2>
+      <p class="lead narrow">Логика на 3 месяца: 1) текстовый контур и prompt discipline, 2) repurposing в visual / audio / channel formats, 3) review loop, marketing pipelines, анализ what worked / what failed и решение, что масштабировать дальше. По инфраструктуре на текущем этапе можно рассматривать управляемые и VPS-варианты у провайдеров вроде Hetzner, DigitalOcean, OVHcloud и Akamai Cloud (Linode). Выбор подрядчика и технического специалиста целесообразно делать отдельно: персональную рекомендацию по специалистам я готова дать после дополнительного подтверждения по своему кругу контактов.</p>
       <div class="final-links">
         <a href="./deck-09-practice-clinic.html">Deck 09</a>
         <a href="./deck-01-start.html">Deck 01</a>
