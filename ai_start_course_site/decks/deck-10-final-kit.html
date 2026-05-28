@@ -13,7 +13,7 @@
 <body>
   <header class="deck-nav">
     <a class="deck-logo" href="../index.html">AI START</a>
-    <nav><a href="#s01">final</a><a href="#s02">focus</a><a href="#s04">prompt</a><a href="#s06">plan</a><a href="#s08">infra</a></nav>
+    <nav><a href="#s01">final</a><a href="#s02">asks</a><a href="#s03">prompt</a><a href="#s06">marketing</a><a href="#s08">rollout</a><a href="#s10">close</a></nav>
     <span>Final · implementation plan</span>
   </header>
   <main>
@@ -30,20 +30,20 @@
     </section>
 
     <section class="slide manifesto" id="s02">
-      <div class="kicker">// ТЕКУЩИЙ ЭТАП</div>
-      <h2>Команда уже работает с промптами. Следующий шаг - перевести отдельные удачные сессии в управляемый процесс.</h2>
+      <div class="kicker">// ЗАПРОС НА ФИНАЛЬНУЮ ВСТРЕЧУ</div>
+      <h2>На последней встрече нужно закрыть не обзор рынка, а конкретные рабочие вопросы команды.</h2>
       <div class="outcome-lanes">
-        <article><b>1</b><h3>единый подход</h3><p>Одна логика построения промпта для разных функций: редакция, маркетинг, HR, аналитика.</p></article>
-        <article><b>2</b><h3>границы проектов</h3><p>Понимание, какие правила закрепляются на уровне проекта, а какие могут быть общими.</p></article>
-        <article><b>3</b><h3>план внедрения</h3><p>Последовательность тестов на июнь, ответственные и формат еженедельного review.</p></article>
-        <article><b>4</b><h3>инфраструктура</h3><p>Список направлений для дополнительной проверки с IT и службой безопасности.</p></article>
+        <article><b>1</b><h3>prompts</h3><p>Короткая универсальная база: как строить сильный промпт для любой функции.</p></article>
+        <article><b>2</b><h3>marketing / hr</h3><p>Какие готовые skills, prompts и пайплайны можно адаптировать под их роли.</p></article>
+        <article><b>3</b><h3>projects</h3><p>Как разделять проекты, правила и контексты на одной машине.</p></article>
+        <article><b>4</b><h3>rollout</h3><p>Как внедрять это 3 месяца: ответственные, материалы, review loop, критерии.</p></article>
       </div>
     </section>
 
     <section class="slide dark" id="s03">
-      <div class="kicker">// ОСНОВНОЙ ПРИНЦИП</div>
-      <h2>Качество результата определяется качеством постановки задачи.</h2>
-      <p class="lead narrow">Промпт следует рассматривать как краткое рабочее задание: с целью, входными данными, форматом результата, ограничениями и критериями проверки.</p>
+      <div class="kicker">// PROMPT BASE</div>
+      <h2>Базовый принцип: сильный промпт - это не магическая формула, а короткое рабочее задание.</h2>
+      <p class="lead narrow">Для редакции, маркетинга, HR и аналитики меняются задачи, но не меняется каркас: роль, задача, условия, ограничения, формат результата и human gate.</p>
     </section>
 
     <section class="slide split" id="s04">
@@ -92,18 +92,28 @@
     </section>
 
     <section class="slide dark" id="s06">
-      <div class="kicker">// THINKING MODES</div>
-      <h2>Какие режимы мышления можно подключать внутри промпта</h2>
+      <div class="kicker">// PROMPT PRACTICE</div>
+      <h2>Упражнение: любой слабый запрос можно докрутить до рабочего промпта.</h2>
       <div class="timeline-plan">
-        <article><b>эксперты</b><p>Подключить 2-3 временные роли: редактор, фактчекер, маркетолог, HR, юрист, продюсер.</p></article>
-        <article><b>критика</b><p>Попросить систему оценить результат по шкале 1-10 и назвать, что мешает уровню 9-10.</p></article>
-        <article><b>шляпы</b><p>Разделить ответ на режимы: факты, риски, идеи, сомнения, решение, следующий шаг.</p></article>
-        <article><b>postmortem</b><p>Спросить: почему такой результат может не сработать в реальной редакционной или маркетинговой задаче.</p></article>
+        <article><b>шаг 1</b><p>Берем сырую задачу: например, “подготовить темы для HR-контента на июнь”.</p></article>
+        <article><b>шаг 2</b><p>Заполняем окна: роль, задача, условия, ограничения, усилитель, human gate.</p></article>
+        <article><b>шаг 3</b><p>Просим систему задать вопросы, оценить результат по шкале 1-10 и предложить улучшения.</p></article>
+        <article><b>вывод</b><p>Команда учится не “просить красиво”, а собирать повторяемые рабочие формулировки.</p></article>
       </div>
     </section>
 
     <section class="slide split" id="s07">
-      <div><div class="kicker">// MARKETING PIPELINES</div><h2>Что можно дать маркетингу корпоративной компании</h2></div>
+      <div><div class="kicker">// MARKETING LIBRARY</div><h2>Маркетингу лучше давать не теорию, а библиотеку готовых контуров</h2></div>
+      <div class="tool-radar">
+        <article><b>github skills</b><h3>готовые пайплайны</h3><p>ICP, buyer persona, campaign brief, competitor monitoring, content quality, CRO, growth experiments.</p></article>
+        <article><b>your prompt base</b><h3>внутренние наработки</h3><p>Собственные prompt-паки и агенты из вашего канала можно оформлять как role-based library.</p></article>
+        <article><b>copyfighter</b><h3>creative scoring</h3><p>I·D·E·E·A·S Scorecard подходит как creative check для маркетинговых идей и сообщений.</p></article>
+        <article><b>hub logic</b><h3>не хранить в чатах</h3><p>Сильные prompts, примеры и доработки должны жить в общей библиотеке, а не в личных переписках.</p></article>
+      </div>
+    </section>
+
+    <section class="slide split" id="s08">
+      <div><div class="kicker">// MARKETING PIPELINES</div><h2>Что именно полезно маркетингу корпоративной компании</h2></div>
       <div class="tool-radar">
         <article><b>audience / icp</b><h3>сегменты и роли</h3><p>Определение целевой аудитории, buyer persona, язык боли, критерии выбора и ограничения по сегментам.</p></article>
         <article><b>campaign brief</b><h3>кампания под задачу</h3><p>Сбор campaign brief: цель, аудитория, сообщения, каналы, контент-календарь, метрики, ограничения.</p></article>
@@ -112,10 +122,37 @@
       </div>
     </section>
 
-    <section class="slide" id="s08">
+    <section class="slide dark" id="s09">
+      <div class="kicker">// 3-MONTH ROLLOUT</div>
+      <h2>Логика внедрения: сначала тексты, потом repurposing, потом review и расширение</h2>
+      <div class="timeline-plan">
+        <article><b>месяц 1</b><p>Текстовый контур: 3-5 типовых задач, единый prompt guide, approved / rejected examples, weekly review.</p></article>
+        <article><b>месяц 2</b><p>Расширение в форматы: visual brief, audio script, repurposing под каналы, quality gates для новых форматов.</p></article>
+        <article><b>месяц 3</b><p>Retention и анализ: what worked, what failed, чего не хватает, что масштабировать, что исключить.</p></article>
+        <article><b>постоянно</b><p>Сохранять evidence: вход, промпт, результат, ручную правку, вывод и owner note.</p></article>
+      </div>
+    </section>
+
+    <section class="slide split" id="s10">
+      <div><div class="kicker">// OWNERS + CRITERIA</div><h2>Что должно остаться после финальной встречи</h2></div>
+      <div class="tool-radar">
+        <article><b>owners</b><h3>2-3 человека</h3><p>Ответственный за качество результата, ответственный за hub, ответственный за сбор практики и обновлений.</p></article>
+        <article><b>pilot cases</b><h3>3 кейса</h3><p>Один редакционный, один маркетинговый, один HR- или аналитический сценарий на первый цикл.</p></article>
+        <article><b>review loop</b><h3>раз в неделю</h3><p>Сохраняем, дорабатываем, исключаем или откладываем автоматизацию.</p></article>
+        <article><b>success</b><h3>понятные признаки</h3><p>Появились approved / rejected examples, улучшен хотя бы один prompt, команда понимает следующий шаг.</p></article>
+      </div>
+    </section>
+
+    <section class="slide" id="s11">
+      <div class="kicker">// PROJECTS + INFRA</div>
+      <h2>Проекты разделяем по папкам и правилам, инфраструктуру обсуждаем отдельным техническим контуром</h2>
+      <p class="lead narrow">Для каждого проекта: отдельная папка, собственный `CLAUDE.md`, локальные примеры и правила применения. На общий уровень выносятся только нейтральные рабочие настройки. По инфраструктуре можно рассматривать провайдеров вроде Hetzner, DigitalOcean, OVHcloud и Akamai Cloud (Linode), а выбор подрядчика и специалиста целесообразно делать отдельно, после дополнительного подтверждения и согласования с IT и безопасностью.</p>
+    </section>
+
+    <section class="slide" id="s12">
       <div class="kicker">// STRATEGY + NEXT</div>
-      <h2>Как вести внедрение: от prompt discipline к маркетингу и стратегии</h2>
-      <p class="lead narrow">Логика на 3 месяца: 1) текстовый контур и prompt discipline, 2) repurposing в visual / audio / channel formats, 3) review loop, marketing pipelines, анализ what worked / what failed и решение, что масштабировать дальше. По инфраструктуре на текущем этапе можно рассматривать управляемые и VPS-варианты у провайдеров вроде Hetzner, DigitalOcean, OVHcloud и Akamai Cloud (Linode). Выбор подрядчика и технического специалиста целесообразно делать отдельно: персональную рекомендацию по специалистам я готова дать после дополнительного подтверждения по своему кругу контактов.</p>
+      <h2>Финал курса - это не закрытие темы, а запуск управляемого цикла внедрения.</h2>
+      <p class="lead narrow">На выходе у команды должна остаться не “память о лекциях”, а рабочая система: prompt base, marketing / HR / editorial pilot cases, owners, weekly review, examples и следующий трехмесячный шаг.</p>
       <div class="final-links">
         <a href="./deck-09-practice-clinic.html">Deck 09</a>
         <a href="./deck-01-start.html">Deck 01</a>
