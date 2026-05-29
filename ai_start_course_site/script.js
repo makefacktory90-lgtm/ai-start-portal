@@ -375,33 +375,72 @@ const modules = {
     ]
   },
   clinic: {
-    crumb: "Retention",
-    code: "AI-HUB · 30 DAYS",
-    title: "Как удерживаем результат после встреч",
-    subtitle: "После финала редакции получают 30-дневный режим применения: один материал через пайплайн, один клип, одна контент-сетка, одно еженедельное обновление.",
-    posterKicker: "ПОСЛЕ ФИНАЛА",
-    posterTitle: "use → save evidence → update hub",
-    posterSubtitle: "летний режим применения и office hours / case clinic",
-    sideTitle: "AI-hub retention",
-    sideSummary: "Удержание строится на маленьком повторяемом действии и owners, а не на вдохновляющей речи.",
+    crumb: "Урок 06",
+    code: "УРОК · 06",
+    title: "Урок 06: финальная сборка AI Start Kit для Мурманска",
+    subtitle: "Фиксируем порядок внедрения на 3 месяца: единые принципы постановки задачи, пилоты по отделам, ответственные, review loop и критерии результата.",
+    posterKicker: "ФИНАЛЬНАЯ СБОРКА",
+    posterTitle: "prompt guide → pilots → 3-month rollout",
+    posterSubtitle: "финальный модуль для Мурманска: внедрение, рабочие шаблоны и review loop",
+    sideTitle: "Final kit for June",
+    sideSummary: "Финальная встреча закрепляет порядок внедрения и переводит практику в регулярный рабочий режим.",
+    recording: {
+      title: "Урок 06: финальный пакет урока",
+      summary: "Презентация, summary, план выступления и методические материалы уже открыты. Ссылка на саму запись будет добавлена отдельно после выбора канала публикации.",
+      folderUrl: "../ai_start_portal_v0/10_recordings/lesson-06-final-tv21/",
+      recordingUrl: "../ai_start_portal_v0/10_recordings/lesson-06-final-tv21/recording_link.md",
+      transcriptUrl: "../ai_start_portal_v0/10_recordings/lesson-06-final-tv21/recording_link.md",
+      summaryUrl: "../ai_start_portal_v0/10_recordings/lesson-06-final-tv21/summary.md",
+      accessCode: "",
+      state: "материалы доступны",
+      timeline: [
+        { time: "prompt", label: "База по промптингу: ДНК промпта, правила усиления и форматы мышления." },
+        { time: "marketing", label: "Маркетинговые сценарии: аудитория, бриф кампании, мониторинг, качество контента и страниц." },
+        { time: "rollout", label: "Трехмесячный план внедрения: выбрать участок, добиться стабильности, сохранить в hub, расширить." },
+        { time: "infra", label: "Проекты, разделение контекста, удаленный контур и серверные провайдеры." }
+      ]
+    },
+    homework: [
+      {
+        level: "База",
+        text: "Каждый отдел выбирает один повторяющийся участок работы, описывает его через ДНК промпта и фиксирует ручную проверку."
+      },
+      {
+        level: "Пилот",
+        text: "Сделать 3-5 прогонов на одном сценарии, сохранить удачный и неудачный пример, а также правку, которая усилила результат."
+      },
+      {
+        level: "Внедрение",
+        text: "Назначить ответственного за шаблон, сбор примеров и weekly review; решить, что масштабировать следующим шагом."
+      }
+    ],
     lessons: [
-      "Назначаем 2-3 AI-hub owners от каждой редакции.",
-      "Фиксируем минимальную частоту применения.",
-      "Собираем approved / rejected examples.",
-      "Раз в неделю решаем: keep, revise, kill, automate later."
+      "Фиксируем универсальную формулу промпта для маркетинга, HR, аналитики и редакции.",
+      "Определяем, какие marketing pipelines полезны корпоративной команде: ICP, campaign brief, monitoring, quality gate.",
+      "Собираем 3-месячный план внедрения: текстовый контур, visual/audio repurposing, review loop.",
+      "Согласовываем пилотные кейсы, ответственных и критерии полезности: approved example, rejected example, доработка или исключение."
     ],
     artifacts: [
-      "30-day adoption loop",
+      "universal prompt guide",
+      "3-month implementation plan",
       "owners list",
-      "feedback log",
-      "approved examples",
-      "workflow review board"
+      "test materials list",
+      "success criteria"
     ],
     insights: [
-      "Курс заканчивается не последним Zoom, а первым самостоятельным применением.",
-      "Если примеры не сохраняются, система не учится.",
-      "AI-hub owner поддерживает общие правила, примеры и обновления workflows.",
-      "Автоматизировать можно позже. Сначала надо понять, что реально работает."
+      "Промпт следует рассматривать как краткое рабочее задание, а не как самостоятельный результат.",
+      "Разные проекты не должны делить продуктовые правила через общий верхний слой.",
+      "Внедрение начинается с ограниченного числа пилотных кейсов, а не с максимального охвата сценариев.",
+      "Автоматизацию и сложную инфраструктуру имеет смысл расширять только после первых стабильных кейсов."
+    ],
+    resources: [
+      { label: "Презентация урока", href: "./decks/deck-10-final-kit.html" },
+      { label: "Summary урока", href: "../ai_start_portal_v0/10_recordings/lesson-06-final-tv21/summary.md" },
+      { label: "План выступления", href: "../ai_start_portal_v0/08_presentations/ai-start%20%7Brun-of-show%7D%20tv21%20final%20lecture%2040%20min%20-%202026-05-28.md" },
+      { label: "Speaker notes", href: "../ai_start_portal_v0/08_presentations/ai-start%20%7Bspeaker-notes%7D%20deck%2010%20final%20kit%20-%202026-05-28.md" },
+      { label: "Prompt guide", href: "../ai_start_portal_v0/08_presentations/ai-start%20%7Bguide%7D%20prompt%20dna%20for%20tv%20company%20-%202026-05-28.md" },
+      { label: "Zoom Whiteboard guide", href: "../ai_start_portal_v0/08_presentations/ai-start%20%7Bguide%7D%20zoom%20whiteboard%20prep%20for%20final%20lecture%20-%202026-05-28.md" },
+      { label: "Провайдеры серверов и удаленный контур", href: "https://iraai.ru/ai-agent-server-providers-page/", external: true }
     ]
   }
 };
