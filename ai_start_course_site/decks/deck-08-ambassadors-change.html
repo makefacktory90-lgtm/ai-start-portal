@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Deck 08 · Ambassadors & Team Change</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./deck-01-start.css">
+  <link rel="stylesheet" href="./deck-practical.css">
+  <style>
+    .change-grid,
+    .role-grid-3,
+    .case-grid-4,
+    .material-grid,
+    .toolkit-grid,
+    .follow-grid,
+    .days-grid {
+      display: grid;
+      gap: 14px;
+    }
+
+    .change-grid {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .role-grid-3 {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .case-grid-4 {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .material-grid,
+    .toolkit-grid,
+    .follow-grid,
+    .days-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .change-grid article,
+    .role-grid-3 article,
+    .case-grid-4 article,
+    .material-grid article,
+    .toolkit-grid article,
+    .follow-grid article,
+    .days-grid article {
+      min-height: 220px;
+      padding: 20px;
+      border: 2px solid var(--black);
+      background: var(--white);
+      box-shadow: 7px 7px 0 var(--black);
+      display: grid;
+      align-content: start;
+      gap: 14px;
+    }
+
+    .change-grid b,
+    .role-grid-3 b,
+    .case-grid-4 b,
+    .material-grid b,
+    .toolkit-grid b,
+    .follow-grid b,
+    .days-grid b {
+      color: var(--red);
+      font-family: var(--mono);
+      font-size: 12px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .change-grid h3,
+    .role-grid-3 h3,
+    .case-grid-4 h3,
+    .material-grid h3,
+    .toolkit-grid h3,
+    .follow-grid h3,
+    .days-grid h3 {
+      margin: 0;
+      font-size: clamp(22px, 2vw, 38px);
+      line-height: 0.96;
+    }
+
+    .change-grid p,
+    .role-grid-3 p,
+    .case-grid-4 p,
+    .material-grid p,
+    .toolkit-grid p,
+    .follow-grid p,
+    .days-grid p {
+      margin: 0;
+      color: #2c2823;
+      font-size: clamp(18px, 1.5vw, 24px);
+      font-weight: 800;
+      line-height: 1.1;
+    }
+
+    .toolkit-grid article,
+    .follow-grid article,
+    .days-grid article {
+      min-height: 260px;
+      align-content: start;
+    }
+
+    .toolkit-grid .resource-link,
+    .follow-grid .resource-link {
+      margin-top: 8px;
+    }
+
+    .team-stack {
+      display: grid;
+      gap: 10px;
+    }
+
+    .team-stack p {
+      margin: 0;
+      padding: 16px 0;
+      border-bottom: 2px solid var(--line);
+      font-size: clamp(22px, 2vw, 34px);
+      font-weight: 900;
+      line-height: 1.04;
+    }
+
+    .team-stack b {
+      color: var(--red);
+      font-family: var(--mono);
+      font-size: 13px;
+      text-transform: uppercase;
+    }
+
+    .mini-note {
+      margin: 0;
+      max-width: 860px;
+      color: var(--muted);
+      font-family: var(--mono);
+      font-size: 13px;
+      font-weight: 800;
+      line-height: 1.35;
+      text-transform: uppercase;
+    }
+
+    @media (max-width: 900px) {
+      .change-grid,
+      .role-grid-3,
+      .case-grid-4,
+      .material-grid,
+      .toolkit-grid,
+      .follow-grid,
+      .days-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="deck-nav">
+    <a class="deck-logo" href="../index.html">AI START</a>
+    <nav><a href="#s01">change</a><a href="#s02">roles</a><a href="#s04">cases</a><a href="#s08">30/60/90</a><a href="#s10">kit</a></nav>
+    <span>08 · ambassadors & team change</span>
+  </header>
+  <main>
+    <section class="slide hero" id="s01">
+      <div class="hero-copy">
+        <div class="pill">лекция 08 · амбассадоры и изменения в маленьких командах</div>
+        <h1>Изменения заходят не через приказ.<br><span>Они заходят через носителей практики.</span></h1>
+        <p class="lead">В маленькой команде внедрение почти никогда не ломается об “технологию”. Оно ломается об страх, перегруз, размытые роли и отсутствие человека, который превращает разовые удачи в повторяемую систему.</p>
+      </div>
+      <figure class="lesson-art">
+        <img src="../assets/deck-10-hero-final-robot.png" alt="Team change and ambassador roles around AI workflows">
+        <figcaption>pilot → proof → habit → update loop</figcaption>
+      </figure>
+    </section>
+
+    <section class="slide manifesto" id="s02">
+      <div class="kicker">// КАК МЕНЯЮТСЯ МАЛЕНЬКИЕ КОМАНДЫ</div>
+      <h2>Они не трансформируются сразу. Они сдвигаются через один рабочий участок.</h2>
+      <div class="change-grid">
+        <article><b>01 · signal</b><h3>появляется боль</h3><p>Есть повторяющаяся задача, где команда теряет время, силы и качество.</p></article>
+        <article><b>02 · pilot</b><h3>кто-то пробует</h3><p>Один человек собирает первый полезный сценарий, а не презентацию “про будущее”.</p></article>
+        <article><b>03 · proof</b><h3>появляется evidence</h3><p>Команда видит конкретный выигрыш: быстрее, чище, понятнее, с меньшим количеством ручной рутины.</p></article>
+        <article><b>04 · routine</b><h3>новый путь закрепляется</h3><p>Промпт, папка, owner, gate и пример переходят из головы одного человека в общую систему.</p></article>
+      </div>
+    </section>
+
+    <section class="slide dark" id="s03">
+      <div class="kicker">// ЖЕСТКАЯ ПРАВДА</div>
+      <h2>Если изменение держится на одном энтузиасте без системы, оно умирает в отпуске.</h2>
+      <p class="lead narrow">Поэтому амбассадор - не евангелист с горящими глазами. Это человек, который собирает материал, объясняет логику, фиксирует правила, помогает коллегам и доводит результат до повторяемой формы.</p>
+    </section>
+
+    <section class="slide split" id="s04">
+      <div>
+        <div class="kicker">// РОЛИ АМБАССАДОРОВ</div>
+        <h2>В маленькой команде это обычно не должность, а набор функций.</h2>
+      </div>
+      <div class="team-stack">
+        <p><b>scout</b> ищет кейсы, инструменты, примеры и приносит не новости, а применимые сценарии</p>
+        <p><b>translator</b> переводит техно-язык в язык роли: дизайнеру одно, редактору другое, продюсеру третье</p>
+        <p><b>builder</b> собирает первый рабочий контур: папки, промпты, шаблоны, naming, правила хранения</p>
+        <p><b>coach</b> помогает коллегам запустить 2-3 первых прогона и не бросить после первого кривого результата</p>
+        <p><b>gate owner</b> держит рамку качества: что можно, что нельзя, где нужен human approval</p>
+        <p><b>archivist</b> сохраняет лучшие кейсы, провалы, правки и обновляет общий материал команды</p>
+      </div>
+    </section>
+
+    <section class="slide" id="s05">
+      <div class="kicker">// НЕ ОДИН АМБАССАДОР, А СВЯЗКА</div>
+      <h2>Лучше всего работает маленькая тройка.</h2>
+      <div class="role-grid-3">
+        <article><b>операционный</b><h3>тянет рутину</h3><p>Следит, чтобы сценарий реально жил в папках, календаре, портале, тасках и обновлениях.</p></article>
+        <article><b>предметный</b><h3>держит качество</h3><p>Понимает саму работу: дизайн, редактура, продакшн, маркетинг. Иначе все превратится в формальный ритуал.</p></article>
+        <article><b>политический</b><h3>снимает сопротивление</h3><p>Объясняет руководителю и коллегам, зачем это нужно, где риски и какой участок окупается первым.</p></article>
+      </div>
+      <p class="mini-note">Иногда это три человека. Иногда один и тот же человек тащит все три роли, из-за чего и выгорает, черт побери.</p>
+    </section>
+
+    <section class="slide split" id="s06">
+      <div>
+        <div class="kicker">// КАКОЙ МАТЕРИАЛ ДОЛЖЕН СОБИРАТЬ АМБАССАДОР</div>
+        <h2>Без материала нет внедрения. Есть только разговоры.</h2>
+      </div>
+      <div class="material-grid">
+        <article><b>approved</b><h3>лучшие примеры</h3><p>Что сработало, в каком контексте, на каком входе, с какой ручной правкой и почему это считается хорошим результатом.</p></article>
+        <article><b>failed</b><h3>провальные прогоны</h3><p>Не прятать их, а сохранять как evidence: где сломалось, какая гипотеза не подтвердилась, что надо запретить.</p></article>
+        <article><b>prompts</b><h3>рабочие формулировки</h3><p>Не одна “идеальная” команда, а версии под разные роли, форматы, ограничения и уровень подготовки коллег.</p></article>
+        <article><b>gates</b><h3>правила проверки</h3><p>Что должен посмотреть человек до публикации: бренд, факты, права, структура, визуальный вкус, безопасность.</p></article>
+      </div>
+    </section>
+
+    <section class="slide dark" id="s07">
+      <div class="kicker">// КЕЙСЫ ДЛЯ МАЛЕНЬКОЙ КОМАНДЫ</div>
+      <h2>Начинать надо не с “всего AI”, а с узких контуров, где эффект виден за неделю.</h2>
+      <div class="case-grid-4">
+        <article><b>design</b><h3>стиль → промпт → черновики</h3><p>Амбассадор собирает папку референсов и показывает, как агент снимает стиль и пишет промпты под визуальный output.</p></article>
+        <article><b>editorial</b><h3>сигналы → weekly digest</h3><p>Один человек приносит структуру мониторинга, а потом команда принимает решения уже не из хаоса.</p></article>
+        <article><b>content</b><h3>материал → repurpose pack</h3><p>Из одного интервью или лекции агент готовит набор форматов, а амбассадор доводит это до рабочей схемы.</p></article>
+        <article><b>ops</b><h3>папка → порядок</h3><p>Даже простая нормализация файлов, имен и статусов дает команде первый ощутимый выигрыш и дисциплину.</p></article>
+      </div>
+    </section>
+
+    <section class="slide" id="s08">
+      <div class="kicker">// ЧТО ДЕЛАТЬ ДАЛЬШЕ</div>
+      <h2>Дальше команде нужен не энтузиазм, а нормальный 90-дневный режим.</h2>
+      <div class="days-grid">
+        <article><b>первые 30 дней</b><h3>один пилот</h3><p>Выбрать один участок, назначить owner, собрать материалы, сделать первые 3-5 прогонов и зафиксировать quality gate.</p></article>
+        <article><b>дни 31-60</b><h3>повторяемость</h3><p>Подключить второго человека, сохранить working prompt, примеры и rejected cases, доказать, что сценарий повторяется не только у одного энтузиаста.</p></article>
+        <article><b>дни 61-90</b><h3>перенос в систему</h3><p>Упаковать сценарий в hub, weekly review и понятную инструкцию. Только после этого расширять на следующий участок.</p></article>
+        <article><b>всегда</b><h3>human ownership</h3><p>Финальный смысл, риск, качество и публикационное решение остаются у людей, а не у самого громкого тулза недели.</p></article>
+      </div>
+      <p class="lead narrow">Результат последней лекции должен быть таким: команда понимает, кто отвечает, что именно копить, что смотреть раз в неделю и как не развалить внедрение через две недели.</p>
+    </section>
+
+    <section class="slide dark" id="s09">
+      <div class="kicker">// ПРАКТИКА НА 10 МИНУТ</div>
+      <h2>Короткий разговор, который можно провести с командой прямо в комнате</h2>
+      <div class="timeline-plan">
+        <article><b>3 мин</b><p>Попросить их назвать один участок, где они регулярно теряют время или качество.</p></article>
+        <article><b>3 мин</b><p>Вместе решить, кто owner, какой вход у задачи, какой ожидаемый выход и где нужен human gate.</p></article>
+        <article><b>2 мин</b><p>Определить, что надо сохранять после каждого прогона: prompt, output, правка, правило.</p></article>
+        <article><b>2 мин</b><p>Назначить первый weekly review: кто приносит кейсы и кто утверждает, что становится стандартом.</p></article>
+      </div>
+    </section>
+
+    <section class="slide" id="s10">
+      <div class="kicker">// ЧТО ИМ ОСТАВИТЬ НА 90 ДНЕЙ</div>
+      <h2>Набор материалов, без которого команда опять съедет в хаос</h2>
+      <div class="toolkit-grid">
+        <article>
+          <b>week 1</b>
+          <h3>One pilot only</h3>
+          <p>Один рабочий участок, один owner, одна папка с материалом, один quality gate. Не пять экспериментов сразу. Это детский сад, а не внедрение.</p>
+          <a class="resource-link" href="./deck-10-final-kit.html" target="_blank" rel="noreferrer">Финальная 3-месячная рамка</a>
+        </article>
+        <article>
+          <b>week 2-4</b>
+          <h3>Hub update discipline</h3>
+          <p>После каждого прогона сохранять вход, prompt, output, ручную правку, решение и правило. Без changelog внедрение не накапливается.</p>
+          <a class="resource-link" href="./deck-07-hub-tv21.html" target="_blank" rel="noreferrer">Лекция про hub</a>
+        </article>
+        <article>
+          <b>must use</b>
+          <h3>Skills, а не разовые чаты</h3>
+          <p>Команда должна пользоваться skills и workflow-репами, а не каждый раз переписывать запрос с нуля. Так сохраняется практика, а не настроение конкретного дня.</p>
+          <a class="resource-link" href="https://github.com/anthropics/skills" target="_blank" rel="noreferrer">anthropics/skills · 142k+ stars</a>
+          <a class="resource-link" href="https://github.com/gooseworks-ai/goose-skills" target="_blank" rel="noreferrer">goose-skills · 665 stars</a>
+        </article>
+        <article>
+          <b>must teach</b>
+          <h3>Figma + Claude Code</h3>
+          <p>Дизайнеру надо сидеть в Figma desktop и Dev Mode, а амбассадору - уметь гонять Claude Code рядом, чтобы handoff, prompts и система материалов были одной связкой.</p>
+          <a class="resource-link" href="https://www.figma.com/downloads/" target="_blank" rel="noreferrer">Figma desktop</a>
+          <a class="resource-link" href="https://docs.anthropic.com/en/docs/claude-code/getting-started" target="_blank" rel="noreferrer">Claude Code setup</a>
+        </article>
+      </div>
+      <p class="mini-note">Здесь задача амбассадора простая: не впечатлить команду AI-магией, а довести один новый рабочий контур до повторяемого состояния.</p>
+    </section>
+
+    <section class="slide dark" id="s11">
+      <div class="kicker">// ЧТО МЫ ФИКСИРУЕМ В КОМАНДЕ</div>
+      <h2>Минимальный operating system после курса</h2>
+      <div class="case-grid-4">
+        <article><b>owner</b><h3>кто отвечает</h3><p>У каждого пилота есть конкретный владелец, а не “пусть кто-нибудь посмотрит”.</p></article>
+        <article><b>materials</b><h3>что сохраняем</h3><p>Prompt, input, output, правка, decision note и quality gate.</p></article>
+        <article><b>review</b><h3>когда смотрим</h3><p>Фиксированный weekly review, а не случайный разговор между встречами.</p></article>
+        <article><b>scale</b><h3>когда расширяем</h3><p>Только после устойчивого результата на одном сценарии, а не раньше.</p></article>
+      </div>
+    </section>
+
+    <section class="slide" id="s12">
+      <div class="kicker">// ЧТО ЧИТАТЬ, ЗА ЧЕМ СЛЕДИТЬ</div>
+      <h2>Подписки, репозитории и хорошие flow-паттерны</h2>
+      <div class="follow-grid">
+        <article>
+          <b>official stack</b>
+          <h3>Anthropic + MCP</h3>
+          <p>Следить за Claude Code, skills, official plugin directory и MCP. Это не “новости ради новостей”, а постоянное обновление рабочего инструментария команды.</p>
+          <a class="resource-link" href="https://www.anthropic.com/product/claude-code" target="_blank" rel="noreferrer">Claude Code</a>
+          <a class="resource-link" href="https://github.com/anthropics/claude-plugins-official" target="_blank" rel="noreferrer">Official plugin directory · 28k+ stars</a>
+          <a class="resource-link" href="https://modelcontextprotocol.io/introduction" target="_blank" rel="noreferrer">MCP intro</a>
+        </article>
+        <article>
+          <b>prompt literacy</b>
+          <h3>Prompt engineering без эзотерики</h3>
+          <p>Нужно уметь писать короткие рабочие задания, а не шаманить. Для этого хватит одной нормальной школы и постоянной практики на своих материалах.</p>
+          <a class="resource-link" href="https://github.com/anthropics/prompt-eng-interactive-tutorial" target="_blank" rel="noreferrer">Anthropic tutorial · 36k stars</a>
+          <a class="resource-link" href="https://github.com/dair-ai/Prompt-Engineering-Guide" target="_blank" rel="noreferrer">Prompt Engineering Guide</a>
+        </article>
+        <article>
+          <b>growth / content ops</b>
+          <h3>Готовые flow-пачки</h3>
+          <p>Для контента, маркетинга и GTM не изобретать велосипеды. Брать готовые связки, тестировать на своих задачах и сохранять только то, что реально работает.</p>
+          <a class="resource-link" href="https://github.com/ericosiu/ai-marketing-skills" target="_blank" rel="noreferrer">ai-marketing-skills · 2k+ stars</a>
+          <a class="resource-link" href="https://github.com/gooseworks-ai/goose-skills" target="_blank" rel="noreferrer">Goose skills catalog</a>
+          <a class="resource-link" href="https://github.com/ericosiu/marketing-os-starter" target="_blank" rel="noreferrer">marketing-os-starter</a>
+        </article>
+        <article>
+          <b>catalog at scale</b>
+          <h3>Когда нужен большой склад навыков</h3>
+          <p>Если команде нужен широкий каталог на вырост, а не только узкий стартовый набор, есть смысл держать один большой skill library и вытаскивать из него нужное по ролям.</p>
+          <a class="resource-link" href="https://github.com/sickn33/antigravity-awesome-skills" target="_blank" rel="noreferrer">antigravity-awesome-skills · 39k+ stars</a>
+          <a class="resource-link" href="https://github.com/hesreallyhim/awesome-claude-code" target="_blank" rel="noreferrer">awesome-claude-code</a>
+        </article>
+      </div>
+    </section>
+  </main>
+  <script src="./deck-01-start.js"></script>
+</body>
+</html>

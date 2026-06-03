@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Норникель · Review Pack</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --black: #080706;
+      --paper: #f6f1e7;
+      --white: #fffdf8;
+      --muted: #7f7669;
+      --red: #f42a2a;
+      --line: #d7cbbb;
+      --mono: "JetBrains Mono", ui-monospace, monospace;
+      --sans: "Inter", system-ui, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background:
+        linear-gradient(rgba(8, 7, 6, 0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(8, 7, 6, 0.025) 1px, transparent 1px),
+        var(--paper);
+      background-size: 42px 42px;
+      color: var(--black);
+      font-family: var(--sans);
+    }
+    main {
+      width: min(1040px, calc(100vw - 40px));
+      margin: 32px auto;
+      display: grid;
+      gap: 18px;
+    }
+    .panel {
+      padding: 24px;
+      border: 2px solid var(--black);
+      background: rgba(255, 253, 248, 0.94);
+      box-shadow: 10px 10px 0 var(--black);
+    }
+    h1, h2 { margin: 0; line-height: 0.95; }
+    h1 { font-size: clamp(42px, 6vw, 84px); font-weight: 900; }
+    h2 { font-size: clamp(24px, 3vw, 42px); font-weight: 900; }
+    p { margin: 0; font-size: 18px; font-weight: 700; line-height: 1.2; }
+    .kicker {
+      color: var(--red);
+      font-family: var(--mono);
+      font-size: 12px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+    .card {
+      padding: 20px;
+      border: 2px solid var(--black);
+      background: var(--white);
+      box-shadow: 7px 7px 0 var(--black);
+      display: grid;
+      gap: 12px;
+    }
+    .card b {
+      color: var(--red);
+      font-family: var(--mono);
+      font-size: 12px;
+      text-transform: uppercase;
+    }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+    .link {
+      display: inline-flex;
+      width: max-content;
+      padding: 10px 12px;
+      border: 2px solid var(--black);
+      background: var(--paper);
+      font-family: var(--mono);
+      font-size: 12px;
+      font-weight: 900;
+      text-transform: uppercase;
+      box-shadow: 4px 4px 0 var(--black);
+    }
+    .link:hover { background: #f1b33d; }
+    @media (max-width: 820px) {
+      .grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="panel">
+      <div class="kicker">private review pack</div>
+      <h1>Норникель</h1>
+      <p>Локальная точка входа для просмотра черновых дек. В навигацию портала не встроено.</p>
+    </section>
+
+    <section class="grid">
+      <article class="card">
+        <b>lecture 07</b>
+        <h2>Агентные системы для дизайнера</h2>
+        <p>Маршрут работы с визуальным контентом: вход, visual DNA, проект, полуавтомат, автомат, 3-5 итераций, собственная visual deck.</p>
+        <a class="link" href="./decks/deck-07-agent-systems-design.html">Открыть деку 07</a>
+      </article>
+
+      <article class="card">
+        <b>lecture 08</b>
+        <h2>Амбассадоры и изменения в маленьких командах</h2>
+        <p>Кто отвечает, что хранить, как вести weekly review и как прожить первые 90 дней после курса без распада системы.</p>
+        <a class="link" href="./decks/deck-08-ambassadors-change.html">Открыть деку 08</a>
+      </article>
+    </section>
+  </main>
+</body>
+</html>

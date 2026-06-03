@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Deck 07 · Agent Systems for Design</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./deck-01-start.css">
+  <link rel="stylesheet" href="./deck-practical.css">
+  <style>
+    .signal-grid,
+    .phase-grid,
+    .case-grid,
+    .loop-grid,
+    .resource-grid,
+    .reading-grid {
+      display: grid;
+      gap: 14px;
+    }
+
+    .signal-grid,
+    .phase-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .case-grid,
+    .loop-grid,
+    .resource-grid,
+    .reading-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .signal-grid.routes {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .signal-grid article,
+    .phase-grid article,
+    .case-grid article,
+    .loop-grid article,
+    .resource-grid article,
+    .reading-grid article {
+      min-height: 220px;
+      padding: 20px;
+      border: 2px solid var(--black);
+      background: var(--white);
+      box-shadow: 7px 7px 0 var(--black);
+      display: grid;
+      align-content: start;
+      gap: 14px;
+    }
+
+    .signal-grid b,
+    .phase-grid b,
+    .case-grid b,
+    .loop-grid b,
+    .resource-grid b,
+    .reading-grid b {
+      color: var(--red);
+      font-family: var(--mono);
+      font-size: 12px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .signal-grid h3,
+    .phase-grid h3,
+    .case-grid h3,
+    .loop-grid h3,
+    .resource-grid h3,
+    .reading-grid h3 {
+      margin: 0;
+      font-size: clamp(24px, 2.2vw, 40px);
+      line-height: 0.96;
+    }
+
+    .signal-grid p,
+    .phase-grid p,
+    .case-grid p,
+    .loop-grid p,
+    .resource-grid p,
+    .reading-grid p {
+      margin: 0;
+      color: #2c2823;
+      font-size: clamp(18px, 1.55vw, 24px);
+      font-weight: 800;
+      line-height: 1.1;
+    }
+
+    .resource-grid article,
+    .reading-grid article {
+      min-height: 260px;
+      align-content: space-between;
+    }
+
+    .resource-grid article > *,
+    .reading-grid article > * {
+      margin: 0;
+    }
+
+    .resource-grid .resource-link,
+    .reading-grid .resource-link {
+      margin-top: auto;
+    }
+
+    .agent-stack {
+      display: grid;
+      gap: 10px;
+    }
+
+    .agent-stack p {
+      margin: 0;
+      padding: 16px 0;
+      border-bottom: 2px solid var(--line);
+      font-size: clamp(22px, 2vw, 34px);
+      font-weight: 900;
+      line-height: 1.04;
+    }
+
+    .agent-stack b {
+      color: var(--red);
+      font-family: var(--mono);
+      font-size: 13px;
+      text-transform: uppercase;
+    }
+
+    .process-line small {
+      color: rgba(255, 253, 248, 0.72);
+      font-family: var(--mono);
+      font-size: 11px;
+      font-weight: 800;
+      line-height: 1.15;
+      text-transform: uppercase;
+    }
+
+    .slide .mini-note {
+      margin: 0;
+      max-width: 900px;
+      color: var(--muted);
+      font-family: var(--mono);
+      font-size: 13px;
+      font-weight: 800;
+      line-height: 1.35;
+      text-transform: uppercase;
+    }
+
+    @media (max-width: 900px) {
+      .signal-grid,
+      .phase-grid,
+      .case-grid,
+      .loop-grid,
+      .resource-grid,
+      .reading-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="deck-nav">
+    <a class="deck-logo" href="../index.html">AI START</a>
+    <nav><a href="#s01">agents</a><a href="#s02">logic</a><a href="#s04">route</a><a href="#s06">steps</a><a href="#s10">kit</a></nav>
+    <span>07 · agent systems for design</span>
+  </header>
+  <main>
+    <section class="slide hero" id="s01">
+      <div class="hero-copy">
+        <div class="pill">лекция 07 · агентные системы для дизайнера</div>
+        <h1>Агент - это не магия.<br><span>Это рабочая связка.</span></h1>
+        <p class="lead">Для маленькой команды агентная система нужна не ради слов “автономно”, а чтобы стабильно проходить путь от задачи до готового визуального пакета: бриф, стиль, промпт, генерация, сборка, проверка, сохранение в hub.</p>
+      </div>
+      <figure class="lesson-art">
+        <img src="../assets/deck-08-hero-agents-robot.png" alt="Agent system connecting brief, files, prompts and visual output">
+        <figcaption>brief → style memory → prompt → output → human gate</figcaption>
+      </figure>
+    </section>
+
+    <section class="slide manifesto" id="s02">
+      <div class="kicker">// ГЛАВНАЯ РАМКА</div>
+      <h2>Для дизайнера здесь важен не инструмент, а маршрут работы с визуальным контентом.</h2>
+      <div class="outcome-lanes">
+        <article><b>01 · вход</b><h3>берем материал</h3><p>Смыслы, тезисы, референсы, бренд-ограничения, нужные форматы и уровень качества.</p></article>
+        <article><b>02 · анализ</b><h3>снимаем стиль</h3><p>Разбираем визуальную ДНК и превращаем ее в формулу серии, а не в абстрактное “сделай красиво”.</p></article>
+        <article><b>03 · система</b><h3>обучаем маршрут</h3><p>Загружаем стиль, материалы, skills и правила в проект, чтобы агент работал не в пустоте.</p></article>
+        <article><b>04 · iter</b><h3>доводим до серии</h3><p>Через 3-5 итераций получаем устойчивую визуальную деку и повторяемый способ ее собирать.</p></article>
+      </div>
+    </section>
+
+    <section class="slide dark" id="s03">
+      <div class="kicker">// БАЗОВОЕ ПРАВИЛО</div>
+      <h2>Если стиль и смысл не разобраны заранее, агент не ускоряет работу, а размазывает хаос.</h2>
+      <p class="lead narrow">Поэтому первым шагом всегда идет разбор материала и разбор визуального языка. Только потом генерация, Figma, Claude Design, Higgsfield или любая другая связка.</p>
+    </section>
+
+    <section class="slide split" id="s04">
+      <div>
+        <div class="kicker">// МАРШРУТЫ ДЛЯ ДИЗАЙНЕРА</div>
+        <h2>Есть три нормальных способа работать: вручную, полуавтоматом и автоматом.</h2>
+      </div>
+      <div class="agent-stack">
+        <p><b>manual</b> дизайнер сам разбирает материал, снимает стиль, пишет промпты и собирает финальный слой</p>
+        <p><b>semi-auto</b> агент помогает разбирать стиль, формулировать задачу, собирать промпты и готовить черновики</p>
+        <p><b>auto</b> система берет задачу из папки или проекта, прогоняет ее по шагам и возвращает пакет на human review</p>
+        <p><b>gate</b> финальный текст, факты, бренд и публикационное решение всегда остаются у человека</p>
+      </div>
+    </section>
+
+    <section class="slide" id="s05">
+      <div class="kicker">// МАРШРУТЫ РАБОТЫ</div>
+      <h2>Как это выглядит в реальной работе дизайнера</h2>
+      <div class="signal-grid routes">
+        <article><b>route 01</b><h3>Claude project</h3><p>Создается проект, в него загружаются бренд-материалы, референсы, правила и skills. Это самый понятный полуавтоматный старт.</p></article>
+        <article><b>route 02</b><h3>Claude Design</h3><p>Подходит как полуавтомат: система помогает быстро собрать визуальное направление и первые версии, если не нужна сложная кастомная сборка.</p></article>
+        <article><b>route 03</b><h3>Figma + Higgsfield + agent</h3><p>Более продвинутый контур: агент разбирает стиль, Higgsfield делает ассеты, Figma держит финальный редактируемый слой.</p></article>
+      </div>
+    </section>
+
+    <section class="slide dark" id="s06">
+      <div class="kicker">// ЛИНЕЙКА ПРОЦЕССА</div>
+      <h2>Вся логика занятия укладывается в один маршрут.</h2>
+      <div class="process-line">
+        <div><b>01</b><span>берем вход</span><small>смыслы, тезисы, бренд, референсы</small></div>
+        <div><b>02</b><span>снимаем стиль</span><small>visual DNA и recipe for series</small></div>
+        <div><b>03</b><span>обучаем систему</span><small>проект, skills, правила, prompt stack</small></div>
+        <div><b>04</b><span>делаем 3-5 итераций</span><small>черновики, правки, feedback log</small></div>
+        <div><b>05</b><span>собираем финал</span><small>визуальная дека и повторяемый workflow</small></div>
+      </div>
+      <p class="mini-note">Это и есть та самая “сережина” процесса: что на входе, что улучшаем, как обрабатываем и что получаем на выходе.</p>
+    </section>
+
+    <section class="slide split" id="s07">
+      <div>
+        <div class="kicker">// ШАГ 1</div>
+        <h2>Сначала берем материал и разбираем, что именно хотим передать визуально.</h2>
+      </div>
+      <div class="risk-list">
+        <p><b>смыслы</b><span>какая главная мысль, какой тезис, какое настроение и зачем вообще нужен визуал</span></p>
+        <p><b>формат</b><span>обложка, карточка, слайд, дека, плашка, вертикальный кадр, hero screen</span></p>
+        <p><b>ограничения</b><span>бренд, цвета, допустимая степень эксперимента, что нельзя искажать</span></p>
+        <p><b>референсы</b><span>что берем как основу стиля, а что используем только как антипример</span></p>
+      </div>
+    </section>
+
+    <section class="slide" id="s08">
+      <div class="kicker">// ШАГ 2</div>
+      <h2>Потом снимаем визуальный стиль и превращаем его в рабочую формулу.</h2>
+      <div class="loop-grid">
+        <article><b>visual DNA</b><h3>анализ референса</h3><p>Используем полный промпт анализа стиля, чтобы получить color, light, composition, texture, mood и recipe for series.</p></article>
+        <article><b>style formula</b><h3>не один prompt, а система</h3><p>На выходе нужен не красивый абзац, а повторяемая формула: что держим, что запрещаем, как выглядит серия.</p></article>
+      </div>
+      <div class="final-links">
+        <a href="../assets/prompts/prompt-image-style-dna-analysis.pdf" target="_blank" rel="noreferrer">Prompt · visual DNA PDF</a>
+        <a href="../assets/prompts/prompt-image-style-dna-analysis.md" target="_blank" rel="noreferrer">Prompt · visual DNA MD</a>
+      </div>
+    </section>
+
+    <section class="slide split" id="s09">
+      <div>
+        <div class="kicker">// ШАГ 3</div>
+        <h2>Дальше обучаем систему работать в этом стиле.</h2>
+      </div>
+      <div class="agent-stack">
+        <p><b>simple route</b> создаем проект в Claude / Cowork, загружаем бренд-материалы, стиль, референсы и ставим skills для дизайна</p>
+        <p><b>design route</b> идем в Claude Design и используем его как полуавтоматную среду для первых быстрых версий</p>
+        <p><b>advanced route</b> подключаем Figma и Higgsfield, где агент управляет маршрутом, а финальный слой остается редактируемым</p>
+        <p><b>memory</b> сохраняем удачные промпты, rejected outputs, правки и recipe for series обратно в систему</p>
+      </div>
+    </section>
+
+    <section class="slide dark" id="s10">
+      <div class="kicker">// ШАГ 4 И ШАГ 5</div>
+      <h2>Через 3-5 итераций у команды появляется уже не картинка, а собственная визуальная дека.</h2>
+      <div class="phase-grid">
+        <article><b>iterate</b><h3>улучшаем</h3><p>Смотрим, что не попало в стиль, где картинка выглядит как сток, где тексту тесно, где бренд потерялся.</p></article>
+        <article><b>assemble</b><h3>собираем</h3><p>Финальный материал собирается в Figma, визуальном конструкторе или другой редактируемой среде, где текст и факты можно поправить.</p></article>
+        <article><b>save</b><h3>закрепляем</h3><p>Сохраняем готовую деку, правила, prompts и quality gate, чтобы в следующий раз не начинать заново.</p></article>
+      </div>
+      <p class="mini-note">Полуавтомат - это когда агент помогает строить и улучшать. Автомат - это когда значимая часть маршрута уже повторяется без ручной сборки с нуля.</p>
+    </section>
+
+    <section class="slide" id="s11">
+      <div class="kicker">// ПРАКТИКА НА УРОКЕ</div>
+      <h2>Короткое упражнение, которое можно сделать с командой прямо в комнате</h2>
+      <div class="timeline-plan">
+        <article><b>3 мин</b><p>Берем один реальный материал: тема, 2-3 тезиса, один формат и 3-5 референсов.</p></article>
+        <article><b>3 мин</b><p>Прогоняем референс через visual DNA prompt и получаем recipe for series.</p></article>
+        <article><b>2 мин</b><p>Просим агента собрать задачу под конкретный формат: обложка, карточка, слайд или visual deck.</p></article>
+        <article><b>2 мин</b><p>Смотрим первый результат и вместе решаем, что надо усилить: стиль, композицию, текстовый слой или ограничения.</p></article>
+      </div>
+    </section>
+
+    <section class="slide dark" id="s12">
+      <div class="kicker">// О ЧЕМ МОЖНО ПОВЕСТИ РАЗГОВОР 10 МИНУТ</div>
+      <h2>Практический разбор, который помогает команде понять процесс на своих глазах</h2>
+      <div class="loop-grid">
+        <article><b>вариант 1</b><h3>разобрать референс</h3><p>Показать один визуальный референс и вместе разобрать: что в нем главное, что делает стиль сильным и что нужно сохранить в серии.</p></article>
+        <article><b>вариант 2</b><h3>перевести стиль в задачу</h3><p>Показать, как из визуального референса получается не “красивый prompt”, а конкретное задание для агента с форматом, ограничениями и выходом.</p></article>
+        <article><b>вариант 3</b><h3>сделать первую итерацию</h3><p>Запустить один прогон и вместе разобрать, что надо поправить, чтобы система лучше держала их визуальный язык.</p></article>
+        <article><b>вариант 4</b><h3>собрать правило</h3><p>По итогам обсуждения зафиксировать одно новое правило для их будущей visual system: что повторять и что запрещать.</p></article>
+      </div>
+    </section>
+
+    <section class="slide" id="s13">
+      <div class="kicker">// ЧТО ДЕЛАТЬ ДАЛЬШЕ</div>
+      <h2>Что команда делает дальше самостоятельно</h2>
+      <div class="agent-stack">
+        <p><b>шаг 1</b> выбирает один тип визуального контента, который нужен регулярно: обложки, карточки, визуальные деки, плашки</p>
+        <p><b>шаг 2</b> собирает папку референсов и один approved set, который станет основой style memory</p>
+        <p><b>шаг 3</b> сохраняет recipe for series, prompts, неудачные версии и правки в один проект или папку</p>
+        <p><b>шаг 4</b> делает 3-5 итераций на одном формате, пока результат не станет устойчивым</p>
+        <p><b>шаг 5</b> только после этого переносит подход на следующий формат, а не пытается автоматизировать все сразу</p>
+      </div>
+    </section>
+
+    <section class="slide dark" id="s14">
+      <div class="kicker">// ЧТО ИМ ОСТАВИТЬ ПОСЛЕ ЛЕКЦИИ</div>
+      <h2>Обязательный toolkit для дизайнерского agent stack</h2>
+      <div class="resource-grid">
+        <article>
+          <b>must install</b>
+          <h3>Figma desktop + Dev Mode</h3>
+          <p>Ставить desktop-приложение Figma и учиться работать именно в нем. Это база для handoff, инспекта, ready-for-dev и нормальной сборки экранов рядом с агентом.</p>
+          <a class="resource-link" href="https://www.figma.com/downloads/" target="_blank" rel="noreferrer">Figma desktop</a>
+          <a class="resource-link" href="https://help.figma.com/hc/en-us/articles/15023124644247-Guide-to-Dev-Mode" target="_blank" rel="noreferrer">Figma Dev Mode guide</a>
+        </article>
+        <article>
+          <b>must install</b>
+          <h3>Claude Code</h3>
+          <p>Это движок всей связки: читает папки, гоняет сценарии, пишет промпты, готовит файлы, тащит MCP и превращает ручной процесс в повторяемый.</p>
+          <a class="resource-link" href="https://docs.anthropic.com/en/docs/claude-code/getting-started" target="_blank" rel="noreferrer">Claude Code getting started</a>
+          <a class="resource-link" href="https://docs.anthropic.com/en/docs/claude-code/cli-usage" target="_blank" rel="noreferrer">CLI reference</a>
+        </article>
+        <article>
+          <b>must know</b>
+          <h3>MCP</h3>
+          <p>Если команда хочет, чтобы Claude работал не в пустоте, а с Figma, GitHub, диском и внутренними штуками, надо понимать MCP хотя бы на уровне архитектуры и готовых серверов.</p>
+          <a class="resource-link" href="https://modelcontextprotocol.io/introduction" target="_blank" rel="noreferrer">MCP introduction</a>
+          <a class="resource-link" href="https://github.com/modelcontextprotocol/servers" target="_blank" rel="noreferrer">Reference MCP servers</a>
+        </article>
+        <article>
+          <b>must clone</b>
+          <h3>Skills libraries</h3>
+          <p>Не собирать все с нуля. Берите готовые skills и адаптируйте под свою структуру папок, дизайн-пайплайн и quality gates.</p>
+          <a class="resource-link" href="https://github.com/anthropics/skills" target="_blank" rel="noreferrer">anthropics/skills · 142k+ stars</a>
+          <a class="resource-link" href="https://github.com/gooseworks-ai/goose-skills" target="_blank" rel="noreferrer">gooseworks-ai/goose-skills · 665 stars</a>
+        </article>
+      </div>
+      <p class="mini-note">Звезды GitHub проверены по доступным страницам 3 июня 2026 года. Смысл не в коллекционировании реп, а в том, чтобы быстро взять рабочие паттерны.</p>
+    </section>
+
+    <section class="slide dark" id="s15">
+      <div class="kicker">// ЖИВЫЕ КЕЙСЫ ИЗ ТЕКУЩЕЙ ПРАКТИКИ</div>
+      <h2>Как дизайнеры и product-команды уже работают на полуавтомате</h2>
+      <div class="case-grid">
+        <article>
+          <b>pattern 01</b>
+          <h3>Figma first, AI second</h3>
+          <p>Самый устойчивый паттерн: сначала дизайн фиксируется в Figma, потом агент помогает его переносить, уточнять или реализовывать. Так меньше фантазий и меньше токенов уходит на угадывание.</p>
+          <a class="resource-link" href="https://www.reddit.com/r/ClaudeCode/comments/1todb8d/can_anyone_share_their_design_workflow/" target="_blank" rel="noreferrer">Reddit · can anyone share their design workflow?</a>
+        </article>
+        <article>
+          <b>pattern 02</b>
+          <h3>tokens + Dev Mode</h3>
+          <p>Когда Claude или другой агент начинает гадать spacing и colors, команды подают дизайн-токены и данные из Figma Dev Mode. Это резко повышает fidelity и снижает количество бессмысленного back-and-forth.</p>
+          <a class="resource-link" href="https://www.reddit.com/r/ClaudeCode/comments/1sutgm8/claud_figma_workflow/" target="_blank" rel="noreferrer">Reddit · Claude & Figma workflow</a>
+        </article>
+        <article>
+          <b>pattern 03</b>
+          <h3>refinement loop</h3>
+          <p>Более зрелый полуавтоматный маршрут: агент тянет metadata, screenshot и assets, затем запускает визуальный refinement loop и сохраняет универсальные правила на будущее.</p>
+          <a class="resource-link" href="https://www.reddit.com/r/ClaudeCode/comments/1sutgm8/claud_figma_workflow/" target="_blank" rel="noreferrer">Reddit · refinement loop comment</a>
+        </article>
+        <article>
+          <b>pattern 04</b>
+          <h3>Claude Design as semi-auto</h3>
+          <p>Claude Design используют как среду для быстрых первых версий и направлений. Но даже в положительных отзывах его не считают заменой Figma 1:1. Рабочая роль сейчас - ускорение первых итераций.</p>
+          <a class="resource-link" href="https://www.reddit.com/r/ClaudeAI/comments/1so3k1y/introducing_claude_design_by_anthropic_labs/" target="_blank" rel="noreferrer">Reddit · introducing Claude Design</a>
+        </article>
+      </div>
+      <p class="mini-note">Общий вывод из обсуждений один и тот же: AI лучше работает как слой ускорения, когда у команды уже есть дизайн-система, токены, референсы и понятный human gate.</p>
+    </section>
+
+    <section class="slide" id="s16">
+      <div class="kicker">// ПРОМПТЫ, СКИЛЛЫ, ЧТЕНИЕ</div>
+      <h2>Нормальный пакет “что делать дальше”</h2>
+      <div class="reading-grid">
+        <article>
+          <b>prompt base</b>
+          <h3>Шаблон под визуальную задачу</h3>
+          <p>Роль: visual systems operator. Задача: [что собираем]. Вход: [папка референсов, бренд-ограничения, формат]. Сделай: 1. style scan; 2. 3 prompt variants; 3. naming for outputs; 4. quality gate before publish.</p>
+          <a class="resource-link" href="https://github.com/anthropics/prompt-eng-interactive-tutorial" target="_blank" rel="noreferrer">Anthropic prompt tutorial · 36k stars</a>
+          <a class="resource-link" href="https://github.com/dair-ai/Prompt-Engineering-Guide" target="_blank" rel="noreferrer">Prompt Engineering Guide</a>
+        </article>
+        <article>
+          <b>design workflow</b>
+          <h3>Что должно лежать в папке</h3>
+          <p>`/references`, `/approved`, `/rejected`, `/prompts`, `/outputs`, `/notes`, `/portal`. Если этого нет, дизайнер и агент оба начинают заново и жрут время.</p>
+          <a class="resource-link" href="../assets/guides/visual-constructor-guide.md" target="_blank" rel="noreferrer">Локальный гайд по визуальному конструктору</a>
+        </article>
+        <article>
+          <b>for follow</b>
+          <h3>Что читать и отслеживать</h3>
+          <p>Следить за официальными обновлениями Anthropic по Claude Code, MCP и skills; читать Figma Dev Mode и MCP guide; смотреть, как меняются лучшие community skills.</p>
+          <a class="resource-link" href="https://www.anthropic.com/product/claude-code" target="_blank" rel="noreferrer">Claude Code product page</a>
+          <a class="resource-link" href="https://help.figma.com/hc/en-us/sections/15023066873239-Dev-Mode" target="_blank" rel="noreferrer">Figma Dev Mode docs</a>
+        </article>
+        <article>
+          <b>good repos</b>
+          <h3>Что брать на GitHub</h3>
+          <p>Для широкой базы - `anthropics/skills`. Для growth и content ops - `goose-skills` и `ericosiu/ai-marketing-skills`. Для каталога на вырост - `sickn33/antigravity-awesome-skills`.</p>
+          <a class="resource-link" href="https://github.com/ericosiu/ai-marketing-skills" target="_blank" rel="noreferrer">ai-marketing-skills · 2k+ stars</a>
+          <a class="resource-link" href="https://github.com/sickn33/antigravity-awesome-skills" target="_blank" rel="noreferrer">antigravity-awesome-skills · 39k+ stars</a>
+        </article>
+      </div>
+    </section>
+  </main>
+  <script src="./deck-01-start.js"></script>
+</body>
+</html>
