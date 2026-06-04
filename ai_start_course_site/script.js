@@ -442,6 +442,147 @@ const modules = {
       { label: "Zoom Whiteboard guide", href: "../ai_start_portal_v0/08_presentations/ai-start%20%7Bguide%7D%20zoom%20whiteboard%20prep%20for%20final%20lecture%20-%202026-05-28.md" },
       { label: "Провайдеры серверов и удаленный контур", href: "https://iraai.ru/ai-agent-server-providers-page/", external: true }
     ]
+  },
+  north01: {
+    crumb: "Июнь · Северный город",
+    code: "SG · 01",
+    title: "Северный город: агенты и репозитории",
+    subtitle: "Отдельный июньский контур для Северного города: запись, summary и рабочая схема для agent-like сценариев и редакционного hub.",
+    posterKicker: "СЕВЕРНЫЙ ГОРОД · ИЮНЬ",
+    posterTitle: "agents → repository → human gate",
+    posterSubtitle: "отдельный микро-раздел на 4 июньских занятия",
+    sideTitle: "Северный город · модуль 1",
+    sideSummary: "Первый июньский слот: агентные сценарии, ручная проверка, репозиторий редакции и список automation candidates.",
+    recording: {
+      title: "SG-01: запись лекции",
+      summary: "Запись Zoom уже подключена. Для долгого хранения лучше перенести видео на Google Drive и позже заменить ссылку в портале на Drive.",
+      folderUrl: "../ai_start_portal_v0/10_recordings/lesson-07-severny-agents-repositories/",
+      recordingUrl: "https://us06web.zoom.us/rec/share/oLbQxQ9XPevVXHA2PODuD_IM_5eMxdD1OBgRFL9bLShk-dKnIcmx0kzd1huGiF2q.-B1M7TAow5qwEA73",
+      transcriptUrl: "../ai_start_portal_v0/10_recordings/lesson-07-severny-agents-repositories/recording_link.md",
+      summaryUrl: "../ai_start_portal_v0/10_recordings/lesson-07-severny-agents-repositories/summary.md",
+      accessCode: "F&m!A3kh",
+      state: "запись доступна",
+      timeline: [
+        { time: "repo", label: "Как устроить редакционный репозиторий и зачем он нужен для repeatable workflows." },
+        { time: "agent", label: "Что такое agent-like сценарий и как разложить его на input, AI step, human check и output." },
+        { time: "gate", label: "Что нельзя автоматизировать без редактора: факты, права, публикация, тон." },
+        { time: "next", label: "Какие сценарии можно поставить в очередь на полуавтоматизацию позже." }
+      ]
+    },
+    homework: [
+      {
+        level: "База",
+        text: "Выбрать один повторяющийся сценарий и описать его через вход, AI-шаг, ручную проверку, выход и запреты на автоматизацию."
+      },
+      {
+        level: "Пилот",
+        text: "Собрать один agent-like сценарий: monitoring -> digest, transcript -> clip candidates, article -> channel package или weekly update proposal."
+      },
+      {
+        level: "Внедрение",
+        text: "Оценить, что можно полуавтоматизировать позже, а что должно остаться у редактора по фактам, правам и публикации."
+      }
+    ],
+    lessons: [
+      "Показываем, как выделить повторяющийся редакционный сценарий и не превращать его в магию из одного удачного чата.",
+      "Собираем human-in-the-loop маршрут: input, AI step, human check, output.",
+      "Разбираем, как репозиторий и hub сохраняют approved examples, rejected examples и quality gates.",
+      "Фиксируем список сценариев, которые можно переводить в полуавтоматический режим только после накопления примеров."
+    ],
+    artifacts: [
+      "карта agent-like сценария",
+      "список automation candidates",
+      "draft структуры репозитория",
+      "summary и homework по уроку"
+    ],
+    insights: [
+      "Агент полезен как рабочий слой, но не как самостоятельный редактор.",
+      "Репозиторий нужен для повторяемости, а не для складирования файлов.",
+      "Сначала сохраняются шаблоны, примеры и quality gates, потом обсуждается автоматизация.",
+      "Google Drive подходит как место для публикации тяжелой записи, портал хранит стабильную ссылку и маршрут урока."
+    ],
+    resources: [
+      { label: "Запись Zoom", href: "https://us06web.zoom.us/rec/share/oLbQxQ9XPevVXHA2PODuD_IM_5eMxdD1OBgRFL9bLShk-dKnIcmx0kzd1huGiF2q.-B1M7TAow5qwEA73", external: true },
+      { label: "Summary урока", href: "../ai_start_portal_v0/10_recordings/lesson-07-severny-agents-repositories/summary.md" },
+      { label: "Homework", href: "../ai_start_portal_v0/10_recordings/lesson-07-severny-agents-repositories/homework.md" },
+      { label: "Презентация · AI-агенты", href: "./decks/deck-08-agents.html" },
+      { label: "Презентация · AI-hub и репозитории", href: "./decks/deck-05-ai-hub-repository-tv21.html" }
+    ]
+  },
+  north02: {
+    crumb: "Июнь · Северный город",
+    code: "SG · 02",
+    title: "Северный город: практика применения и амбассадоры",
+    subtitle: "Второй июньский слот: реальные материалы команды, approved и rejected examples, роли амбассадоров и weekly review.",
+    posterKicker: "СЕВЕРНЫЙ ГОРОД · ИЮНЬ",
+    posterTitle: "real material → review → ambassadors",
+    posterSubtitle: "второй слот июньского контура: реальные кейсы, board примеров и амбассадоры",
+    sideTitle: "Северный город · модуль 2",
+    sideSummary: "Слот под практику применения: реальные материалы, board примеров и ответственные за обновление базы.",
+    lessons: [
+      "Каждый участник приносит один реальный материал и показывает input, pipeline, output и gate.",
+      "Группа выбирает approved example, rejected example и useful failure.",
+      "Назначаются амбассадоры: hub, examples, prompts, weekly review."
+    ],
+    artifacts: [
+      "example board",
+      "ambassadors map",
+      "weekly review roles"
+    ],
+    insights: [
+      "Без носителей практики база быстро умирает.",
+      "Полезен не только удачный пример, но и понятный провал с выводом."
+    ]
+  },
+  north03: {
+    crumb: "Июнь · Северный город",
+    code: "SG · 03",
+    title: "Северный город: финальная сборка рабочего комплекта",
+    subtitle: "Третий июньский слот: pipeline pages, prompt library, quality gates, owners и рабочий набор для редакции.",
+    posterKicker: "СЕВЕРНЫЙ ГОРОД · ИЮНЬ",
+    posterTitle: "kit → gates → owners",
+    posterSubtitle: "собираем рабочий комплект, а не красивую папку ради красоты",
+    sideTitle: "Северный город · модуль 3",
+    sideSummary: "Слот под сборку рабочего комплекта и закрепление того, что реально используется.",
+    lessons: [
+      "Собираем pipeline pages, prompt library, quality gates, examples и owners.",
+      "Фиксируем, что идет в базу как рабочий стандарт редакции.",
+      "Разделяем must keep, revise later и do not automate yet."
+    ],
+    artifacts: [
+      "final working kit",
+      "owners list",
+      "quality gate map"
+    ],
+    insights: [
+      "Рабочий комплект ценен только тогда, когда команда им реально пользуется.",
+      "Слишком ранняя автоматизация портит внедрение быстрее, чем его ускоряет."
+    ]
+  },
+  north04: {
+    crumb: "Июнь · Северный город",
+    code: "SG · 04",
+    title: "Северный город: 30-дневный контур применения",
+    subtitle: "Четвертый июньский слот: weekly loop, 30-day adoption, review cadence и план, как не потерять результат после серии занятий.",
+    posterKicker: "СЕВЕРНЫЙ ГОРОД · ИЮНЬ",
+    posterTitle: "use → save evidence → update",
+    posterSubtitle: "после занятий начинается нормальная работа, а не пустой энтузиазм",
+    sideTitle: "Северный город · модуль 4",
+    sideSummary: "Слот под режим применения: 1 материал в неделю, review, обновление базы и следующий пересмотр.",
+    lessons: [
+      "Собираем 30-дневный контур применения после июньской серии.",
+      "Фиксируем weekly cadence: use, gate, save evidence, update.",
+      "Определяем, когда пересматривать hub и что считать устойчивым эффектом."
+    ],
+    artifacts: [
+      "30-day adoption loop",
+      "review cadence",
+      "next-stage roadmap"
+    ],
+    insights: [
+      "После финального Zoom начинается внедрение, а не заканчивается программа.",
+      "Если evidence не сохраняется, команда каждый раз начинает заново."
+    ]
   }
 };
 
