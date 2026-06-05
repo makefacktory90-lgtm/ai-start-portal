@@ -1,0 +1,1142 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Start Portal · Demo</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23080706'/%3E%3Crect x='34' y='34' width='20' height='20' fill='%23f42a2a'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800;900&family=JetBrains+Mono:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --paper: #f6f1e7;
+      --panel: #fffdf8;
+      --ink: #080706;
+      --muted: #766e63;
+      --line: #d7cbbb;
+      --red: #f42a2a;
+      --amber: #f1b33d;
+      --green: #6fbf8a;
+      --blue: #486fc7;
+      --mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+      --sans: "Inter", "Helvetica Neue", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background:
+        linear-gradient(rgba(8, 7, 6, 0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(8, 7, 6, 0.025) 1px, transparent 1px),
+        var(--paper);
+      background-size: 42px 42px;
+      color: var(--ink);
+      font-family: var(--sans);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font: inherit;
+    }
+
+    .shell {
+      width: min(1440px, 100%);
+      margin: 0 auto;
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 248px minmax(0, 1fr);
+      border-left: 2px solid var(--ink);
+      border-right: 2px solid var(--ink);
+      background: rgba(255, 253, 248, 0.44);
+    }
+
+    .sidebar {
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      padding: 18px 14px;
+      border-right: 2px solid var(--ink);
+      background: rgba(255, 253, 248, 0.92);
+      overflow: auto;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 22px;
+    }
+
+    .mark {
+      width: 22px;
+      height: 22px;
+      background: var(--ink);
+      box-shadow: 5px 5px 0 var(--red);
+      flex: 0 0 auto;
+    }
+
+    .brand strong {
+      display: block;
+      font-size: 18px;
+      font-weight: 900;
+      line-height: 1;
+      text-transform: uppercase;
+    }
+
+    .brand span {
+      display: block;
+      margin-top: 3px;
+      color: var(--muted);
+      font-family: var(--mono);
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .search {
+      min-height: 42px;
+      display: grid;
+      align-items: center;
+      padding: 0 13px;
+      border: 2px solid var(--ink);
+      border-radius: 999px;
+      background: var(--panel);
+      color: var(--muted);
+      font-family: var(--mono);
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .nav-title {
+      margin: 24px 0 10px;
+      color: var(--red);
+      font-family: var(--mono);
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    .lesson-link {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 10px minmax(0, 1fr);
+      gap: 11px;
+      align-items: center;
+      padding: 10px 9px;
+      border: 1px solid transparent;
+      border-radius: 8px;
+      background: transparent;
+      color: var(--ink);
+      text-align: left;
+      cursor: pointer;
+    }
+
+    .lesson-link:hover,
+    .lesson-link.active {
+      border-color: var(--ink);
+      background: var(--panel);
+      box-shadow: 4px 4px 0 var(--ink);
+    }
+
+    .dot {
+      width: 8px;
+      height: 8px;
+      background: var(--line);
+    }
+
+    .lesson-link.active .dot {
+      background: var(--red);
+    }
+
+    .lesson-link b {
+      display: block;
+      font-family: var(--mono);
+      font-size: 12px;
+      line-height: 1.25;
+      text-transform: uppercase;
+    }
+
+    .lesson-link small {
+      display: block;
+      margin-top: 3px;
+      color: var(--muted);
+      font-family: var(--mono);
+      font-size: 11px;
+      line-height: 1.25;
+    }
+
+    .side-note {
+      margin-top: 22px;
+      padding: 14px;
+      border: 2px solid var(--ink);
+      background: #f7d9cf;
+      box-shadow: 5px 5px 0 var(--ink);
+    }
+
+    .side-note b,
+    .side-note span {
+      display: block;
+      font-family: var(--mono);
+      font-size: 11px;
+      font-weight: 800;
+      line-height: 1.35;
+      text-transform: uppercase;
+    }
+
+    .side-note span {
+      margin-top: 7px;
+      color: #4f3934;
+    }
+
+    .workspace {
+      min-width: 0;
+      display: grid;
+      grid-template-rows: auto 1fr;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      min-height: 58px;
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      align-items: center;
+      padding: 0 30px;
+      border-bottom: 2px solid var(--ink);
+      background: rgba(246, 241, 231, 0.94);
+      backdrop-filter: blur(16px);
+    }
+
+    .crumbs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+      color: var(--muted);
+      font-family: var(--mono);
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    .crumbs strong {
+      color: var(--ink);
+    }
+
+    .status-pill {
+      min-height: 34px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 0 12px;
+      border: 2px solid var(--ink);
+      border-radius: 999px;
+      background: var(--panel);
+      font-family: var(--mono);
+      font-size: 11px;
+      font-weight: 900;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .status-pill::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      background: var(--green);
+      box-shadow: 0 0 0 3px rgba(111, 191, 138, 0.2);
+    }
+
+    main {
+      min-width: 0;
+      padding: 28px 30px 48px;
+      display: grid;
+      gap: 20px;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 0.92fr) minmax(380px, 1.08fr);
+      gap: 22px;
+      align-items: stretch;
+    }
+
+    .hero-copy {
+      min-width: 0;
+      display: grid;
+      align-content: space-between;
+      gap: 24px;
+      padding: 28px;
+      border: 2px solid var(--ink);
+      background: var(--panel);
+      box-shadow: 10px 10px 0 var(--ink);
+    }
+
+    .eyebrow {
+      color: var(--red);
+      font-family: var(--mono);
+      font-size: 12px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 8px 0 0;
+      max-width: 760px;
+      font-size: clamp(42px, 5vw, 72px);
+      font-weight: 900;
+      line-height: 0.95;
+      letter-spacing: 0;
+      text-transform: uppercase;
+      overflow-wrap: anywhere;
+    }
+
+    .lead {
+      max-width: 680px;
+      margin: 16px 0 0;
+      color: #3f3932;
+      font-size: clamp(17px, 1.8vw, 22px);
+      font-weight: 750;
+      line-height: 1.18;
+    }
+
+    .metric-row {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .metric {
+      min-height: 82px;
+      padding: 13px;
+      border: 2px solid var(--ink);
+      background: #f9efe0;
+    }
+
+    .metric strong {
+      display: block;
+      font-size: 28px;
+      font-weight: 900;
+      line-height: 1;
+    }
+
+    .metric span {
+      display: block;
+      margin-top: 8px;
+      color: var(--muted);
+      font-family: var(--mono);
+      font-size: 11px;
+      font-weight: 800;
+      line-height: 1.25;
+      text-transform: uppercase;
+    }
+
+    .screen-stage {
+      min-width: 0;
+      display: grid;
+      grid-template-rows: auto 1fr;
+      border: 2px solid var(--ink);
+      background: #11100f;
+      box-shadow: 10px 10px 0 var(--ink);
+      overflow: hidden;
+    }
+
+    .window-bar {
+      min-height: 39px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      padding: 0 13px;
+      border-bottom: 2px solid var(--ink);
+      background: var(--panel);
+      font-family: var(--mono);
+      font-size: 11px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .traffic {
+      display: inline-flex;
+      gap: 6px;
+      align-items: center;
+    }
+
+    .traffic i {
+      width: 10px;
+      height: 10px;
+      border: 2px solid var(--ink);
+      background: var(--red);
+    }
+
+    .traffic i:nth-child(2) {
+      background: var(--amber);
+    }
+
+    .traffic i:nth-child(3) {
+      background: var(--green);
+    }
+
+    .screen-frame {
+      position: relative;
+      min-height: 500px;
+      background: #151311;
+      overflow: hidden;
+    }
+
+    .screen-frame img {
+      width: 100%;
+      height: 100%;
+      min-height: 500px;
+      display: block;
+      object-fit: cover;
+      object-position: top left;
+    }
+
+    .tabs {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      padding: 12px;
+      border: 2px solid var(--ink);
+      background: rgba(255, 253, 248, 0.88);
+    }
+
+    .tab {
+      min-height: 38px;
+      padding: 0 13px;
+      border: 2px solid var(--ink);
+      border-radius: 999px;
+      background: var(--panel);
+      cursor: pointer;
+      color: var(--ink);
+      font-family: var(--mono);
+      font-size: 11px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .tab:hover,
+    .tab.active {
+      background: var(--ink);
+      color: var(--panel);
+    }
+
+    .view {
+      display: none;
+    }
+
+    .view.active {
+      display: grid;
+      gap: 20px;
+    }
+
+    .band {
+      padding: 24px;
+      border: 2px solid var(--ink);
+      background: rgba(255, 253, 248, 0.92);
+      box-shadow: 8px 8px 0 var(--ink);
+    }
+
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: end;
+      margin-bottom: 18px;
+    }
+
+    h2 {
+      margin: 0;
+      max-width: 820px;
+      font-size: clamp(28px, 4vw, 54px);
+      font-weight: 900;
+      line-height: 0.98;
+      text-transform: uppercase;
+    }
+
+    .section-head p {
+      max-width: 440px;
+      margin: 0;
+      color: var(--muted);
+      font-family: var(--mono);
+      font-size: 12px;
+      font-weight: 800;
+      line-height: 1.35;
+      text-transform: uppercase;
+      text-align: right;
+    }
+
+    .lesson-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .lesson-card {
+      min-height: 236px;
+      display: grid;
+      align-content: space-between;
+      gap: 18px;
+      padding: 17px;
+      border: 2px solid var(--ink);
+      border-radius: 8px;
+      background: var(--panel);
+      cursor: pointer;
+      text-align: left;
+      box-shadow: 5px 5px 0 var(--ink);
+    }
+
+    .lesson-card:hover,
+    .lesson-card.active {
+      background: #fff0ca;
+      transform: translate(-2px, -2px);
+      box-shadow: 7px 7px 0 var(--ink);
+    }
+
+    .lesson-card .code {
+      color: var(--red);
+      font-family: var(--mono);
+      font-size: 11px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .lesson-card h3 {
+      margin: 8px 0 0;
+      font-size: 23px;
+      font-weight: 900;
+      line-height: 1;
+      text-transform: uppercase;
+    }
+
+    .lesson-card p {
+      margin: 10px 0 0;
+      color: #4f483f;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 1.22;
+    }
+
+    .tag-row {
+      display: flex;
+      gap: 7px;
+      flex-wrap: wrap;
+    }
+
+    .tag {
+      display: inline-flex;
+      min-height: 24px;
+      align-items: center;
+      padding: 0 8px;
+      border: 1px solid var(--ink);
+      border-radius: 999px;
+      background: #f2e7d7;
+      font-family: var(--mono);
+      font-size: 10px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    .lesson-detail {
+      display: grid;
+      grid-template-columns: minmax(0, 0.85fr) minmax(360px, 1.15fr);
+      gap: 18px;
+      align-items: stretch;
+    }
+
+    .detail-copy {
+      display: grid;
+      gap: 14px;
+      padding: 20px;
+      border: 2px solid var(--ink);
+      border-radius: 8px;
+      background: #f2e7d7;
+    }
+
+    .detail-copy h3 {
+      margin: 0;
+      font-size: clamp(28px, 4vw, 48px);
+      font-weight: 900;
+      line-height: 0.98;
+      text-transform: uppercase;
+    }
+
+    .detail-copy p {
+      margin: 0;
+      color: #403a34;
+      font-size: 17px;
+      font-weight: 750;
+      line-height: 1.22;
+    }
+
+    .checklist {
+      display: grid;
+      gap: 8px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .checklist li {
+      display: grid;
+      grid-template-columns: 18px minmax(0, 1fr);
+      gap: 9px;
+      align-items: start;
+      font-family: var(--mono);
+      font-size: 12px;
+      font-weight: 750;
+      line-height: 1.35;
+      text-transform: uppercase;
+    }
+
+    .checklist li::before {
+      content: "";
+      width: 12px;
+      height: 12px;
+      margin-top: 2px;
+      border: 2px solid var(--ink);
+      background: var(--green);
+    }
+
+    .shot-card {
+      min-width: 0;
+      border: 2px solid var(--ink);
+      border-radius: 8px;
+      background: var(--ink);
+      overflow: hidden;
+    }
+
+    .shot-card img {
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      display: block;
+      object-fit: cover;
+      object-position: top left;
+    }
+
+    .materials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .material {
+      min-height: 164px;
+      display: grid;
+      align-content: space-between;
+      gap: 16px;
+      padding: 17px;
+      border: 2px solid var(--ink);
+      border-radius: 8px;
+      background: var(--panel);
+    }
+
+    .material:nth-child(2) {
+      background: #e7f0d8;
+    }
+
+    .material:nth-child(3) {
+      background: #dfe8fb;
+    }
+
+    .material:nth-child(4) {
+      background: #f7d9cf;
+    }
+
+    .material strong {
+      display: block;
+      font-size: 24px;
+      font-weight: 900;
+      line-height: 1;
+      text-transform: uppercase;
+    }
+
+    .material span {
+      display: block;
+      margin-top: 8px;
+      color: #4d463e;
+      font-family: var(--mono);
+      font-size: 11px;
+      font-weight: 800;
+      line-height: 1.35;
+      text-transform: uppercase;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .gallery-item {
+      min-width: 0;
+      border: 2px solid var(--ink);
+      border-radius: 8px;
+      background: var(--panel);
+      overflow: hidden;
+      box-shadow: 6px 6px 0 var(--ink);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      display: block;
+      object-fit: cover;
+      object-position: top left;
+      border-bottom: 2px solid var(--ink);
+    }
+
+    .gallery-item figcaption {
+      min-height: 52px;
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: center;
+      padding: 12px;
+      font-family: var(--mono);
+      font-size: 11px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .gallery-item figcaption span {
+      color: var(--red);
+    }
+
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .button {
+      min-height: 42px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 14px;
+      border: 2px solid var(--ink);
+      border-radius: 999px;
+      background: var(--ink);
+      color: var(--panel);
+      font-family: var(--mono);
+      font-size: 11px;
+      font-weight: 900;
+      text-transform: uppercase;
+      box-shadow: 4px 4px 0 var(--red);
+    }
+
+    .button.secondary {
+      background: var(--panel);
+      color: var(--ink);
+      box-shadow: 4px 4px 0 var(--ink);
+    }
+
+    @media (max-width: 1180px) {
+      .shell {
+        grid-template-columns: 1fr;
+        border: 0;
+      }
+
+      .sidebar {
+        position: relative;
+        height: auto;
+        border-right: 0;
+        border-bottom: 2px solid var(--ink);
+      }
+
+      .side-note {
+        display: none;
+      }
+
+      .hero,
+      .lesson-detail {
+        grid-template-columns: 1fr;
+      }
+
+      .lesson-grid,
+      .materials-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 760px) {
+      .topbar {
+        position: relative;
+        display: grid;
+        padding: 14px 16px;
+      }
+
+      main {
+        padding: 16px 14px 34px;
+      }
+
+      .hero-copy,
+      .band {
+        padding: 18px;
+        box-shadow: 6px 6px 0 var(--ink);
+      }
+
+      .screen-frame,
+      .screen-frame img {
+        min-height: 300px;
+      }
+
+      .metric-row,
+      .lesson-grid,
+      .materials-grid,
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section-head {
+        display: grid;
+      }
+
+      .section-head p {
+        text-align: left;
+      }
+
+      h1 {
+        font-size: clamp(40px, 14vw, 56px);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar" aria-label="Навигация демо портала">
+      <div class="brand">
+        <div class="mark" aria-hidden="true"></div>
+        <div>
+          <strong>AI Start</strong>
+          <span>demo portal // sales</span>
+        </div>
+      </div>
+      <div class="search">search / lesson / material</div>
+
+      <div class="nav-title">// уроки в демо</div>
+      <button class="lesson-link active" type="button" data-lesson="0">
+        <span class="dot"></span>
+        <span><b>01 / Старт курса</b><small>карта курса, правила, hub</small></span>
+      </button>
+      <button class="lesson-link" type="button" data-lesson="1">
+        <span class="dot"></span>
+        <span><b>02 / Текст</b><small>голос, формат, проверка</small></span>
+      </button>
+      <button class="lesson-link" type="button" data-lesson="2">
+        <span class="dot"></span>
+        <span><b>03 / Видео + визуал</b><small>style DNA, lab, промпты</small></span>
+      </button>
+      <button class="lesson-link" type="button" data-lesson="3">
+        <span class="dot"></span>
+        <span><b>04 / Аудио + контур</b><small>запись, примеры, план</small></span>
+      </button>
+
+      <div class="nav-title">// вкладки портала</div>
+      <button class="lesson-link" type="button" data-tab-target="overview">
+        <span class="dot"></span>
+        <span><b>Обзор</b><small>что видит клиент</small></span>
+      </button>
+      <button class="lesson-link" type="button" data-tab-target="lessons">
+        <span class="dot"></span>
+        <span><b>Уроки</b><small>3-4 открытых модуля</small></span>
+      </button>
+      <button class="lesson-link" type="button" data-tab-target="materials">
+        <span class="dot"></span>
+        <span><b>Материалы</b><small>деки, записи, домашки</small></span>
+      </button>
+      <button class="lesson-link" type="button" data-tab-target="screens">
+        <span class="dot"></span>
+        <span><b>Скриншоты</b><small>галерея интерфейса</small></span>
+      </button>
+
+      <div class="side-note">
+        <b>demo mode</b>
+        <span>Открывается без пароля и показывает структуру портала на реальных скринах.</span>
+      </div>
+    </aside>
+
+    <div class="workspace">
+      <header class="topbar">
+        <div class="crumbs">
+          <span>IRAAI.RU</span>
+          <span>/</span>
+          <span>AI START</span>
+          <span>/</span>
+          <strong>demo portal</strong>
+        </div>
+        <div class="status-pill">online preview</div>
+      </header>
+
+      <main>
+        <section class="hero">
+          <div class="hero-copy">
+            <div>
+              <div class="eyebrow">sales demo / private preview</div>
+              <h1>Демо портала обучения</h1>
+              <p class="lead">Один экран для продажи проекта: как выглядит кабинет, какие уроки открыты, где лежат записи, презентации, домашние задания и рабочие материалы.</p>
+            </div>
+            <div class="metric-row" aria-label="Состав демо">
+              <div class="metric"><strong>4</strong><span>урока показаны в демо</span></div>
+              <div class="metric"><strong>5</strong><span>типов материалов</span></div>
+              <div class="metric"><strong>6</strong><span>реальных скринов портала</span></div>
+            </div>
+          </div>
+
+          <div class="screen-stage" aria-label="Главный скрин портала">
+            <div class="window-bar">
+              <span class="traffic" aria-hidden="true"><i></i><i></i><i></i></span>
+              <span id="stage-title">Главный экран портала</span>
+            </div>
+            <div class="screen-frame">
+              <img id="stage-image" src="./live-portal-preview.png" alt="Скриншот главного экрана AI Start Portal">
+            </div>
+          </div>
+        </section>
+
+        <nav class="tabs" aria-label="Вкладки демо">
+          <button class="tab active" type="button" data-tab="overview">Обзор</button>
+          <button class="tab" type="button" data-tab="lessons">Уроки</button>
+          <button class="tab" type="button" data-tab="materials">Материалы</button>
+          <button class="tab" type="button" data-tab="screens">Скриншоты</button>
+        </nav>
+
+        <section class="view active" id="overview" aria-label="Обзор демо">
+          <div class="band">
+            <div class="section-head">
+              <h2>Что видно на демо</h2>
+              <p>Портал собран как рабочий кабинет: навигация слева, текущий урок в центре, быстрые материалы и статус занятий.</p>
+            </div>
+            <div class="materials-grid">
+              <div class="material"><strong>Личный вход</strong><span>Парольный экран в боевом портале; в демо вход снят, потому что продажи не должны страдать.</span></div>
+              <div class="material"><strong>Модули</strong><span>Уроки открываются как разделы: запись, deck, summary, transcript и домашнее задание.</span></div>
+              <div class="material"><strong>Материалы</strong><span>Презентации, гайды, prompt pack, визуальный конструктор и ссылки на внешнее хранилище.</span></div>
+              <div class="material"><strong>Прогресс</strong><span>Статусы уроков, уровни домашки и быстрый доступ к следующему действию.</span></div>
+              <div class="material"><strong>Практика</strong><span>Каждый урок привязан к конкретному артефакту: текст, visual recipe, видео-карта, аудио-план.</span></div>
+              <div class="material"><strong>Скрины</strong><span>В демо используются реальные изображения текущей сборки портала, а не фантазия в стиле “ну примерно”.</span></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="view" id="lessons" aria-label="Уроки демо">
+          <div class="band">
+            <div class="section-head">
+              <h2>Открытые уроки</h2>
+              <p>Карточки имитируют рабочие вкладки портала и переключают скрин справа.</p>
+            </div>
+            <div class="lesson-grid" id="lesson-grid"></div>
+          </div>
+
+          <div class="lesson-detail">
+            <div class="detail-copy">
+              <div class="eyebrow" id="lesson-code">УРОК 01</div>
+              <h3 id="lesson-title">Старт курса и карта программы</h3>
+              <p id="lesson-text">Фиксируем рабочую рамку: AI draft, human gate, hub и единая карта материалов курса.</p>
+              <div class="tag-row" id="lesson-tags"></div>
+              <ul class="checklist" id="lesson-points"></ul>
+              <div class="cta-row">
+                <a class="button" href="./ai_start_course_site/portal.html">Открыть боевой портал</a>
+                <a class="button secondary" href="./ai_start_course_site/index.html">Экран входа</a>
+              </div>
+            </div>
+            <figure class="shot-card">
+              <img id="lesson-shot" src="./online-lesson-01-homework-wide.png" alt="Скриншот урока 01 в портале">
+            </figure>
+          </div>
+        </section>
+
+        <section class="view" id="materials" aria-label="Материалы портала">
+          <div class="band">
+            <div class="section-head">
+              <h2>Вкладки и материалы</h2>
+              <p>Показываем не только уроки, но и ощущение полноценного кабинета: deck, guides, visual lab, homework, записи.</p>
+            </div>
+            <div class="materials-grid">
+              <a class="material" href="./ai_start_course_site/decks/deck-01-start.html"><strong>Презентации</strong><span>web-deck внутри портала, открывается как отдельная страница.</span></a>
+              <a class="material" href="./ai_start_course_site/skills.html"><strong>Гайды</strong><span>Инструкции, prompt pack и материалы для самостоятельной практики.</span></a>
+              <a class="material" href="./ai_start_course_site/visual-builder.html"><strong>Visual lab</strong><span>Интерактивный конструктор для визуальных форматов и карточек.</span></a>
+              <div class="material"><strong>Записи</strong><span>Zoom-ссылки, коды доступа, транскрипты и краткие summary уроков.</span></div>
+              <div class="material"><strong>Домашка</strong><span>Три уровня сложности: base, optimal, advanced, чтобы команда не тонула в героизме.</span></div>
+              <div class="material"><strong>Hub</strong><span>Место для сохранения удачных правил, промптов, примеров и обновлений.</span></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="view" id="screens" aria-label="Галерея скриншотов">
+          <div class="band">
+            <div class="section-head">
+              <h2>Скриншоты портала</h2>
+              <p>Галерея из текущей сборки. Клик по карточке меняет большой скрин наверху.</p>
+            </div>
+            <div class="gallery-grid">
+              <figure class="gallery-item" data-shot="./live-portal-preview.png" data-title="Главный экран портала">
+                <img src="./live-portal-preview.png" alt="Главный экран портала">
+                <figcaption>Главный экран <span>portal</span></figcaption>
+              </figure>
+              <figure class="gallery-item" data-shot="./online-lesson-01-homework-wide.png" data-title="Урок 01 и домашнее задание">
+                <img src="./online-lesson-01-homework-wide.png" alt="Урок 01 и домашнее задание">
+                <figcaption>Урок 01 <span>homework</span></figcaption>
+              </figure>
+              <figure class="gallery-item" data-shot="./ai_start_course_site/portal-lesson-02-final.png" data-title="Урок 02: текстовый модуль">
+                <img src="./ai_start_course_site/portal-lesson-02-final.png" alt="Урок 02 в портале">
+                <figcaption>Урок 02 <span>text os</span></figcaption>
+              </figure>
+              <figure class="gallery-item" data-shot="./ai_start_course_site/visual-builder-desktop.png" data-title="Визуальный конструктор">
+                <img src="./ai_start_course_site/visual-builder-desktop.png" alt="Визуальный конструктор">
+                <figcaption>Visual lab <span>tool</span></figcaption>
+              </figure>
+              <figure class="gallery-item" data-shot="./ai_start_course_site/preview.png" data-title="Превью курса">
+                <img src="./ai_start_course_site/preview.png" alt="Превью курса AI Start">
+                <figcaption>Course preview <span>deck</span></figcaption>
+              </figure>
+              <figure class="gallery-item" data-shot="./portal-deploy-preview.png" data-title="Экран деплоя портала">
+                <img src="./portal-deploy-preview.png" alt="Экран деплоя портала">
+                <figcaption>Deploy preview <span>online</span></figcaption>
+              </figure>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <script>
+    const lessons = [
+      {
+        code: "УРОК 01",
+        title: "Старт курса и карта программы",
+        text: "Фиксируем рабочую рамку: AI draft, human gate, hub и единая карта материалов курса.",
+        tags: ["карта курса", "human gate", "hub"],
+        points: ["запись Zoom и код доступа", "summary и transcript", "домашнее задание в 3 уровнях"],
+        shot: "./online-lesson-01-homework-wide.png"
+      },
+      {
+        code: "УРОК 02",
+        title: "Управляемая работа с текстом",
+        text: "Источник, голос, черновик, чистка, формат и проверка. Не просто “напиши пост”, ну мы же взрослые люди.",
+        tags: ["text os", "style graph", "de-ai-fy"],
+        points: ["prompt pack без агента", "TV Style Graph", "проверка перед выпуском"],
+        shot: "./ai_start_course_site/portal-lesson-02-final.png"
+      },
+      {
+        code: "УРОК 03",
+        title: "Видео и визуальная фабрика",
+        text: "Референс превращается в visual DNA, а длинное видео или транскрипт в карту материала и production brief.",
+        tags: ["style dna", "visual lab", "video map"],
+        points: ["visual constructor", "image style prompt", "video texture prompt"],
+        shot: "./ai_start_course_site/visual-builder-desktop.png"
+      },
+      {
+        code: "УРОК 04",
+        title: "Аудио и редакторский контур",
+        text: "Озвучка, подложки, Suno-примеры, дайджест и план выпуска в одном редакционном маршруте.",
+        tags: ["audio", "suno", "editorial contour"],
+        points: ["аудио-примеры", "prompt-блок", "план выпуска"],
+        shot: "./live-portal-preview.png"
+      }
+    ];
+
+    const tabButtons = Array.from(document.querySelectorAll("[data-tab]"));
+    const tabTargets = Array.from(document.querySelectorAll("[data-tab-target]"));
+    const views = Array.from(document.querySelectorAll(".view"));
+    const stageImage = document.querySelector("#stage-image");
+    const stageTitle = document.querySelector("#stage-title");
+    const lessonGrid = document.querySelector("#lesson-grid");
+    const lessonLinks = Array.from(document.querySelectorAll("[data-lesson]"));
+    const lessonCode = document.querySelector("#lesson-code");
+    const lessonTitle = document.querySelector("#lesson-title");
+    const lessonText = document.querySelector("#lesson-text");
+    const lessonTags = document.querySelector("#lesson-tags");
+    const lessonPoints = document.querySelector("#lesson-points");
+    const lessonShot = document.querySelector("#lesson-shot");
+
+    function setTab(id) {
+      tabButtons.forEach((button) => button.classList.toggle("active", button.dataset.tab === id));
+      views.forEach((view) => view.classList.toggle("active", view.id === id));
+    }
+
+    function setStage(src, title) {
+      stageImage.src = src;
+      stageTitle.textContent = title;
+    }
+
+    function setLesson(index, updateStage = true) {
+      const lesson = lessons[index];
+      lessonCode.textContent = lesson.code;
+      lessonTitle.textContent = lesson.title;
+      lessonText.textContent = lesson.text;
+      lessonShot.src = lesson.shot;
+      lessonShot.alt = `Скриншот: ${lesson.title}`;
+      lessonTags.innerHTML = lesson.tags.map((tag) => `<span class="tag">${tag}</span>`).join("");
+      lessonPoints.innerHTML = lesson.points.map((point) => `<li>${point}</li>`).join("");
+      document.querySelectorAll(".lesson-card").forEach((card) => {
+        card.classList.toggle("active", Number(card.dataset.lessonCard) === index);
+      });
+      lessonLinks.forEach((link) => {
+        link.classList.toggle("active", Number(link.dataset.lesson) === index);
+      });
+      if (updateStage) {
+        setStage(lesson.shot, lesson.title);
+      }
+    }
+
+    lessonGrid.innerHTML = lessons.map((lesson, index) => `
+      <button class="lesson-card${index === 0 ? " active" : ""}" type="button" data-lesson-card="${index}">
+        <span>
+          <span class="code">${lesson.code}</span>
+          <h3>${lesson.title}</h3>
+          <p>${lesson.text}</p>
+        </span>
+        <span class="tag-row">${lesson.tags.map((tag) => `<span class="tag">${tag}</span>`).join("")}</span>
+      </button>
+    `).join("");
+
+    tabButtons.forEach((button) => {
+      button.addEventListener("click", () => setTab(button.dataset.tab));
+    });
+
+    tabTargets.forEach((button) => {
+      button.addEventListener("click", () => setTab(button.dataset.tabTarget));
+    });
+
+    lessonLinks.forEach((button) => {
+      button.addEventListener("click", () => {
+        setTab("lessons");
+        setLesson(Number(button.dataset.lesson));
+      });
+    });
+
+    document.querySelectorAll(".lesson-card").forEach((button) => {
+      button.addEventListener("click", () => setLesson(Number(button.dataset.lessonCard)));
+    });
+
+    document.querySelectorAll(".gallery-item").forEach((item) => {
+      item.addEventListener("click", () => {
+        setStage(item.dataset.shot, item.dataset.title);
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+    });
+
+    setLesson(0, false);
+    setStage("./live-portal-preview.png", "Главный экран портала");
+  </script>
+</body>
+</html>
