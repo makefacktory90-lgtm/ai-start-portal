@@ -446,67 +446,67 @@ const modules = {
   north01: {
     crumb: "Июнь · Северный город",
     code: "SG · 01",
-    title: "Северный город: агенты и репозитории",
-    subtitle: "Отдельный июньский контур для Северного города: запись, summary и рабочая схема для agent-like сценариев и редакционного hub.",
+    title: "Северный город: агентные системы для команды",
+    subtitle: "Отдельный июньский контур для Северного города: запись, презентация и рабочая схема для полуавтомата, автомата и human-in-the-loop маршрутов.",
     posterKicker: "СЕВЕРНЫЙ ГОРОД · ИЮНЬ",
-    posterTitle: "agents → repository → human gate",
+    posterTitle: "agent systems → human gate → next steps",
     posterSubtitle: "отдельный микро-раздел на 4 июньских занятия",
     sideTitle: "Северный город · модуль 1",
-    sideSummary: "Первый июньский слот: агентные сценарии, ручная проверка, репозиторий редакции и список automation candidates.",
+    sideSummary: "Первый июньский слот: агентные системы, полуавтомат, автомат, ручная проверка и практический маршрут для команды.",
     recording: {
-      title: "SG-01: запись лекции",
-      summary: "Запись Zoom уже подключена. Для долгого хранения лучше перенести видео на Google Drive и позже заменить ссылку в портале на Drive.",
+      title: "SG-01: запись лекции по агентным системам",
+      summary: "Запись Zoom готова. Код доступа: D*rJZg9c. Домашнее задание уже встроено в презентацию лекции 07.",
       folderUrl: "../ai_start_portal_v0/10_recordings/lesson-07-severny-agents-repositories/",
-      recordingUrl: "https://us06web.zoom.us/rec/share/oLbQxQ9XPevVXHA2PODuD_IM_5eMxdD1OBgRFL9bLShk-dKnIcmx0kzd1huGiF2q.-B1M7TAow5qwEA73",
-      transcriptUrl: "../ai_start_portal_v0/10_recordings/lesson-07-severny-agents-repositories/recording_link.md",
-      summaryUrl: "../ai_start_portal_v0/10_recordings/lesson-07-severny-agents-repositories/summary.md",
-      accessCode: "F&m!A3kh",
+      recordingUrl: "https://us06web.zoom.us/rec/share/7ckaa15GNB8QnT8T-DtulqYc8_PD0GSfhaPvKNwjKZT6gQi86AffEpf1hwFvjcB4.LQxHowtgk76RBnpW",
+      transcriptUrl: "./decks/deck-07-agent-systems-design.html",
+      summaryUrl: "./decks/deck-07-agent-systems-design.html#s13",
+      accessCode: "D*rJZg9c",
       state: "запись доступна",
       timeline: [
-        { time: "repo", label: "Как устроить редакционный репозиторий и зачем он нужен для repeatable workflows." },
-        { time: "agent", label: "Что такое agent-like сценарий и как разложить его на input, AI step, human check и output." },
-        { time: "gate", label: "Что нельзя автоматизировать без редактора: факты, права, публикация, тон." },
-        { time: "next", label: "Какие сценарии можно поставить в очередь на полуавтоматизацию позже." }
+        { time: "levels", label: "Ручной маршрут, полуавтомат и автомат: где команде полезно начинать и где нужен human gate." },
+        { time: "design", label: "Как дизайнеру работать со стилем, промптами, проектом и 3-5 итерациями до устойчивой visual deck." },
+        { time: "gate", label: "Что важно оставлять у человека: бренд, факты, текст, публикационное решение и финальная проверка." },
+        { time: "next", label: "Что делать дальше: один пилотный участок, recipe for series, working prompts и понятный следующий шаг." }
       ]
     },
     homework: [
       {
         level: "База",
-        text: "Выбрать один повторяющийся сценарий и описать его через вход, AI-шаг, ручную проверку, выход и запреты на автоматизацию."
+        text: "Выбрать один повторяющийся визуальный или редакционный сценарий и описать его через вход, AI-шаг, ручную проверку, выход и ограничения."
       },
       {
         level: "Пилот",
-        text: "Собрать один agent-like сценарий: monitoring -> digest, transcript -> clip candidates, article -> channel package или weekly update proposal."
+        text: "Собрать один полуавтоматный сценарий: стиль -> prompt set, материал -> visual deck, transcript -> clip candidates или article -> channel package."
       },
       {
         level: "Внедрение",
-        text: "Оценить, что можно полуавтоматизировать позже, а что должно остаться у редактора по фактам, правам и публикации."
+        text: "Оценить, что можно переводить в полуавтомат позже, а что лучше оставить у человека по фактам, правам, бренду и публикации."
       }
     ],
     lessons: [
-      "Показываем, как выделить повторяющийся редакционный сценарий и не превращать его в магию из одного удачного чата.",
-      "Собираем human-in-the-loop маршрут: input, AI step, human check, output.",
-      "Разбираем, как репозиторий и hub сохраняют approved examples, rejected examples и quality gates.",
-      "Фиксируем список сценариев, которые можно переводить в полуавтоматический режим только после накопления примеров."
+      "Показываем, как разложить агентную систему на понятные уровни: ручной, полуавтомат и автомат.",
+      "Собираем human-in-the-loop маршрут: вход, анализ стиля или материала, AI-шаг, human check и выход.",
+      "Разбираем, как сохранять working prompts, approved examples, rejected examples и quality gates.",
+      "Фиксируем список сценариев, которые можно переводить в полуавтоматический режим только после накопления устойчивых примеров."
     ],
     artifacts: [
-      "карта agent-like сценария",
+      "карта agent systems маршрута",
       "список automation candidates",
-      "draft структуры репозитория",
-      "summary и homework по уроку"
+      "лекция 07 по агентным системам",
+      "домашнее задание внутри презентации"
     ],
     insights: [
-      "Агент полезен как рабочий слой, но не как самостоятельный редактор.",
-      "Репозиторий нужен для повторяемости, а не для складирования файлов.",
+      "Агент полезен как рабочий слой, но не как самостоятельный владелец результата.",
       "Сначала сохраняются шаблоны, примеры и quality gates, потом обсуждается автоматизация.",
-      "Google Drive подходит как место для публикации тяжелой записи, портал хранит стабильную ссылку и маршрут урока."
+      "Полуавтомат лучше работает там, где уже есть стиль, структура и понятный human review.",
+      "Домашнее задание и следующий шаг удобнее держать прямо в лекционной деке, а не в отдельном документе."
     ],
     resources: [
-      { label: "Запись Zoom", href: "https://us06web.zoom.us/rec/share/oLbQxQ9XPevVXHA2PODuD_IM_5eMxdD1OBgRFL9bLShk-dKnIcmx0kzd1huGiF2q.-B1M7TAow5qwEA73", external: true },
-      { label: "Summary урока", href: "../ai_start_portal_v0/10_recordings/lesson-07-severny-agents-repositories/summary.md" },
-      { label: "Homework", href: "../ai_start_portal_v0/10_recordings/lesson-07-severny-agents-repositories/homework.md" },
-      { label: "Презентация · AI-агенты", href: "./decks/deck-08-agents.html" },
-      { label: "Презентация · AI-hub и репозитории", href: "./decks/deck-05-ai-hub-repository-tv21.html" }
+      { label: "Запись Zoom", href: "https://us06web.zoom.us/rec/share/7ckaa15GNB8QnT8T-DtulqYc8_PD0GSfhaPvKNwjKZT6gQi86AffEpf1hwFvjcB4.LQxHowtgk76RBnpW", external: true },
+      { label: "Презентация · Лекция 07", href: "./decks/deck-07-agent-systems-design.html" },
+      { label: "Домашнее задание", href: "./decks/deck-07-agent-systems-design.html#s13" },
+      { label: "Review pack", href: "./nornikel-review-pack.html" },
+      { label: "Гайд · visual DNA prompt", href: "./assets/prompts/prompt-image-style-dna-analysis.pdf" }
     ]
   },
   north02: {
