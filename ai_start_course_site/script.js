@@ -571,6 +571,22 @@ const modules = {
     posterSubtitle: "после занятий начинается нормальная работа, а не пустой энтузиазм",
     sideTitle: "Северный город · модуль 4",
     sideSummary: "Слот под режим применения: 1 материал в неделю, review, обновление базы и следующий пересмотр.",
+    recording: {
+      title: "SG-04: финальная лекция Северного города",
+      summary: "Запись Zoom подключена. Это финальная лекция Северного города; для нее используется та же финальная презентация, что и для последней лекции ТВ-21.",
+      folderUrl: "./decks/deck-10-final-kit.html",
+      recordingUrl: "https://us06web.zoom.us/rec/share/mMh0UaX3C2325o5bbqFWp8EY4-KJW6VYpuntSIpU_yFMcqqw3neW6eKfoUq_p3Rx.MHia5-0yYqwtgvfb",
+      transcriptUrl: "./decks/deck-10-final-kit.html",
+      summaryUrl: "./decks/deck-10-final-kit.html",
+      accessCode: "TLwg%b2=",
+      state: "запись доступна",
+      timeline: [
+        { time: "final", label: "Финальная сборка рабочего режима после серии занятий." },
+        { time: "rollout", label: "30-дневный контур применения: use, gate, save evidence, update." },
+        { time: "hub", label: "Как не потерять результат после Zoom: владельцы, review cadence и обновление базы." },
+        { time: "next", label: "Что считать устойчивым эффектом и когда переходить к следующему уровню." }
+      ]
+    },
     lessons: [
       "Собираем 30-дневный контур применения после июньской серии.",
       "Фиксируем weekly cadence: use, gate, save evidence, update.",
@@ -584,6 +600,10 @@ const modules = {
     insights: [
       "После финального Zoom начинается внедрение, а не заканчивается программа.",
       "Если evidence не сохраняется, команда каждый раз начинает заново."
+    ],
+    resources: [
+      { label: "Запись Zoom", href: "https://us06web.zoom.us/rec/share/mMh0UaX3C2325o5bbqFWp8EY4-KJW6VYpuntSIpU_yFMcqqw3neW6eKfoUq_p3Rx.MHia5-0yYqwtgvfb", external: true },
+      { label: "Презентация", href: "./decks/deck-10-final-kit.html" }
     ]
   }
 };
