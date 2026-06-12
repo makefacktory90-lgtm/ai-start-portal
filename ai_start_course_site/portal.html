@@ -198,10 +198,10 @@
         </div>
       </section>
 
-      <section class="homework-panel" aria-label="Домашнее задание по уровням">
+      <section id="homework-panel" class="homework-panel" aria-label="Домашнее задание по уровням">
         <div class="check-head">
           <span>домашнее задание</span>
-          <span>3 уровня</span>
+          <span id="main-homework-count">по презентации</span>
         </div>
         <div id="main-homework-list" class="homework-grid"></div>
       </section>
@@ -242,10 +242,10 @@
       <p id="side-summary">Открыть kit, понять уровни и запустить первый безопасный workflow.</p>
     </section>
 
-    <section class="check-card">
+    <section id="side-homework-card" class="check-card">
       <div class="check-head">
         <span>домашнее задание</span>
-        <span>базовый / оптимальный / расширенный</span>
+        <span id="side-homework-count">по презентации</span>
       </div>
       <div id="homework-list"></div>
     </section>
@@ -253,6 +253,11 @@
     <section class="collection" aria-label="Материалы урока">
       <div class="mini-label">материалы урока</div>
       <div id="lesson-materials"></div>
+    </section>
+
+    <section id="lesson-prompts-card" class="collection" aria-label="Промпты урока" hidden>
+      <div class="mini-label">промпты урока</div>
+      <div id="lesson-prompts"></div>
     </section>
 
   </aside>

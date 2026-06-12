@@ -33,22 +33,18 @@ const modules = {
         { time: "35:00", label: "Установка и адаптация skill, зачем форкать готовые решения." },
         { time: "55:00", label: "Exa как внешний поисковый источник и связка skill + Exa." },
         { time: "65:00", label: "Демонстрация результата research skill и переход к домашке." },
-        { time: "66:00", label: "Домашнее задание: три уровня работы со скиллами для ресерча." },
+        { time: "66:00", label: "Домашнее задание: первый рабочий прогон и продвинутый форк research skill." },
         { time: "85:00", label: "Финальные вопросы, группа курса, ссылка на портал." }
       ]
     },
     homework: [
       {
-        level: "Уровень 1 · Базовый",
-        text: "Возьмите готовые research skills: deep-research-skill и skill для телестудии. Протестируйте на своей теме. Итог: сохраненный результат ресерча, который можно взять в работу."
+        level: "Base · первый рабочий прогон",
+        text: "Создать рабочую папку, установить research skill, подключить Exa и найти что-нибудь по своей теме."
       },
       {
-        level: "Уровень 2 · ОК",
-        text: "Добавьте Exa как дополнительный источник поиска, подключите Exa к агенту и используйте связку skill + Exa. Итог: ресерч с внешним поисковым источником."
-      },
-      {
-        level: "Уровень 3 · Продвинутый",
-        text: "Форкните skill и сделайте свою версию под собственные задачи, источники и формат выдачи. Итог: свой research skill, заточенный под вашу работу."
+        level: "Advanced · своя версия skill",
+        text: "Форкнуть skill под свои профессиональные задачи, прогнать материал и принести результат: Source Map + выводы."
       }
     ],
     lessons: [
@@ -76,8 +72,16 @@ const modules = {
     resources: [
       { label: "Запись Zoom", href: "https://us06web.zoom.us/rec/share/OxKsTKtVd_BbugFLNPSryL6lJeqrDM1LVsbxg7rQE45VVYPN09tyo7l0XvvbshNs.ww4OFDKpG-Rm4smJ", external: true },
       { label: "Презентация", href: "./decks/deck-01-start.html" },
+      { label: "Домашнее задание", href: "./decks/deck-01-start.html#s17" },
       { label: "Транскрипт", href: "../ai_start_portal_v0/10_recordings/lesson-01-start/transcript.md" },
       { label: "Краткое резюме", href: "../ai_start_portal_v0/10_recordings/lesson-01-start/summary.md" }
+    ],
+    prompts: [
+      { label: "Researcher: SCOUT / CRITIC / METHOD / ACTION / GATE", href: "./decks/deck-01-start.html#s12" },
+      { label: "Smell test prompt", href: "./decks/deck-01-start.html#s09" },
+      { label: "Source safety gate", href: "./decks/deck-01-start.html#s10" },
+      { label: "Publication gate", href: "./decks/deck-01-start.html#s11" },
+      { label: "Source Map prompt + output format", href: "./skills.html#researcher" }
     ]
   },
   text: {
@@ -121,11 +125,11 @@ const modules = {
       },
       {
         level: "Normal",
-        text: "В агенте: создать папку под конкретный продукт, положить примеры и правила, запустить TV Style Graph, написать один текст и пройти проверку перед выпуском."
+        text: "В агенте: создать папку проекта, запустить TV Style Graph, взять один источник, собрать пакет форматов и пройти проверку перед выпуском."
       },
       {
         level: "Advanced",
-        text: "Добавить Dramaturgical Text, Format Factory, Voice to Editorial Source, Source Map Prompt или Prompt to Skill под свою передачу, рубрику или авторский формат."
+        text: "Добавить Dramaturgical Text, Format Factory или отдельный форматный скилл для своей передачи."
       }
     ],
     lessons: [
@@ -157,6 +161,14 @@ const modules = {
       { label: "Транскрипт", href: "../ai_start_portal_v0/10_recordings/lesson-02-text-os/transcript.md" },
       { label: "Краткое резюме", href: "../ai_start_portal_v0/10_recordings/lesson-02-text-os/summary.md" },
       { label: "Домашнее задание", href: "./decks/deck-02-text.html#s18" }
+    ],
+    prompts: [
+      { label: "No-Agent Prompt Pack", href: "https://github.com/makefacktory90-lgtm/ai-start-portal/blob/main/ai_start_portal_v0/12_drafts/lesson_02_no_agent_prompt_pack.md", external: true },
+      { label: "Voice DNA / Reverse Prompt", href: "./decks/deck-02-text.html#s12" },
+      { label: "De-AI-fy / Humanize", href: "./decks/deck-02-text.html#s08" },
+      { label: "TV Style Graph Protocol", href: "https://github.com/makefacktory90-lgtm/ai-start-portal/blob/main/ai_start_portal_v0/11_skills/14_style_graph_protocol.md", external: true },
+      { label: "Dramaturgical Text", href: "./decks/deck-02-text.html#s18" },
+      { label: "Format Factory", href: "./decks/deck-02-text.html#s18" }
     ]
   },
   formats: {
@@ -194,16 +206,16 @@ const modules = {
     },
     homework: [
       {
-        level: "Base",
-        text: "Возьмите одно изображение-референс, разберите его через prompt-image-style-dna-analysis и сохраните RECIPE FOR SERIES. Затем возьмите длинное видео или транскрипт, прогоните через prompt-video-texture-analysis и получите карту материала, 3 сюжета и production brief."
+        level: "Уровень 1 · разобрать стиль и видео вручную",
+        text: "Снимите стиль изображения полным visual prompt. По видео сделайте транскрипт, вставьте video prompt в Gemini / Claude / ChatGPT и получите план нарезки."
       },
       {
-        level: "Optimal",
-        text: "Подключите Higgsfield через MCP по гайду или повторите маршрут вручную в выбранном генераторе. Сделайте серию изображений или video assets в одном стиле и сохраните удачный prompt / настройки как workflow."
+        level: "Уровень 2 · подключить Higgsfield через MCP",
+        text: "Сохраните стиль, подключите Higgsfield через MCP, сделайте серию картинок или video assets в одном стиле, затем оформите это как skill."
       },
       {
-        level: "Advanced",
-        text: "Соберите свой HTML visual constructor и агентный видео-пайплайн: файл в папку, анализ, хуки, нарезка, brief и human gate по фактам, лицам, цитатам, титрам и правам."
+        level: "Уровень 3 · собрать свою инфраструктуру",
+        text: "Создайте visual constructor и агентный видео-пайплайн: файл в папку, агент анализирует, находит хуки, предлагает монтаж и готовит brief."
       }
     ],
     lessons: [
@@ -234,7 +246,17 @@ const modules = {
       { label: "Запись Zoom", href: "https://us06web.zoom.us/rec/share/Qwhba1JW094TSmlk51x2_cuS3tZbj5VBDO7QdWmr6hTmn4HIHyCz59s4EuDY007A.3sOAjLuHa5MEbBHL", external: true },
       { label: "Презентация", href: "./decks/deck-03-video.html" },
       { label: "Визуальный конструктор", href: "./visual-builder.html" },
-      { label: "Домашнее задание", href: "../ai_start_portal_v0/10_recordings/lesson-03-visual-video/summary.md" }
+      { label: "Домашнее задание", href: "./decks/deck-03-video.html#s19" },
+      { label: "Higgsfield MCP guide", href: "./assets/guides/higgsfield-mcp-guide.pdf" },
+      { label: "Visual constructor guide", href: "./assets/guides/visual-constructor-guide.pdf" }
+    ],
+    prompts: [
+      { label: "Image Style DNA prompt · PDF", href: "./assets/prompts/prompt-image-style-dna-analysis.pdf?v=20260518-visual" },
+      { label: "Image Style DNA prompt · MD", href: "./assets/prompts/prompt-image-style-dna-analysis.md?v=20260518-visual" },
+      { label: "Video texture analysis prompt · PDF", href: "./assets/prompts/prompt-video-texture-analysis.pdf?v=20260518-gemini" },
+      { label: "Video texture analysis prompt · MD", href: "./assets/prompts/prompt-video-texture-analysis.md?v=20260518-gemini" },
+      { label: "Video editorial pipeline guide", href: "./assets/prompts/video-editorial-pipeline-codex-claude.pdf" },
+      { label: "Human gate: факты, лица, цитаты, титры, бренд", href: "./decks/deck-03-video.html#s18" }
     ]
   },
   radar: {
@@ -272,12 +294,16 @@ const modules = {
         text: "Подготовить одно аудио: текст для озвучки, промпт для подложки и короткую проверку результата."
       },
       {
-        level: "Optimal",
+        level: "Опти",
         text: "Собрать редакторский дайджест из 8-12 материалов и на его основе подготовить план выпуска на неделю."
       },
       {
+        level: "Проект",
+        text: "Сложить в одно место правила, три обязательных промпта и по одному хорошему и плохому примеру."
+      },
+      {
         level: "Hub",
-        text: "Сложить в одно место правила, обязательные промпты, один удачный пример и одно предложение по обновлению правила."
+        text: "Подготовить одно предложение по обновлению правила: что именно надо поправить и почему."
       }
     ],
     lessons: [
@@ -302,8 +328,15 @@ const modules = {
       { label: "Запись Zoom", href: "https://us06web.zoom.us/rec/share/zz0mKewp3bP6veqIoLr87t-FmuWXyp9Lsmet1_xfAGSaCm3axK7StvB6IRr2ons.wS4wJ1PpFEC6QJTJ", external: true },
       { label: "Презентация", href: "./decks/deck-04-audio-editorial-contour.html" },
       { label: "Аудио-примеры", href: "./decks/deck-04-audio-editorial-contour.html#s08" },
-      { label: "Промпты урока", href: "./decks/deck-04-audio-editorial-contour.html#s05" },
       { label: "Домашнее задание", href: "./decks/deck-04-audio-editorial-contour.html#s21" }
+    ],
+    prompts: [
+      { label: "Prompt · озвучка", href: "./decks/deck-04-audio-editorial-contour.html#s05" },
+      { label: "Suno · базовый и профессиональный prompt", href: "./decks/deck-04-audio-editorial-contour.html#s06" },
+      { label: "Prompt · редакторский дайджест", href: "./decks/deck-04-audio-editorial-contour.html#s14" },
+      { label: "Prompt · план выпуска", href: "./decks/deck-04-audio-editorial-contour.html#s15" },
+      { label: "Prompt · задание команде", href: "./decks/deck-04-audio-editorial-contour.html#s17" },
+      { label: "Prompt · обновление hub", href: "./decks/deck-04-audio-editorial-contour.html#s20" }
     ]
   },
   system: {
@@ -402,20 +435,7 @@ const modules = {
         { time: "infra", label: "Проекты, разделение контекста, удаленный контур и серверные провайдеры." }
       ]
     },
-    homework: [
-      {
-        level: "База",
-        text: "Каждый отдел выбирает один повторяющийся участок работы, описывает его через ДНК промпта и фиксирует ручную проверку."
-      },
-      {
-        level: "Пилот",
-        text: "Сделать 3-5 прогонов на одном сценарии, сохранить удачный и неудачный пример, а также правку, которая усилила результат."
-      },
-      {
-        level: "Внедрение",
-        text: "Назначить ответственного за шаблон, сбор примеров и weekly review; решить, что масштабировать следующим шагом."
-      }
-    ],
+    homework: [],
     lessons: [
       "Фиксируем универсальную формулу промпта для маркетинга, HR, аналитики и редакции.",
       "Определяем, какие marketing pipelines полезны корпоративной команде: ICP, campaign brief, monitoring, quality gate.",
@@ -443,6 +463,14 @@ const modules = {
       { label: "Prompt guide", href: "../ai_start_portal_v0/08_presentations/ai-start%20%7Bguide%7D%20prompt%20dna%20for%20tv%20company%20-%202026-05-28.md" },
       { label: "Zoom Whiteboard guide", href: "../ai_start_portal_v0/08_presentations/ai-start%20%7Bguide%7D%20zoom%20whiteboard%20prep%20for%20final%20lecture%20-%202026-05-28.md" },
       { label: "Провайдеры серверов и удаленный контур", href: "https://iraai.ru/ai-agent-server-providers-page/", external: true }
+    ],
+    prompts: [
+      { label: "Prompt DNA: роль / задача / условия / ограничения", href: "./decks/deck-10-final-kit.html#s04" },
+      { label: "Prompt boosters: self-check, premortem, варианты структуры", href: "./decks/deck-10-final-kit.html#s05" },
+      { label: "Prompt practice: докрутить слабый запрос", href: "./decks/deck-10-final-kit.html#s06" },
+      { label: "Marketing library: ICP / prompt audit / scorecard", href: "./decks/deck-10-final-kit.html#s07" },
+      { label: "Analytics prompt: анализ с рамкой", href: "./decks/deck-10-final-kit.html#s12" },
+      { label: "Department loop: сохранить prompt, example, failure, правку", href: "./decks/deck-10-final-kit.html#s14" }
     ]
   },
   north01: {
@@ -524,7 +552,7 @@ const modules = {
     sideSummary: "Агентные системы, полуавтомат, автомат, ручная проверка и практический маршрут для команды.",
     recording: {
       title: "SG-02: лекция от 5 июня · агентные системы",
-      summary: "Запись Zoom готова. Код доступа: D*rJZg9c. Домашнее задание уже встроено в презентацию лекции 07.",
+      summary: "Запись Zoom готова. Код доступа: D*rJZg9c. Следующие шаги, toolkit и prompt-блок встроены в презентацию лекции 07.",
       folderUrl: "./decks/deck-07-agent-systems-design.html",
       recordingUrl: "https://us06web.zoom.us/rec/share/a1PiFm2_bUwImvioflS3pWc4tmxSaNRVxSB-gIbbhDCZ6PAIsooVxfWKO06y0k7A.c4FkQHnqasgXv9B3",
       transcriptUrl: "./decks/deck-07-agent-systems-design.html",
@@ -538,20 +566,7 @@ const modules = {
         { time: "next", label: "Что делать дальше: один пилотный участок, recipe for series, working prompts и понятный следующий шаг." }
       ]
     },
-    homework: [
-      {
-        level: "База",
-        text: "Выбрать один повторяющийся визуальный или редакционный сценарий и описать его через вход, AI-шаг, ручную проверку, выход и ограничения."
-      },
-      {
-        level: "Пилот",
-        text: "Собрать один полуавтоматный сценарий: стиль -> prompt set, материал -> visual deck, transcript -> clip candidates или article -> channel package."
-      },
-      {
-        level: "Внедрение",
-        text: "Оценить, что можно полуавтоматизировать позже, а что должно остаться у редактора по фактам, правам и публикации."
-      }
-    ],
+    homework: [],
     lessons: [
       "Показываем, как разложить агентную систему на понятные уровни: ручной, полуавтомат и автомат.",
       "Собираем human-in-the-loop маршрут: вход, анализ стиля или материала, AI-шаг, human check и выход.",
@@ -562,20 +577,28 @@ const modules = {
       "карта agent systems маршрута",
       "список automation candidates",
       "лекция 07 по агентным системам",
-      "домашнее задание внутри презентации"
+      "следующие шаги внутри презентации"
     ],
     insights: [
       "Агент полезен как рабочий слой, но не как самостоятельный владелец результата.",
       "Сначала сохраняются шаблоны, примеры и quality gates, потом обсуждается автоматизация.",
       "Полуавтомат лучше работает там, где уже есть стиль, структура и понятный human review.",
-      "Домашнее задание и следующий шаг удобнее держать прямо в лекционной деке, а не в отдельном документе."
+      "Следующий шаг удобнее держать прямо в лекционной деке, а не в отдельном документе."
     ],
     resources: [
       { label: "Запись Zoom", href: "https://us06web.zoom.us/rec/share/a1PiFm2_bUwImvioflS3pWc4tmxSaNRVxSB-gIbbhDCZ6PAIsooVxfWKO06y0k7A.c4FkQHnqasgXv9B3", external: true },
       { label: "Презентация · Лекция 07", href: "./decks/deck-07-agent-systems-design.html" },
-      { label: "Домашнее задание", href: "./decks/deck-07-agent-systems-design.html#s13" },
+      { label: "Следующие шаги", href: "./decks/deck-07-agent-systems-design.html#s13" },
+      { label: "Toolkit", href: "./decks/deck-07-agent-systems-design.html#s14" },
       { label: "Review pack", href: "./nornikel-review-pack.html" },
       { label: "Гайд · visual DNA prompt", href: "./assets/prompts/prompt-image-style-dna-analysis.pdf" }
+    ],
+    prompts: [
+      { label: "Visual DNA prompt · PDF", href: "./assets/prompts/prompt-image-style-dna-analysis.pdf" },
+      { label: "Visual DNA prompt · MD", href: "./assets/prompts/prompt-image-style-dna-analysis.md" },
+      { label: "Шаблон visual systems operator", href: "./decks/deck-07-agent-systems-design.html#s16" },
+      { label: "Design workflow folder structure", href: "./decks/deck-07-agent-systems-design.html#s16" },
+      { label: "Human gate для visual deck", href: "./decks/deck-07-agent-systems-design.html#s04" }
     ]
   },
   north03: {
@@ -620,7 +643,15 @@ const modules = {
     ],
     resources: [
       { label: "Запись Zoom", href: "https://us06web.zoom.us/rec/share/vNPE972VgQRrCo2O0rYZDmbqWDzVgHsn8SFop9wOcRp9WKTI4uiTK1L8p8Tb7KeE.NORtRNvoswJhmnXk", external: true },
-      { label: "Презентация · Амбассадоры", href: "./decks/deck-08-ambassadors-change.html" }
+      { label: "Презентация · Амбассадоры", href: "./decks/deck-08-ambassadors-change.html" },
+      { label: "90-дневный режим", href: "./decks/deck-08-ambassadors-change.html#s08" },
+      { label: "Operating system после курса", href: "./decks/deck-08-ambassadors-change.html#s11" }
+    ],
+    prompts: [
+      { label: "Working prompts и gates: что собирает амбассадор", href: "./decks/deck-08-ambassadors-change.html#s06" },
+      { label: "Prompt, output, правка и новое правило", href: "./decks/deck-08-ambassadors-change.html#s09" },
+      { label: "Hub update discipline", href: "./decks/deck-08-ambassadors-change.html#s10" },
+      { label: "Prompt engineering как рабочий навык", href: "./decks/deck-08-ambassadors-change.html#s12" }
     ]
   },
   north04: {
@@ -666,6 +697,14 @@ const modules = {
     resources: [
       { label: "Запись Zoom", href: "https://us06web.zoom.us/rec/share/mMh0UaX3C2325o5bbqFWp8EY4-KJW6VYpuntSIpU_yFMcqqw3neW6eKfoUq_p3Rx.MHia5-0yYqwtgvfb", external: true },
       { label: "Презентация", href: "./decks/deck-10-final-kit.html" }
+    ],
+    prompts: [
+      { label: "Prompt DNA: роль / задача / условия / ограничения", href: "./decks/deck-10-final-kit.html#s04" },
+      { label: "Prompt boosters: self-check, premortem, варианты структуры", href: "./decks/deck-10-final-kit.html#s05" },
+      { label: "Prompt practice: докрутить слабый запрос", href: "./decks/deck-10-final-kit.html#s06" },
+      { label: "Marketing library: ICP / prompt audit / scorecard", href: "./decks/deck-10-final-kit.html#s07" },
+      { label: "Analytics prompt: анализ с рамкой", href: "./decks/deck-10-final-kit.html#s12" },
+      { label: "Department loop: сохранить prompt, example, failure, правку", href: "./decks/deck-10-final-kit.html#s14" }
     ]
   }
 };
@@ -773,8 +812,24 @@ function renderHomeworkInto(selector, items) {
 }
 
 function renderHomework(items) {
-  renderHomeworkInto("#homework-list", items);
-  renderHomeworkInto("#main-homework-list", items);
+  const homeworkItems = items || [];
+  const homeworkPanel = $("#homework-panel");
+  const sideHomeworkCard = $("#side-homework-card");
+  const mainHomeworkCount = $("#main-homework-count");
+  const sideHomeworkCount = $("#side-homework-count");
+  const hasHomework = homeworkItems.length > 0;
+  if (homeworkPanel) homeworkPanel.hidden = !hasHomework;
+  if (sideHomeworkCard) sideHomeworkCard.hidden = !hasHomework;
+  const homeworkLabel = `${homeworkItems.length} ${homeworkItems.length === 1 ? "пункт" : "пункта"}`;
+  if (mainHomeworkCount) mainHomeworkCount.textContent = homeworkLabel;
+  if (sideHomeworkCount) sideHomeworkCount.textContent = homeworkLabel;
+  if (!hasHomework) {
+    renderHomeworkInto("#homework-list", []);
+    renderHomeworkInto("#main-homework-list", []);
+    return;
+  }
+  renderHomeworkInto("#homework-list", homeworkItems);
+  renderHomeworkInto("#main-homework-list", homeworkItems);
 
   const fallbackSlots = [
     { title: "#a1-title", text: "#a1-text" },
@@ -783,7 +838,7 @@ function renderHomework(items) {
   ];
 
   fallbackSlots.forEach((slot, index) => {
-    const item = items[index];
+    const item = homeworkItems[index];
     const titleEl = $(slot.title);
     const textEl = $(slot.text);
     if (!titleEl || !textEl || !item) return;
@@ -797,6 +852,25 @@ function renderLessonMaterials(items) {
   if (!el) return;
   el.innerHTML = "";
   (items || []).forEach((item) => {
+    const link = document.createElement("a");
+    link.href = item.href;
+    link.textContent = item.label;
+    if (item.external) {
+      link.target = "_blank";
+      link.rel = "noopener";
+    }
+    el.appendChild(link);
+  });
+}
+
+function renderLessonPrompts(items) {
+  const card = $("#lesson-prompts-card");
+  const el = $("#lesson-prompts");
+  if (!card || !el) return;
+  const prompts = items || [];
+  card.hidden = prompts.length === 0;
+  el.innerHTML = "";
+  prompts.forEach((item) => {
     const link = document.createElement("a");
     link.href = item.href;
     link.textContent = item.label;
@@ -895,8 +969,9 @@ function setModule(id) {
   renderList("#artifact-list", data.artifacts);
   renderQuotes(data.insights);
   renderRecording(data.recording || defaultRecording);
-  renderHomework(data.homework || defaultHomework);
+  renderHomework(data.homework || []);
   renderLessonMaterials(data.resources || []);
+  renderLessonPrompts(data.prompts || []);
 
   $$(".nav-item").forEach((button) => {
     button.classList.toggle("active", button.dataset.module === id);
