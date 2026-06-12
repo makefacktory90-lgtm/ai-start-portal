@@ -456,10 +456,10 @@ const modules = {
     sideTitle: "Северный город · модуль 1",
     sideSummary: "Первый июньский слот: агентные системы, полуавтомат, автомат, ручная проверка и практический маршрут для команды.",
     recording: {
-      title: "SG-01: запись лекции по агентным системам",
+      title: "SG-01: лекция от 5 июня · агентные системы",
       summary: "Запись Zoom готова. Код доступа: D*rJZg9c. Домашнее задание уже встроено в презентацию лекции 07.",
       folderUrl: "../ai_start_portal_v0/10_recordings/lesson-07-severny-agents-repositories/",
-      recordingUrl: "https://us06web.zoom.us/rec/share/7ckaa15GNB8QnT8T-DtulqYc8_PD0GSfhaPvKNwjKZT6gQi86AffEpf1hwFvjcB4.LQxHowtgk76RBnpW",
+      recordingUrl: "https://us06web.zoom.us/rec/share/a1PiFm2_bUwImvioflS3pWc4tmxSaNRVxSB-gIbbhDCZ6PAIsooVxfWKO06y0k7A.c4FkQHnqasgXv9B3",
       transcriptUrl: "./decks/deck-07-agent-systems-design.html",
       summaryUrl: "./decks/deck-07-agent-systems-design.html#s13",
       accessCode: "D*rJZg9c",
@@ -504,7 +504,7 @@ const modules = {
       "Домашнее задание и следующий шаг удобнее держать прямо в лекционной деке, а не в отдельном документе."
     ],
     resources: [
-      { label: "Запись Zoom", href: "https://us06web.zoom.us/rec/share/7ckaa15GNB8QnT8T-DtulqYc8_PD0GSfhaPvKNwjKZT6gQi86AffEpf1hwFvjcB4.LQxHowtgk76RBnpW", external: true },
+      { label: "Запись Zoom", href: "https://us06web.zoom.us/rec/share/a1PiFm2_bUwImvioflS3pWc4tmxSaNRVxSB-gIbbhDCZ6PAIsooVxfWKO06y0k7A.c4FkQHnqasgXv9B3", external: true },
       { label: "Презентация · Лекция 07", href: "./decks/deck-07-agent-systems-design.html" },
       { label: "Домашнее задание", href: "./decks/deck-07-agent-systems-design.html#s13" },
       { label: "Review pack", href: "./nornikel-review-pack.html" },
