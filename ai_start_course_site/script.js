@@ -81,7 +81,7 @@ const modules = {
       { label: "Smell test prompt", href: "./decks/deck-01-start.html#s09" },
       { label: "Source safety gate", href: "./decks/deck-01-start.html#s10" },
       { label: "Publication gate", href: "./decks/deck-01-start.html#s11" },
-      { label: "Source Map prompt + output format", href: "./skills.html#researcher" }
+      { label: "Source Map prompt + output format", href: "./skills.html#source-map" }
     ]
   },
   text: {
