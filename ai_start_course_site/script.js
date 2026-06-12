@@ -448,17 +448,84 @@ const modules = {
   north01: {
     crumb: "Июнь · Северный город",
     code: "SG · 01",
-    title: "Северный город: агентные системы для команды",
-    subtitle: "Отдельный июньский контур для Северного города: запись, презентация и рабочая схема для полуавтомата, автомата и human-in-the-loop маршрутов.",
+    title: "Северный город: hub и репозитории",
+    subtitle: "Лекция от 2 июня: как хранить материалы, базовые промпты, рабочие промпты и обновления в управляемом репозитории.",
     posterKicker: "СЕВЕРНЫЙ ГОРОД · ИЮНЬ",
-    posterTitle: "agent systems → human gate → next steps",
+    posterTitle: "portal -> repository -> prompts -> update loop",
     posterSubtitle: "отдельный микро-раздел на 4 июньских занятия",
     sideTitle: "Северный город · модуль 1",
-    sideSummary: "Первый июньский слот: агентные системы, полуавтомат, автомат, ручная проверка и практический маршрут для команды.",
+    sideSummary: "Первый июньский слот: AI-hub, репозиторий, структура материалов и порядок обновления рабочих промптов.",
     recording: {
-      title: "SG-01: лекция от 5 июня · агентные системы",
+      title: "SG-01: лекция от 2 июня · hub и репозиторий",
+      summary: "Запись Zoom готова. Код доступа: F&m!A3kh. Презентация и домашнее задание открываются по ссылкам этого урока.",
+      folderUrl: "./decks/deck-05-ai-hub-repository-tv21.html",
+      recordingUrl: "https://us06web.zoom.us/rec/share/l_W_ijQiG3kmRtYDMn6sdzML1WeY7m3jLONhPihyZLZZq5TVcdr5fwhZRNLvSKyr.rvDepvfn0o-jxX6f",
+      transcriptUrl: "./decks/deck-05-ai-hub-repository-tv21.html",
+      summaryUrl: "./decks/deck-05-ai-hub-repository-tv21.html#s07",
+      accessCode: "F&m!A3kh",
+      state: "запись доступна",
+      timeline: [
+        { time: "portal", label: "Карта портала: уроки, записи, презентации, промпты, skills, гайды и рабочие ссылки." },
+        { time: "repository", label: "Структура репозитория редакции: источники, базовые промпты, рабочие промпты, gates и updates." },
+        { time: "storage", label: "Базовый вариант на Яндекс.Диске и продвинутый вариант в GitHub." },
+        { time: "loop", label: "Как регулярно обновлять рабочие промпты по итогам практики команды." }
+      ]
+    },
+    homework: [
+      {
+        level: "Base · Яндекс.Диск",
+        text: "Начать работать с репозиторием редакции на Яндекс.Диске: создать структуру, разнести материалы, базовые промпты и рабочие промпты по отдельным папкам."
+      },
+      {
+        level: "Advanced · GitHub",
+        text: "Начать работать с репозиторием в GitHub: перенести структуру, оформить README, зафиксировать правила обновления и роли владельцев."
+      },
+      {
+        level: "Update loop · Claude",
+        text: "Подключить репозиторий к Claude и настроить минимум ежемесячное обновление папки рабочих промптов на основе практики редакции."
+      }
+    ],
+    lessons: [
+      "Показываем, как устроен портал: где лежат записи, презентации, промпты, гайды и рабочие ссылки.",
+      "Собираем структуру хранения для редакции: источники, базовые промпты, рабочие промпты, примеры, gates и updates.",
+      "Разбираем базовый вариант репозитория на Яндекс.Диске и продвинутый вариант в GitHub.",
+      "Фиксируем порядок регулярного обновления рабочих промптов через Claude на основе практики редакции."
+    ],
+    artifacts: [
+      "Deck 05: AI-hub и репозитории редакции",
+      "Zoom-запись от 2 июня",
+      "Гайд: Яндекс.Диск + Claude",
+      "Домашнее задание по двум уровням репозитория",
+      "Update loop для рабочих промптов"
+    ],
+    insights: [
+      "Базовые промпты хранятся как стабильная основа курса.",
+      "Рабочие промпты обновляются по результатам применения, правок редактора и повторяющихся задач.",
+      "Яндекс.Диск используется как синхронизированная рабочая папка, которую можно открыть в Claude / Codex Work.",
+      "GitHub подходит для продвинутого варианта, где важны версии, README, changelog и роли владельцев."
+    ],
+    resources: [
+      { label: "Запись Zoom", href: "https://us06web.zoom.us/rec/share/l_W_ijQiG3kmRtYDMn6sdzML1WeY7m3jLONhPihyZLZZq5TVcdr5fwhZRNLvSKyr.rvDepvfn0o-jxX6f", external: true },
+      { label: "Презентация", href: "./decks/deck-05-ai-hub-repository-tv21.html" },
+      { label: "Домашнее задание", href: "./decks/deck-05-ai-hub-repository-tv21.html#s07" },
+      { label: "Гайд PDF", href: "./assets/guides/yandex-disk-claude-repository-guide.pdf" },
+      { label: "Гайд Markdown", href: "./assets/guides/yandex-disk-claude-repository-guide.md" }
+    ]
+  },
+  north02: {
+    crumb: "Июнь · Северный город",
+    code: "SG · 02",
+    title: "Северный город: агентные системы для команды",
+    subtitle: "Лекция от 5 июня: агентные системы, полуавтомат, автомат и human-in-the-loop маршруты для команды.",
+    posterKicker: "СЕВЕРНЫЙ ГОРОД · ИЮНЬ",
+    posterTitle: "agent systems -> human gate -> next steps",
+    posterSubtitle: "второй июньский слот: агентные системы и практический маршрут",
+    sideTitle: "Северный город · модуль 2",
+    sideSummary: "Агентные системы, полуавтомат, автомат, ручная проверка и практический маршрут для команды.",
+    recording: {
+      title: "SG-02: лекция от 5 июня · агентные системы",
       summary: "Запись Zoom готова. Код доступа: D*rJZg9c. Домашнее задание уже встроено в презентацию лекции 07.",
-      folderUrl: "../ai_start_portal_v0/10_recordings/lesson-07-severny-agents-repositories/",
+      folderUrl: "./decks/deck-07-agent-systems-design.html",
       recordingUrl: "https://us06web.zoom.us/rec/share/a1PiFm2_bUwImvioflS3pWc4tmxSaNRVxSB-gIbbhDCZ6PAIsooVxfWKO06y0k7A.c4FkQHnqasgXv9B3",
       transcriptUrl: "./decks/deck-07-agent-systems-design.html",
       summaryUrl: "./decks/deck-07-agent-systems-design.html#s13",
@@ -482,7 +549,7 @@ const modules = {
       },
       {
         level: "Внедрение",
-        text: "Оценить, что можно переводить в полуавтомат позже, а что лучше оставить у человека по фактам, правам, бренду и публикации."
+        text: "Оценить, что можно полуавтоматизировать позже, а что должно остаться у редактора по фактам, правам и публикации."
       }
     ],
     lessons: [
@@ -511,18 +578,18 @@ const modules = {
       { label: "Гайд · visual DNA prompt", href: "./assets/prompts/prompt-image-style-dna-analysis.pdf" }
     ]
   },
-  north02: {
+  north03: {
     crumb: "Июнь · Северный город",
-    code: "SG · 02",
+    code: "SG · 03",
     title: "Северный город: практика применения и амбассадоры",
-    subtitle: "Второй июньский слот: реальные материалы команды, approved и rejected examples, роли амбассадоров и weekly review.",
+    subtitle: "Лекция от 9 июня: реальные материалы команды, approved и rejected examples, роли амбассадоров и weekly review.",
     posterKicker: "СЕВЕРНЫЙ ГОРОД · ИЮНЬ",
     posterTitle: "real material → review → ambassadors",
-    posterSubtitle: "второй слот июньского контура: реальные кейсы, board примеров и амбассадоры",
-    sideTitle: "Северный город · модуль 2",
+    posterSubtitle: "третий июньский слот: реальные кейсы, board примеров и амбассадоры",
+    sideTitle: "Северный город · модуль 3",
     sideSummary: "Слот под практику применения: реальные материалы, board примеров и ответственные за обновление базы.",
     recording: {
-      title: "SG-02: лекция от 9 июня · амбассадоры",
+      title: "SG-03: лекция от 9 июня · амбассадоры",
       summary: "Запись Zoom подключена. Лекция посвящена амбассадорам, практике применения, approved/rejected examples и weekly review.",
       folderUrl: "./decks/deck-08-ambassadors-change.html",
       recordingUrl: "https://us06web.zoom.us/rec/share/vNPE972VgQRrCo2O0rYZDmbqWDzVgHsn8SFop9wOcRp9WKTI4uiTK1L8p8Tb7KeE.NORtRNvoswJhmnXk",
@@ -554,31 +621,6 @@ const modules = {
     resources: [
       { label: "Запись Zoom", href: "https://us06web.zoom.us/rec/share/vNPE972VgQRrCo2O0rYZDmbqWDzVgHsn8SFop9wOcRp9WKTI4uiTK1L8p8Tb7KeE.NORtRNvoswJhmnXk", external: true },
       { label: "Презентация · Амбассадоры", href: "./decks/deck-08-ambassadors-change.html" }
-    ]
-  },
-  north03: {
-    crumb: "Июнь · Северный город",
-    code: "SG · 03",
-    title: "Северный город: финальная сборка рабочего комплекта",
-    subtitle: "Третий июньский слот: pipeline pages, prompt library, quality gates, owners и рабочий набор для редакции.",
-    posterKicker: "СЕВЕРНЫЙ ГОРОД · ИЮНЬ",
-    posterTitle: "kit → gates → owners",
-    posterSubtitle: "собираем рабочий комплект, а не красивую папку ради красоты",
-    sideTitle: "Северный город · модуль 3",
-    sideSummary: "Слот под сборку рабочего комплекта и закрепление того, что реально используется.",
-    lessons: [
-      "Собираем pipeline pages, prompt library, quality gates, examples и owners.",
-      "Фиксируем, что идет в базу как рабочий стандарт редакции.",
-      "Разделяем must keep, revise later и do not automate yet."
-    ],
-    artifacts: [
-      "final working kit",
-      "owners list",
-      "quality gate map"
-    ],
-    insights: [
-      "Рабочий комплект ценен только тогда, когда команда им реально пользуется.",
-      "Слишком ранняя автоматизация портит внедрение быстрее, чем его ускоряет."
     ]
   },
   north04: {
