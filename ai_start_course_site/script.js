@@ -420,14 +420,15 @@ const modules = {
     sideTitle: "Final kit for June",
     sideSummary: "Финальная встреча закрепляет порядок внедрения и переводит практику в регулярный рабочий режим.",
     recording: {
-      title: "Урок 06: финальный пакет урока",
-      summary: "Презентация, summary, план выступления и методические материалы уже открыты. Ссылка на саму запись будет добавлена отдельно после выбора канала публикации.",
-      folderUrl: "../ai_start_portal_v0/10_recordings/lesson-06-final-tv21/",
-      recordingUrl: "../ai_start_portal_v0/10_recordings/lesson-06-final-tv21/recording_link.md",
-      transcriptUrl: "../ai_start_portal_v0/10_recordings/lesson-06-final-tv21/recording_link.md",
+      title: "Урок 06: запись финальной лекции",
+      summary: "Запись финальной лекции ТВ-21 от 29 мая подключена через Google Drive. Презентация, summary, план выступления и методические материалы открыты рядом.",
+      folderUrl: "./decks/deck-10-final-kit.html",
+      recordingUrl: "https://drive.google.com/file/d/1jmyJWQ-kVmHtkas5hX8Bvlt2Kwmlcm16/view?usp=sharing",
+      transcriptUrl: "../ai_start_portal_v0/10_recordings/lesson-06-final-tv21/summary.md",
       summaryUrl: "../ai_start_portal_v0/10_recordings/lesson-06-final-tv21/summary.md",
+      actionLabel: "Смотреть запись Google Drive",
       accessCode: "",
-      state: "материалы доступны",
+      state: "запись доступна",
       timeline: [
         { time: "prompt", label: "База по промптингу: ДНК промпта, правила усиления и форматы мышления." },
         { time: "marketing", label: "Маркетинговые сценарии: аудитория, бриф кампании, мониторинг, качество контента и страниц." },
@@ -456,6 +457,7 @@ const modules = {
       "Автоматизацию и сложную инфраструктуру имеет смысл расширять только после первых стабильных кейсов."
     ],
     resources: [
+      { label: "Запись Google Drive", href: "https://drive.google.com/file/d/1jmyJWQ-kVmHtkas5hX8Bvlt2Kwmlcm16/view?usp=sharing", external: true },
       { label: "Презентация урока", href: "./decks/deck-10-final-kit.html" },
       { label: "Summary урока", href: "../ai_start_portal_v0/10_recordings/lesson-06-final-tv21/summary.md" },
       { label: "План выступления", href: "../ai_start_portal_v0/08_presentations/ai-start%20%7Brun-of-show%7D%20tv21%20final%20lecture%2040%20min%20-%202026-05-28.md" },
@@ -896,12 +898,14 @@ function renderRecording(recording) {
   const quickRecordingLink = $("#quick-recording-link");
   if (quickRecordingLink) {
     quickRecordingLink.href = recording.recordingUrl;
+    quickRecordingLink.textContent = recording.actionLabel || "Смотреть запись урока";
     quickRecordingLink.target = "_blank";
     quickRecordingLink.rel = "noopener";
   }
   const heroRecordingLink = $("#hero-recording-link");
   if (heroRecordingLink) {
     heroRecordingLink.href = recording.recordingUrl;
+    heroRecordingLink.textContent = recording.actionLabel || "Смотреть запись Zoom";
     heroRecordingLink.target = "_blank";
     heroRecordingLink.rel = "noopener";
   }
@@ -913,7 +917,7 @@ function renderRecording(recording) {
   const recordingLink = $("#recording-link");
   if (recordingLink) {
     recordingLink.href = recording.recordingUrl;
-    recordingLink.textContent = "Смотреть запись Zoom";
+    recordingLink.textContent = recording.actionLabel || "Смотреть запись Zoom";
     recordingLink.target = "_blank";
     recordingLink.rel = "noopener";
   }
