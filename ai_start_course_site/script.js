@@ -521,6 +521,22 @@ const modules = {
     posterSubtitle: "второй слот июньского контура: реальные кейсы, board примеров и амбассадоры",
     sideTitle: "Северный город · модуль 2",
     sideSummary: "Слот под практику применения: реальные материалы, board примеров и ответственные за обновление базы.",
+    recording: {
+      title: "SG-02: лекция от 9 июня · амбассадоры",
+      summary: "Запись Zoom подключена. Лекция посвящена амбассадорам, практике применения, approved/rejected examples и weekly review.",
+      folderUrl: "./decks/deck-08-ambassadors-change.html",
+      recordingUrl: "https://us06web.zoom.us/rec/share/vNPE972VgQRrCo2O0rYZDmbqWDzVgHsn8SFop9wOcRp9WKTI4uiTK1L8p8Tb7KeE.NORtRNvoswJhmnXk",
+      transcriptUrl: "./decks/deck-08-ambassadors-change.html",
+      summaryUrl: "./decks/deck-08-ambassadors-change.html",
+      accessCode: "zS4+kYjE",
+      state: "запись доступна",
+      timeline: [
+        { time: "cases", label: "Разбор реальных материалов команды и сохранение evidence." },
+        { time: "review", label: "Approved examples, rejected examples и useful failures." },
+        { time: "roles", label: "Роли амбассадоров: hub, examples, prompts и weekly review." },
+        { time: "next", label: "Как удержать практику после лекции и не потерять рабочие выводы." }
+      ]
+    },
     lessons: [
       "Каждый участник приносит один реальный материал и показывает input, pipeline, output и gate.",
       "Группа выбирает approved example, rejected example и useful failure.",
@@ -534,6 +550,10 @@ const modules = {
     insights: [
       "Без носителей практики база быстро умирает.",
       "Полезен не только удачный пример, но и понятный провал с выводом."
+    ],
+    resources: [
+      { label: "Запись Zoom", href: "https://us06web.zoom.us/rec/share/vNPE972VgQRrCo2O0rYZDmbqWDzVgHsn8SFop9wOcRp9WKTI4uiTK1L8p8Tb7KeE.NORtRNvoswJhmnXk", external: true },
+      { label: "Презентация · Амбассадоры", href: "./decks/deck-08-ambassadors-change.html" }
     ]
   },
   north03: {
