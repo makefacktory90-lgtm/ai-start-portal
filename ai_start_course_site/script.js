@@ -75,6 +75,7 @@ const modules = {
     ],
     resources: [
       { label: "Запись Zoom", href: "https://us06web.zoom.us/rec/share/OxKsTKtVd_BbugFLNPSryL6lJeqrDM1LVsbxg7rQE45VVYPN09tyo7l0XvvbshNs.ww4OFDKpG-Rm4smJ", external: true },
+      { label: "Презентация", href: "./decks/deck-01-start.html" },
       { label: "Транскрипт", href: "../ai_start_portal_v0/10_recordings/lesson-01-start/transcript.md" },
       { label: "Краткое резюме", href: "../ai_start_portal_v0/10_recordings/lesson-01-start/summary.md" }
     ]
@@ -152,9 +153,10 @@ const modules = {
     ],
     resources: [
       { label: "Запись Zoom", href: "https://us06web.zoom.us/rec/share/TiKykudX1PX0gb4SvPyUcTyPXD8VeGfnwz3--hj3N2A_lm3_JCPCGB4elcDR59d1.R3DFLlMN2Ent7wBh", external: true },
+      { label: "Презентация", href: "./decks/deck-02-text.html" },
       { label: "Транскрипт", href: "../ai_start_portal_v0/10_recordings/lesson-02-text-os/transcript.md" },
       { label: "Краткое резюме", href: "../ai_start_portal_v0/10_recordings/lesson-02-text-os/summary.md" },
-      { label: "Домашнее задание", href: "./decks/deck-02-text.html" }
+      { label: "Домашнее задание", href: "./decks/deck-02-text.html#s18" }
     ]
   },
   formats: {
