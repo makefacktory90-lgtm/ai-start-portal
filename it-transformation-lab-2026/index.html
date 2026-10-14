@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="ru">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Рабочая среда проекта ИИ-инструменты для коммуникаций нового поколения"><title>AI Transformation · 2026</title><link rel="stylesheet" href="styles.css"></head>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Рабочая среда проекта ИИ-инструменты для коммуникаций нового поколения"><title>AI Transformation · 2026</title><link rel="stylesheet" href="styles.css"><script src="access.js"></script></head>
 <body>
   <main class="shell">
     <header class="topbar"><div><div class="brand">AI TRANSFORMATION</div><div class="season">Октябрь–ноябрь 2026</div></div><span class="eyebrow">Консалтинг-проект</span></header>
@@ -8,7 +8,11 @@
       <div class="eyebrow">Рабочая среда проекта</div>
       <h1>ИИ-инструменты<br>для коммуникаций<br>нового поколения</h1>
       <p class="lead">Шесть встреч и набор готовых рабочих процессов для руководителей коммуникаций: источники, документы, тексты, презентации, медиапланы и требования к внедрению.</p>
-      <div class="actions"><a class="button primary" href="portal.html">Войти в портал →</a></div>
+      <form class="access-form" id="access-form">
+        <label for="access-code">Код доступа</label>
+        <div class="access-row"><input id="access-code" name="code" type="password" inputmode="numeric" autocomplete="current-password" maxlength="12" required autofocus><button class="button primary" type="submit">Войти в портал →</button></div>
+        <p class="access-message" id="access-message" role="alert" aria-live="polite"></p>
+      </form>
       <div class="meta"><span class="pill">6 встреч</span><span class="pill">Пятницы · 10:00–12:00 МСК</span><span class="pill">16 октября — 20 ноября</span></div>
     </section>
   </main>
