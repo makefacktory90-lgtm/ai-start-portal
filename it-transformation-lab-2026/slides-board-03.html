@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ru" data-protected="true">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Третий урок · Доска слайдов</title>
+  <link rel="stylesheet" href="slides-03.css">
+  <script src="access.js"></script>
+</head>
+<body data-view="board">
+  <header class="slide-top">
+    <a href="lesson-03.html">← К уроку 3</a>
+    <strong>Доска слайдов · 9 кадров</strong>
+    <nav aria-label="Управление доской">
+      <button id="zoom-out" type="button" title="Уменьшить" aria-label="Уменьшить">−</button>
+      <span id="zoom-value">100%</span>
+      <button id="zoom-in" type="button" title="Увеличить" aria-label="Увеличить">+</button>
+      <button id="fit" type="button">Вся доска</button>
+      <a class="slide-mode" href="slides-03.html">Презентация ↗</a>
+    </nav>
+  </header>
+  <main id="board-viewport" aria-label="Доска слайдов третьего урока">
+    <div id="board-canvas"></div>
+  </main>
+  <div class="board-hint">Перетаскивайте доску · Колесо мыши меняет масштаб · Нажмите слайд для просмотра</div>
+  <dialog id="lightbox" aria-label="Просмотр слайда">
+    <img id="lightbox-image" alt="">
+    <div class="lightbox-tools">
+      <span id="lightbox-label"></span>
+      <div>
+        <button id="lightbox-prev" type="button" title="Предыдущий слайд">←</button>
+        <button id="lightbox-next" type="button" title="Следующий слайд">→</button>
+        <button id="lightbox-close" type="button">Закрыть</button>
+      </div>
+    </div>
+  </dialog>
+  <script src="slides-03.js"></script>
+</body>
+</html>
