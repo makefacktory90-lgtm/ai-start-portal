@@ -21,16 +21,9 @@ pack("все-паспорта-урок-3.zip", passports)
 pack(
     "урок-3-основной-комплект.zip",
     [
-        FILES / "НАЧНИТЕ-ЗДЕСЬ.txt",
-        PASSPORTS / "01-производственный-результат.txt",
-        PASSPORTS / "тон-голоса-рабочий.txt",
-        FILES / "учебные-данные-производство.txt",
-        PROMPTS_LIVE / "01-вытащить-факты.txt",
-        PROMPTS_LIVE / "02-написать-черновик.txt",
-        PROMPTS_LIVE / "03-открыть-как-страницу.txt",
-        FILES / "Памятка-участника-База.pdf",
-        FILES / "Схемы-урока-3-База-и-Про.pdf",
         PDF,
+        PASSPORTS / "03-результаты-отчета.txt",
+        PASSPORTS / "тон-голоса-рабочий.txt",
     ],
 )
 pack("урок-3-паспорта-и-про.zip", passports + sorted(PROMPTS_PRO.glob("*.txt")) + [PDF, FILES / "Схемы-урока-3-База-и-Про.pdf", FILES / "источники-19.txt", FILES.parent / "lesson-02/skill-humanizer-ru.zip"])

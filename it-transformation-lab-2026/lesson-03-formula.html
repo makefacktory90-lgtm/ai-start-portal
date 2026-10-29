@@ -14,7 +14,7 @@
       <div><p class="eyebrow">Урок 3 · один результат за раз</p><h1>Контент + язык + формат</h1></div>
       <div class="mode" role="group" aria-label="Уровень схемы"><button type="button" data-mode="base" aria-pressed="true">База</button><button type="button" data-mode="pro" aria-pressed="false">Про</button></div>
     </div>
-    <p class="intro" id="mode-intro">Берём проверенные факты, выбираем голос и формат. Все три источника отправляем в один чат — получаем черновик.</p>
+    <p class="intro" id="mode-intro">Сегодня все используют уже выбранные PDF за 2025 год, рабочий голос и формат «Результаты отчёта». Переключатели нужны только для сравнения после общего результата.</p>
 
     <section class="pipeline" aria-label="Схема создания текста">
       <div class="stage"><span class="step">01</span><strong>КОНТЕНТ</strong><small>Факты и источник</small></div>
@@ -30,10 +30,10 @@
       <section class="controls" aria-label="Выбор исходных данных и ДНК текста">
         <div class="control-group"><p class="control-label"><span>1</span> Контент: исходные факты</p>
           <div class="choices" id="data-options" role="group" aria-label="Источник данных">
-            <button type="button" data-data="line" aria-pressed="true">Учебная линия</button>
-            <button type="button" data-data="annual" aria-pressed="false">Результаты 2025</button>
+            <button type="button" data-data="annual" aria-pressed="true">PDF урока: 2025</button>
+            <button type="button" data-data="line" aria-pressed="false">Другой кейс</button>
           </div>
-          <p class="detail" id="source-detail">Вымышленный кейс: в Кировске 15 октября 2026 года ввели линию сортировки; за испытания проверено 12 480 деталей. Эффект снижения брака не измерен.</p>
+          <p class="detail" id="source-detail">Открытый Региональный атлас «Норникеля»: итоги производства за 2025 год. Это опубликованные ретроспективные данные, не новая новость.</p>
         </div>
         <div class="control-group"><p class="control-label"><span>2</span> Язык: паспорт голоса</p>
           <div class="choices" id="voice-options" role="group" aria-label="Язык и тон">
@@ -46,9 +46,9 @@
         <div class="control-group"><p class="control-label"><span>3</span> Формат: паспорт документа</p>
           <label class="sr-only" for="format-select">Выберите формат документа</label>
           <select id="format-select">
+            <option value="report">03 · Результаты отчёта</option>
             <option value="production">01 · Производственный результат</option>
             <option value="partnership">02 · Соглашение и партнёрство</option>
-            <option value="report">03 · Результаты отчёта</option>
             <option value="technology">04 · Технология и разработка</option>
             <option value="ecology">05 · Общественная или экологическая программа</option>
             <option value="people">06 · Люди, награда, событие</option>
@@ -58,7 +58,7 @@
       </section>
 
       <section class="preview" aria-live="polite" aria-label="Пример результата">
-        <div class="preview-head"><span>ПОЛУЧАЕТСЯ</span><span id="selection">Производственный результат · рабочий язык</span></div>
+        <div class="preview-head"><span>ПОЛУЧАЕТСЯ</span><span id="selection">Результаты отчёта · рабочий язык</span></div>
         <div class="preview-body" id="preview-body"><span class="draft-tag" id="draft-tag">УЧЕБНЫЙ ЧЕРНОВИК · НЕ ДЛЯ ПУБЛИКАЦИИ</span><h2 id="draft-title"></h2><p id="draft-text"></p></div>
         <div class="preview-foot" id="preview-foot">Проверяем цифры, формулировки, цитату и согласование до публикации.</div>
       </section>

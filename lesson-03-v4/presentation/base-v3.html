@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Урок 3 · База · Один маршрут</title>
+<style>
+:root{--paper:#f4f0e7;--ink:#181818;--red:#c73532;--green:#216b4d;--line:#c9c5bc}
+*{box-sizing:border-box}body{margin:0;background:#111;color:var(--ink);font-family:Arial,Helvetica,sans-serif}
+.deck{width:100vw;height:100vh;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.slide{display:none;position:absolute;width:1600px;height:900px;padding:56px 78px 65px;background:var(--paper);overflow:hidden;transform-origin:center}
+.slide.active{display:block}.slide:before{content:"";height:10px;background:var(--red);position:absolute;top:0;left:0;right:0}
+.top{display:flex;align-items:center;font-size:22px;font-weight:800;margin-bottom:32px}
+.top b{color:var(--red);margin-left:7px}.top span{font-size:20px;color:#67635e;font-weight:600;margin-left:auto}
+h1,h2,p{margin:0}h1{font-size:69px;line-height:1.04;max-width:1420px}h2{font-size:57px;line-height:1.07;max-width:1420px}
+.sub{font-size:30px;line-height:1.24;margin-top:20px;max-width:1400px}.sub a{color:var(--red);text-decoration-thickness:2px}
+.workflow{display:grid;grid-template-columns:1fr 1fr;gap:34px;margin-top:34px;height:530px}
+.column{min-width:0;min-height:0;display:flex;flex-direction:column}.label{font-size:24px;font-weight:800;text-transform:uppercase;color:var(--red);margin-bottom:12px}
+.visual{background:#fff;min-height:0;height:0;flex:1;display:flex;align-items:center;justify-content:center;overflow:hidden;border:2px solid var(--line);position:relative}
+.visual img{display:block;max-width:100%;max-height:100%;object-fit:contain}.visual.sand{background:#ebe7dd}
+.visual.portal{align-items:flex-start}.visual.portal img{width:100%;max-height:none}.visual.portal.focus,.visual.portal.action{align-items:center}.visual.portal.focus img{width:88%;max-width:88%}.visual.portal.action img{width:90%;max-width:90%;transform:none}.visual.chat img{max-width:none;max-height:none;width:300%;height:auto}
+.visual.chat-start img{max-width:none;max-height:none;width:300%;height:auto}
+.visual .zoom-note{position:absolute;bottom:0;left:0;right:0;background:#191919;color:white;padding:11px 16px;font-size:20px}
+.visual.comment img{width:88%;max-width:none;max-height:none}
+.expected{background:#fff;border-top:7px solid var(--green);padding:28px 30px;flex:1;min-height:0;overflow:hidden}
+.expected h3{font-size:32px;line-height:1.15;margin:0 0 18px}.expected p,.expected li{font-size:27px;line-height:1.28;margin:0 0 14px}
+.expected ul{margin:0;padding-left:31px}.expected .source{font-size:20px;color:#666;margin-top:16px}
+.checkpoint{position:absolute;left:78px;right:78px;bottom:65px;background:var(--ink);color:white;padding:16px 22px;font-size:25px;font-weight:700}
+.checkpoint b{color:#85d6ad}.page{position:absolute;right:78px;bottom:24px;font:18px monospace;color:var(--red)}
+.smallshot{max-width:100%;padding:26px}.finish .workflow{height:475px}.finish .visual img{width:100%}
+.hint{position:fixed;bottom:10px;right:15px;color:#aaa;font:14px Arial;z-index:10}
+@media print{@page{size:1600px 900px;margin:0}body{background:white}.deck{display:block;width:auto;height:auto;overflow:visible}.slide{display:block!important;position:relative;transform:none!important;page-break-after:always}.hint{display:none}}
+</style>
+</head>
+<body><div class="deck">
+<section class="slide">
+  <div class="top">AI <b>TRANSFORMATION</b><span>УРОК 3 · ВОЗВРАТ К ДОМАШКЕ</span></div>
+  <h2>Сначала ответим в «опросе»</h2>
+  <p class="sub"><a href="https://chatgpt.com/space/page_6adb2c8c92788191a43dcb2ab457d371">Откройте «ДЗ занятие 2»</a> → Content → «опрос». В самом низу напишите своё имя и ответы; если уже писали, найдите свой блок.</p>
+  <div class="workflow"><div class="column"><div class="label">Куда нажать</div><div class="visual"><img src="скрины/дз2-контент.png" alt="Вкладка Content и карточка опроса"></div></div><div class="column"><div class="label">Что открылось</div><div class="visual"><img src="скрины/дз2-опрос.png" alt="Открытая страница опроса"></div></div></div>
+  <div class="checkpoint"><b>Пауза:</b> ответ под своим именем виден после повторного открытия страницы. Чужое не стираем.</div><div class="page"></div>
+</section>
+<section class="slide">
+  <div class="top">AI <b>TRANSFORMATION</b><span>УРОК 3 · ВОЗВРАТ К ДОМАШКЕ</span></div>
+  <h2>Теперь оставим комментарий к речи Сергея</h2>
+  <p class="sub">В том же Content откройте «Мастер речь для комментариев». Выделите фразу, нажмите «Комментарий» и оставьте один конкретный вопрос или предложение.</p>
+  <div class="workflow"><div class="column"><div class="label">Куда нажать</div><div class="visual"><img src="скрины/дз2-контент.png" alt="Карточка речи Сергея на вкладке Content"></div></div><div class="column"><div class="label">Пример опубликованного комментария</div><div class="visual comment"><img src="скрины/дз2-комментарий.png" alt="Опубликованный комментарий возле текста"></div></div></div>
+  <div class="checkpoint"><b>Пауза:</b> комментарий виден после повторного открытия речи. Саму речь не переписываем.</div><div class="page"></div>
+</section>
+<section class="slide">
+  <div class="top">AI <b>TRANSFORMATION</b><span>УРОК 3 · БАЗА · ВСЕ ВМЕСТЕ</span></div>
+  <h1>Сегодня делаем один черновик пресс-релиза</h1>
+  <p class="sub">Откройте браузер и страницу урока. Все вместе: PDF с данными + два готовых паспорта → карта фактов → черновик. Проект создадим позже.</p>
+  <div class="workflow"><div class="column"><div class="label">Куда смотреть · страница урока</div><div class="visual portal focus sand"><img src="скрины/портал-материалы-новый.png" alt="Материалы урока с кнопкой Основной комплект"></div></div><div class="column"><div class="label">Что должно быть на экране</div><div class="expected"><h3>Материалы и слайды</h3><p>Нажмите «Основной комплект». В папке компьютера «Загрузки» найдите ZIP и распакуйте его.</p><p>В комплекте один PDF и два TXT.</p></div></div></div>
+  <div class="checkpoint"><b>Пауза:</b> все открыли страницу урока.</div><div class="page"></div>
+</section>
+<section class="slide">
+  <div class="top">AI <b>TRANSFORMATION</b><span>ШАГ 1 · ФАЙЛЫ</span></div>
+  <h2>В архиве — три файла для работы</h2>
+  <p class="sub">Откройте распакованную папку. Пока ничего не надо выбирать из шести форматов: для всех готов один комплект.</p>
+  <div class="workflow"><div class="column"><div class="label">Где названия файлов · страница урока</div><div class="visual portal sand"><img src="скрины/портал-файлы-новый.png" alt="Три файла: PDF с данными и два паспорта"></div></div><div class="column"><div class="label">Что получилось</div><div class="expected"><h3>PDF + два TXT в «Загрузках»</h3><ul><li>Данные «Норникеля» за 2025 год</li><li>Рабочий паспорт голоса</li><li>Паспорт «Результаты отчёта»</li></ul><p class="source">Оригинальный атлас указан внутри PDF.</p></div></div></div>
+  <div class="checkpoint"><b>Пауза:</b> у всех скачаны три файла.</div><div class="page"></div>
+</section>
+<section class="slide">
+  <div class="top">AI <b>TRANSFORMATION</b><span>ШАГ 1 · ЧАТ</span></div>
+  <h2>Откройте новый чат в рабочем ChatGPT</h2>
+  <p class="sub">Оставьте страницу урока в первой вкладке. Во второй вкладке откройте рабочий ChatGPT Business и новый чат. Сегодня не создаём проект или пространство.</p>
+  <div class="workflow"><div class="column"><div class="label">Куда смотреть</div><div class="visual chat-start"><img src="скрины/старт.png" alt="Новый чат в ChatGPT Business"></div></div><div class="column"><div class="label">Что получилось</div><div class="expected"><h3>Пустой новый чат</h3><p>Внизу видно поле для сообщения и кнопку «+» слева.</p><p>Если открыта старая переписка, откройте новый чат.</p></div></div></div>
+  <div class="checkpoint"><b>Пауза:</b> у всех открыт пустой чат.</div><div class="page"></div>
+</section>
+<section class="slide">
+  <div class="top">AI <b>TRANSFORMATION</b><span>ШАГ 1 · ПРИКРЕПИТЬ</span></div>
+  <h2>Нажмите «+» и добавьте три файла</h2>
+  <p class="sub">В рабочем Business, во вкладке «Работа» (если она видна), откройте новый чат. Выберите «Добавить фото и файлы», затем PDF и два TXT из распакованной папки «Загрузки».</p>
+  <div class="workflow"><div class="column"><div class="label">Куда нажать · реальный экран</div><div class="visual chat"><img src="скрины/06.png" alt="Меню добавления файлов в ChatGPT Business"></div></div><div class="column"><div class="label">Что проверить</div><div class="expected"><h3>Три вложения над полем ввода</h3><p>Один PDF с данными и два TXT-паспорта должны быть видны до отправки сообщения.</p><p>Если файла нет, повторите «+» → «Добавить фото и файлы».</p></div></div></div>
+  <div class="checkpoint"><b>Пауза:</b> не листаем, пока у всех не видны три вложения.</div><div class="page"></div>
+</section>
+<section class="slide">
+  <div class="top">AI <b>TRANSFORMATION</b><span>ШАГ 2 · ФАКТЫ</span></div>
+  <h2>Скопируйте команду 1 и отправьте</h2>
+  <p class="sub">На странице урока найдите «1. Вытащить факты» и нажмите «Скопировать запрос». Вернитесь в тот же чат, вставьте текст и отправьте.</p>
+  <div class="workflow"><div class="column"><div class="label">Куда нажать · страница урока</div><div class="visual portal action sand"><img src="скрины/портал-промпт-факты-новый.png" alt="Кнопка Скопировать запрос для карты фактов"></div></div><div class="column"><div class="label">Что получилось · пример ответа</div><div class="expected"><h3>Карта фактов</h3><ul><li>Никель: 198 тыс. тонн.</li><li>Медь: 425 тыс. тонн.</li><li>Период: 2025 год.</li><li>Оговорка: из собственного сырья.</li></ul><p class="source">Это ориентир по PDF, не скрин ответа ChatGPT.</p></div></div></div>
+  <div class="checkpoint"><b>Пауза:</b> у всех есть карта фактов; данные 2025 года не названы новой новостью.</div><div class="page"></div>
+</section>
+<section class="slide">
+  <div class="top">AI <b>TRANSFORMATION</b><span>ШАГ 3 · ЧЕРНОВИК</span></div>
+  <h2>Скопируйте команду 2 в тот же чат</h2>
+  <p class="sub">На странице урока найдите «2. Написать черновик» и нажмите «Скопировать запрос». Вставьте его в тот же чат и отправьте.</p>
+  <div class="workflow"><div class="column"><div class="label">Куда нажать · страница урока</div><div class="visual portal action sand"><img src="скрины/портал-промпт-черновик-новый.png" alt="Кнопка Скопировать запрос для черновика"></div></div><div class="column"><div class="label">Что получилось · пример структуры</div><div class="expected"><h3>Учебный черновик пресс-релиза</h3><p>Заголовок → лид с результатами 2025 года → детали с единицами → ссылка на атлас → вопросы перед публикацией.</p><p>Нет выдуманной цитаты, причин изменения или нового события.</p><p class="source">Это ориентир, не скрин ответа ChatGPT.</p></div></div></div>
+  <div class="checkpoint"><b>Пауза:</b> у каждого есть первый черновик. Пока не сохраняем: сначала проверим его.</div><div class="page"></div>
+</section>
+<section class="slide">
+  <div class="top">AI <b>TRANSFORMATION</b><span>ШАГ 4 · ПРОВЕРКА</span></div>
+  <h2>Отправьте команду 3 и исправьте текст</h2>
+  <p class="sub">В том же чате отправьте промпт 3 из Телеграма. Он сверит текст с PDF, паспортом голоса и паспортом формата. Сами проверьте четыре числа и год.</p>
+  <div class="workflow"><div class="column"><div class="label">Где взять команду · страница урока</div><div class="visual portal action sand"><img src="скрины/портал-промпт-проверка-новый.png" alt="Кнопка Скопировать запрос для проверки и исправления"></div></div><div class="column"><div class="label">Что получилось</div><div class="expected"><h3>Исправленный черновик</h3><p>Есть короткая таблица проверки и новая версия текста.</p><p>Если PDF недоступен, прикрепите его заново. Если цифры остались неверными, не переходите к следующему шагу.</p></div></div></div>
+  <div class="checkpoint"><b>Пауза:</b> у всех проверены цифры, единицы, год и пометка «не публиковать».</div><div class="page"></div>
+</section>
+<section class="slide">
+  <div class="top">AI <b>TRANSFORMATION</b><span>ШАГ 4 · СТРАНИЦА</span></div>
+  <h2>Отправьте команду 4: откройте страницу</h2>
+  <p class="sub">Только после проверки отправьте промпт 4 в тот же чат. Откройте ссылку на созданную страницу и убедитесь, что исправленный текст сохранился.</p>
+  <div class="workflow"><div class="column"><div class="label">Где взять команду · страница урока</div><div class="visual portal action sand"><img src="скрины/портал-промпт-страница-новый.png" alt="Кнопка Скопировать запрос для открытия страницы"></div></div><div class="column"><div class="label">Что получилось</div><div class="expected"><h3>Страница с учебным текстом</h3><p>Исправленный черновик с пометкой «не публиковать».</p><p>Если ссылка не появилась: в учебном пространстве «Создать» → «Страница», вставьте текст вручную.</p><p>Для правок коллеги отдельно нажмите «Поделиться».</p></div></div></div>
+  <div class="checkpoint"><b>Пауза:</b> каждый открыл страницу и видит свой исправленный текст.</div><div class="page"></div>
+</section>
+<section class="slide finish">
+  <div class="top">AI <b>TRANSFORMATION</b><span>СТОП · ВОПРОСЫ</span></div>
+  <h2>Страница готова. Дальше — ваши вопросы</h2>
+  <p class="sub">Общий маршрут закончен. Текст — учебный; опубликованные показатели 2025 года не превращаем в новую новость.</p>
+  <div class="workflow"><div class="column"><div class="label">После результата · страница урока</div><div class="visual portal sand"><img src="скрины/портал-проект-новый.png" alt="Блок о проекте Пресс-релизы после базовой практики"></div></div><div class="column"><div class="label">Что дальше</div><div class="expected"><h3>Вопросы, затем проект</h3><p>Где создать следующую страницу? Как дать коллеге право «Редактор»? Что делать, если ответ другой?</p><p>После первого результата можно создать проект «Пресс-релизы» и сохранить в нём паспорта. Навыки остаются для «Про».</p></div></div></div>
+  <div class="checkpoint"><b>После урока:</b> желающие открывают отдельную страницу «Про».</div><div class="page"></div>
+</section>
+</div><div class="hint">← → листать · F полный экран</div>
+<script>
+const slides=[...document.querySelectorAll('.slide')];let current=0;
+function fit(){const r=Math.min(innerWidth/1600,innerHeight/900);slides.forEach(s=>s.style.transform=`scale(${r})`)}
+function show(n){current=Math.max(0,Math.min(n,slides.length-1));slides.forEach((s,i)=>s.classList.toggle('active',i===current));location.hash=String(current+1)}
+slides.forEach((s,i)=>s.querySelector('.page').textContent=String(i+1).padStart(2,'0')+' / '+slides.length);
+addEventListener('resize',fit);addEventListener('hashchange',()=>show((parseInt(location.hash.slice(1),10)||1)-1));
+addEventListener('keydown',e=>{if(['ArrowRight','PageDown',' '].includes(e.key)){e.preventDefault();show(current+1)}if(['ArrowLeft','PageUp'].includes(e.key)){e.preventDefault();show(current-1)}if(e.key.toLowerCase()==='f')document.documentElement.requestFullscreen()});
+fit();show((parseInt(location.hash.slice(1),10)||1)-1);
+</script>
+</body>
+</html>

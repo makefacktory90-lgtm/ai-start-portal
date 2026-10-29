@@ -29,7 +29,7 @@ const text = {
     }
   }
 };
-const state = { data: 'line', format: 'production', voice: 'working', mode: 'base' };
+const state = { data: 'annual', format: 'report', voice: 'working', mode: 'base' };
 const preview = document.getElementById('preview-body');
 const foot = document.getElementById('preview-foot');
 function render() {
@@ -69,7 +69,7 @@ document.querySelectorAll('[data-data], [data-voice], [data-mode]').forEach(butt
       document.getElementById('pro-block').hidden = state.mode !== 'pro';
       document.getElementById('mode-intro').textContent = state.mode === 'pro'
         ? 'После первого черновика можно расширить библиотеку голосов и форматов, добавить проверки, редактуру и работу с ошибками.'
-        : 'Берём проверенные факты, выбираем голос и формат. Все три источника отправляем в один чат — получаем черновик.';
+        : 'Сегодня все используют уже выбранные PDF за 2025 год, рабочий голос и формат «Результаты отчёта». Переключатели нужны только для сравнения после общего результата.';
     }
     render();
   });
