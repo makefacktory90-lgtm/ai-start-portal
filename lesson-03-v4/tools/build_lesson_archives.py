@@ -29,7 +29,8 @@ pack(
         PROMPTS_LIVE / "02-написать-черновик.txt",
         PROMPTS_LIVE / "03-открыть-как-страницу.txt",
         FILES / "Памятка-участника-База.pdf",
+        FILES / "Схемы-урока-3-База-и-Про.pdf",
         PDF,
     ],
 )
-pack("урок-3-паспорта-и-про.zip", passports + sorted(PROMPTS_PRO.glob("*.txt")) + [PDF, FILES / "источники-19.txt", FILES.parent / "lesson-02/skill-humanizer-ru.zip"])
+pack("урок-3-паспорта-и-про.zip", passports + sorted(PROMPTS_PRO.glob("*.txt")) + [PDF, FILES / "Схемы-урока-3-База-и-Про.pdf", FILES / "источники-19.txt", FILES.parent / "lesson-02/skill-humanizer-ru.zip"])
