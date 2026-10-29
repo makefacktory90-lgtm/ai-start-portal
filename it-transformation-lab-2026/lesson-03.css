@@ -76,6 +76,8 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
 .lesson03-hero{padding:44px 0 36px}
 .lesson03 h1{font-size:clamp(38px,5vw,62px);line-height:1.06;margin:13px 0 24px}
 .lesson03-lead{font-size:clamp(20px,2.3vw,25px);line-height:1.48;max-width:930px;margin:0 0 25px}
+.lesson03-prep{display:flex;align-items:center;flex-wrap:wrap;gap:12px 18px;margin:0 0 24px}
+.lesson03-prep span{max-width:540px;font-size:16px}
 .lesson03-nav{display:flex;flex-wrap:wrap;gap:11px 22px}
 .lesson03-nav a{color:#9f1720;font-size:16px}
 .lesson03 section[id]{scroll-margin-top:20px}
@@ -99,6 +101,13 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
 .lesson03-button.red{background:#d92d36;border-color:#d92d36;color:#fff}
 .lesson03-button:hover{filter:brightness(.92)}
 .lesson03-material-list{border-top:1px solid #151515;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin:25px 0 34px}
+.lesson03-download-strip{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);margin:24px 0}
+.lesson03-download-strip a{padding:17px 20px 18px 0;text-decoration:none}
+.lesson03-download-strip a+a{border-left:1px solid var(--line);padding-left:20px}
+.lesson03-download-strip b{display:block;font:12px monospace;color:#b42327;margin-bottom:5px}
+.lesson03-download-strip strong{display:block;font-size:21px}
+.lesson03-download-strip small{display:block;color:var(--muted);font-size:14px;margin-top:4px}
+.lesson03-download-strip a:hover strong{text-decoration:underline}
 .lesson03-material-list a{padding:18px 18px 18px 0;border-bottom:1px solid var(--line);text-decoration:none}
 .lesson03-material-list span{display:block;font-size:18px;font-weight:700}
 .lesson03-material-list small{display:block;color:var(--muted);margin-top:5px}
@@ -111,8 +120,21 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
 .lesson03-files small{margin-top:auto;padding-top:10px;color:#9f1720}
 .lesson03-extra-link{margin:20px 0 0;font-size:17px}
 .lesson03-extra-link a{color:#9f1720;font-weight:700}
+.lesson03-passports{border-top:1px solid var(--ink);margin-top:35px;padding-top:27px}
+.lesson03-passports-head{display:flex;justify-content:space-between;align-items:start;gap:28px}
+.lesson03-passports-head h3{margin:5px 0 9px!important}
+.lesson03-passports-head p{margin:0;max-width:750px}
+.lesson03-passports-head .lesson03-button{white-space:nowrap}
+.lesson03-passport-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));margin-top:21px;border-top:1px solid var(--line)}
+.lesson03-passport-list a{display:flex;gap:12px;align-items:baseline;padding:13px 12px 13px 0;border-bottom:1px solid var(--line);text-decoration:none;font-weight:700}
+.lesson03-passport-list a:hover{text-decoration:underline}
+.lesson03-passport-list b{color:#b42327;font:13px monospace;min-width:41px}
 .lesson03-route ol{padding-left:26px;max-width:950px}
 .lesson03-route li{font-size:18px;line-height:1.55;margin-bottom:12px}
+.lesson03-workplace{font-size:18px;line-height:1.5;border-left:4px solid #d92d36;padding:12px 16px;margin:0 0 24px;background:#f4f0e7}
+.lesson03-rescue{border-top:1px solid var(--line);margin-top:26px;padding-top:22px}
+.lesson03-rescue h3{font-size:23px;margin:0 0 8px}
+.lesson03-rescue p{font-size:17px;line-height:1.55;margin:0}
 .lesson03-proof{border-top:1px solid var(--line);padding-top:23px;display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:24px;align-items:start}
 .lesson03-proof img{width:100%;height:auto;display:block;border:1px solid var(--line)}
 .lesson03-proof p{font-size:17px}
@@ -126,4 +148,4 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
 .lesson03-advanced{border-top:1px solid var(--line)}
 .lesson03-footer{padding:20px max(20px,calc((100vw - 1140px)/2));background:#151515}
 .lesson03-footer a{color:#fff}
-@media(max-width:760px){.lesson03-material-list,.lesson03-files{grid-template-columns:1fr}.lesson03-files a{min-height:120px}.lesson03-proof{grid-template-columns:1fr}.lesson03-recording-meta{grid-template-columns:1fr}.lesson03-recording-meta>div+div{border-left:0;border-top:1px solid #19191855}.lesson03-prompt-head{align-items:flex-start;flex-direction:column}.lesson03-recording,.lesson03-materials,.lesson03-route,.lesson03-prompts,.lesson03-advanced{padding:35px 0}.lesson03-player>div{padding:15px}}
+@media(max-width:760px){.lesson03-material-list,.lesson03-files,.lesson03-passport-list,.lesson03-download-strip{grid-template-columns:1fr}.lesson03-download-strip a+a{border-left:0;border-top:1px solid var(--line);padding-left:0}.lesson03-passports-head{flex-direction:column}.lesson03-files a{min-height:120px}.lesson03-proof{grid-template-columns:1fr}.lesson03-recording-meta{grid-template-columns:1fr}.lesson03-recording-meta>div+div{border-left:0;border-top:1px solid #19191855}.lesson03-prompt-head{align-items:flex-start;flex-direction:column}.lesson03-recording,.lesson03-materials,.lesson03-route,.lesson03-prompts,.lesson03-advanced{padding:35px 0}.lesson03-player>div{padding:15px}}
