@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="ru" data-protected="true">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Контент + язык + формат · Урок 3</title>
+  <link rel="stylesheet" href="lesson-03-formula.css">
+  <script src="access.js"></script>
+</head>
+<body>
+  <header class="top"><a href="lesson-03.html">← Урок 3</a><span>IRA × AI / СХЕМА ТЕКСТА</span></header>
+  <main class="shell">
+    <div class="heading">
+      <div><p class="eyebrow">Урок 3 · один результат за раз</p><h1>Контент + язык + формат</h1></div>
+      <div class="mode" role="group" aria-label="Уровень схемы"><button type="button" data-mode="base" aria-pressed="true">База</button><button type="button" data-mode="pro" aria-pressed="false">Про</button></div>
+    </div>
+    <p class="intro" id="mode-intro">Берём проверенные факты, выбираем голос и формат. Все три источника отправляем в один чат — получаем черновик.</p>
+
+    <section class="pipeline" aria-label="Схема создания текста">
+      <div class="stage"><span class="step">01</span><strong>КОНТЕНТ</strong><small>Факты и источник</small></div>
+      <span class="flow" aria-hidden="true">→</span>
+      <div class="stage voice"><span class="step">02</span><strong>ЯЗЫК</strong><small>Паспорт голоса</small></div>
+      <span class="flow" aria-hidden="true">→</span>
+      <div class="stage format"><span class="step">03</span><strong>ФОРМАТ</strong><small>Паспорт документа</small></div>
+      <span class="flow" aria-hidden="true">→</span>
+      <div class="stage result"><span class="step">04</span><strong>ЧЕРНОВИК</strong><small>Проверяем перед публикацией</small></div>
+    </section>
+
+    <div class="workspace">
+      <section class="controls" aria-label="Выбор исходных данных и ДНК текста">
+        <div class="control-group"><p class="control-label"><span>1</span> Контент: исходные факты</p>
+          <div class="choices" id="data-options" role="group" aria-label="Источник данных">
+            <button type="button" data-data="line" aria-pressed="true">Учебная линия</button>
+            <button type="button" data-data="annual" aria-pressed="false">Результаты 2025</button>
+          </div>
+          <p class="detail" id="source-detail">Вымышленный кейс: в Кировске 15 октября 2026 года ввели линию сортировки; за испытания проверено 12 480 деталей. Эффект снижения брака не измерен.</p>
+        </div>
+        <div class="control-group"><p class="control-label"><span>2</span> Язык: паспорт голоса</p>
+          <div class="choices" id="voice-options" role="group" aria-label="Язык и тон">
+            <button type="button" data-voice="working" aria-pressed="true">Рабочий</button>
+            <button type="button" data-voice="formal" aria-pressed="false">Официальный</button>
+            <button type="button" data-voice="clear" aria-pressed="false">Понятный</button>
+          </div>
+          <p class="detail">«Рабочий» опирается на учебный паспорт; два других тона здесь только для сравнения.</p>
+        </div>
+        <div class="control-group"><p class="control-label"><span>3</span> Формат: паспорт документа</p>
+          <label class="sr-only" for="format-select">Выберите формат документа</label>
+          <select id="format-select">
+            <option value="production">01 · Производственный результат</option>
+            <option value="partnership">02 · Соглашение и партнёрство</option>
+            <option value="report">03 · Результаты отчёта</option>
+            <option value="technology">04 · Технология и разработка</option>
+            <option value="ecology">05 · Общественная или экологическая программа</option>
+            <option value="people">06 · Люди, награда, событие</option>
+          </select>
+          <p class="detail">Структуру берём из выбранного паспорта формата.</p>
+        </div>
+      </section>
+
+      <section class="preview" aria-live="polite" aria-label="Пример результата">
+        <div class="preview-head"><span>ПОЛУЧАЕТСЯ</span><span id="selection">Производственный результат · рабочий язык</span></div>
+        <div class="preview-body" id="preview-body"><span class="draft-tag" id="draft-tag">УЧЕБНЫЙ ЧЕРНОВИК · НЕ ДЛЯ ПУБЛИКАЦИИ</span><h2 id="draft-title"></h2><p id="draft-text"></p></div>
+        <div class="preview-foot" id="preview-foot">Проверяем цифры, формулировки, цитату и согласование до публикации.</div>
+      </section>
+    </div>
+
+    <section class="pro-block" id="pro-block" hidden>
+      <div class="section-head"><p class="eyebrow">Продолжение после общей практики</p><h2>Широкий процесс «Про»</h2><p>В Базе мы берём один набор фактов, один голос и один формат. В «Про» каждый из этих блоков становится библиотекой, а черновик проходит несколько проверок.</p></div>
+      <div class="research-strip"><b>5 возможных входов для контента</b><span>исследование</span><span>интервью</span><span>внутренний бриф</span><span>цифры и отчёты</span><span>открытые источники</span></div>
+      <div class="pro-flow" aria-label="Дополнительные этапы">
+        <div><b>01</b><strong>Контент</strong><span>Выбираем и проверяем исходные материалы.</span></div>
+        <div><b>02</b><strong>Голос</strong><span>Берём один паспорт или навык из своей библиотеки голосов.</span></div>
+        <div><b>03</b><strong>Формат</strong><span>Выбираем паспорт под задачу и факты.</span></div>
+        <div><b>04</b><strong>Черновик</strong><span>Собираем текст из трёх согласованных частей.</span></div>
+        <div><b>05</b><strong>Проверка</strong><span>Сверяем стратегию, факты, имена, даты и ошибки.</span></div>
+        <div><b>06</b><strong>Редактура языка</strong><span>Убираем штампы и искусственные обороты, сохраняя смысл.</span></div>
+        <div><b>07</b><strong>Урок из правок</strong><span>Записываем повторяющиеся ошибки и обновляем промпт или навык.</span></div>
+      </div>
+      <p class="pro-caveat">Человек утверждает финальный текст. Само чтение правок не «обучает» модель автоматически: улучшение появляется, когда мы явно меняем инструкции, примеры или навык.</p>
+      <div class="toolbox" aria-label="Дополнительные инструменты Про">
+        <div class="toolbox-head"><h3>Какие квадраты можно добавить</h3><p>Это меню, а не ещё одно задание для всей группы. После Базы выберите только те инструменты, которые нужны Вашей задаче.</p></div>
+        <div class="toolbox-grid">
+          <article><span>ГОТОВЫЙ ПРОМПТ</span><h4>Снять свой голос</h4><p>Из нескольких одобренных текстов получить правила языка с доказательствами.</p><a href="files/lesson-03/prompts-pro/03-снять-общий-голос.txt" download>Взять промпт →</a></article>
+          <article><span>ГОТОВЫЙ ПРОМПТ</span><h4>Снять свой формат</h4><p>Из образцов одного типа получить паспорт структуры документа.</p><a href="files/lesson-03/prompts-pro/02-снять-паспорт-формата.txt" download>Взять промпт →</a></article>
+          <article><span>ГОТОВЫЙ ПРОМПТ</span><h4>Карта фактов</h4><p>Отделить подтверждённые события, планы и пробелы в исходных данных.</p><a href="files/lesson-03/prompts-live/01-вытащить-факты.txt" download>Взять промпт →</a></article>
+          <article><span>ГОТОВЫЙ ПРОМПТ</span><h4>Проверка по источникам</h4><p>Сверить цифры, даты, цитаты и причинные утверждения с файлами.</p><a href="files/lesson-03/prompts-pro/05-проверить-паспорта-и-факты.txt" download>Взять промпт →</a></article>
+          <article><span>НОВЫЙ ПРОМПТ</span><h4>Проверка стратегии</h4><p>Сопоставить черновик с брифом, аудиторией и главным сообщением.</p><a href="files/lesson-03/prompts-pro/06-проверить-стратегию.txt" download>Взять промпт →</a></article>
+          <article><span>НАВЫК ИЗ УРОКА 2</span><h4>Humanizer</h4><p>После фактчекинга убрать машинные обороты. Установка навыка зависит от доступа в Business.</p><a href="files/lesson-02/skill-humanizer-ru.zip" download>Навык ZIP →</a><a href="files/lesson-03/prompts-pro/10-редактура-без-установки-навыка.txt" download>Промпт без установки →</a></article>
+          <article><span>НОВЫЙ ПРОМПТ</span><h4>Под нужную площадку</h4><p>Превратить проверенный релиз в версию для конкретной аудитории.</p><a href="files/lesson-03/prompts-pro/07-адаптировать-под-площадку.txt" download>Взять промпт →</a></article>
+          <article><span>НОВЫЙ ПРОМПТ</span><h4>Вопросы журналиста</h4><p>Заранее увидеть, каких ответов и доказательств недостаёт.</p><a href="files/lesson-03/prompts-pro/08-вопросы-журналиста.txt" download>Взять промпт →</a></article>
+          <article><span>НОВЫЙ ПРОМПТ</span><h4>Журнал правок</h4><p>Превратить замечания редактора в явные правила для следующей версии.</p><a href="files/lesson-03/prompts-pro/09-журнал-правок.txt" download>Взять промпт →</a></article>
+          <article><span>КАНДИДАТ В НАВЫК</span><h4>Редакторский маршрут</h4><p>Позже можно объединить проверки, адаптацию и журнал в один навык с контрольными точками.</p><a href="lesson-03-pro.html#apply">Посмотреть основу →</a></article>
+        </div>
+      </div>
+      <p class="pro-link"><a href="lesson-03-pro.html">Открыть все паспорта и промпты уровня «Про» →</a></p>
+    </section>
+    <p class="bottom-note">Схема показывает принцип работы, а не автоматически генерирует полный пресс-релиз. Для реального текста используем файлы и промпты <a href="lesson-03.html#practice-files">третьего урока</a>.</p>
+  </main>
+  <script src="lesson-03-formula.js"></script>
+</body>
+</html>
