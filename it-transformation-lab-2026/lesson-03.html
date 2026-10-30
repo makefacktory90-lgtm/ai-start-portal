@@ -1,203 +1,753 @@
 <!doctype html>
 <html lang="ru" data-protected="true">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Третья встреча · Черновик пресс-релиза</title>
-  <link rel="stylesheet" href="lesson-03.css">
-  <script src="access.js"></script>
-</head>
-<body class="lesson03">
-  <header class="lesson03-top">
-    <a href="portal.html">IRA × AI</a>
-    <a href="portal.html">Все встречи</a>
-  </header>
-  <main>
-    <section class="lesson03-hero wrap">
-      <p class="eyebrow">Третья встреча · 30 октября 2026 · 10:00–12:00 МСК</p>
-      <h1>Из образца<br>в пресс-релиз</h1>
-      <p class="lesson03-lead">Сначала завершим домашку и научимся править текст вместе. Затем все по одной схеме сделаем черновик пресс-релиза: контент + язык + формат. В конце покажем, как усилить этот процесс.</p>
-      <div class="lesson03-prep"><a class="lesson03-button red" href="files/lesson-03/урок-3-основной-комплект.zip?v=20261029b" download>Комплект к занятию</a><span>Заранее достаточно открыть ссылку на урок и сохранить четыре промпта из Телеграма. Архив скачаем вместе на занятии.</span></div>
-      <nav class="lesson03-nav" aria-label="Разделы урока">
-        <a href="#recording">Запись</a>
-        <a href="#homework">Повторение</a>
-        <a href="#materials">Материалы и слайды</a>
-        <a href="#route">Подготовить чат</a>
-        <a href="#prompts">Промпты 1–4</a>
-        <a href="#advanced">Про</a>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Третья встреча · Черновик пресс-релиза</title>
+    <link rel="stylesheet" href="lesson-03.css" />
+    <script src="access.js"></script>
+  </head>
+  <body class="lesson03">
+    <header class="lesson03-top">
+      <a href="portal.html">IRA × AI</a>
+      <a href="portal.html">Все встречи</a>
+    </header>
+    <main>
+      <section class="lesson03-hero wrap">
+        <p class="eyebrow">
+          Третья встреча · 30 октября 2026 · 10:00–12:00 МСК
+        </p>
+        <h1>Из образца<br />в пресс-релиз</h1>
+        <p class="lesson03-lead">
+          Сначала завершим домашку и научимся править текст вместе. Затем все по
+          одной схеме сделаем черновик пресс-релиза: контент + язык + формат. В
+          конце покажем, как усилить этот процесс.
+        </p>
+        <div class="lesson03-prep">
+          <a
+            class="lesson03-button red"
+            href="files/lesson-03/урок-3-основной-комплект.zip?v=20261029b"
+            download
+            >Комплект к занятию</a
+          ><span
+            >Заранее достаточно открыть ссылку на урок и сохранить четыре
+            промпта из Телеграма. Архив скачаем вместе на занятии.</span
+          >
+        </div>
+        <nav class="lesson03-nav" aria-label="Разделы урока">
+          <a href="#recording">Запись</a>
+          <a href="#homework">Повторение</a>
+          <a href="#materials">Материалы и слайды</a>
+          <a href="#route">Подготовить чат</a>
+          <a href="#prompts">Промпты 1–4</a>
+          <a href="#advanced">Про</a>
+        </nav>
+      </section>
+
+      <nav class="lesson03-lesson-map" aria-label="Три части занятия">
+        <a href="#homework"
+          ><b>01 · ПОВТОРЯЕМ</b><strong>Домашка и совместная работа</strong
+          ><span>Находим ответ, комментируем, проверяем доступ.</span></a
+        >
+        <a href="#materials"
+          ><b>02 · ДЕЛАЕМ ВМЕСТЕ</b><strong>Тексты: База</strong
+          ><span>Файлы → факты → черновик → проверка → страница.</span></a
+        >
+        <a href="#advanced"
+          ><b>03 · ПОСЛЕ БАЗЫ</b><strong>Тексты: Про</strong
+          ><span>Свои паспорта, проверки и работа над ошибками.</span></a
+        >
       </nav>
-    </section>
 
-    <nav class="lesson03-lesson-map" aria-label="Три части занятия">
-      <a href="#homework"><b>01 · ПОВТОРЯЕМ</b><strong>Домашка и совместная работа</strong><span>Находим ответ, комментируем, проверяем доступ.</span></a>
-      <a href="#materials"><b>02 · ДЕЛАЕМ ВМЕСТЕ</b><strong>Тексты: База</strong><span>Файлы → факты → черновик → проверка → страница.</span></a>
-      <a href="#advanced"><b>03 · ПОСЛЕ БАЗЫ</b><strong>Тексты: Про</strong><span>Свои паспорта, проверки и работа над ошибками.</span></a>
-    </nav>
-
-    <section class="lesson03-recording" id="recording">
-      <div class="wrap">
-        <p class="eyebrow">Запись третьей встречи</p>
-        <h2>Посмотреть урок</h2>
-        <div class="lesson03-player" aria-label="Место для записи урока">
-          <div>
-            <strong>Видео будет здесь после занятия</strong>
-            <span>Запись Zoom, код доступа и таймкоды добавим после встречи.</span>
+      <section class="lesson03-recording" id="recording">
+        <div class="wrap">
+          <p class="eyebrow">Запись третьей встречи</p>
+          <h2>Посмотреть урок</h2>
+          <div class="lesson03-player" id="lesson03-player">
+            <button
+              class="lesson03-play"
+              type="button"
+              aria-label="Открыть запись третьей встречи"
+            >
+              <span aria-hidden="true">▶</span>
+              <strong>Из образца в пресс-релиз</strong>
+              <small>Открыть запись Zoom · 2:00:31</small>
+            </button>
           </div>
-        </div>
-        <div class="lesson03-recording-meta">
-          <div><small>Код доступа</small><strong>Появится вместе с записью</strong></div>
-          <div><small>Таймкоды</small><strong>Добавим после обработки видео</strong></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="lesson03-homework" id="homework">
-      <div class="wrap">
-        <p class="eyebrow">01 / жёлтый блок · начинаем с домашки</p>
-        <h2>Сначала работаем вместе</h2>
-        <p>Все открывают одно и то же <a href="https://chatgpt.com/space/page_6adb2c8c92788191a43dcb2ab457d371" target="_blank" rel="noopener noreferrer">пространство «ДЗ занятие 2»</a>. Приглашать участников заново не нужно: они уже приглашены.</p>
-        <ol class="lesson03-mini-steps">
-          <li><b>Найдите свой ответ.</b> Нажмите Content → «опрос». Если ответа нет, впишите его внизу страницы, не стирая чужой текст.</li>
-          <li><b>Откройте речь.</b> В Content выберите «Мастер речь для комментариев», выделите один фрагмент и оставьте конкретный комментарий.</li>
-          <li><b>Проверьте результат.</b> Закройте страницу, откройте её снова и убедитесь, что текст и комментарий остались на месте.</li>
-        </ol>
-        <p class="lesson03-outcome"><b>Результат:</b> каждый увидел общий документ и оставил в нём свой след.</p>
-      </div>
-    </section>
-
-    <section class="lesson03-materials" id="materials">
-      <div class="wrap">
-        <p class="eyebrow">02 / бирюзовый блок · тексты: база</p>
-        <h2>Сначала скачайте три файла</h2>
-        <p>Нажмите «Основной комплект», распакуйте ZIP. Внутри: <b>PDF с фактами</b>, <b>TXT с правилами языка</b> и <b>TXT со структурой пресс-релиза</b>. Все три файла загрузим в один новый чат. Промпты придут в Телеграм по номерам; они также есть ниже на этой странице.</p>
-        <div class="lesson03-download-strip"><a href="files/lesson-03/урок-3-основной-комплект.zip?v=20261029b" download><b>СКАЧАТЬ СЕЙЧАС</b><strong>Основной комплект · 3 файла</strong><small>Один PDF и два TXT в ZIP</small></a><a href="files/lesson-03/ПРОМПТЫ-ДЛЯ-ТЕЛЕГРАМ-УРОК-3.txt" download><b>ЕСЛИ НУЖНЫ ОТДЕЛЬНО</b><strong>Четыре промпта · TXT</strong><small>Те же тексты есть ниже с кнопками копирования</small></a></div>
-        <div class="lesson03-slide-actions">
-          <a class="lesson03-button red" href="slides-board-03.html">Слайды на доске</a>
-          <a class="lesson03-button red" href="slides-03.html">Слайды как презентация</a>
-          <a class="lesson03-button" href="files/lesson-03/Урок-3-База-из-образца-в-релиз.pdf" target="_blank" rel="noopener">Открыть PDF</a>
-          <a class="lesson03-button" href="lesson-03-formula.html">Интерактивная схема: База → Про</a>
-          <a class="lesson03-button" href="files/lesson-03/Схемы-урока-3-База-и-Про.pdf" target="_blank" rel="noopener">Схемы без интернета · PDF</a>
-        </div>
-        <div class="lesson03-material-list">
-          <a href="files/lesson-03/Памятка-участника-База.pdf" target="_blank" rel="noopener"><span>Памятка участника</span><small>PDF · База</small></a>
-          <a href="files/lesson-02/homework-02.pdf" target="_blank" rel="noopener"><span>Домашка второго урока</span><small>PDF · со скриншотами</small></a>
-          <a href="https://chatgpt.com/space/page_6adb2c8c92788191a43dcb2ab457d371" target="_blank" rel="noopener noreferrer"><span>Пространство «ДЗ занятие 2»</span><small>Открыть в ChatGPT</small></a>
-        </div>
-        <details class="lesson03-file-details"><summary>Что лежит в комплекте и где взять файлы по одному</summary>
-        <p>PDF — <b>контент</b>, первый TXT — <b>голос</b>, второй TXT — <b>формат</b>. Это учебная практика по уже опубликованным данным, не новая новость компании.</p>
-        <div class="lesson03-files">
-          <a href="files/lesson-03/открытые-данные-норникель-2025.pdf" download><b>01 · КОНТЕНТ</b><strong>Данные «Норникеля» за 2025 год</strong><small>Скачать PDF</small></a>
-          <a href="files/lesson-03/passports/тон-голоса-рабочий.txt" download><b>02 · ГОЛОС</b><strong>Рабочий паспорт голоса</strong><small>Скачать TXT</small></a>
-          <a href="files/lesson-03/passports/03-результаты-отчета.txt" download><b>03 · ФОРМАТ</b><strong>Паспорт «Результаты отчёта»</strong><small>Скачать TXT</small></a>
-        </div>
-        <p class="lesson03-extra-link"><b>Первоисточник для проверки:</b> <a href="https://atlas2025.nornickel.ru/download/ru/ar/full-report/ar_ru_atlas-nornik_2025.pdf" target="_blank" rel="noopener noreferrer">полный PDF Регионального атласа 2025 ↗</a> (около 65 МБ) или <a href="https://atlas2025.nornickel.ru/key-facts-figures/" target="_blank" rel="noopener noreferrer">раздел с использованными цифрами ↗</a>. На уроке прикрепляем короткий PDF из комплекта.</p>
-        </details>
-      </div>
-    </section>
-
-    <section class="lesson03-route" id="route">
-      <div class="wrap">
-        <p class="eyebrow">02 / бирюзовый блок · все делают одно и то же</p>
-        <h2>Загрузите комплект в новый чат</h2>
-        <p class="lesson03-workplace"><b>Работаем на компьютере в браузере.</b> Страница урока — в одной вкладке, рабочий ChatGPT Business — в другой. Проект и пространство пока не создаём.</p>
-        <ol class="lesson03-four-steps">
-          <li><b>Распакуйте скачанный ZIP.</b> На Mac дважды нажмите на архив; на Windows выберите «Извлечь всё». В папке должны быть один PDF и два TXT.</li>
-          <li><b>Откройте новый чат в Business.</b> Во второй вкладке откройте <a href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer">chatgpt.com</a>, выберите рабочий аккаунт и нажмите «Новый чат». Через «+» → «Добавить фото и файлы» прикрепите <b>все три распакованных файла</b>, не сам ZIP.</li>
-        </ol>
-        <p class="lesson03-outcome"><b>Проверка перед стартом:</b> над полем ввода видны три вложения. Теперь идём к промпту 1 ниже. Все четыре промпта отправляем в этот же чат.</p>
-        <div class="lesson03-proof"><img src="files/lesson-03/screenshot-attach.png" alt="В ChatGPT открыто меню добавления файлов" loading="lazy"><p>Это меню появляется после нажатия «+». Выберите «Добавить фото и файлы», затем найдите распакованный комплект в «Загрузках». Перед отправкой должны быть видны <b>один PDF и два TXT</b>.</p></div>
-        <div class="lesson03-rescue"><h3>Если файлы не прикрепляются</h3><p>Проверьте, что ZIP распакован и открыт рабочий аккаунт Business. Если после отправки ChatGPT не видит PDF, прикрепите недостающий файл в тот же чат. К проверке текста вернёмся после промпта 3.</p></div>
-      </div>
-    </section>
-
-    <section class="lesson03-prompts" id="prompts">
-      <div class="wrap">
-        <p class="eyebrow">База · копируйте по очереди</p>
-        <h2>Четыре промпта урока</h2>
-        <p>Отправляйте по одному в подготовленный чат. Слева показано, <b>какую работу выполняет каждый промпт</b>; справа — текст для копирования и ожидаемый результат.</p>
-        <article class="lesson03-prompt">
-          <aside class="lesson03-phase">01 <span>Извлекаем фактуру</span></aside>
-          <div class="lesson03-prompt-head"><h3>1. Вытащить факты</h3><button type="button" data-copy="prompt-facts">Скопировать запрос</button></div>
-          <pre id="prompt-facts">Прочитайте прикреплённый PDF «открытые-данные-норникель-2025.pdf». Это краткая учебная выжимка из уже опубликованного Регионального атласа за 2025 год. Составьте карту фактов только по производственным показателям: никель, медь, палладий, платина. Для каждого показателя укажите точное число, единицу, период, оговорку «из собственного сырья» и страницу PDF. Отдельно перечислите, чего не хватает, чтобы назвать это новой новостью. Не добавляйте факты из памяти или интернета. Данные о выбросах пока не используйте: это отдельная тема.</pre>
-          <p class="lesson03-check">Результат: четыре показателя за 2025 год; единицы и оговорка сохранены.</p>
-          <a href="files/lesson-03/prompts-live/01-вытащить-факты.txt" download>Скачать запрос TXT</a>
-        </article>
-        <article class="lesson03-prompt">
-          <aside class="lesson03-phase">02 <span>Собираем черновик</span></aside>
-          <div class="lesson03-prompt-head"><h3>2. Написать черновик</h3><button type="button" data-copy="prompt-draft">Скопировать запрос</button></div>
-          <pre id="prompt-draft">В этом чате прикреплены три файла: PDF «открытые-данные-норникель-2025.pdf» с фактурой, «тон-голоса-рабочий.txt» с правилами языка и «03-результаты-отчета.txt» со структурой документа. По карте фактов выше напишите короткий учебный черновик пресс-релиза до 180 слов о производственных показателях за 2025 год. Факты берите только из PDF; структуру — из паспорта формата, язык — из паспорта голоса. Данных хватает только на один тематический блок: не придумывайте дополнительные выводы ради структуры. Начните с главного подтверждённого результата и укажите, что данные опубликованы в Региональном атласе. Сохраняйте год, единицы измерения и оговорку «из собственного сырья». Не называйте показатели 2025 года новым событием 2026 года. Не добавляйте причины, сравнения, прогнозы или цитаты, которых нет в PDF. Данные о выбросах не смешивайте с производственными. После черновика перечислите, что редактор должен проверить перед публикацией. Заголовок пометьте «Учебный черновик — не публиковать».</pre>
-          <p class="lesson03-check">Результат: ретроспективный учебный черновик без новой выдуманной новости и цитаты.</p>
-          <a href="files/lesson-03/prompts-live/02-написать-черновик.txt" download>Скачать запрос TXT</a>
-        </article>
-        <article class="lesson03-prompt">
-          <aside class="lesson03-phase">03 <span>Проверяем данные</span></aside>
-          <div class="lesson03-prompt-head"><h3>3. Проверить и исправить</h3><button type="button" data-copy="prompt-check">Скопировать запрос</button></div>
-          <pre id="prompt-check">Проверьте последний черновик по трём прикреплённым файлам. Сначала сверьте все числа, единицы, период и оговорку «из собственного сырья» с PDF «открытые-данные-норникель-2025.pdf». Затем проверьте структуру по паспорту «03-результаты-отчета.txt» и язык по «тон-голоса-рабочий.txt». Сделайте короткую таблицу: фрагмент черновика | где это есть в PDF | оставить / исправить / удалить. Удалите неподтверждённое, не смешивайте производственные данные с выбросами и не называйте опубликованные показатели 2025 года новой новостью. Покажите исправленный учебный черновик с пометкой «Учебный черновик — не публиковать» и отдельно вопросы редактору. Если PDF или паспорта Вам недоступны, не угадывайте: напишите, какой файл нужно прикрепить заново.</pre>
-          <p class="lesson03-check">Результат: исправленный черновик и короткий список того, что ещё требует согласования. Если источник недоступен, остановитесь и прикрепите файл заново.</p>
-          <a href="files/lesson-03/prompts-live/03-проверить-черновик.txt" download>Скачать запрос TXT</a>
-        </article>
-        <article class="lesson03-prompt">
-          <aside class="lesson03-phase">04 <span>Сохраняем результат</span></aside>
-          <div class="lesson03-prompt-head"><h3>4. Открыть как страницу</h3><button type="button" data-copy="prompt-page">Скопировать запрос</button></div>
-          <pre id="prompt-page">Создайте из исправленного учебного черновика в этом чате отдельную страницу с названием «Учебный пресс-релиз: показатели 2025 года». Перенесите только сам текст, без карты фактов, проверочной таблицы и списка вопросов. Сохраните пометку «Учебный черновик — не публиковать». Дайте ссылку на страницу. Если нужно выбрать пространство, сначала спросите меня; не публикуйте страницу и не приглашайте коллег самостоятельно.</pre>
-          <p class="lesson03-check">Результат: ссылка на страницу. Откройте её и проверьте текст. Приглашение коллеги — Ваше отдельное действие.</p>
-          <a href="files/lesson-03/prompts-live/04-открыть-как-страницу.txt" download>Скачать запрос TXT</a>
-        </article>
-        <p class="lesson03-final-result"><b>Получилось:</b> из одного PDF мы извлекли факты, написали текст по двум готовым паспортам, проверили его по источнику и сохранили как страницу. Это учебный черновик, не материал для публикации.</p>
-      </div>
-    </section>
-
-    <section class="lesson03-project-next" id="project-next">
-      <div class="wrap">
-        <p class="eyebrow">После первого результата · повторяемый процесс</p>
-        <h2>Паспорта понравились? Положите их в проект</h2>
-        <p>Это следующий шаг, <b>не часть сегодняшней Базы</b>. Проект хранит правила для будущих чатов: понравившийся паспорт голоса, паспорта форматов и короткую инструкцию. Новый отчёт потом прикрепляете только в новый чат проекта. Проект не заменяет общее пространство для совместной правки страниц.</p>
-        <ol>
-          <li>В рабочем ChatGPT Business слева нажмите «Новый проект» / New project. Назовите его «Пресс-релизы» и нажмите «Создать».</li>
-          <li>Откройте проект. В разделе источников нажмите «Добавить источники» / Add sources и загрузите <b>паспорт голоса</b> и нужные <b>паспорта форматов</b>. Это постоянные правила для новых чатов проекта. Не кладите туда каждый новый отчёт, если он нужен только для одного релиза.</li>
-          <li>Откройте меню проекта «•••» → «Настройки проекта» / Project settings. В поле инструкций напишите: «Используй загруженный паспорт голоса и только тот паспорт формата, который я назову в запросе. Факты бери из приложенного к чату документа. Не выдумывай цитаты, даты, причины и результаты. Сначала покажи вопросы по пробелам данных».</li>
-          <li>Для следующего релиза откройте <b>новый чат внутри проекта</b>, прикрепите только новый PDF или другой массив данных и напишите: «По этим данным подготовь учебный черновик пресс-релиза в нашем рабочем голосе, по паспорту формата „Результаты отчёта“. Сохрани числа, периоды и ссылки на источник. Отдельно покажи вопросы перед публикацией».</li>
-        </ol>
-        <p class="lesson03-outcome">Проект хранит общие инструкции и образцы; новый чат получает данные для конкретного текста. Перед отправкой наружу человек всё равно сверяет факты и согласует релиз. <a href="https://help.openai.com/en/articles/10169521-projects-in-chatgpt" target="_blank" rel="noopener noreferrer">Официальная инструкция OpenAI о проектах ↗</a></p>
-      </div>
-    </section>
-
-    <section class="lesson03-advanced" id="advanced">
-      <div class="wrap">
-        <p class="eyebrow">03 / красный блок · после общего результата</p>
-        <h2>Тексты: «Про»</h2>
-        <p>После того как все получили и открыли страницу, можно расширять процесс: пять видов исходного контента, свои голоса и форматы, проверка стратегии и фактов, редактура языка и обновление промптов по замечаниям редактора. Установка и настройка навыков тоже остаётся здесь, в «Про»; во время общей практики до этого блока не доходим.</p>
-        <div class="lesson03-slide-actions">
-          <a class="lesson03-button red" href="lesson-03-formula.html#pro-block">Показать широкую схему</a>
-          <a class="lesson03-button red" href="lesson-03-pro.html#formats">Шесть паспортов</a>
-          <a class="lesson03-button" href="lesson-03-pro.html#extract-format">Как снять формат</a>
-          <a class="lesson03-button" href="lesson-03-pro.html#extract-voice">Как снять голос</a>
-          <a class="lesson03-button" href="files/lesson-03/урок-3-паспорта-и-про.zip?v=20261029c" download>Скачать весь «Про» ZIP</a>
-          <a class="lesson03-button" href="files/lesson-03/prompts-live/03-проверить-черновик.txt" download>Скачать проверку TXT</a>
-        </div>
-        <details class="lesson03-after-base"><summary>Готовые паспорта и как мы их получили</summary>
-          <div class="lesson03-voice" id="voice">
-            <h3>Рабочий голос</h3>
-            <p>Мы изучили <a href="files/lesson-03/источники-19.txt" download>19 опубликованных материалов</a> и собрали учебный паспорт языка. Это гипотеза по текстам, не утверждённый стандарт компании. <a href="lesson-03-pro.html#extract-voice">Как снять свой голос →</a></p>
-            <div class="lesson03-voice-points"><span>Предмет назван рано</span><span>Цифры с периодом и единицей</span><span>План отделён от результата</span><span>Цитаты не выдумываются</span></div>
-          </div>
-          <div class="lesson03-passports" id="passports">
-            <div class="lesson03-passports-head"><div><h3>Шесть паспортов формата</h3><p>Мы сгруппировали 19 материалов по редакционной задаче. Для Базы взяли №3 «Результаты отчёта»; по одному образцу это предварительная версия, требующая проверки.</p></div><a class="lesson03-button" href="files/lesson-03/все-паспорта-урок-3.zip?v=20261029b" download>Скачать все ZIP</a></div>
-            <div class="lesson03-passport-cards">
-              <article><b>01</b><h4>Производственный результат</h4><p>Запуск, завершённый этап, подтверждённый результат.</p><div><button type="button" data-copy-url="files/lesson-03/passports/01-производственный-результат.txt">Скопировать паспорт</button><a href="files/lesson-03/passports/01-производственный-результат.txt" download>TXT ↓</a></div></article>
-              <article><b>02</b><h4>Соглашение и партнёрство</h4><p>Кто с кем и о чём договорился; что уже сделано.</p><div><button type="button" data-copy-url="files/lesson-03/passports/02-соглашение-и-партнерство.txt">Скопировать паспорт</button><a href="files/lesson-03/passports/02-соглашение-и-партнерство.txt" download>TXT ↓</a></div></article>
-              <article class="lesson03-today"><b>03 · НА УРОКЕ</b><h4>Результаты отчёта</h4><p>Главный вывод, показатели, периоды и границы данных.</p><div><button type="button" data-copy-url="files/lesson-03/passports/03-результаты-отчета.txt">Скопировать паспорт</button><a href="files/lesson-03/passports/03-результаты-отчета.txt" download>TXT ↓</a></div></article>
-              <article><b>04</b><h4>Технология и разработка</h4><p>Что создано, где применяют и на какой стадии проект.</p><div><button type="button" data-copy-url="files/lesson-03/passports/04-технология-и-разработка.txt">Скопировать паспорт</button><a href="files/lesson-03/passports/04-технология-и-разработка.txt" download>TXT ↓</a></div></article>
-              <article><b>05</b><h4>Общественная или экологическая программа</h4><p>Изменение для людей или территории, масштаб и результат.</p><div><button type="button" data-copy-url="files/lesson-03/passports/05-общественная-и-экологическая-программа.txt">Скопировать паспорт</button><a href="files/lesson-03/passports/05-общественная-и-экологическая-программа.txt" download>TXT ↓</a></div></article>
-              <article><b>06</b><h4>Люди, награда, событие</h4><p>Кто, где, когда и за что получил признание.</p><div><button type="button" data-copy-url="files/lesson-03/passports/06-люди-награда-событие.txt">Скопировать паспорт</button><a href="files/lesson-03/passports/06-люди-награда-событие.txt" download>TXT ↓</a></div></article>
+          <div class="lesson03-recording-meta">
+            <div><small>Код доступа</small><strong>+.C6@SRg</strong></div>
+            <div>
+              <small>Если плеер не открылся</small
+              ><strong
+                ><a
+                  href="https://us06web.zoom.us/rec/share/KkdfH5Jod3dtngz8ito21KdllFifdieq0JftjrIHaAsKb6VZ6gMbckk-LUmGybTw.uIevAcAhKbdQ-pOZ?startTime=1793343598000"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Открыть запись в Zoom ↗</a
+                ></strong
+              >
             </div>
-            <p class="lesson03-extra-link">Формат любого нового документа можно снять по образцу, даже если его название Вам неизвестно. <a href="lesson-03-pro.html#extract-format">Пошаговая инструкция и промпт →</a></p>
           </div>
-        </details>
-      </div>
-    </section>
-  </main>
-  <footer class="lesson03-footer"><a href="portal.html">← Все встречи</a></footer>
-  <script src="lesson-03-copy.js"></script>
-</body>
+          <div class="lesson03-timecodes" id="timecodes">
+            <h3>Таймкоды</h3>
+            <ul>
+              <li>
+                <b>00:05:09</b><span>Три исходных файла и задача урока</span>
+              </li>
+              <li>
+                <b>00:07:38</b
+                ><span>Загрузка материалов в Work и первый запрос</span>
+              </li>
+              <li>
+                <b>00:12:51</b
+                ><span>Черновик пресс-релиза по заданной структуре</span>
+              </li>
+              <li>
+                <b>00:15:17</b
+                ><span>Перенос текста в Pages для совместной правки</span>
+              </li>
+              <li>
+                <b>00:20:29</b
+                ><span>Пространства, участники и права доступа</span>
+              </li>
+              <li><b>00:30:47</b><span>База про тексты на портале</span></li>
+              <li>
+                <b>00:31:24</b
+                ><span>Четыре кирпича: факты, голос, формат, черновик</span>
+              </li>
+              <li>
+                <b>00:35:01</b
+                ><span>Humanizer и признаки машинного текста</span>
+              </li>
+              <li><b>00:40:00</b><span>Как сохранять логику процесса</span></li>
+              <li>
+                <b>00:45:00</b
+                ><span>Проект: фактура, паспорт голоса и формат</span>
+              </li>
+              <li>
+                <b>00:50:00</b
+                ><span>Когда нужен отдельный проект под направление</span>
+              </li>
+              <li>
+                <b>00:55:00</b
+                ><span>PDF, ссылка или копипаст: выбираем источник</span>
+              </li>
+              <li>
+                <b>01:10:00</b
+                ><span>Безопасность данных и границы внешнего ИИ</span>
+              </li>
+              <li>
+                <b>01:15:00</b><span>Локальные модели и цифровая гигиена</span>
+              </li>
+              <li><b>01:20:00</b><span>Знакомство с Codex</span></li>
+              <li><b>01:25:00</b><span>Режим цели</span></li>
+              <li><b>01:30:00</b><span>Голосовая работа и телефон</span></li>
+              <li>
+                <b>01:35:18</b
+                ><span>Анонс встречи 4: презентации по шаблонам</span>
+              </li>
+              <li><b>01:40:12</b><span>Как снять каркас документа</span></li>
+              <li><b>01:45:29</b><span>Плагин как база знаний</span></li>
+              <li>
+                <b>01:51:27</b><span>Требования к корпоративной AI-среде</span>
+              </li>
+              <li>
+                <b>01:56:31</b
+                ><span>Корпоративный аккаунт и совместная работа</span>
+              </li>
+            </ul>
+            <p>
+              <a
+                class="lesson03-button"
+                href="files/lesson-03/lesson-03-timecodes.md"
+                download
+                >Скачать таймкоды</a
+              >
+              <a
+                class="lesson03-button"
+                href="files/lesson-03/lesson-03-transcript.vtt"
+                download
+                >Скачать транскрипт</a
+              >
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="lesson03-homework" id="homework">
+        <div class="wrap">
+          <p class="eyebrow">01 / жёлтый блок · начинаем с домашки</p>
+          <h2>Сначала работаем вместе</h2>
+          <p>
+            Все открывают одно и то же
+            <a
+              href="https://chatgpt.com/space/page_6adb2c8c92788191a43dcb2ab457d371"
+              target="_blank"
+              rel="noopener noreferrer"
+              >пространство «ДЗ занятие 2»</a
+            >. Приглашать участников заново не нужно: они уже приглашены.
+          </p>
+          <ol class="lesson03-mini-steps">
+            <li>
+              <b>Найдите свой ответ.</b> Нажмите Content → «опрос». Если ответа
+              нет, впишите его внизу страницы, не стирая чужой текст.
+            </li>
+            <li>
+              <b>Откройте речь.</b> В Content выберите «Мастер речь для
+              комментариев», выделите один фрагмент и оставьте конкретный
+              комментарий.
+            </li>
+            <li>
+              <b>Проверьте результат.</b> Закройте страницу, откройте её снова и
+              убедитесь, что текст и комментарий остались на месте.
+            </li>
+          </ol>
+          <p class="lesson03-outcome">
+            <b>Результат:</b> каждый увидел общий документ и оставил в нём свой
+            след.
+          </p>
+        </div>
+      </section>
+
+      <section class="lesson03-materials" id="materials">
+        <div class="wrap">
+          <p class="eyebrow">02 / бирюзовый блок · тексты: база</p>
+          <h2>Сначала скачайте три файла</h2>
+          <p>
+            Нажмите «Основной комплект», распакуйте ZIP. Внутри:
+            <b>PDF с фактами</b>, <b>TXT с правилами языка</b> и
+            <b>TXT со структурой пресс-релиза</b>. Все три файла загрузим в один
+            новый чат. Промпты придут в Телеграм по номерам; они также есть ниже
+            на этой странице.
+          </p>
+          <div class="lesson03-download-strip">
+            <a
+              href="files/lesson-03/урок-3-основной-комплект.zip?v=20261029b"
+              download
+              ><b>СКАЧАТЬ СЕЙЧАС</b><strong>Основной комплект · 3 файла</strong
+              ><small>Один PDF и два TXT в ZIP</small></a
+            ><a href="files/lesson-03/ПРОМПТЫ-ДЛЯ-ТЕЛЕГРАМ-УРОК-3.txt" download
+              ><b>ЕСЛИ НУЖНЫ ОТДЕЛЬНО</b><strong>Четыре промпта · TXT</strong
+              ><small>Те же тексты есть ниже с кнопками копирования</small></a
+            >
+          </div>
+          <div class="lesson03-slide-actions">
+            <a class="lesson03-button red" href="slides-board-03.html"
+              >Слайды на доске</a
+            >
+            <a class="lesson03-button red" href="slides-03.html"
+              >Слайды как презентация</a
+            >
+            <a
+              class="lesson03-button"
+              href="files/lesson-03/Урок-3-База-из-образца-в-релиз.pdf"
+              target="_blank"
+              rel="noopener"
+              >Открыть PDF</a
+            >
+            <a class="lesson03-button" href="lesson-03-formula.html"
+              >Интерактивная схема: База → Про</a
+            >
+            <a
+              class="lesson03-button"
+              href="files/lesson-03/Схемы-урока-3-База-и-Про.pdf"
+              target="_blank"
+              rel="noopener"
+              >Схемы без интернета · PDF</a
+            >
+          </div>
+          <div class="lesson03-material-list">
+            <a
+              href="files/lesson-03/Памятка-участника-База.pdf"
+              target="_blank"
+              rel="noopener"
+              ><span>Памятка участника</span><small>PDF · База</small></a
+            >
+            <a
+              href="files/lesson-02/homework-02.pdf"
+              target="_blank"
+              rel="noopener"
+              ><span>Домашка второго урока</span
+              ><small>PDF · со скриншотами</small></a
+            >
+            <a
+              href="https://chatgpt.com/space/page_6adb2c8c92788191a43dcb2ab457d371"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><span>Пространство «ДЗ занятие 2»</span
+              ><small>Открыть в ChatGPT</small></a
+            >
+          </div>
+          <details class="lesson03-file-details">
+            <summary>Что лежит в комплекте и где взять файлы по одному</summary>
+            <p>
+              PDF — <b>контент</b>, первый TXT — <b>голос</b>, второй TXT —
+              <b>формат</b>. Это учебная практика по уже опубликованным данным,
+              не новая новость компании.
+            </p>
+            <div class="lesson03-files">
+              <a
+                href="files/lesson-03/открытые-данные-норникель-2025.pdf"
+                download
+                ><b>01 · КОНТЕНТ</b
+                ><strong>Данные «Норникеля» за 2025 год</strong
+                ><small>Скачать PDF</small></a
+              >
+              <a
+                href="files/lesson-03/passports/тон-голоса-рабочий.txt"
+                download
+                ><b>02 · ГОЛОС</b><strong>Рабочий паспорт голоса</strong
+                ><small>Скачать TXT</small></a
+              >
+              <a
+                href="files/lesson-03/passports/03-результаты-отчета.txt"
+                download
+                ><b>03 · ФОРМАТ</b><strong>Паспорт «Результаты отчёта»</strong
+                ><small>Скачать TXT</small></a
+              >
+            </div>
+            <p class="lesson03-extra-link">
+              <b>Первоисточник для проверки:</b>
+              <a
+                href="https://atlas2025.nornickel.ru/download/ru/ar/full-report/ar_ru_atlas-nornik_2025.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                >полный PDF Регионального атласа 2025 ↗</a
+              >
+              (около 65 МБ) или
+              <a
+                href="https://atlas2025.nornickel.ru/key-facts-figures/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >раздел с использованными цифрами ↗</a
+              >. На уроке прикрепляем короткий PDF из комплекта.
+            </p>
+          </details>
+        </div>
+      </section>
+
+      <section class="lesson03-route" id="route">
+        <div class="wrap">
+          <p class="eyebrow">02 / бирюзовый блок · все делают одно и то же</p>
+          <h2>Загрузите комплект в новый чат</h2>
+          <p class="lesson03-workplace">
+            <b>Работаем на компьютере в браузере.</b> Страница урока — в одной
+            вкладке, рабочий ChatGPT Business — в другой. Проект и пространство
+            пока не создаём.
+          </p>
+          <ol class="lesson03-four-steps">
+            <li>
+              <b>Распакуйте скачанный ZIP.</b> На Mac дважды нажмите на архив;
+              на Windows выберите «Извлечь всё». В папке должны быть один PDF и
+              два TXT.
+            </li>
+            <li>
+              <b>Откройте новый чат в Business.</b> Во второй вкладке откройте
+              <a
+                href="https://chatgpt.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >chatgpt.com</a
+              >, выберите рабочий аккаунт и нажмите «Новый чат». Через «+» →
+              «Добавить фото и файлы» прикрепите
+              <b>все три распакованных файла</b>, не сам ZIP.
+            </li>
+          </ol>
+          <p class="lesson03-outcome">
+            <b>Проверка перед стартом:</b> над полем ввода видны три вложения.
+            Теперь идём к промпту 1 ниже. Все четыре промпта отправляем в этот
+            же чат.
+          </p>
+          <div class="lesson03-proof">
+            <img
+              src="files/lesson-03/screenshot-attach.png"
+              alt="В ChatGPT открыто меню добавления файлов"
+              loading="lazy"
+            />
+            <p>
+              Это меню появляется после нажатия «+». Выберите «Добавить фото и
+              файлы», затем найдите распакованный комплект в «Загрузках». Перед
+              отправкой должны быть видны <b>один PDF и два TXT</b>.
+            </p>
+          </div>
+          <div class="lesson03-rescue">
+            <h3>Если файлы не прикрепляются</h3>
+            <p>
+              Проверьте, что ZIP распакован и открыт рабочий аккаунт Business.
+              Если после отправки ChatGPT не видит PDF, прикрепите недостающий
+              файл в тот же чат. К проверке текста вернёмся после промпта 3.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="lesson03-prompts" id="prompts">
+        <div class="wrap">
+          <p class="eyebrow">База · копируйте по очереди</p>
+          <h2>Четыре промпта урока</h2>
+          <p>
+            Отправляйте по одному в подготовленный чат. Слева показано,
+            <b>какую работу выполняет каждый промпт</b>; справа — текст для
+            копирования и ожидаемый результат.
+          </p>
+          <article class="lesson03-prompt">
+            <aside class="lesson03-phase">
+              01 <span>Извлекаем фактуру</span>
+            </aside>
+            <div class="lesson03-prompt-head">
+              <h3>1. Вытащить факты</h3>
+              <button type="button" data-copy="prompt-facts">
+                Скопировать запрос
+              </button>
+            </div>
+            <pre id="prompt-facts">
+Прочитайте прикреплённый PDF «открытые-данные-норникель-2025.pdf». Это краткая учебная выжимка из уже опубликованного Регионального атласа за 2025 год. Составьте карту фактов только по производственным показателям: никель, медь, палладий, платина. Для каждого показателя укажите точное число, единицу, период, оговорку «из собственного сырья» и страницу PDF. Отдельно перечислите, чего не хватает, чтобы назвать это новой новостью. Не добавляйте факты из памяти или интернета. Данные о выбросах пока не используйте: это отдельная тема.</pre>
+            <p class="lesson03-check">
+              Результат: четыре показателя за 2025 год; единицы и оговорка
+              сохранены.
+            </p>
+            <a
+              href="files/lesson-03/prompts-live/01-вытащить-факты.txt"
+              download
+              >Скачать запрос TXT</a
+            >
+          </article>
+          <article class="lesson03-prompt">
+            <aside class="lesson03-phase">
+              02 <span>Собираем черновик</span>
+            </aside>
+            <div class="lesson03-prompt-head">
+              <h3>2. Написать черновик</h3>
+              <button type="button" data-copy="prompt-draft">
+                Скопировать запрос
+              </button>
+            </div>
+            <pre id="prompt-draft">
+В этом чате прикреплены три файла: PDF «открытые-данные-норникель-2025.pdf» с фактурой, «тон-голоса-рабочий.txt» с правилами языка и «03-результаты-отчета.txt» со структурой документа. По карте фактов выше напишите короткий учебный черновик пресс-релиза до 180 слов о производственных показателях за 2025 год. Факты берите только из PDF; структуру — из паспорта формата, язык — из паспорта голоса. Данных хватает только на один тематический блок: не придумывайте дополнительные выводы ради структуры. Начните с главного подтверждённого результата и укажите, что данные опубликованы в Региональном атласе. Сохраняйте год, единицы измерения и оговорку «из собственного сырья». Не называйте показатели 2025 года новым событием 2026 года. Не добавляйте причины, сравнения, прогнозы или цитаты, которых нет в PDF. Данные о выбросах не смешивайте с производственными. После черновика перечислите, что редактор должен проверить перед публикацией. Заголовок пометьте «Учебный черновик — не публиковать».</pre>
+            <p class="lesson03-check">
+              Результат: ретроспективный учебный черновик без новой выдуманной
+              новости и цитаты.
+            </p>
+            <a
+              href="files/lesson-03/prompts-live/02-написать-черновик.txt"
+              download
+              >Скачать запрос TXT</a
+            >
+          </article>
+          <article class="lesson03-prompt">
+            <aside class="lesson03-phase">
+              03 <span>Проверяем данные</span>
+            </aside>
+            <div class="lesson03-prompt-head">
+              <h3>3. Проверить и исправить</h3>
+              <button type="button" data-copy="prompt-check">
+                Скопировать запрос
+              </button>
+            </div>
+            <pre id="prompt-check">
+Проверьте последний черновик по трём прикреплённым файлам. Сначала сверьте все числа, единицы, период и оговорку «из собственного сырья» с PDF «открытые-данные-норникель-2025.pdf». Затем проверьте структуру по паспорту «03-результаты-отчета.txt» и язык по «тон-голоса-рабочий.txt». Сделайте короткую таблицу: фрагмент черновика | где это есть в PDF | оставить / исправить / удалить. Удалите неподтверждённое, не смешивайте производственные данные с выбросами и не называйте опубликованные показатели 2025 года новой новостью. Покажите исправленный учебный черновик с пометкой «Учебный черновик — не публиковать» и отдельно вопросы редактору. Если PDF или паспорта Вам недоступны, не угадывайте: напишите, какой файл нужно прикрепить заново.</pre>
+            <p class="lesson03-check">
+              Результат: исправленный черновик и короткий список того, что ещё
+              требует согласования. Если источник недоступен, остановитесь и
+              прикрепите файл заново.
+            </p>
+            <a
+              href="files/lesson-03/prompts-live/03-проверить-черновик.txt"
+              download
+              >Скачать запрос TXT</a
+            >
+          </article>
+          <article class="lesson03-prompt">
+            <aside class="lesson03-phase">
+              04 <span>Сохраняем результат</span>
+            </aside>
+            <div class="lesson03-prompt-head">
+              <h3>4. Открыть как страницу</h3>
+              <button type="button" data-copy="prompt-page">
+                Скопировать запрос
+              </button>
+            </div>
+            <pre id="prompt-page">
+Создайте из исправленного учебного черновика в этом чате отдельную страницу с названием «Учебный пресс-релиз: показатели 2025 года». Перенесите только сам текст, без карты фактов, проверочной таблицы и списка вопросов. Сохраните пометку «Учебный черновик — не публиковать». Дайте ссылку на страницу. Если нужно выбрать пространство, сначала спросите меня; не публикуйте страницу и не приглашайте коллег самостоятельно.</pre>
+            <p class="lesson03-check">
+              Результат: ссылка на страницу. Откройте её и проверьте текст.
+              Приглашение коллеги — Ваше отдельное действие.
+            </p>
+            <a
+              href="files/lesson-03/prompts-live/04-открыть-как-страницу.txt"
+              download
+              >Скачать запрос TXT</a
+            >
+          </article>
+          <p class="lesson03-final-result">
+            <b>Получилось:</b> из одного PDF мы извлекли факты, написали текст
+            по двум готовым паспортам, проверили его по источнику и сохранили
+            как страницу. Это учебный черновик, не материал для публикации.
+          </p>
+        </div>
+      </section>
+
+      <section class="lesson03-project-next" id="project-next">
+        <div class="wrap">
+          <p class="eyebrow">После первого результата · повторяемый процесс</p>
+          <h2>Паспорта понравились? Положите их в проект</h2>
+          <p>
+            Это следующий шаг, <b>не часть сегодняшней Базы</b>. Проект хранит
+            правила для будущих чатов: понравившийся паспорт голоса, паспорта
+            форматов и короткую инструкцию. Новый отчёт потом прикрепляете
+            только в новый чат проекта. Проект не заменяет общее пространство
+            для совместной правки страниц.
+          </p>
+          <ol>
+            <li>
+              В рабочем ChatGPT Business слева нажмите «Новый проект» / New
+              project. Назовите его «Пресс-релизы» и нажмите «Создать».
+            </li>
+            <li>
+              Откройте проект. В разделе источников нажмите «Добавить источники»
+              / Add sources и загрузите <b>паспорт голоса</b> и нужные
+              <b>паспорта форматов</b>. Это постоянные правила для новых чатов
+              проекта. Не кладите туда каждый новый отчёт, если он нужен только
+              для одного релиза.
+            </li>
+            <li>
+              Откройте меню проекта «•••» → «Настройки проекта» / Project
+              settings. В поле инструкций напишите: «Используй загруженный
+              паспорт голоса и только тот паспорт формата, который я назову в
+              запросе. Факты бери из приложенного к чату документа. Не выдумывай
+              цитаты, даты, причины и результаты. Сначала покажи вопросы по
+              пробелам данных».
+            </li>
+            <li>
+              Для следующего релиза откройте <b>новый чат внутри проекта</b>,
+              прикрепите только новый PDF или другой массив данных и напишите:
+              «По этим данным подготовь учебный черновик пресс-релиза в нашем
+              рабочем голосе, по паспорту формата „Результаты отчёта“. Сохрани
+              числа, периоды и ссылки на источник. Отдельно покажи вопросы перед
+              публикацией».
+            </li>
+          </ol>
+          <p class="lesson03-outcome">
+            Проект хранит общие инструкции и образцы; новый чат получает данные
+            для конкретного текста. Перед отправкой наружу человек всё равно
+            сверяет факты и согласует релиз.
+            <a
+              href="https://help.openai.com/en/articles/10169521-projects-in-chatgpt"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Официальная инструкция OpenAI о проектах ↗</a
+            >
+          </p>
+        </div>
+      </section>
+
+      <section class="lesson03-advanced" id="advanced">
+        <div class="wrap">
+          <p class="eyebrow">03 / красный блок · после общего результата</p>
+          <h2>Тексты: «Про»</h2>
+          <p>
+            После того как все получили и открыли страницу, можно расширять
+            процесс: пять видов исходного контента, свои голоса и форматы,
+            проверка стратегии и фактов, редактура языка и обновление промптов
+            по замечаниям редактора. Установка и настройка навыков тоже остаётся
+            здесь, в «Про»; во время общей практики до этого блока не доходим.
+          </p>
+          <div class="lesson03-slide-actions">
+            <a
+              class="lesson03-button red"
+              href="lesson-03-formula.html#pro-block"
+              >Показать широкую схему</a
+            >
+            <a class="lesson03-button red" href="lesson-03-pro.html#formats"
+              >Шесть паспортов</a
+            >
+            <a class="lesson03-button" href="lesson-03-pro.html#extract-format"
+              >Как снять формат</a
+            >
+            <a class="lesson03-button" href="lesson-03-pro.html#extract-voice"
+              >Как снять голос</a
+            >
+            <a
+              class="lesson03-button"
+              href="files/lesson-03/урок-3-паспорта-и-про.zip?v=20261029c"
+              download
+              >Скачать весь «Про» ZIP</a
+            >
+            <a
+              class="lesson03-button"
+              href="files/lesson-03/prompts-live/03-проверить-черновик.txt"
+              download
+              >Скачать проверку TXT</a
+            >
+          </div>
+          <details class="lesson03-after-base">
+            <summary>Готовые паспорта и как мы их получили</summary>
+            <div class="lesson03-voice" id="voice">
+              <h3>Рабочий голос</h3>
+              <p>
+                Мы изучили
+                <a href="files/lesson-03/источники-19.txt" download
+                  >19 опубликованных материалов</a
+                >
+                и собрали учебный паспорт языка. Это гипотеза по текстам, не
+                утверждённый стандарт компании.
+                <a href="lesson-03-pro.html#extract-voice"
+                  >Как снять свой голос →</a
+                >
+              </p>
+              <div class="lesson03-voice-points">
+                <span>Предмет назван рано</span
+                ><span>Цифры с периодом и единицей</span
+                ><span>План отделён от результата</span
+                ><span>Цитаты не выдумываются</span>
+              </div>
+            </div>
+            <div class="lesson03-passports" id="passports">
+              <div class="lesson03-passports-head">
+                <div>
+                  <h3>Шесть паспортов формата</h3>
+                  <p>
+                    Мы сгруппировали 19 материалов по редакционной задаче. Для
+                    Базы взяли №3 «Результаты отчёта»; по одному образцу это
+                    предварительная версия, требующая проверки.
+                  </p>
+                </div>
+                <a
+                  class="lesson03-button"
+                  href="files/lesson-03/все-паспорта-урок-3.zip?v=20261029b"
+                  download
+                  >Скачать все ZIP</a
+                >
+              </div>
+              <div class="lesson03-passport-cards">
+                <article>
+                  <b>01</b>
+                  <h4>Производственный результат</h4>
+                  <p>Запуск, завершённый этап, подтверждённый результат.</p>
+                  <div>
+                    <button
+                      type="button"
+                      data-copy-url="files/lesson-03/passports/01-производственный-результат.txt"
+                    >
+                      Скопировать паспорт</button
+                    ><a
+                      href="files/lesson-03/passports/01-производственный-результат.txt"
+                      download
+                      >TXT ↓</a
+                    >
+                  </div>
+                </article>
+                <article>
+                  <b>02</b>
+                  <h4>Соглашение и партнёрство</h4>
+                  <p>Кто с кем и о чём договорился; что уже сделано.</p>
+                  <div>
+                    <button
+                      type="button"
+                      data-copy-url="files/lesson-03/passports/02-соглашение-и-партнерство.txt"
+                    >
+                      Скопировать паспорт</button
+                    ><a
+                      href="files/lesson-03/passports/02-соглашение-и-партнерство.txt"
+                      download
+                      >TXT ↓</a
+                    >
+                  </div>
+                </article>
+                <article class="lesson03-today">
+                  <b>03 · НА УРОКЕ</b>
+                  <h4>Результаты отчёта</h4>
+                  <p>Главный вывод, показатели, периоды и границы данных.</p>
+                  <div>
+                    <button
+                      type="button"
+                      data-copy-url="files/lesson-03/passports/03-результаты-отчета.txt"
+                    >
+                      Скопировать паспорт</button
+                    ><a
+                      href="files/lesson-03/passports/03-результаты-отчета.txt"
+                      download
+                      >TXT ↓</a
+                    >
+                  </div>
+                </article>
+                <article>
+                  <b>04</b>
+                  <h4>Технология и разработка</h4>
+                  <p>Что создано, где применяют и на какой стадии проект.</p>
+                  <div>
+                    <button
+                      type="button"
+                      data-copy-url="files/lesson-03/passports/04-технология-и-разработка.txt"
+                    >
+                      Скопировать паспорт</button
+                    ><a
+                      href="files/lesson-03/passports/04-технология-и-разработка.txt"
+                      download
+                      >TXT ↓</a
+                    >
+                  </div>
+                </article>
+                <article>
+                  <b>05</b>
+                  <h4>Общественная или экологическая программа</h4>
+                  <p>
+                    Изменение для людей или территории, масштаб и результат.
+                  </p>
+                  <div>
+                    <button
+                      type="button"
+                      data-copy-url="files/lesson-03/passports/05-общественная-и-экологическая-программа.txt"
+                    >
+                      Скопировать паспорт</button
+                    ><a
+                      href="files/lesson-03/passports/05-общественная-и-экологическая-программа.txt"
+                      download
+                      >TXT ↓</a
+                    >
+                  </div>
+                </article>
+                <article>
+                  <b>06</b>
+                  <h4>Люди, награда, событие</h4>
+                  <p>Кто, где, когда и за что получил признание.</p>
+                  <div>
+                    <button
+                      type="button"
+                      data-copy-url="files/lesson-03/passports/06-люди-награда-событие.txt"
+                    >
+                      Скопировать паспорт</button
+                    ><a
+                      href="files/lesson-03/passports/06-люди-награда-событие.txt"
+                      download
+                      >TXT ↓</a
+                    >
+                  </div>
+                </article>
+              </div>
+              <p class="lesson03-extra-link">
+                Формат любого нового документа можно снять по образцу, даже если
+                его название Вам неизвестно.
+                <a href="lesson-03-pro.html#extract-format"
+                  >Пошаговая инструкция и промпт →</a
+                >
+              </p>
+            </div>
+          </details>
+        </div>
+      </section>
+    </main>
+    <footer class="lesson03-footer">
+      <a href="portal.html">← Все встречи</a>
+    </footer>
+    <script src="lesson-03-copy.js"></script>
+  </body>
+  <script>
+    document
+      .querySelector(".lesson03-play")
+      ?.addEventListener("click", function () {
+        document.getElementById("lesson03-player").innerHTML =
+          '<iframe title="Запись третьей встречи" allow="autoplay; fullscreen" allowfullscreen src="https://us06web.zoom.us/rec/share/KkdfH5Jod3dtngz8ito21KdllFifdieq0JftjrIHaAsKb6VZ6gMbckk-LUmGybTw.uIevAcAhKbdQ-pOZ?startTime=1793343598000"></iframe>';
+      });
+  </script>
 </html>
