@@ -7,6 +7,28 @@
   --line: #c9c3b8;
   --green: #1f7351;
 }
+.lesson04 .lesson04-help { margin: 18px 0; border-top: 1px solid #b4b1a7; padding: 16px 0; }
+.lesson04 .lesson04-help summary { font-weight: 700; cursor: pointer; font-size: 18px; }
+.lesson04 .lesson04-help p, .lesson04 .lesson04-help ol { margin-top: 15px; max-width: 850px; }
+.lesson04 .lesson04-help li { margin-bottom: 10px; }
+.lesson04 .lesson04-formula { display:grid; grid-template-columns: repeat(3,1fr); margin:24px 0; border:1px solid #8aa5a0; }
+.lesson04 .lesson04-formula div { padding:20px; border-right:1px solid #8aa5a0; }
+.lesson04 .lesson04-formula div:last-child { border:0; }
+.lesson04 .lesson04-formula b { display:block; font-size:23px; margin-bottom:8px; }
+.lesson04 .lesson04-formula span { display:block; font-size:16px; }
+.lesson04 .lesson04-checklist { background:#e2efea; border-left:4px solid #1f7351; padding:22px 26px; margin:25px 0; }
+.lesson04 .lesson04-checklist li { margin-bottom:8px; }
+.lesson04 .lesson03-mini-steps { display:block; }
+.lesson04 .lesson03-mini-steps li { padding:12px 0; border-bottom:1px solid #19191830; }
+.lesson04 .lesson04-shot-grid { grid-template-columns:1fr; max-width:850px; }
+.lesson04 .lesson04-shot img { cursor:zoom-in; }
+.lesson04 dialog { border:0; background:#111; padding:10px; width: min(96vw,1600px); max-height:94vh; color:white; }
+.lesson04 dialog::backdrop { background:#000c; }
+.lesson04 dialog img { display:block; max-width:100%; max-height:83vh; margin:auto; object-fit:contain; }
+.lesson04 dialog button { display:block; margin:0 0 10px auto; padding:8px 16px; }
+.lesson04 .lesson03-advanced .lesson03-phase { color:#cf302e; }
+.lesson04 .lesson03-advanced .lesson03-prompt button { background:#cf302e; color:#fff; }
+@media(max-width:760px) { .lesson04 .lesson04-formula{grid-template-columns:1fr} .lesson04 .lesson04-formula div {border-right:0;border-bottom:1px solid #8aa5a0} .lesson04 .lesson03-prompt {display:block} .lesson04 .lesson03-prompt>*{grid-column:auto} .lesson04 .lesson03-phase {margin-bottom:18px} .lesson04 .lesson03-prompt-head {display:block} .lesson04 .lesson03-prompt-head button {margin-top:12px} }
 * {
   box-sizing: border-box;
 }
