@@ -125,20 +125,11 @@
 
   <section class="lesson03-advanced" id="bonus-codex"><div class="wrap">
     <p class="eyebrow">Бонус 1 · только после общего результата</p><h2>Codex и дополнительные навыки презентаций</h2>
-    <p>Все пробуем один навык: <b>Slide Wright</b>. Он сначала делает два пробных слайда, затем собирает веб-презентацию. Это отдельная ветка для эксперимента с подачей; фирменный PPTX из основного консультации уже сохранён.</p>
+    <p>Для практики используем <b><a href="https://github.com/arifszn/slide-wright" target="_blank" rel="noopener">Slide Wright</a></b>. Он сначала делает два пробных слайда, затем собирает веб-презентацию.</p>
     <ol class="lesson03-four-steps"><li>Откройте Codex и новый чат.</li><li>Отправьте <b>промпт 7</b> с адресом GitHub. Дождитесь установки.</li><li>Начните следующий ход и отправьте <b>промпт 8</b>. Прикрепите учебный PDF.</li><li>Откройте два пробных слайда. Если направление подходит, напишите: «Подтверждаю. Собери все пять слайдов».</li><li>Откройте итоговый HTML в браузере. Переключите слайды стрелками.</li></ol>
     <article class="lesson03-prompt lesson04-one-prompt"><aside class="lesson03-phase">07 <span>Бонус: установка</span></aside><div class="lesson03-prompt-head"><h3>Установить один навык</h3><button data-copy="prompt-7">Скопировать промпт 7</button></div><pre id="prompt-7">Используй skill-installer. Проверь репозиторий https://github.com/arifszn/slide-wright и установи навык slide-wright из подходящей папки со SKILL.md. Перед установкой прочитай инструкции и проверь зависимости. Если навык уже установлен, используй его без перезаписи. Сообщи, как вызвать навык и какие дополнительные зависимости нужны для HTML, PDF и PowerPoint.</pre><p class="lesson03-check">Проверка: Codex подтвердил установку и сообщил название навыка.</p></article>
     <article class="lesson03-prompt lesson04-one-prompt"><aside class="lesson03-phase">08 <span>Бонус: тест</span></aside><div class="lesson03-prompt-head"><h3>Получить два пробных слайда</h3><button data-copy="prompt-8">Скопировать промпт 8</button></div><pre id="prompt-8">Используй slide-wright. По прикреплённому учебному PDF подготовь презентацию из пяти слайдов для внутреннего обзора команды. Сначала покажи два пробных слайда и дождись моего подтверждения. Все факты бери только из PDF, сохраняй год и единицы. Пометь результат «Учебный пример». Сохрани итог как HTML, открывающийся в браузере.</pre><p class="lesson03-check">Проверка: появились два пробных слайда, затем после подтверждения полный HTML.</p></article>
     <details class="lesson04-help"><summary>Как посмотреть навык на GitHub и скачать вручную</summary><ol><li>Откройте ссылку Slide Wright ниже.</li><li>Найдите файл SKILL.md: в нём описано поведение навыка. Прочитайте README и требования к установке.</li><li>Для скачивания копии нажмите Code → Download ZIP и распакуйте архив.</li><li>Не загружайте целый репозиторий как плагин ChatGPT. Передайте Codex путь к распакованной папке и попросите установить именно папку навыка вместе с её references и scripts.</li></ol><p>Скачивание ZIP само по себе не устанавливает навык. Для консультации проще пользоваться промптом 7.</p></details>
-    <p>Другие варианты из коллекции Иры и GitHub для самостоятельного изучения:</p>
-    <div class="lesson04-bonus-grid">
-      <article><b>Коллекция Иры</b><h3>Presentations</h3><p>Редактируемые PPTX и работа по шаблону.</p></article>
-      <article><b>Коллекция Иры</b><h3>Slideshow</h3><p>Интерактивные веб-презентации.</p></article>
-      <article><b>Коллекция Иры</b><h3>Guizang PPT</h3><p>Журнальные веб-презентации.</p></article>
-      <article><b>GitHub · структура</b><h3>Humanize PPT</h3><p>Сначала логика и история, потом оформление.</p><a href="https://github.com/LearnPrompt/humanize-ppt" target="_blank" rel="noopener">GitHub ↗</a></article>
-      <article><b>GitHub · общий тест</b><h3>Slide Wright</h3><p>Два пробных слайда, затем HTML. Для экспорта в PDF или PPTX нужны дополнительные шаги и зависимости.</p><a href="https://github.com/arifszn/slide-wright" target="_blank" rel="noopener">GitHub ↗</a></article>
-      <article><b>GitHub · продвинутый</b><h3>PPT Agent Skills</h3><p>Воспроизводимая сборка презентаций как кода.</p><a href="https://github.com/sunbigfly/ppt-agent-skills" target="_blank" rel="noopener">GitHub ↗</a></article>
-    </div>
   </div></section>
 
   <section class="lesson03-homework lesson04-scheduled" id="bonus-scheduled"><div class="wrap">
@@ -148,6 +139,17 @@
     <details class="lesson04-help"><summary>При первом запуске появилось окно знакомства</summary><figure class="lesson04-shot compact"><img loading="lazy" src="assets/lesson-04/09-scheduled-intro.png" alt="Знакомство с расписанием"><figcaption>Нажмите «Начать», затем создайте задачу своим запросом.</figcaption></figure></details>
     <details class="lesson04-help"><summary>Задача не появилась или расписание не загрузилось</summary><p>Ответ обычным текстом «напомню» не подтверждает создание. В том же чате попросите: «Создай именно задачу по расписанию и покажи дату следующего запуска». Если раздел Scheduled выдаёт ошибку, обновите страницу и откройте его отдельно. Если функция недоступна в рабочем аккаунте, напишите вопрос в чат или задайте вопрос во время занятия.</p><p>Для проверки не нужны подключённая почта, локальные файлы и отправка сообщений коллегам. Это личное напоминание с чек-листом.</p></details>
     <p class="lesson03-outcome"><b>Результат бонуса:</b> задача видна в Scheduled, время правильное, самостоятельная отправка запрещена.</p>
+  </div></section>
+  <section class="lesson03-advanced" id="github-skills"><div class="wrap">
+    <p class="eyebrow">Для самостоятельной практики</p>
+    <h2>Навыки презентаций на GitHub</h2>
+    <p>Число звёзд указано для репозиториев по состоянию на 6 ноября 2026 года.</p>
+    <div class="lesson04-bonus-grid">
+      <article><b>★ 992</b><h3>Humanize PPT</h3><p>Проработка структуры и истории презентации до оформления.</p><a href="https://github.com/LearnPrompt/humanize-ppt" target="_blank" rel="noopener">Репозиторий ↗</a></article>
+      <article><b>★ 67</b><h3>Slide Wright</h3><p>Два пробных слайда, затем HTML-презентация. Для экспорта в PPTX или PDF могут понадобиться дополнительные зависимости.</p><a href="https://github.com/arifszn/slide-wright" target="_blank" rel="noopener">Репозиторий ↗</a></article>
+      <article><b>★ 917</b><h3>PPT Agent Skills</h3><p>Сборка презентаций как кода для повторяемых выпусков.</p><a href="https://github.com/sunbigfly/ppt-agent-skills" target="_blank" rel="noopener">Репозиторий ↗</a></article>
+      <article><b>★ 187 909 у репозитория</b><h3>PPTX от Anthropic</h3><p>Навык для работы с файлами PowerPoint в общем репозитории Agent Skills.</p><a href="https://github.com/anthropics/skills/tree/main/skills/pptx" target="_blank" rel="noopener">Папка навыка ↗</a></article>
+    </div>
   </div></section>
 </main>
 <dialog id="screen-dialog" aria-label="Скриншот крупно"><button type="button">Закрыть ×</button><img alt=""></dialog>
