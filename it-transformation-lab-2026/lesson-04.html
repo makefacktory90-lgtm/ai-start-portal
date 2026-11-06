@@ -26,9 +26,16 @@
     <p class="eyebrow">Запись четвёртой консультации</p>
     <h2 id="recording-title">Посмотреть запись</h2>
     <div class="lesson03-player" id="lesson04-player">
-      <div role="status"><strong>Запись появится после консультации</strong><span>Здесь можно будет посмотреть видео и вернуться к нужному шагу.</span></div>
+      <button class="lesson03-play" type="button" id="lesson04-play" aria-label="Открыть запись четвёртой консультации">
+        <span aria-hidden="true">▶</span>
+        <strong>Из материалов в фирменную презентацию</strong>
+        <small>Открыть запись Zoom</small>
+      </button>
     </div>
-    <!-- После получения записи: заменить заглушку плеером, добавить ссылку на оригинал и код доступа, затем заполнить и открыть таймкоды. -->
+    <div class="lesson03-recording-meta">
+      <div><small>Код доступа</small><strong>.qHN#$J1</strong></div>
+      <div><small>Если плеер не открылся</small><strong><a id="lesson04-zoom-link" href="https://us06web.zoom.us/rec/share/sGfRwSiUKG04_BtsK6qs0HySRTATRO4FMaikJ1STilqUtUeTwx-DkrIPn3ZGhMn-.KYRnilqBvzNGK4JI" target="_blank" rel="noopener noreferrer">Открыть запись в Zoom ↗</a></strong></div>
+    </div>
     <div class="lesson03-timecodes" id="timecodes" hidden>
       <h3>Таймкоды</h3>
       <ul id="lesson04-timecodes"></ul>
@@ -154,6 +161,14 @@
 </main>
 <dialog id="screen-dialog" aria-label="Скриншот крупно"><button type="button">Закрыть ×</button><img alt=""></dialog>
 <script>
+document.getElementById('lesson04-play').addEventListener('click', () => {
+  const player = document.createElement('iframe');
+  player.title = 'Запись четвёртой консультации';
+  player.src = document.getElementById('lesson04-zoom-link').href;
+  player.allow = 'autoplay; fullscreen';
+  player.allowFullscreen = true;
+  document.getElementById('lesson04-player').replaceChildren(player);
+});
 document.querySelectorAll('[data-copy]').forEach(b=>b.addEventListener('click',async()=>{const t=document.getElementById(b.dataset.copy);try{await navigator.clipboard.writeText(t.innerText.trim());const x=b.textContent;b.textContent='Скопировано';setTimeout(()=>b.textContent=x,1500)}catch{const selection=window.getSelection();const range=document.createRange();range.selectNodeContents(t);selection.removeAllRanges();selection.addRange(range);b.textContent='Текст выделен: Ctrl/Cmd+C'}}));
 const viewer=document.getElementById('screen-dialog');
 document.querySelectorAll('.lesson04-shot img').forEach(img=>{const link=document.createElement('a');link.href=img.getAttribute('src');link.setAttribute('aria-label','Увеличить: '+img.alt);img.before(link);link.append(img);link.addEventListener('click',e=>{e.preventDefault();viewer.querySelector('img').src=img.src;viewer.querySelector('img').alt=img.alt;viewer.showModal()})});
