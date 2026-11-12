@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>День открытых мастерских</title>
+<style>
+  * { box-sizing: border-box }
+  body { margin: 0; background: #f7f5ef; color: #141c2d; font: 18px/1.5 system-ui, sans-serif }
+  .wrap { width: min(1100px, calc(100% - 40px)); margin: 0 auto }
+  header { background: #131f35; color: #fff; padding: 64px 0 }
+  .hero { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 36px }
+  .hero img { display: block; width: 100%; border-radius: 12px }
+  .label { color: #ffba78; font-size: 15px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em }
+  h1 { font-size: clamp(40px, 7vw, 72px); line-height: 1; letter-spacing: -.045em; margin: 10px 0 20px }
+  h2 { font-size: clamp(30px, 5vw, 46px); line-height: 1.1; margin: 0 0 24px }
+  p { margin: 0 0 18px }
+  .button { display: inline-block; background: #ffba78; color: #141c2d; border-radius: 6px; padding: 12px 18px; font-weight: 700 }
+  a:focus-visible { outline: 3px solid currentColor; outline-offset: 5px }
+  section { padding: 48px 0 }
+  ol { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 0; padding-left: 25px }
+  li { padding-right: 12px }
+  footer { border-top: 1px solid #cbd1db; padding: 20px 0 }
+  @media (max-width: 700px) {
+    header { padding: 36px 0 }
+    .hero, ol { grid-template-columns: 1fr }
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap hero">
+    <div>
+      <p class="label">Учебный пример</p>
+      <h1>День открытых мастерских</h1>
+      <p>Загляните в мастерские, посмотрите инструменты в работе и задайте вопросы специалистам.</p>
+      <a class="button" href="#program">Посмотреть программу</a>
+    </div>
+    <img src="cover.jpg" alt="Оранжевый демонстрационный стенд на тёмно-синем фоне" width="1600" height="900">
+  </div>
+</header>
+<main>
+  <section class="wrap" id="program">
+    <h2>Что будет на встрече</h2>
+    <ol>
+      <li>Экскурсия по мастерским</li>
+      <li>Демонстрация инструментов</li>
+      <li>Вопросы специалистам</li>
+    </ol>
+  </section>
+</main>
+<footer><div class="wrap">Черновик анонса для обсуждения с командой вёрстки</div></footer>
+</body>
+</html>
