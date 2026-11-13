@@ -1,50 +1,131 @@
 <!doctype html>
 <html lang="ru">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Спартакиада 2026</title>
-<style>
-  * { box-sizing: border-box }
-  body { margin: 0; background: #f7f5ef; color: #141c2d; font: 18px/1.5 system-ui, sans-serif }
-  .wrap { width: min(1100px, calc(100% - 40px)); margin: 0 auto }
-  header { background: #131f35; color: #fff; padding: 64px 0 }
-  .hero { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 36px }
-  .hero img { display: block; width: 100%; border-radius: 12px }
-  .label { color: #ffba78; font-size: 15px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em }
-  h1 { font-size: clamp(40px, 7vw, 72px); line-height: 1; letter-spacing: -.045em; margin: 10px 0 20px }
-  h2 { font-size: clamp(30px, 5vw, 46px); line-height: 1.1; margin: 0 0 24px }
-  p { margin: 0 0 18px }
-  .button { display: inline-block; background: #ffba78; color: #141c2d; border-radius: 6px; padding: 12px 18px; font-weight: 700 }
-  a:focus-visible { outline: 3px solid currentColor; outline-offset: 5px }
-  section { padding: 48px 0 }
-  ol { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 0; padding-left: 25px }
-  li { padding-right: 12px }
-  footer { border-top: 1px solid #cbd1db; padding: 20px 0 }
-  @media (max-width: 700px) {
-    header { padding: 36px 0 }
-    .hero, ol { grid-template-columns: 1fr }
-  }
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Спартакиада 2026</title>
+  <style>
+    :root {
+      --ink: #171915;
+      --paper: #f8f7ef;
+      --lime: #e2fa64;
+      --line: #c9ccbc;
+      --display: "Archivo Black", "Arial Black", system-ui, sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    body { margin: 0; color: var(--ink); background: var(--paper); font: 17px/1.5 system-ui, sans-serif; }
+    a { color: inherit; }
+    a:focus-visible { outline: 3px solid #26752c; outline-offset: 5px; }
+    .wrap { width: min(1240px, calc(100% - 72px)); margin-inline: auto; }
+    .top { border-bottom: 1px solid var(--line); }
+    .top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 12px 28px; padding-block: 16px; }
+    .brand, .eyebrow { font-size: .78rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+    .top nav { display: flex; flex-wrap: wrap; gap: 12px 24px; font-size: .9rem; font-weight: 650; }
+    .top a { text-decoration: none; }
+    .top a:hover { text-decoration: underline; }
+    .hero { padding-block: clamp(32px, 6vw, 86px); }
+    .hero-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.06fr); align-items: stretch; gap: clamp(22px, 4vw, 60px); }
+    .hero-copy { align-self: center; padding-block: 18px; }
+    .eyebrow { margin: 0 0 16px; }
+    h1, h2 { font-family: var(--display); font-weight: 900; line-height: .96; letter-spacing: -.07em; margin: 0; }
+    h1 { font-size: clamp(40px, 6.2vw, 94px); }
+    h1 span { display: block; font-size: 1.22em; }
+    .lead { font-size: clamp(1.05rem, 1.65vw, 1.45rem); font-weight: 700; margin: 20px 0 12px; }
+    .intro { max-width: 38ch; margin: 0 0 23px; }
+    .button { display: inline-flex; align-items: center; gap: 18px; background: var(--lime); color: var(--ink); padding: 13px 18px; border: 1px solid var(--ink); font-weight: 800; text-decoration: none; }
+    .button:hover { background: var(--ink); color: var(--lime); }
+    .hero img { display: block; width: 100%; height: 100%; max-height: 580px; min-height: 390px; object-fit: cover; object-position: 57% center; }
+    .event { display: grid; grid-template-columns: 1fr 1fr 1.3fr; margin-top: clamp(24px, 4vw, 54px); border: 1px solid var(--ink); background: var(--lime); }
+    .event div { padding: 12px clamp(12px, 2.5vw, 26px); }
+    .event div + div { border-left: 1px solid var(--ink); }
+    .event dt { font-size: .73rem; font-weight: 750; text-transform: uppercase; letter-spacing: .08em; }
+    .event dd { margin: 3px 0 0; font-weight: 800; }
+    .section { padding-block: clamp(36px, 6vw, 88px); border-top: 1px solid var(--line); }
+    h2 { font-size: clamp(38px, 6vw, 76px); }
+    .schedule { list-style: none; margin: 30px 0 0; padding: 0; }
+    .schedule li { display: grid; grid-template-columns: minmax(95px, .3fr) 1fr; gap: 14px; align-items: baseline; padding: 19px 0; border-top: 1px solid var(--line); }
+    .schedule li:last-child { border-bottom: 1px solid var(--line); }
+    .schedule time { font: 900 clamp(24px, 4vw, 44px)/1 var(--display); letter-spacing: -.06em; }
+    .schedule span { font-size: clamp(1rem, 2vw, 1.35rem); font-weight: 650; }
+    .participate { background: var(--ink); color: var(--paper); }
+    .participate a:focus-visible { outline-color: var(--lime); }
+    .participate h2 { color: var(--lime); }
+    .participate-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(20px, 4vw, 56px); margin-top: 28px; }
+    .participate h3 { margin: 0 0 8px; font-size: 1.2rem; }
+    .participate p { margin: 0; max-width: 48ch; }
+    footer { padding-block: 19px; font-size: .86rem; }
+
+    @media (max-width: 760px) {
+      .wrap { width: calc(100% - 36px); }
+      .hero-grid, .participate-grid { grid-template-columns: 1fr; }
+      .hero-copy { padding: 0; }
+      h1 { font-size: clamp(38px, 9vw, 72px); }
+      .hero img { min-height: 0; aspect-ratio: 16 / 10; }
+    }
+
+    @media (max-width: 510px) {
+      .top .wrap { flex-wrap: wrap; }
+      .event { grid-template-columns: 1fr 1fr; }
+      .event div:last-child { grid-column: 1 / -1; border-left: 0; border-top: 1px solid var(--ink); }
+    }
+  </style>
 </head>
 <body>
-<header>
-  <div class="wrap">
-    <div>
-      <p class="label">Учебный пример</p>
-      <h1>Спартакиада 2026</h1>
-      <p>Один день, три дисциплины, команда коллег.</p><p>24 октября 2026 · 10:30–15:30 · Спорткомплекс «Север»</p><p>Соберите команду отдела или приходите болеть за коллег. В программе эстафета, волейбол и настольный теннис.</p>
-      <a class="button" href="#program">Посмотреть программу</a>
+  <header class="top">
+    <div class="wrap">
+      <span class="brand">Спартакиада 2026</span>
+      <nav aria-label="Навигация по странице">
+        <a href="#program">Программа</a>
+        <a href="#participate">Как участвовать</a>
+      </nav>
     </div>
-  </div>
-</header>
-<main>
-  <section class="wrap" id="program">
-    <h2>Программа</h2>
-    <ul><li><b>10:30</b> · Сбор участников и выдача номеров</li><li><b>11:00</b> · Открытие и командная эстафета</li><li><b>12:00</b> · Волейбол и настольный теннис</li><li><b>15:00</b> · Награждение</li></ul>
-  </section>
-  <section class="wrap"><h2>Как участвовать</h2><p>До 16 октября сообщите координатору отдела, в какой дисциплине хотите выступить. Можно выбрать одно соревнование или прийти болельщиком.</p><p>Возьмите спортивную форму, сменную обувь и бутылку воды. Приходите к 10:30, чтобы получить номер.</p></section>
-</main>
-<footer><div class="wrap">Черновик анонса для обсуждения с командой вёрстки</div></footer>
+  </header>
+  <main>
+    <section class="hero" aria-labelledby="event-title">
+      <div class="wrap">
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">Учебный пример</p>
+            <h1 id="event-title">Спартакиада <span>2026</span></h1>
+            <p class="lead">Один день, три дисциплины, команда коллег</p>
+            <p class="intro">Соберите команду отдела или приходите болеть за коллег. В программе эстафета, волейбол и настольный теннис.</p>
+            <a class="button" href="#program">Посмотреть программу <span aria-hidden="true">↓</span></a>
+          </div>
+          <img src="spartakiada-relay.jpg" alt="Участники эстафеты бегут по стадиону">
+        </div>
+        <dl class="event">
+          <div><dt>Дата</dt><dd><time datetime="2026-10-24">24 октября 2026</time></dd></div>
+          <div><dt>Время</dt><dd>10:30–15:30</dd></div>
+          <div><dt>Место</dt><dd>Спорткомплекс «Север»</dd></div>
+        </dl>
+      </div>
+    </section>
+    <section class="section wrap" id="program">
+      <h2>Программа</h2>
+      <ol class="schedule">
+        <li><time datetime="10:30">10:30</time><span>Сбор участников и выдача номеров</span></li>
+        <li><time datetime="11:00">11:00</time><span>Открытие и командная эстафета</span></li>
+        <li><time datetime="12:00">12:00</time><span>Волейбол и настольный теннис</span></li>
+        <li><time datetime="15:00">15:00</time><span>Награждение</span></li>
+      </ol>
+    </section>
+    <section class="section participate" id="participate">
+      <div class="wrap">
+        <h2>Как участвовать</h2>
+        <div class="participate-grid">
+          <div>
+            <h3>Сообщите координатору отдела</h3>
+            <p>До 16 октября выберите дисциплину и сообщите координатору, в какой хотите выступить. Можно выбрать одно соревнование или прийти болельщиком.</p>
+          </div>
+          <div>
+            <h3>Что взять с собой</h3>
+            <p>Спортивную форму, сменную обувь и бутылку воды. Приходите к 10:30, чтобы получить номер.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer><div class="wrap">Учебный пример. Событие, дата и место придуманы для практики.</div></footer>
 </body>
 </html>
