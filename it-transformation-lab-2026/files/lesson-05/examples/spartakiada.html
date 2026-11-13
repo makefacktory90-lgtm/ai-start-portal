@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Спартакиада 2026</title>
+<style>
+  * { box-sizing: border-box }
+  body { margin: 0; background: #f7f5ef; color: #141c2d; font: 18px/1.5 system-ui, sans-serif }
+  .wrap { width: min(1100px, calc(100% - 40px)); margin: 0 auto }
+  header { background: #131f35; color: #fff; padding: 64px 0 }
+  .hero { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 36px }
+  .hero img { display: block; width: 100%; border-radius: 12px }
+  .label { color: #ffba78; font-size: 15px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em }
+  h1 { font-size: clamp(40px, 7vw, 72px); line-height: 1; letter-spacing: -.045em; margin: 10px 0 20px }
+  h2 { font-size: clamp(30px, 5vw, 46px); line-height: 1.1; margin: 0 0 24px }
+  p { margin: 0 0 18px }
+  .button { display: inline-block; background: #ffba78; color: #141c2d; border-radius: 6px; padding: 12px 18px; font-weight: 700 }
+  a:focus-visible { outline: 3px solid currentColor; outline-offset: 5px }
+  section { padding: 48px 0 }
+  ol { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 0; padding-left: 25px }
+  li { padding-right: 12px }
+  footer { border-top: 1px solid #cbd1db; padding: 20px 0 }
+  @media (max-width: 700px) {
+    header { padding: 36px 0 }
+    .hero, ol { grid-template-columns: 1fr }
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div>
+      <p class="label">Учебный пример</p>
+      <h1>Спартакиада 2026</h1>
+      <p>Один день, три дисциплины, команда коллег.</p><p>24 октября 2026 · 10:30–15:30 · Спорткомплекс «Север»</p><p>Соберите команду отдела или приходите болеть за коллег. В программе эстафета, волейбол и настольный теннис.</p>
+      <a class="button" href="#program">Посмотреть программу</a>
+    </div>
+  </div>
+</header>
+<main>
+  <section class="wrap" id="program">
+    <h2>Программа</h2>
+    <ul><li><b>10:30</b> · Сбор участников и выдача номеров</li><li><b>11:00</b> · Открытие и командная эстафета</li><li><b>12:00</b> · Волейбол и настольный теннис</li><li><b>15:00</b> · Награждение</li></ul>
+  </section>
+  <section class="wrap"><h2>Как участвовать</h2><p>До 16 октября сообщите координатору отдела, в какой дисциплине хотите выступить. Можно выбрать одно соревнование или прийти болельщиком.</p><p>Возьмите спортивную форму, сменную обувь и бутылку воды. Приходите к 10:30, чтобы получить номер.</p></section>
+</main>
+<footer><div class="wrap">Черновик анонса для обсуждения с командой вёрстки</div></footer>
+</body>
+</html>
