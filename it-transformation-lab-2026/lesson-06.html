@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="ru" data-protected="true">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<script src="access.js"></script>
+<title>Шестая консультация · Безопасность, процессы и агенты в PR</title>
+<style>
+    :root{--ink:#171717;--paper:#faf6ea;--red:#bd302d;--green:#d8eee3;--yellow:#ffe8a3;--line:#262626;--muted:#4d4d49}
+    *{box-sizing:border-box}body{margin:0;font:17px/1.55 system-ui,sans-serif;color:var(--ink);background:var(--paper)}
+    a{color:#8e2322;text-underline-offset:3px}button{font:inherit;cursor:pointer}button:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid #176845;outline-offset:4px}
+    .wrap{width:min(1100px,calc(100% - 40px));margin:auto}.top{background:var(--ink);color:white;border-top:5px solid var(--red)}.top .wrap{display:flex;justify-content:space-between;gap:18px;padding:16px 0}.top a{color:white}
+    header{padding:40px 0 26px}h1{font-size:clamp(37px,7vw,77px);line-height:1.01;letter-spacing:-.045em;max-width:980px;margin:12px 0 20px}h2{font-size:clamp(28px,4vw,47px);line-height:1.08;letter-spacing:-.03em;margin:9px 0 18px}h3{font-size:22px;line-height:1.2;margin:0 0 8px}p{margin:0 0 14px}.lead{font-size:clamp(19px,3vw,25px);max-width:850px}.eyebrow{font:700 12px/1.3 ui-monospace,monospace;letter-spacing:.07em;text-transform:uppercase;color:#982724}
+    .jump{display:flex;flex-wrap:wrap;gap:9px 20px;border-top:1px solid var(--line);padding:15px 0}.route{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line);margin:18px auto 32px}.route a{padding:16px 20px;text-decoration:none;color:var(--ink);background:var(--yellow)}.route a:nth-child(2){background:var(--green)}.route a:nth-child(3){background:#f2d9df}.route a+a{border-left:1px solid var(--line)}.route b{display:block;margin-bottom:5px}
+    section{padding:34px 0;border-top:1px solid var(--line);scroll-margin-top:12px}.tint{background:#fffdf6}.green{background:#e9f4ee}.yellow{background:#fff0c6}.check{border-left:4px solid #287250;padding:9px 13px;background:var(--green);margin:14px 0 20px}.notice{border-left:4px solid #a77522;padding:9px 13px;background:var(--yellow);margin:13px 0}
+    .prompt{background:#fffdf7;border:1px solid #96928a;margin:14px 0 20px;padding:17px 18px}.prompt-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}.prompt-head button{border:1px solid #8a201d;background:var(--red);color:#fff;border-radius:4px;padding:6px 12px;font-size:14px;white-space:nowrap}.prompt pre{font:inherit;white-space:pre-wrap;overflow-wrap:anywhere;margin:10px 0 0}.prompt p{margin:8px 0 0}.hint{font-size:14px;color:var(--muted)}
+    details{border-top:1px solid #b4aea3;padding:12px 0}summary{font-weight:700;cursor:pointer}details[open] summary{margin-bottom:12px}ol,ul{padding-left:23px}li{margin:6px 0}.table-scroll{overflow:auto}table{width:100%;border-collapse:collapse;background:#fffdf7}th,td{border:1px solid #aea99f;text-align:left;padding:10px 12px;vertical-align:top}th{background:var(--green)}.links li{margin:8px 0}.code{font:14px/1.5 ui-monospace,monospace;background:#f2eee3;padding:12px;white-space:pre-wrap;overflow-wrap:anywhere}
+    .shots{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:15px 0}.shot{margin:0;background:#f6f0e2;border:1px dashed #898174;padding:12px}.shot img{display:block;width:100%;height:auto;margin:0 0 10px}.shot img[hidden]{display:none}.shot label{display:block;font-size:13px;margin-top:8px}.shot input{max-width:100%;font-size:13px}.shot figcaption{font-size:14px}.player{background:#171717;color:#fff;min-height:145px;display:grid;place-items:center;text-align:center;padding:20px}.footer{padding:18px 0;border-top:1px solid var(--line)}
+    @media(max-width:650px){.wrap{width:calc(100% - 28px)}.route,.shots{grid-template-columns:1fr}.route a+a{border-left:0;border-top:1px solid var(--line)}.prompt-head{flex-wrap:wrap}.top .wrap{flex-wrap:wrap}}
+    @media print{.top,.jump,.prompt-head button,.shot input,.shot label{display:none}.prompt,.shot{break-inside:avoid}body{font-size:11pt}section{padding:16px 0}}
+    .production{background:#f9e1eb}.production .prompt{background:#fff2f7;border-color:#c8799b}.production .prompt-head button{background:#9b285b;border-color:#772044}.production .check{background:#fff2f7;border-color:#a53568}.route a:nth-child(2){background:#f9e1eb}.route a:nth-child(3){background:var(--green)}
+  </style>
+</head>
+<body>
+<div class="top"><div class="wrap"><strong>IRA × AI</strong><a href="portal.html">Все встречи</a></div></div>
+<main>
+<header class="wrap">
+<p class="eyebrow">Консультация 06 · 20 ноября 2026 · 10:00–12:00 МСК</p>
+<h1>Безопасность, процессы и агенты в PR</h1>
+<p class="lead">Как команде дальше развивать работу с ИИ: проверять новые инструменты, поддерживать общие правила и запускать повторяемые процессы.</p>
+<nav class="jump" aria-label="Разделы"><a href="#materials">Подготовка</a><a href="#safety">Безопасность</a><a href="#trends">Тренды</a><a href="#system">Система отдела</a><a href="#sources">Официальные источники</a><a href="#plugins">Плагины</a><a href="#skills">GitHub и Codex</a><a href="#recording">Запись</a></nav>
+</header>
+<nav class="route wrap" aria-label="План консультации">
+<a href="#safety"><b>10:00–10:30 · Безопасность</b>Проверяем данные, доступ и право на действие.</a>
+<a href="#trends"><b>10:30–11:00 · Тренды</b>Читаем релиз, тестируем новый инструмент и разбираем цикл агента.</a>
+<a href="#system"><b>11:00–12:00 · Система отдела</b>Практика Сергея. Собираем и проверяем один процесс.</a>
+</nav>
+<section class="tint" id="materials"><div class="wrap">
+<h2>Что открыть к встрече</h2>
+<ul><li>Обычный чат в ChatGPT Business. Codex пригодится для показа навыка.</li><li>Открытую новость или учебный анонс и один запрос, который вы уже использовали. Для примера подойдёт <a href="lesson-05.html#landing">бриф «Спартакиады»</a>.</li><li><a href="files/lesson-06/prompts.txt" download>Скачать все промпты</a> или копировать их по ходу со страницы.</li></ul>
+</div></section>
+<section class="yellow" id="safety"><div class="wrap">
+<p class="eyebrow">10:00–10:30 · Безопасность</p><h2>Что можно дать ИИ</h2>
+<p>Если этим небезопасно делиться, мы этим не делимся. Проверяем тип данных, согласованный инструмент, круг доступа и действие, которое он сможет выполнить.</p>
+<ol><li>Открываем учебную новость и определяем минимальный набор фактов для черновика.</li><li>Для внутреннего материала проверяем допуск у владельца данных и ИБ. Для практики берём открытый аналог.</li><li>Для агента начинаем с разрешённых источников и черновика. Проверяем, кто подтверждает отправку, публикацию и изменение общих файлов.</li></ol>
+<article class="prompt"><h3>1. Выбрать безопасный вход</h3><pre>Помоги подготовить учебный вход для задачи «из открытой новости сделать анонс». Вот описание задачи без документов. Какие данные нужны для черновика, какие можно заменить вымышленными и какие вопросы нужно задать владельцу материала до загрузки? Разрешение на работу с данными определяет наша организация.</pre></article>
+<p class="check"><b>К 10:30.</b> У каждого есть допустимый вход для теста и понятная точка согласования.</p>
+</div></section>
+<section class="green" id="trends"><div class="wrap">
+<p class="eyebrow">10:30–11:00 · Тренды и модели</p><h2>От запроса к циклу работы</h2>
+<p><b>10:30–10:40.</b> Откройте официальный журнал релизов, выберите одно изменение и найдите руководство. Проверьте, относится ли оно к ChatGPT, API или Codex и доступно ли в вашей рабочей среде.</p>
+<article class="prompt"><h3>2. Разобрать обновление по первоисточнику</h3><pre>Разбери приложенный официальный релиз и руководство. Укажи дату, точное название модели или функции, продукт, тариф или условия доступа, форматы входа и ограничения. Для каждого вывода дай ссылку на раздел. Отдельно предложи один тест для PR-задачи и перечисли, что мне нужно проверить в своём рабочем пространстве.</pre></article>
+<p><b>10:40–10:48.</b> Сохраните старый запрос и возьмите два одинаковых примера для сравнения. Фиксируйте версию модели и результат теста.</p>
+<article class="prompt"><h3>3. Проверить старый промпт на новой модели</h3><pre>Вот старый промпт, два открытых учебных примера и руководство новой модели. Предложи минимальную правку промпта. Объясни, на какой раздел руководства она опирается. Дай таблицу для сравнения на одинаковых входах: точность фактов, ссылки, формат, время до пригодного черновика и число правок. Сохрани требования к согласованию. Отметь, где ещё нужно провести ручную проверку.</pre></article>
+<p><b>10:48–11:00.</b> На одном анонсе сравним три маршрута: запрос на черновик, цикл «черновик → сверка → исправление» и агент с разрешёнными инструментами. Первый агент получает одну задачу, один критерий остановки и один тип действия. Оркестрация нужна, когда этапы можно передать друг другу вместе с фактами и результатами проверки.</p>
+<article class="prompt"><h3>4. Запустить цикл проверки</h3><pre>Из приложенной публичной новости сделай черновик анонса. Сначала выпиши проверяемые факты со ссылками. Напиши черновик, затем сравни его с источником и требованиями к формату. Исправь найденные несоответствия один раз и покажи, что изменилось. Если ключевой факт не подтверждён, вынеси его в вопросы редактору. Остановись на согласовании.</pre></article>
+<p class="check"><b>К 11:00.</b> Есть карточка обновления и понятная проверка, стоит ли менять рабочий процесс.</p>
+</div></section>
+<section class="production" id="system"><div class="wrap">
+<p class="eyebrow">11:00–12:00 · Блок Сергея</p><h2>Система, которой сможет пользоваться отдел</h2>
+<p>Эта последовательность предлагается для сверки с Сергеем. Для практики берём один процесс: из открытого источника сделать карточку фактов и черновик для редактора.</p>
+<ol><li><b>11:00–11:15.</b> Разделяем работу на этапы. Фиксируем вход, выход, владельца и того, кто принимает результат.</li><li><b>11:15–11:30.</b> Разбираем разросшуюся систему. Составляем реестр промптов, шаблонов и навыков. Выбираем действующие версии, решаем, что объединить или архивировать, назначаем владельцев.</li><li><b>11:30–11:50.</b> Прогоняем один сценарий по карточке. Редактор сверяет факты и возвращает одну правку. При желании показываем ту же последовательность в учебной папке Codex.</li><li><b>11:50–12:00.</b> Выбираем процесс на ближайшую неделю и договариваемся, кто проверит первый результат.</li></ol>
+<article class="prompt"><h3>5. Собрать карточку процесса отдела</h3><pre>Из приложенных промптов и учебного примера собери карточку повторяемого процесса. Укажи владельца, допустимые источники, вход и выход каждого этапа, критерии приёмки, версию инструкции и шаг согласования. Покажи, где передаётся результат коллеге и что делать при недостающих данных. Начни с одного типа анонса.</pre></article><article class="prompt"><h3>6. Упростить разросшуюся систему</h3><pre>Составь реестр приложенных инструкций, шаблонов и навыков. Для каждого укажи используемую задачу, владельца, последнюю подтверждённую версию и источник. Найди дубли и конфликтующие правила. Предложи, что оставить основным, объединить или вынести в архив. Перечисли, какие изменения сначала проверить на контрольном примере. Верни план без изменений файлов.</pre></article>
+<p class="check"><b>К 12:00.</b> У команды есть карточка процесса, контрольный пример и владелец. При следующем обновлении модели или шаблона команда повторяет контрольный прогон.</p>
+</div></section>
+<section class="tint" id="sources"><div class="wrap">
+<h2>Где проверять новости и учиться дальше</h2>
+<div class="table-scroll"><table><thead><tr><th>Платформа</th><th>Что изменилось</th><th>Как применять</th></tr></thead><tbody>
+<tr><td>OpenAI</td><td><a href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes">Обновления ChatGPT</a></td><td><a href="https://openai.com/academy/">OpenAI Academy</a> · <a href="https://learn.chatgpt.com/">ChatGPT Learn</a> · <a href="https://developers.openai.com/">Документация OpenAI</a></td></tr>
+<tr><td>Google</td><td><a href="https://gemini.google.com/updates">Обновления Gemini</a> · <a href="https://aistudio.google.com/docs/changelog">Журнал Gemini API</a></td><td><a href="https://aistudio.google.com/docs/prompting-strategies">Руководство по промптам Gemini</a></td></tr>
+<tr><td>Anthropic</td><td><a href="https://support.claude.com/en/articles/12138966-release-notes">Обновления Claude</a></td><td><a href="https://anthropic.skilljar.com/">Курсы Anthropic</a> · <a href="https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/overview">Руководство Claude по промптам</a></td></tr>
+</tbody></table></div>
+</div></section>
+<section id="plugins"><div class="wrap">
+<h2>Плагины ChatGPT для PR и коммуникаций</h2>
+<p>Откройте каталог, проверьте доступность в Business и выберите плагин под ближайшую задачу. Для показа на встрече достаточно одного.</p>
+<div class="table-scroll"><table><thead><tr><th>Задача</th><th>Плагин</th><th>Что попросить</th></tr></thead><tbody>
+<tr><td>Собрать визуалы кампании</td><td>Canva</td><td>Из учебного брифа собрать обложку и два формата карточек.</td></tr>
+<tr><td>Подготовить фото и PDF к выпуску</td><td>Adobe / Adobe Acrobat</td><td>Подготовить варианты фото под разные размеры или собрать утверждённые страницы PDF.</td></tr>
+<tr><td>Передать макет дизайнеру</td><td>Figma</td><td>Разложить бриф на первый экран, секции и мобильный макет.</td></tr>
+<tr><td>Собрать справку с источниками</td><td>Google Drive или SharePoint</td><td>Найти утверждённые версии материалов и дать ссылки на каждый источник.</td></tr>
+<tr><td>Собрать статус кампании</td><td>Slack или Teams</td><td>В согласованном канале найти решения, сроки и вопросы для команды.</td></tr>
+<tr><td>Подготовить ответ редакции</td><td>Gmail или Outlook Email</td><td>Собрать контекст из разрешённой переписки и подготовить черновик письма.</td></tr>
+</tbody></table></div>
+<p><a href="https://openai.com/business/plugins/">Каталог плагинов OpenAI</a> · <a href="https://learn.chatgpt.com/docs/skills-and-plugins">Руководство по плагинам и навыкам</a>.</p>
+<article class="prompt"><h3>7. Проверить плагин на учебном примере</h3><pre>Используй выбранный плагин для учебного брифа. Покажи, какие источники использовал, что получилось и что нужно проверить вручную. Подготовь черновик для редактора. Если инструменту нужно больше данных или доступов, сначала объясни, каких именно и зачем.</pre></article>
+</div></section>
+<section class="tint" id="skills"><div class="wrap">
+<h2>Где искать навыки и как ставить в Codex</h2>
+<ol><li>На GitHub ищите по задаче, например <code>seo audit agent skill</code>. Откройте README и файл <code>SKILL.md</code> конкретного навыка.</li><li>Проверьте исходники, зависимости, лицензию и коммит с помощью промпта 8.</li><li>Скопируйте папку с навыком и нужными файлами в <code>.agents/skills/</code> учебного проекта. Для SEO Audit путь будет <code>.agents/skills/seo-audit/SKILL.md</code>.</li><li>Откройте новый чат в проекте Codex, выберите навык по имени и проверьте его на одной публичной странице. Зафиксируйте версию и результат.</li></ol>
+<article class="prompt"><h3>8. Проверить навык с GitHub</h3><pre>Проверь README, SKILL.md, ссылки на зависимости и скрипты выбранного навыка на GitHub. Объясни, какие файлы он читает и меняет, какие команды запускает, нужны ли сеть или внешние ключи. Укажи лицензию и коммит. Предложи тест на открытой странице с результатом в виде отчёта. Сначала покажи выводы для проверки.</pre></article>
+<ul><li><a href="https://github.com/coreyhaines31/marketingskills/tree/main/skills/seo-audit">SEO Audit</a> · проверка открытой страницы и список проблем с приоритетами.</li><li><a href="https://github.com/coreyhaines31/marketingskills/tree/main/skills/ai-seo">AI SEO</a> · гипотезы о видимости материалов в ответах ИИ и журнал проверок.</li><li><a href="https://github.com/coreyhaines31/marketingskills/tree/main/skills/schema">Schema</a> · черновик структурированных данных по содержимому страницы.</li><li><a href="https://github.com/coreyhaines31/marketingskills/tree/main/skills/marketing-loops">Marketing Loops</a> · карточка повторяемого процесса для команды.</li></ul>
+<p><a href="https://learn.chatgpt.com/docs/build-skills">Навыки в Codex</a> · <a href="https://developers.google.com/search/docs/appearance/ai-features">Рекомендации Google для поиска с ИИ</a>.</p>
+</div></section>
+<section id="recording"><div class="wrap"><h2>Запись консультации</h2><div class="player">Запись появится после встречи.</div></div></section>
+</main>
+<footer class="footer"><div class="wrap">Консультация 06 · AI Transformation</div></footer>
+<script>
+    for (const card of document.querySelectorAll('.prompt')) {
+      const title = card.querySelector('h3');
+      const prompt = card.querySelector('pre');
+      const head = document.createElement('div');
+      head.className = 'prompt-head';
+      card.prepend(head);
+      head.append(title);
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.textContent = 'Скопировать';
+      button.addEventListener('click', async () => {
+        try {
+          await navigator.clipboard.writeText(prompt.textContent.trim());
+          button.textContent = 'Скопировано';
+        } catch {
+          const range = document.createRange();
+          range.selectNodeContents(prompt);
+          const selection = window.getSelection();
+          selection.removeAllRanges();
+          selection.addRange(range);
+          button.textContent = 'Выделено · Ctrl/Cmd+C';
+        }
+        setTimeout(() => { button.textContent = 'Скопировать'; }, 2400);
+      });
+      head.append(button);
+    }
+
+  </script>
+</body>
+</html>
