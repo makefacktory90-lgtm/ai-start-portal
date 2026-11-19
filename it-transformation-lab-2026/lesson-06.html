@@ -4,19 +4,20 @@
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
 <script src="access.js?v=2"></script>
-<title>Шестая консультация · Безопасность, процессы и агенты в PR</title>
+<title>Шестая консультация · Как работать с ИИ дальше</title>
 <style>
     :root{--ink:#171717;--paper:#faf6ea;--red:#bd302d;--green:#d8eee3;--yellow:#ffe8a3;--line:#262626;--muted:#4d4d49}
     *{box-sizing:border-box}body{margin:0;font:17px/1.55 system-ui,sans-serif;color:var(--ink);background:var(--paper)}
     a{color:#8e2322;text-underline-offset:3px}button{font:inherit;cursor:pointer}button:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid #176845;outline-offset:4px}
     .wrap{width:min(1100px,calc(100% - 40px));margin:auto}.top{background:var(--ink);color:white;border-top:5px solid var(--red)}.top .wrap{display:flex;justify-content:space-between;gap:18px;padding:16px 0}.top a{color:white}
     header{padding:40px 0 26px}h1{font-size:clamp(37px,7vw,77px);line-height:1.01;letter-spacing:-.045em;max-width:980px;margin:12px 0 20px}h2{font-size:clamp(28px,4vw,47px);line-height:1.08;letter-spacing:-.03em;margin:9px 0 18px}h3{font-size:22px;line-height:1.2;margin:0 0 8px}p{margin:0 0 14px}.lead{font-size:clamp(19px,3vw,25px);max-width:850px}.eyebrow{font:700 12px/1.3 ui-monospace,monospace;letter-spacing:.07em;text-transform:uppercase;color:#982724}
-    .jump{display:flex;flex-wrap:wrap;gap:9px 20px;border-top:1px solid var(--line);padding:15px 0}.route{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line);margin:18px auto 32px}.route a{padding:16px 20px;text-decoration:none;color:var(--ink);background:var(--yellow)}.route a:nth-child(2){background:var(--green)}.route a:nth-child(3){background:#f2d9df}.route a+a{border-left:1px solid var(--line)}.route b{display:block;margin-bottom:5px}
+    .jump{display:flex;flex-wrap:wrap;gap:9px 20px;border-top:1px solid var(--line);padding:15px 0}.route{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);margin:18px auto 32px}.route a{padding:16px 20px;text-decoration:none;color:var(--ink);background:var(--yellow)}.route a:nth-child(2){background:var(--green)}.route a:nth-child(3){background:#f2d9df}.route a+a{border-left:1px solid var(--line)}.route b{display:block;margin-bottom:5px}
     section{padding:34px 0;border-top:1px solid var(--line);scroll-margin-top:12px}.tint{background:#fffdf6}.green{background:#e9f4ee}.yellow{background:#fff0c6}.check{border-left:4px solid #287250;padding:9px 13px;background:var(--green);margin:14px 0 20px}.notice{border-left:4px solid #a77522;padding:9px 13px;background:var(--yellow);margin:13px 0}
     .prompt{background:#fffdf7;border:1px solid #96928a;margin:14px 0 20px;padding:17px 18px}.prompt-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}.prompt-head button{border:1px solid #8a201d;background:var(--red);color:#fff;border-radius:4px;padding:6px 12px;font-size:14px;white-space:nowrap}.prompt pre{font:inherit;white-space:pre-wrap;overflow-wrap:anywhere;margin:10px 0 0}.prompt p{margin:8px 0 0}.hint{font-size:14px;color:var(--muted)}
     details{border-top:1px solid #b4aea3;padding:12px 0}summary{font-weight:700;cursor:pointer}details[open] summary{margin-bottom:12px}ol,ul{padding-left:23px}li{margin:6px 0}.table-scroll{overflow:auto}table{width:100%;border-collapse:collapse;background:#fffdf7}th,td{border:1px solid #aea99f;text-align:left;padding:10px 12px;vertical-align:top}th{background:var(--green)}.links li{margin:8px 0}.code{font:14px/1.5 ui-monospace,monospace;background:#f2eee3;padding:12px;white-space:pre-wrap;overflow-wrap:anywhere}
     .shots{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:15px 0}.shot{margin:0;background:#f6f0e2;border:1px dashed #898174;padding:12px}.shot img{display:block;width:100%;height:auto;margin:0 0 10px}.shot img[hidden]{display:none}.shot label{display:block;font-size:13px;margin-top:8px}.shot input{max-width:100%;font-size:13px}.shot figcaption{font-size:14px}.player{background:#171717;color:#fff;min-height:145px;display:grid;place-items:center;text-align:center;padding:20px}.footer{padding:18px 0;border-top:1px solid var(--line)}
-    @media(max-width:650px){.wrap{width:calc(100% - 28px)}.route,.shots{grid-template-columns:1fr}.route a+a{border-left:0;border-top:1px solid var(--line)}.prompt-head{flex-wrap:wrap}.top .wrap{flex-wrap:wrap}}
+    .skill-recap{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:22px 0}.skill-recap article{background:#fffdf7;border:1px solid var(--line);padding:22px}.skill-recap article:last-child{grid-column:1/-1}.skill-recap article p{margin-bottom:12px}
+    @media(max-width:650px){.wrap{width:calc(100% - 28px)}.route,.shots,.skill-recap{grid-template-columns:1fr}.route a+a{border-left:0;border-top:1px solid var(--line)}.prompt-head{flex-wrap:wrap}.top .wrap{flex-wrap:wrap}}
     @media print{.top,.jump,.prompt-head button,.shot input,.shot label{display:none}.prompt,.shot{break-inside:avoid}body{font-size:11pt}section{padding:16px 0}}
     .production{background:#f9e1eb}.production .prompt{background:#fff2f7;border-color:#c8799b}.production .prompt-head button{background:#9b285b;border-color:#772044}.production .check{background:#fff2f7;border-color:#a53568}.route a:nth-child(2){background:#f9e1eb}.route a:nth-child(3){background:var(--green)}
   </style>
@@ -26,18 +27,43 @@
 <main>
 <header class="wrap">
 <p class="eyebrow">Консультация 06 · 20 ноября 2026 · 10:00–12:00 МСК</p>
-<h1>Безопасность, процессы и агенты в PR</h1>
-<p class="lead">Как команде дальше развивать работу с ИИ: проверять новые инструменты, поддерживать общие правила и запускать повторяемые процессы.</p>
-<nav class="jump" aria-label="Разделы"><a href="#materials">Подготовка</a><a href="#practice">Учебный кейс</a><a href="#safety">Безопасность</a><a href="#trends">Тренды</a><a href="#system">Система отдела</a><a href="#sources">Официальные источники</a><a href="#plugins">Плагины</a><a href="#skills">GitHub и Codex</a><a href="#next-week">После встречи</a><a href="#recording">Запись</a></nav>
+<h1>Как работать с ИИ дальше</h1>
+<p class="lead">Пять встреч уже позади. Собираем то, что вы умеете, разбираем безопасность и следующий шаг: от отдельных заданий к системе работы отдела.</p>
+<nav class="jump" aria-label="Разделы"><a href="#materials">Подготовка</a><a href="#achievements">Что вы уже умеете</a><a href="#safety">Безопасность</a><a href="#practice">Учебный кейс</a><a href="#trends">Тренды</a><a href="#system">Система отдела</a><a href="#sources">Официальные источники</a><a href="#plugins">Плагины</a><a href="#skills">GitHub и Codex</a><a href="#next-week">После встречи</a><a href="#recording">Запись</a></nav>
 </header>
 <nav class="route wrap" aria-label="План консультации">
-<a href="#safety"><b>10:00–10:30 · Безопасность</b>Проверяем данные, доступ и право на действие.</a>
+<a href="#achievements"><b>10:00–10:10 · Уже умеем</b>Собираем результаты пяти встреч.</a>
+<a href="#safety"><b>10:10–10:30 · Безопасность</b>Локальные модели и границы работы с данными.</a>
 <a href="#trends"><b>10:30–11:00 · Тренды</b>Читаем релиз, тестируем новый инструмент и разбираем цикл агента.</a>
 <a href="#system"><b>11:00–12:00 · Система отдела</b>Практика Сергея. Собираем и проверяем один процесс.</a>
 </nav>
 <section class="tint" id="materials"><div class="wrap">
 <h2>Что открыть к встрече</h2>
 <ul><li>Обычный чат в ChatGPT Business. Codex пригодится для показа навыка.</li><li><a href="#practice">Готовый учебный кейс ниже</a>. Для проверки новой модели можно взять один свой запрос на открытых данных.</li><li><a href="files/lesson-06/prompts.txt" download>Скачать все промпты</a> или копировать их по ходу со страницы.</li></ul>
+</div></section>
+<section class="green" id="achievements"><div class="wrap">
+<p class="eyebrow">10:00–10:10 · Результаты пяти встреч</p><h2>Посмотрите, сколько вы уже умеете</h2>
+<p class="lead">За пять встреч вы прошли путь от первого запроса до текстов, презентаций и визуального продакшна. Теперь у вас есть целый набор приёмов для работы коммуникационной команды.</p>
+<div class="skill-recap">
+<article><p class="eyebrow">01 · Рабочее пространство</p><h3>От задачи к первому результату</h3><p>Формулировать запрос, уточнять результат, давать правки в чате, работать со страницами и делиться результатом с коллегой.</p><p><b>В вашей копилке:</b> понятная задача и общий материал для обсуждения.</p><a href="lesson-01.html">Вернуться к первой встрече →</a></article>
+<article><p class="eyebrow">02 · Документы и факты</p><h3>Превращать материалы в проверенный текст</h3><p>Разбирать документы, собирать карту фактов со ссылками, готовить речь по исходникам и перепроверять ключевые утверждения.</p><p><b>В вашей копилке:</b> черновик речи, который можно сверить с источниками.</p><a href="lesson-02.html">Вернуться ко второй встрече →</a></article>
+<article><p class="eyebrow">03 · Редакционные правила</p><h3>Объяснять ИИ ваш формат и голос</h3><p>Снимать с образцов паспорт формата и голоса, писать пресс-релиз по фактам и сохранять правила для следующих задач.</p><p><b>В вашей копилке:</b> повторяемый способ получать текст в нужной подаче.</p><a href="lesson-03.html">Вернуться к третьей встрече →</a></article>
+<article><p class="eyebrow">04 · Презентации</p><h3>Собирать презентацию по своим правилам</h3><p>Использовать фирменный шаблон и плагин, получать PPTX или редактируемую презентацию в пространстве, делиться и вносить правки. Разобрали, как упаковать правила в навык и плагин.</p><p><b>В вашей копилке:</b> путь от содержания до презентации в нужном стиле.</p><a href="lesson-04.html">Вернуться к четвёртой встрече →</a></article>
+<article><p class="eyebrow">05 · Мультимодальный продакшн</p><h3>Показывать идею через текст, изображение и видео</h3><p>Разбирать референс лендинга и делать HTML-черновик, снимать визуальный стиль и переносить его на своё изображение. Разобрали инфографику, раскадровку и сборку аниматика.</p><p><b>В вашей копилке:</b> наглядный черновик, с которым проще обсуждать задачу с дизайном и продакшном.</p><a href="lesson-05.html">Вернуться к пятой встрече →</a></article>
+</div>
+<p class="check"><b>Это уже серьёзная база.</b> Вы можете объяснить ИИ задачу, дать образец, проверить результат и передать его коллеге. Сегодня связываем эти приёмы в рабочую систему.</p>
+<p><b>Все делаем:</b> откройте один свой результат с прошлых встреч. Напишите в чат: «Я уже использую … Для следующей задачи возьму …». Если какой-то шаг пока не повторяли, выберите его для самостоятельной практики.</p>
+</div></section>
+<section class="yellow" id="safety"><div class="wrap">
+<p class="eyebrow">10:10–10:30 · Безопасность</p><h2>Что можно дать ИИ</h2>
+<p class="notice"><b>Главное правило: то, чем небезопасно делиться, в нейросети не загружаем.</b> Сначала определяем, какие данные разрешены и где с ними можно работать.</p>
+<h3>Локальная модель: что это меняет</h3>
+<p>Модель можно запускать на компьютере или сервере компании. Это позволяет организовать обработку внутри корпоративного контура. Но сам по себе запуск модели локально ещё не означает, что вся система безопасна.</p>
+<ul><li><b>Смотрим на весь путь данных.</b> Где хранятся файлы, история чатов, расшифровки, журналы и резервные копии? Есть ли внешние сервисы и подключённые инструменты?</li><li><b>Проверяем доступ.</b> Кто может читать материал, делиться им и запускать действия? Это определяют компания и её специалисты по ИБ.</li><li><b>Проверяем пригодность для задачи.</b> На разрешённых примерах сравниваем качество русского текста, расшифровки, работы с документами и скорость. Локальное размещение само по себе не гарантирует нужного качества.</li></ul>
+<p>Для команды наша рекомендация: согласованный рабочий контур, понятные правила доступа и проверка конкретных сценариев вместе с IT и ИБ. Сегодня практикуемся на открытых материалах.</p>
+<ol><li>Открываем учебный кейс и решаем, какие факты нужны для черновика. Промпт 1 запускаем на открытых релизах. Отдельно отмечаем, что непубличный сменный отчёт и контакты сотрудников для задачи не нужны.</li><li>Для внутреннего материала проверяем допуск у владельца данных и ИБ. Для практики берём открытый аналог.</li><li>Для агента начинаем с разрешённых источников и черновика. Проверяем, кто подтверждает отправку, публикацию и изменение общих файлов.</li></ol>
+<article class="prompt"><h3>1. Выбрать безопасный вход</h3><pre>Помоги подготовить учебный вход для задачи «из открытой новости сделать анонс». Вот описание задачи без документов. Какие данные нужны для черновика, какие можно заменить вымышленными и какие вопросы нужно задать владельцу материала до загрузки? Разрешение на работу с данными определяет наша организация.</pre></article>
+<p class="check"><b>К 10:30.</b> У каждого есть допустимый вход для теста и понятная точка согласования.</p>
 </div></section>
 <section class="tint" id="practice"><div class="wrap">
 <h2>Один кейс на всю консультацию</h2>
@@ -60,15 +86,9 @@ https://nornickel.ru/news-and-media/press-releases-and-news/nornikel-obyavlyaet-
 Для обсуждения безопасности представьте, что у вас есть непубличный сменный отчёт и контакты сотрудников. Этот материал в чат не загружаем. Для учебной новости достаточно двух открытых источников.</pre></article>
 <p><a href="https://nornickel.ru/news-and-media/press-releases-and-news/nornikel-obyavlyaet-itogi-proizvodstvennoy-deyatelnosti-za-9m-2026-g/">Релиз Норникеля за девять месяцев</a> · <a href="https://nornickel.ru/news-and-media/press-releases-and-news/nornikel-obyavlyaet-itogi-proizvodstvennoy-deyatelnosti-za-1-polugodie-2026-g/">Релиз за первое полугодие</a>.</p>
 </div></section>
-<section class="yellow" id="safety"><div class="wrap">
-<p class="eyebrow">10:00–10:30 · Безопасность</p><h2>Что можно дать ИИ</h2>
-<p>Если этим небезопасно делиться, мы этим не делимся. Проверяем тип данных, согласованный инструмент, круг доступа и действие, которое он сможет выполнить.</p>
-<ol><li>Открываем учебный кейс и решаем, какие факты нужны для черновика. Промпт 1 запускаем на открытых релизах. Отдельно отмечаем, что непубличный сменный отчёт и контакты сотрудников для задачи не нужны.</li><li>Для внутреннего материала проверяем допуск у владельца данных и ИБ. Для практики берём открытый аналог.</li><li>Для агента начинаем с разрешённых источников и черновика. Проверяем, кто подтверждает отправку, публикацию и изменение общих файлов.</li></ol>
-<article class="prompt"><h3>1. Выбрать безопасный вход</h3><pre>Помоги подготовить учебный вход для задачи «из открытой новости сделать анонс». Вот описание задачи без документов. Какие данные нужны для черновика, какие можно заменить вымышленными и какие вопросы нужно задать владельцу материала до загрузки? Разрешение на работу с данными определяет наша организация.</pre></article>
-<p class="check"><b>К 10:30.</b> У каждого есть допустимый вход для теста и понятная точка согласования.</p>
-</div></section>
 <section class="green" id="trends"><div class="wrap">
-<p class="eyebrow">10:30–11:00 · Тренды и модели</p><h2>От запроса к циклу работы</h2>
+<p class="eyebrow">10:30–11:00 · Тренды и модели</p><h2>От отдельных заданий к автономной системе</h2>
+<p>Следующий шаг: сохраняем удачные инструкции, связываем этапы и задаём цикл «сделать → проверить → исправить». Затем часть этапов можно поручить агентам. Для автономной работы заранее определяем цель, разрешённые действия, критерии качества и момент передачи человеку.</p>
 <p><b>10:30–10:40.</b> Откройте официальный журнал релизов, выберите одно изменение и найдите руководство. Проверьте, относится ли оно к ChatGPT, API или Codex и доступно ли в вашей рабочей среде.</p>
 <article class="prompt"><h3>2. Разобрать обновление по первоисточнику</h3><pre>Разбери приложенный официальный релиз и руководство. Укажи дату, точное название модели или функции, продукт, тариф или условия доступа, форматы входа и ограничения. Для каждого вывода дай ссылку на раздел. Отдельно предложи один тест для PR-задачи и перечисли, что мне нужно проверить в своём рабочем пространстве.</pre></article>
 <p><b>10:40–10:48.</b> Сохраните старый запрос и возьмите два одинаковых примера для сравнения. Фиксируйте версию модели и результат теста.</p>
